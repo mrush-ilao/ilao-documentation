@@ -47,7 +47,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'IllinoisLegalAid Documentation'
+project = u'IllinoisLegalAid.org'
 copyright = u'2020, Illinois Legal Aid Online'
 author = u'Illinois Legal Aid Online'
 

@@ -1,0 +1,2 @@
+Testimonials Content Type
+==========================

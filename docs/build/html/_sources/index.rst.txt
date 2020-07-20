@@ -10,11 +10,7 @@ Welcome to IllinoisLegalAid Documentation's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   legal_content_cms
+   basic_pages_cms
+   testimonials_cms
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
