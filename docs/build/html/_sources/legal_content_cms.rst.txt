@@ -1,12 +1,19 @@
+===================
 Legal Content CMS
-==================
+===================
 
 Content types for legal content:
 
-* Legal content
-* Portal main page
-* Toolboxes, toolbox tools, toolbox tool steps
-* Lawyer manual (ADRM) format
+.. toctree::
+   :maxdepth: 2
+   :caption: Content types for legal content:
+   
+   cms_legal_content
+   cms_portal_main_page
+   cms_toolboxes
+   cms_adrm
+
+
 
 See also:
 
