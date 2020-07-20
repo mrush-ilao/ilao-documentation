@@ -7,8 +7,8 @@ Purpose
 
 Basic pages are used in the About section and for ancillary pages (such as Terms of Use, Privacy Policy, Contact us).  These pages are not included in legal resources sections of the website.
 
-To be removed
-===============
+Elements to be removed
+========================
 While we moved over the existing data and fields, those should not be used going forward as we will deprecate them:
 
 * Body
