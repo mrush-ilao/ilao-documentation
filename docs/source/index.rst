@@ -10,6 +10,7 @@ Welcome to IllinoisLegalAid Documentation's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   design_guide
    legal_content_cms
    basic_pages_cms
    testimonials_cms
