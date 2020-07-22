@@ -84,14 +84,20 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design Guide</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="cms_legal_content.html">Legal content type</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_portal_main_page.html">Portal main page content type</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="cms_toolboxes.html">Toolbox and related content types</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="cms_toolboxes_admin.html">Creating and managing toolboxes</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Toolbox tool content type</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Toolbox tool content type</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#creating-or-editing-a-tool">Creating or editing a tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-users-see">What users see</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="cms_tool_step_admin.html">Tool step content type</a></li>
 <li class="toctree-l3"><a class="reference internal" href="content_toolbox_use.html">Using ILAO toolboxes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_toolboxes.html#creating-a-toolbox">Creating a Toolbox</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="cms_adrm.html">ADRM content</a></li>
@@ -169,6 +175,48 @@
             
   <div class="section" id="toolbox-tool-content-type">
 <h1>Toolbox tool content type<a class="headerlink" href="#toolbox-tool-content-type" title="Permalink to this headline">¶</a></h1>
+<p>Every toolbox should have at least 2 tools. Each tool must have at least 1 step.</p>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">Explore the possibility of supporting tools that do not reside inside a toolbox.</p>
+</div>
+<div class="section" id="creating-or-editing-a-tool">
+<h2>Creating or editing a tool<a class="headerlink" href="#creating-or-editing-a-tool" title="Permalink to this headline">¶</a></h2>
+<p>When creating a tool, add:</p>
+<ul class="simple">
+<li>A title</li>
+<li>A relationship to an existing toolbox</li>
+<li>A primary legal category</li>
+<li>A selector form label; this will appear on the toolbox page</li>
+<li>An effort level.  Use easy for anything that can be completed in 1 week or less, medium for anything that takes 1-6 months and hard for anything that typically takes 6 months or more.</li>
+<li>Purpose description.  This appears on the page after a user selects toolboxes.</li>
+<li>Overview.  This is a summary of the tool and appears above the list of steps</li>
+<li>Optionally add a before you get started block to add any critical warnings or other information the user should have before starting</li>
+<li>Optionally add a Learn more section.  This can use an existing guide or be hand-curated.</li>
+<li>Add each tool step in the tools list (these can not be added until the tool steps exist)</li>
+</ul>
+<p>Do not use the pick up where I left off field</p>
+<div class="admonition-todo admonition" id="index-1">
+<p class="first admonition-title">Todo</p>
+<p class="last">Add tools to appear in category pages if they do not; proper search handling; add legal issues so that tools can appear in subcategory pages</p>
+</div>
+<div class="admonition-todo admonition" id="index-2">
+<p class="first admonition-title">Todo</p>
+<p class="last">Remove publishing status field, pick up where I left off field,</p>
+</div>
+</div>
+<div class="section" id="what-users-see">
+<h2>What users see<a class="headerlink" href="#what-users-see" title="Permalink to this headline">¶</a></h2>
+<p>When viewing a tool page a user will see:</p>
+<ul class="simple">
+<li>The overview</li>
+<li>The list of steps, numbered under a “Your Progress” block</li>
+<li>A start button to go to the next step</li>
+<li>Before you get started block with an information icon</li>
+<li>A learn more block with a … icon</li>
+</ul>
+<img alt="_images/tool_view.png" src="_images/tool_view.png" />
+</div>
 </div>
 
 

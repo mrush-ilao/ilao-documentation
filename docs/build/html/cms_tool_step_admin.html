@@ -84,14 +84,21 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design Guide</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="cms_legal_content.html">Legal content type</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_portal_main_page.html">Portal main page content type</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="cms_toolboxes.html">Toolbox and related content types</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="cms_toolboxes_admin.html">Creating and managing toolboxes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_tools_admin.html">Toolbox tool content type</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Tool step content type</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Tool step content type</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#creating-a-tool-step">Creating a tool step</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-users-see">What users see</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my-progress-block">My Progress block</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="content_toolbox_use.html">Using ILAO toolboxes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_toolboxes.html#creating-a-toolbox">Creating a Toolbox</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="cms_adrm.html">ADRM content</a></li>
@@ -169,6 +176,30 @@
             
   <div class="section" id="tool-step-content-type">
 <h1>Tool step content type<a class="headerlink" href="#tool-step-content-type" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="creating-a-tool-step">
+<h2>Creating a tool step<a class="headerlink" href="#creating-a-tool-step" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="what-users-see">
+<h2>What users see<a class="headerlink" href="#what-users-see" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="my-progress-block">
+<h2>My Progress block<a class="headerlink" href="#my-progress-block" title="Permalink to this headline">¶</a></h2>
+<p>The “My Progress” block tracks a user’s progress across the tool.</p>
+<ul class="simple">
+<li>For logged in users, it will remember their progress over the course of 1 year.</li>
+<li>For anonymous users, it will remember their progress only for the current session.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This is a change from the Drupal 7 site where the ‘return code’ allowed users to return.</p>
+</div>
+<p>As a user progresses through a tool:</p>
+<ul class="simple">
+<li>The current step, if it has not been previously marked complete, will be blue and filled</li>
+<li>Incomplete steps will be white with a blue border</li>
+<li>Steps that are marked complete will be green with a check in them</li>
+</ul>
+</div>
 </div>
 
 
