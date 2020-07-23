@@ -93,11 +93,14 @@
 <li class="toctree-l2"><a class="reference internal" href="cms_legal_content.html">Legal content type</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_portal_main_page.html">Portal main page content type</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="cms_toolboxes.html">Toolbox and related content types</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Creating and managing toolboxes</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Creating and managing toolboxes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#creating-a-toolbox">Creating a toolbox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-users-see">What users see</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="cms_tools_admin.html">Toolbox tool content type</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_tool_step_admin.html">Tool step content type</a></li>
 <li class="toctree-l3"><a class="reference internal" href="content_toolbox_use.html">Using ILAO toolboxes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_toolboxes.html#creating-a-toolbox">Creating a Toolbox</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="cms_adrm.html">ADRM content</a></li>
@@ -105,6 +108,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Building basic pages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
 </ul>
 
             
@@ -176,6 +180,36 @@
             
   <div class="section" id="creating-and-managing-toolboxes">
 <h1>Creating and managing toolboxes<a class="headerlink" href="#creating-and-managing-toolboxes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="creating-a-toolbox">
+<h2>Creating a toolbox<a class="headerlink" href="#creating-a-toolbox" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Add a title</li>
+<li>Add a content description; this is the description that will be used in content pages and search results.</li>
+<li>Add a meta description; this is the description that will be used in search engines like Google and social media</li>
+<li>Selector form label.  This is what appears in a toolbox selector form on portal content</li>
+<li>Overall level of effort. Use easy for anything that can be completed in 1 week or less, medium for anything that takes 1-6 months and hard for anything that typically takes 6 months or more. (this is likely to be deprecated as the level applies more to tools than toolboxes)</li>
+<li>Page components: add a split column layout to add summaries of each tool in the toolbox or other information.  The split column layout requires two items, each with a title and body.</li>
+</ul>
+<p>Do not use:</p>
+<ul class="simple">
+<li>Fast fact block; this will be removed in a future update</li>
+<li>Page components other than split column layout.</li>
+</ul>
+</div>
+<div class="section" id="what-users-see">
+<h2>What users see<a class="headerlink" href="#what-users-see" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>There is a form automatically created for all of the tools in the toolbox.</li>
+<li>The <a class="reference external" href="https://www.illinoislegalaid.org/block/231">Using this toolbox</a> is static and shared across all toolboxes.</li>
+<li>Fast fact blocks are not displayed to users.</li>
+<li>Buttons in split column layouts do not display to users.</li>
+</ul>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">Update the level of effort help text; Deprecate these fields and remove from CMS: fast fact block, level of effort</p>
+</div>
+<img alt="_images/toolbox_view.png" src="_images/toolbox_view.png" />
+</div>
 </div>
 
 
