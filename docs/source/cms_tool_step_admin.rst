@@ -10,7 +10,11 @@ Creating a tool step
 What users see
 ===================
 
+.. image:: ../assets/tool_step_process.png
 
+.. image:: ../assets/tool_step_webform.png
+
+.. image:: ../assets/tool_step_easyform.png
 
 My Progress block
 ======================
