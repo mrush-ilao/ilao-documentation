@@ -17,12 +17,10 @@ Welcome to IllinoisLegalAid Documentation's documentation!
    webforms_cms
    
    
-Workarounds
-==============   
 
 .. toctree::
    :maxdepth: 1
-   :caption: Contents:
+   :caption: Workarounds:
 
    legal_content_cms
 
