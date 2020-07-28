@@ -5,7 +5,7 @@ Design Guide
 Button classes
 ====================
 
-.. note::  Hyperlinks in legal content even when styled with the button class are showing the wrong link color; they should be white for primary and secondary links.  However, tertiary class is the best class for most content situations.
+.. note::  Hyperlinks in legal content even when styled with the button class are showing the wrong link color; they should be white for primary and secondary links.  
 
 Primary
 ---------
@@ -24,8 +24,8 @@ Use for:
 
 Do not use:
 
- * When there is already a primary call to action.  For example, on the why donate page, the donate button is the primary call to action and Learn more about connector's circle or other ways to give should be secondary buttons.
- * On any legal content that already has a primary button such as Easy Forms, download, link content, toolboxes, tools, tool steps, or blank forms
+ * On about pages, except when it is the primary call to action.  For example, on the why donate page, the donate button is the primary call to action and Learn more about connector's circle or other ways to give should be secondary buttons.  **In most cases, the secondary or tertiary buttons should be used.**
+ * Within legal content 
 
 Secondary
 --------------
@@ -49,11 +49,12 @@ Do not use:
 
  * For form submit buttons
  * For cancel buttons
+ * In toolbox, tool, and tool step content 
  * For links generally except 
  
    * in About pages in side-by-side blocks that go to an underlying child page
    * in legal content except for the above use case
-   * in toolbox, tool, and tool step content 
+
  
 
 Tertiary
