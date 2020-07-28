@@ -100,6 +100,11 @@
 <li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Building basic pages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Workarounds:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
 </ul>
 
             
@@ -169,6 +174,10 @@
 <h1>Design Guide<a class="headerlink" href="#design-guide" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="button-classes">
 <h2>Button classes<a class="headerlink" href="#button-classes" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Hyperlinks in legal content even when styled with the button class are showing the wrong link color; they should be white for primary and secondary links.  However, tertiary class is the best class for most content situations.</p>
+</div>
 <div class="section" id="primary">
 <h3>Primary<a class="headerlink" href="#primary" title="Permalink to this headline">¶</a></h3>
 <p>The primary CTA button is the bright blue button with white text.  It can be added in the WYSIWYG using the class name “cta-primary”</p>
@@ -186,7 +195,7 @@
 <blockquote>
 <div><ul class="simple">
 <li>When there is already a primary call to action.  For example, on the why donate page, the donate button is the primary call to action and Learn more about connector’s circle or other ways to give should be secondary buttons.</li>
-<li>On any legal content that already has a primary button such as Easy Forms, download, link content, or blank forms</li>
+<li>On any legal content that already has a primary button such as Easy Forms, download, link content, toolboxes, tools, tool steps, or blank forms</li>
 </ul>
 </div></blockquote>
 </div>
@@ -194,12 +203,14 @@
 <h3>Secondary<a class="headerlink" href="#secondary" title="Permalink to this headline">¶</a></h3>
 <p>The secondary CTA button is the dark blue button with white text. It can be added in the WYSIWYG using the class name “cta-secondary”</p>
 <div class="highlight-HTML notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;cta-secondary&quot;</span><span class="p">&gt;</span>Secondary CTA<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;cta-secondary&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color:white&quot;</span><span class="p">&gt;</span>Secondary CTA in legal content<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 <p>Use for:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Important buttons where the button is not the primary CTA on the page</li>
+<li>On about pages, for important buttons where the button is not the primary CTA on the page</li>
+<li>On legal content (other than toolbox, tool, tool step content), for a primary next step in an article such as to call out the next immediate step the user must take (for example, filing an answer or appearance in an article on responding to a lawsuit).  Legal content should never have more than one secondary button within the text.  If there are more than one critical action to highlight (for example, linking to an answer and an appearance separately, use two tertiary buttons).</li>
 </ul>
 </div></blockquote>
 <p>Do not use:</p>
@@ -221,7 +232,7 @@
 <blockquote>
 <div><ul class="simple">
 <li>Cancel actions</li>
-<li>When you absolutely need to use a button to direct a user to another node without an actual action (other than learning more, reading the page, etc).</li>
+<li>When you absolutely need to use a button to direct a user to another node without an actual action (other than learning more, reading the page, etc) or when you need to call out two actions of similar weight (for example, File divorce with kids and file divorce without kids)</li>
 </ul>
 </div></blockquote>
 </div>
