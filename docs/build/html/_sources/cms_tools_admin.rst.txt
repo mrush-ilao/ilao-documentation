@@ -38,7 +38,7 @@ When viewing a tool page a user will see:
 * The list of steps, numbered under a "Your Progress" block
 * A start button to go to the next step
 * Before you get started block with an information icon
-* A learn more block with a ... icon
+* A learn more block with a ... icon if a learn more block is provided
 
 .. image:: ../assets/tool_view.png
 

@@ -96,15 +96,43 @@
 <li class="toctree-l3"><a class="reference internal" href="cms_toolboxes_admin.html">Creating and managing toolboxes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_tools_admin.html">Toolbox tool content type</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_tool_step_admin.html">Tool step content type</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Using ILAO toolboxes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_toolboxes.html#creating-a-toolbox">Creating a Toolbox</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Using ILAO toolboxes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#how-toolboxes-tools-and-tool-steps-are-found">How Toolboxes, tools, and tool steps are found</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#keeping-track-of-progress">Keeping Track of Progress</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#offline-communications">Offline Communications</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="cms_adrm.html">ADRM content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="legal_content_cms.html#known-workarounds">Known Workarounds</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Building basic pages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Workarounds:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cms_legal_content.html">Legal content type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_portal_main_page.html">Portal main page content type</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="cms_toolboxes.html">Toolbox and related content types</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cms_toolboxes_admin.html">Creating and managing toolboxes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_tools_admin.html">Toolbox tool content type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_tool_step_admin.html">Tool step content type</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Using ILAO toolboxes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#how-toolboxes-tools-and-tool-steps-are-found">How Toolboxes, tools, and tool steps are found</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#keeping-track-of-progress">Keeping Track of Progress</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#offline-communications">Offline Communications</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cms_adrm.html">ADRM content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="legal_content_cms.html#known-workarounds">Known Workarounds</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -176,6 +204,72 @@
             
   <div class="section" id="using-ilao-toolboxes">
 <h1>Using ILAO toolboxes<a class="headerlink" href="#using-ilao-toolboxes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="how-toolboxes-tools-and-tool-steps-are-found">
+<h2>How Toolboxes, tools, and tool steps are found<a class="headerlink" href="#how-toolboxes-tools-and-tool-steps-are-found" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">These access points need to be built out with the exception of from within portal pages and dashboards</p>
+</div>
+<p>Users can access toolboxes:</p>
+<ul class="simple">
+<li>From portal pages</li>
+<li>From search</li>
+<li>From their dashboards, for community and law student members</li>
+</ul>
+<p>Users can access tools:</p>
+<ul class="simple">
+<li>From within legal resources pages</li>
+<li>From toolboxes within portal pages</li>
+<li>From their dashboards, for community and law student members</li>
+</ul>
+<p>Users can access tool steps:</p>
+<ul class="simple">
+<li>From their dashboards, for community and law student members</li>
+<li>From tool pages</li>
+</ul>
+</div>
+<div class="section" id="keeping-track-of-progress">
+<h2>Keeping Track of Progress<a class="headerlink" href="#keeping-track-of-progress" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">Reporting tools coming soon</p>
+</div>
+<p>Users who start a toolbox or tool will have records created in our website that captures:</p>
+<ul class="simple">
+<li>the language they accessed the content in</li>
+<li>the timestamp of the first activity</li>
+<li>the timestamp of the most recent activity</li>
+<li>their user ID (0 for anonymous users)</li>
+</ul>
+<p>For each node viewed:</p>
+<ul class="simple">
+<li>the language the user accessed the content in</li>
+<li>the timestamp of the first activity</li>
+<li>the timestamp of the last activity</li>
+<li>a status of completed, started, or saved<ul>
+<li>Tool steps will have a status of started when the tool step is viewed and completed when the user marks it complete</li>
+<li>Tools will have a status of started when the user first views the page and a status of completed when the user has marked.  If they accessed it from the toolbox form and did not start it, it will have a status of saved until they start.</li>
+</ul>
+</li>
+</ul>
+<div class="section" id="website-members">
+<h3>Website members<a class="headerlink" href="#website-members" title="Permalink to this headline">¶</a></h3>
+<p>For logged in members, their user ID is captured; this allows the user to return and pick up where they left off later.</p>
+</div>
+<div class="section" id="anonymous-users">
+<h3>Anonymous users<a class="headerlink" href="#anonymous-users" title="Permalink to this headline">¶</a></h3>
+<p>For anonymous users, the data is captured but the user can not return and continue where they left off.  If they return to a tool, they will not see any completed progress from earlier sessions.</p>
+</div>
+</div>
+<div class="section" id="offline-communications">
+<h2>Offline Communications<a class="headerlink" href="#offline-communications" title="Permalink to this headline">¶</a></h2>
+<p>Ticklers exist on the back-end to allow us to follow up with users who are in-progress on a tool via SMS and email.  But they need a lot of work before we reactivate them.</p>
+<div class="admonition-todo admonition" id="index-1">
+<p class="first admonition-title">Todo</p>
+<p class="last">rebuild the tickler functionality</p>
+</div>
+<p>Users who complete a tool are provided the link to a <a class="reference external" href="https://www.surveymonkey.com/r/R6CHB8R">toolbox feedback survey</a>.</p>
+</div>
 </div>
 
 

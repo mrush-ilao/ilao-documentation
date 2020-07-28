@@ -10,14 +10,14 @@ To create a tool step:
 * Add a title
 * Pick the tool the step goes into
 * Indicate whether the step is always required.  If you mark NO, the text (optional) will appear next to the step in the progress block.  There is a field to explain when the step is not required but it does not appear.
-* Indicate if this is the last step in the process.  A tool should only ever have exactly 1 last step.
+* Indicate if this is the last step in the process.  A tool should have exactly 1 last step.
 * Add a step type.  This adds the content to the page.  
 * Optionally add toolbox step components of type callout
 
 
-Go back to the associated tool and add the tool step at the right spot.
+**After adding a step, you must go back to the associated tool and add the tool step to the tool step list and order the steps correctly**
 
-.. note::  The last step in the tool should be marked.  There should only ever be one and it should be at the end of the toolbox.  The last step will then give the user the option to mark the toolbox complete.  This is usually going to be a "Mark toolbox complete" step.
+.. note::  The last step in the tool must be marked as the last step.  There should only ever be one and it should be at the end of the toolbox.  The last step will then give the user the option to mark the toolbox complete.  This is usually going to be a "Mark toolbox complete" step.
 
 Step types
 ------------
@@ -96,11 +96,12 @@ Tool with a single form
 
 Tool with multiple forms
 --------------------------
+Currently does not work
 
-The last Step
+Last Step
 -----------------
 
-When a user sees the last step:
+When a user sees a step that is marked as the last step:
 
 * the content of the step displays
 * if the user has incomplete steps:
