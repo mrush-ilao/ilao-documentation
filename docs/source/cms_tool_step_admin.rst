@@ -118,6 +118,7 @@ When a user sees a step that is marked as the last step:
 
 .. image:: ../assets/toolbox-incomplete.png
 
+
 When the tool is marked complete
 -----------------------------------
 
@@ -128,6 +129,8 @@ When the user completes the tool and marks the toolbox complete:
 * they have the option to provide feedback via SurveyMonkey
 
 .. image:: ../assets/toolbox-confirm.png
+
+The well done image and text are managed in the `Final toolbox page image block. <https://www.illinoislegalaid.org/block/236>`_
 
 My Progress block
 ======================
