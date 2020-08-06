@@ -8,6 +8,7 @@ Design Guide
 
    design_colors
    design_buttons
+   design_legal_content_format_icons
 
 Related Documents
 ====================
