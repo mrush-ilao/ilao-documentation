@@ -4,6 +4,25 @@ Legal content format icons
 
 We use colors and iconography on the site to distinguish between different formats.
 
+These are used as icons on:
+
+* legal content pages
+* category and subcategory listing pages
+* the blog listing page
+* the form library category and subcategory pages
+* the practice resources category and subcategory pages
+
+These are used as text labels:
+
+* On the forms block in legal content
+* On content titles on legal content pages for:
+
+  * Guides
+  * How-to's
+  * Easy Forms
+  * Blank forms
+
+.. note:: Text labels are a work-in-progress
 
 Guide
 =======
@@ -29,6 +48,8 @@ Hex color:  #D28B7FF
 
 How to includes legal content containing process steps, toolbox tools.
 
+.. image:: ../asets/design-howto-label.png
+
 Video
 ========
 
@@ -42,6 +63,8 @@ Easy Form
 .. image:: ../assets/design-easyform.png
 
 Hex color: #A2ed87
+
+.. image:: ../assets/design-easyformlabel.png
 
 
 Blank forms
@@ -84,7 +107,7 @@ Decision Tree
 
 Hex color: #Adbaff
 
-.. note:: Decision trees is limited to legal content that contains the decision tree paragraphs bundle.  
+.. note:: Decision tree format is limited to legal content that contains the decision tree paragraphs bundle.  
 
 Teach Me
 =========
