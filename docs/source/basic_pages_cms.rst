@@ -1,5 +1,5 @@
 =====================
-Building basic pages
+Basic pages
 =====================
 
 Purpose

@@ -15,7 +15,7 @@ Welcome to IllinoisLegalAid Documentation's documentation!
    basic_pages_cms
    testimonials_cms
    webforms_cms
-   
+   otis_cms
    
 
 .. toctree::

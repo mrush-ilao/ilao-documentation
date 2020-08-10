@@ -1,6 +1,5 @@
 
 
-
 <!DOCTYPE html>
 <html class="writer-html4" lang="en" >
 <head>
@@ -8,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Index &mdash; IllinoisLegalAid.org 1 documentation</title>
+  <title>Triage rule endpoints &mdash; IllinoisLegalAid.org 1 documentation</title>
   
 
   
@@ -35,8 +34,9 @@
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-    <link rel="index" title="Index" href="#" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Get Legal Help" href="otis_cms.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -86,13 +86,24 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="otis_cms.html">Get Legal Help</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Triage rule endpoints</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#standard-usage">Standard Usage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#bypass">Bypass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pro-bono">Pro Bono</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#phone">Phone</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul>
@@ -143,12 +154,16 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Index</li>
+          <li><a href="otis_cms.html">Get Legal Help</a> &raquo;</li>
+        
+      <li>Triage rule endpoints</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
+            <a href="_sources/otis_endpoints.rst.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
     
@@ -160,11 +175,37 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+  <div class="section" id="triage-rule-endpoints">
+<h1>Triage rule endpoints<a class="headerlink" href="#triage-rule-endpoints" title="Permalink to this headline">¶</a></h1>
+<p>There are 3 supported end points in OTIS webforms:</p>
+<ul class="simple">
+<li>by_pass</li>
+<li>pro_bono_end_point</li>
+<li>phone_end_point</li>
+</ul>
+<p>These are set as the webform element’s key.</p>
+<img alt="../assets/otis_endpoints.png" src="../assets/otis_endpoints.png" />
+<p>These endpoints are set via responses to Yes/No questions.  When no end point is set, the user will not get routed to intake or referrals.</p>
+<div class="section" id="standard-usage">
+<h2>Standard Usage<a class="headerlink" href="#standard-usage" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bypass">
+<h3>Bypass<a class="headerlink" href="#bypass" title="Permalink to this headline">¶</a></h3>
+<p>Bypass is used when a program wants users to call immediately versus apply online due to the emergency nature of a legal issue.</p>
+<p>The standard question for bypass is “Online applications are not taken for this problem, but there is a dedicated number to call for help. Would you like to know how to reach them?”</p>
+<ul class="simple">
+<li>When the user says yes, they are given the bypass exit screen</li>
+<li>When the user says no, they are diverted to referrals to other organizations</li>
+</ul>
+<p>In the webform, the question must have a key of “by_pass”</p>
+</div>
+<div class="section" id="pro-bono">
+<h3>Pro Bono<a class="headerlink" href="#pro-bono" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="phone">
+<h3>Phone<a class="headerlink" href="#phone" title="Permalink to this headline">¶</a></h3>
+<p>The standard usage for phone_end_point is to ask a user a yes/no question if they have a safe phone number to call them at.  When this</p>
+</div>
+</div>
 </div>
 
 
@@ -172,6 +213,13 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="otis_cms.html" class="btn btn-neutral float-left" title="Get Legal Help" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
