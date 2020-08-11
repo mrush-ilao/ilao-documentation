@@ -92,6 +92,9 @@
 <li class="toctree-l1 current"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="cms_legal_content.html">Legal content type</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Portal main page content type</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#portal-page-types">Portal page types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fields">Fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#components">Components</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#navigation">Navigation</a></li>
 </ul>
 </li>
@@ -110,6 +113,9 @@
 <li class="toctree-l1 current"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="cms_legal_content.html">Legal content type</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Portal main page content type</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#portal-page-types">Portal page types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fields">Fields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#components">Components</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#navigation">Navigation</a></li>
 </ul>
 </li>
@@ -187,10 +193,57 @@
             
   <div class="section" id="portal-main-page-content-type">
 <h1>Portal main page content type<a class="headerlink" href="#portal-main-page-content-type" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The 2020 migration resulted in a new portal template.  As a result, there are fields that are no longer used, such as the hero image. At some point in the future, the deprecated fields will be removed.</p>
+</div>
+<div class="section" id="portal-page-types">
+<h2>Portal page types<a class="headerlink" href="#portal-page-types" title="Permalink to this headline">¶</a></h2>
+<p>Despite the content type name of “portal main page”, there are three types of portal pages:</p>
+<ul class="simple">
+<li>Main page</li>
+<li>Subpages</li>
+<li>Toolbox selector form (deprecated I think)</li>
+</ul>
+<p>A portal should have no more than 1 main page and may have an unlimited number of subpages.</p>
+</div>
+<div class="section" id="fields">
+<h2>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h2>
+<p>Every portal page requires:</p>
+<ul class="simple">
+<li>A title</li>
+<li>A subdomain.  For main pages, this is the url that the the website is accessed at.  While the field is called subdomain, it is no longer an actual subdomain.  Instead, it becomes <a class="reference external" href="https://www.illinoislegalaid.org/[node:subdomain">https://www.illinoislegalaid.org/[node:subdomain</a>].  For sub pages and toolbox selector form, this binds the pages together and results in a url of <a class="reference external" href="https://www.illinoislegalaid.org/[node:subdomain]/[node:title">https://www.illinoislegalaid.org/[node:subdomain]/[node:title</a>]</li>
+<li>A page type</li>
+<li>A meta description.  This is used in socia media and SEO.</li>
+<li>A content description.  This is used in listing pages and search results pages</li>
+<li>Hero title and subtitle are required but not used.</li>
+<li>Primary legal category and legal issues; this is used throughout the site to aid in navigation, filtering, and reporting</li>
+<li>One or more paragraphs (components)</li>
+<li>An image.  This is used for social media sharing</li>
+<li>An hero image.  This is no longer used but is still required.</li>
+</ul>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">Remove hero title, subtitle and image.</p>
+</div>
+</div>
+<div class="section" id="components">
+<h2>Components<a class="headerlink" href="#components" title="Permalink to this headline">¶</a></h2>
+<p>The supported components within a portal are:</p>
+<ul class="simple">
+<li>Portal layout webform</li>
+<li>Portal layout grid</li>
+<li>Portal layout summary</li>
+<li>Portal layout timeline</li>
+<li>Portal layout sidebar</li>
+<li>Portal layout split column layout</li>
+<li>Portal layout structured content</li>
+</ul>
+</div>
 <div class="section" id="navigation">
 <h2>Navigation<a class="headerlink" href="#navigation" title="Permalink to this headline">¶</a></h2>
 <p>The main portal page should be linked to in the Quick Links in the footer.</p>
-<div class="admonition-todo admonition" id="index-0">
+<div class="admonition-todo admonition" id="index-1">
 <p class="first admonition-title">Todo</p>
 <p class="last">We will add portal main page where the page type is main page to the legal resources pages to improve findability.</p>
 </div>
