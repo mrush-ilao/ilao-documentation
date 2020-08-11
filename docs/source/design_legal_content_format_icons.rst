@@ -48,7 +48,7 @@ Hex color:  #D28B7FF
 
 How to includes legal content containing process steps, toolbox tools.
 
-.. image:: ../asets/design-howto-label.png
+.. image:: ../assets/design-howto-label.png
 
 Video
 ========
