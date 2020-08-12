@@ -11,11 +11,13 @@ Welcome to IllinoisLegalAid Documentation's documentation!
    :caption: Contents:
 
    design_guide
+   block_management
    legal_content_cms
    basic_pages_cms
    testimonials_cms
    webforms_cms
    otis_cms
+   
    
 
 .. toctree::

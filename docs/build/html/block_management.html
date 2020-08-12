@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Search &mdash; IllinoisLegalAid.org 1 documentation</title>
+  <title>Custom blocks &mdash; IllinoisLegalAid.org 1 documentation</title>
   
 
   
@@ -20,7 +20,6 @@
   
 
   
-    
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -35,9 +34,10 @@
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-    <script type="text/javascript" src="_static/searchtools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Current blocks" href="blocks_current.html" />
+    <link rel="prev" title="Legal content format icons" href="design_legal_content_format_icons.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -68,7 +68,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -87,9 +87,16 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Custom blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="blocks_current.html">Current blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blocks_configuration.html">Configuring blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blocks_translation.html">Block translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#drupal-blocks-overview">Drupal Blocks Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#placing-a-block">Placing a block</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
@@ -145,12 +152,14 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Search</li>
+      <li>Custom blocks</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
+            <a href="_sources/block_management.rst.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
     
@@ -162,23 +171,47 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search functionality.
-    </p>
-  </div>
-  </noscript>
+  <div class="section" id="custom-blocks">
+<h1>Custom blocks<a class="headerlink" href="#custom-blocks" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="blocks_current.html">Current blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blocks_configuration.html">Configuring blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blocks_translation.html">Block translation</a></li>
+</ul>
+</div>
+<div class="section" id="drupal-blocks-overview">
+<h2>Drupal Blocks Overview<a class="headerlink" href="#drupal-blocks-overview" title="Permalink to this headline">¶</a></h2>
+<p>Blocks are managed under Structure.</p>
+<ul class="simple">
+<li>Blocks layout =&gt; this is where block placement is managed</li>
+<li>Custom block library =&gt; this is where custom blocks are created and edited.</li>
+</ul>
+</div>
+<div class="section" id="placing-a-block">
+<h2>Placing a block<a class="headerlink" href="#placing-a-block" title="Permalink to this headline">¶</a></h2>
+<p>To place a block, go to Structure =&gt; blocks layout and click place block next to the region where the block should appear.</p>
+<img alt="_images/blocks-placeblock1.png" src="_images/blocks-placeblock1.png" />
+<p>Note: if the block title needs to be hidden, from the configuration drop down next to the block where it appears, select “Configure” and uncheck the display title box.</p>
+<img alt="_images/blocks-hidetitle.png" src="_images/blocks-hidetitle.png" />
+</div>
+</div>
 
-  
-  <div id="search-results">
-  
-  </div>
 
            </div>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="blocks_current.html" class="btn btn-neutral float-right" title="Current blocks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="design_legal_content_format_icons.html" class="btn btn-neutral float-left" title="Legal content format icons" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -218,14 +251,7 @@
   
   
     
-  
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
    
-
 
 </body>
 </html>
