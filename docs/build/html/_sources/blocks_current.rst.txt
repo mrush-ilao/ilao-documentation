@@ -1,13 +1,24 @@
 ==================
-Current blocks
+Heading blocks
 ==================
 
-List of custom blocks that may need occasional editing:
+Only one of these should appear on any given page.  To create a heading banner:
 
-* Covid banner (appears on all pages except those that show the worning to landlords banner)
+* Go to Structure => Block layout => Custom block library
+* Add custom block
+* Select basic
+* Enter a block description; this is what appears in the block library as the name of the block
+* Enter the body.   Use the header banner code below to provide the correct style.
+* **DO NOT** add an image.
+
+When placing the block:
+
+* add the block to the Header section on the block layout page by clicking Place block
+* the block must be ordered just above the disabled blocks to keep the block from interfering with menus, site slogan blocks.
+
 
 Header banner code
-===================
+=====================
 
 This is the code used in the header banner to provide the correct style.
 
@@ -15,9 +26,13 @@ This is the code used in the header banner to provide the correct style.
    
    <div style="background-color:#F8FAFA;width:100%; padding:20px;font-weight:bold;box-shadow: 0 0.125rem 0.5rem rgba(106,107,113,0.2);">
    <p style="padding-bottom:0;font-weight:bold;">
-   <em>Note: COVID-19 is affecting many areas of the law. Please <a href="/node/163621/" title="Legal issues during the coronavirus pandemic">check our blog</a> for the latest updates.</em>
+   Text goes here
    </p>
    </div>
 
 
 
+Current header banner blocks
+==============================
+* Covid banner (appears on all pages except those that show the worning to landlords banner)
+* Landlord warning banner (appears on selected legal content pages in place of Covid banner)

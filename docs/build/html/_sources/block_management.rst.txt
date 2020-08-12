@@ -8,6 +8,7 @@ Custom blocks
    
 
    blocks_current
+   blocks_sectional
    blocks_configuration
    blocks_translation
    
