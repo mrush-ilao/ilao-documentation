@@ -115,8 +115,14 @@ When a user sees a step that is marked as the last step:
   * the primary button on the page is "Mark toolbox complete"
   * the secondary button is "Save toolbox progress"
   
+Desktop:
 
 .. image:: ../assets/toolbox-incomplete.png
+
+Mobile:
+
+.. image:: ../assets/tool-incomplete-mobile.png
+   :scale: 50%
 
 
 When the tool is marked complete
@@ -128,7 +134,14 @@ When the user completes the tool and marks the toolbox complete:
 * they have the option to view their toolboxes.  This returns them to the toolbox selector results page with the completed tools marked done and incomplete tools ready to be started.
 * they have the option to provide feedback via SurveyMonkey
 
+Desktop:
+
 .. image:: ../assets/toolbox-confirm.png
+
+Mobile:
+
+.. image:: ../assets/tool-mobile-welldone.png
+   :scale: 50%
 
 The well done image and text are managed in the `Final toolbox page image block. <https://www.illinoislegalaid.org/block/236>`_
 
