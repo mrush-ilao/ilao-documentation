@@ -82,7 +82,14 @@ What users see
 Tool with a process step
 --------------------------
 
+Desktop:
+
 .. image:: ../assets/tool_step_process.png
+
+Mobile:
+
+.. image:: ../assets/tool-step1-mobile.png
+   :scale: 50%
 
 Tool with a webform
 ---------------------
@@ -120,9 +127,10 @@ Desktop:
 .. image:: ../assets/toolbox-incomplete.png
 
 Mobile:
-
+   
 .. image:: ../assets/tool-incomplete-mobile.png
    :scale: 50%
+   
 
 
 When the tool is marked complete

@@ -40,8 +40,15 @@ When viewing a tool page a user will see:
 * Before you get started block with an information icon
 * A learn more block with a ... icon if a learn more block is provided
 
+Desktop:
+
 .. image:: ../assets/tool_view.png
 
+Mobile:
+
+.. image:: ../assets/tool-mobile.png
+   :scale: 50%
+   
 
 
 
