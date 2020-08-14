@@ -2,6 +2,12 @@
 Intake/Triage Report
 =======================
 
+The `intake & triage report <http://www.illinoislegalaid.org/admin/intake/reporting/eTransfers>`_ includes information for users who were at least offered intake.
+
+.. image:: ../assets/otis-etransfer-report.png
+
+
+
 Intake Statuses
 ==================
 

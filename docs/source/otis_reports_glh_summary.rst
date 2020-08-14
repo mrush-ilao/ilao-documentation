@@ -20,6 +20,7 @@ The report includes:
 Filters
 ==========
 Data can be directly filtered by:
+
 * One or more help types
 * Start and end dates of when the triage form was started
 * Legal issues.  
