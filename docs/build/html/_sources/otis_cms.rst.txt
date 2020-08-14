@@ -6,4 +6,6 @@ Get Legal Help
    :caption: Contents:
 
    otis_endpoints
+   otis_reports
    otis_ai_integration
+   
