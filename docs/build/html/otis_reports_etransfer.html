@@ -36,7 +36,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Referrals Report" href="otis_reports_referrals.html" />
+    <link rel="next" title="GLH Referral Count Report" href="otis_reports_referral_counts.html" />
     <link rel="prev" title="Get Legal Help Summary Report" href="otis_reports_glh_summary.html" /> 
 </head>
 
@@ -98,7 +98,11 @@
 <li class="toctree-l2"><a class="reference internal" href="otis_endpoints.html">Triage rule endpoints</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="otis_reports.html">Get Legal Help Reporting</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="otis_reports_glh_summary.html">Get Legal Help Summary Report</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Intake/Triage Report</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Intake/Triage Report</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#intake-statuses">Intake Statuses</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="otis_reports_referral_counts.html">GLH Referral Count Report</a></li>
 <li class="toctree-l3"><a class="reference internal" href="otis_reports_referrals.html">Referrals Report</a></li>
 </ul>
 </li>
@@ -180,6 +184,19 @@
             
   <div class="section" id="intake-triage-report">
 <h1>Intake/Triage Report<a class="headerlink" href="#intake-triage-report" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="intake-statuses">
+<h2>Intake Statuses<a class="headerlink" href="#intake-statuses" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Bypass intake - the user completed the program’s triage rules and was taken to the bypass intake message. They did not complete an intake application.</li>
+<li>Diverted - the user completed the program’s triage rules and was diverted because of legal issue.</li>
+<li>Offered - the user completed the program’s triage rules and was offered intake. The user did not start the intake form.</li>
+<li>Started - the user completed the program’s triage rules, was offered intake and completed at least one page in the intake form but did not complete the application.</li>
+<li>Eligible - the user completed the program’s triage rules, began intake and finished any financial information screens but did not complete the contact information.</li>
+<li>Over-income - the user completed the program’s triage rules, was offered intake, completed an intake application but was over-income.</li>
+<li>Over-asset - the user completed the program’s triage rules, was offered intake, completed an intake application but was over-asset (and not over-income).</li>
+<li>eTransferred -the user completed the program’s triage rules, was offered intake, completed an intake application that was eTransferred to the program.</li>
+</ul>
+</div>
 </div>
 
 
@@ -190,7 +207,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="otis_reports_referrals.html" class="btn btn-neutral float-right" title="Referrals Report" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="otis_reports_referral_counts.html" class="btn btn-neutral float-right" title="GLH Referral Count Report" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="otis_reports_glh_summary.html" class="btn btn-neutral float-left" title="Get Legal Help Summary Report" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
