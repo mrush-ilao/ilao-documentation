@@ -99,6 +99,8 @@
 <li class="toctree-l2 current"><a class="reference internal" href="otis_reports.html">Get Legal Help Reporting</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="otis_reports_glh_summary.html">Get Legal Help Summary Report</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Intake/Triage Report</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#report-data">Report Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filters">Filters</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#intake-statuses">Intake Statuses</a></li>
 </ul>
 </li>
@@ -186,6 +188,40 @@
 <h1>Intake/Triage Report<a class="headerlink" href="#intake-triage-report" title="Permalink to this headline">¶</a></h1>
 <p>The <a class="reference external" href="http://www.illinoislegalaid.org/admin/intake/reporting/eTransfers">intake &amp; triage report</a> includes information for users who were at least offered intake.</p>
 <img alt="_images/otis-etransfer-report.png" src="_images/otis-etransfer-report.png" />
+<div class="section" id="report-data">
+<h2>Report Data<a class="headerlink" href="#report-data" title="Permalink to this headline">¶</a></h2>
+<p>Report data includes:</p>
+<ul class="simple">
+<li>Triage ID (labeled as ID)</li>
+<li>Organization name (labeled Name)</li>
+<li>Location of the associated service</li>
+<li>Service associated with the intake</li>
+<li>Date the intake was created (Intake Created)</li>
+<li>Intake Status (see intake statuses below)</li>
+<li>Zip code entered by the user</li>
+<li>County, derived from the zip code entered</li>
+<li>Gender, if captured.  Not all organizations capture gender</li>
+<li>Race, if captured.  Not all organizations capture race</li>
+<li>Ethnicity, if captured.  Not all organizations capture ethnicity</li>
+<li>Martial status, if captured.  Not all organizations capture marital status</li>
+<li>Legal problem.  The tree of legal problems the user drilled through to get to intake</li>
+</ul>
+</div>
+<div class="section" id="filters">
+<h2>Filters<a class="headerlink" href="#filters" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Start and end date:  Either or both can be added.  This is based on intake created date.  There are some instances where this field is empty.  In those cases, the date will appear as 12/31/1969.</li>
+<li>Organization:  Supports partial matches to the organization name</li>
+<li>Services:  Supports partial  matches to a location-services for an organization</li>
+<li>Legal issues:  Single select of a legal issue.  This field is slightly problematic in that it returns only instances where the selected term matches part of the user’s drill down.</li>
+<li>Source:  this is currently legacy from D7 site to include whether the user accessed the system from a program widget or the modal (neither of which are part of the D8 site)</li>
+<li>Intake status:  this is a multi-select for different intake statuses.  See the intake status legend below.</li>
+</ul>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">Update the legal issues filter to have depth.</p>
+</div>
+</div>
 <div class="section" id="intake-statuses">
 <h2>Intake Statuses<a class="headerlink" href="#intake-statuses" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
