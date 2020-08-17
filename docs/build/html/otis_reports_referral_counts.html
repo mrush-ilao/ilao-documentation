@@ -35,7 +35,9 @@
 
     
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Referrals Report" href="otis_reports_referrals.html" />
+    <link rel="prev" title="Intake/Triage Report" href="otis_reports_etransfer.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -85,14 +87,29 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="otis_cms.html">Get Legal Help</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="otis_endpoints.html">Triage rule endpoints</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="otis_reports.html">Get Legal Help Reporting</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="otis_reports_glh_summary.html">Get Legal Help Summary Report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_reports_etransfer.html">Intake/Triage Report</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">GLH Referral Count Report</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#report-data">Report data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filters">Filters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="otis_reports_referrals.html">Referrals Report</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="otis_ai_integration.html">OTIS AI Integration</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul>
@@ -143,6 +160,10 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
+          <li><a href="otis_cms.html">Get Legal Help</a> &raquo;</li>
+        
+          <li><a href="otis_reports.html">Get Legal Help Reporting</a> &raquo;</li>
+        
       <li>GLH Referral Count Report</li>
     
     
@@ -164,6 +185,26 @@
             
   <div class="section" id="glh-referral-count-report">
 <h1>GLH Referral Count Report<a class="headerlink" href="#glh-referral-count-report" title="Permalink to this headline">¶</a></h1>
+<p>The <a class="reference external" href="https://www.illinoislegalaid.org/admin/reporting/get-legal-help/referral-counts">referral count report</a> shows the number of times a user was referred to a specific service using Get Legal Help.</p>
+<div class="section" id="report-data">
+<h2>Report data<a class="headerlink" href="#report-data" title="Permalink to this headline">¶</a></h2>
+<p>The report shows:</p>
+<ul class="simple">
+<li>Count of referrals made</li>
+<li>Service the referrals were made to</li>
+<li>Organization associated with the referrals</li>
+</ul>
+<p>..todo:: Where an organization is translated, duplicate rows are showing.</p>
+</div>
+<div class="section" id="filters">
+<h2>Filters<a class="headerlink" href="#filters" title="Permalink to this headline">¶</a></h2>
+<p>The report can be filtered on:</p>
+<ul class="simple">
+<li>Date the referrals were made</li>
+<li>The county associated with the request</li>
+<li>The legal issue, with depth.  This means that filtering on Divorce will include all child terms selected for example.</li>
+</ul>
+</div>
 </div>
 
 
@@ -171,6 +212,15 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="otis_reports_referrals.html" class="btn btn-neutral float-right" title="Referrals Report" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="otis_reports_etransfer.html" class="btn btn-neutral float-left" title="Intake/Triage Report" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
