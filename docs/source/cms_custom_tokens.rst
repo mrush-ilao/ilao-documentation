@@ -19,7 +19,7 @@ Staff can create different types of custom tokens to better manage custom tokens
 * Process-ES
 * Process-PL
 
-..note ::  The machine name for each type is lowercase.  Uppercase is not supported.  
+.. note::  The machine name for each type is lowercase.  Uppercase is not supported.  
 
 Adding and editing custom tokens
 ====================================
