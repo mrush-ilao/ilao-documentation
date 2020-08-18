@@ -19,6 +19,8 @@ Staff can create different types of custom tokens to better manage custom tokens
 * Process-ES
 * Process-PL
 
+..note ::  The machine name for each type is lowercase.  Uppercase is not supported.  
+
 Adding and editing custom tokens
 ====================================
 
@@ -45,7 +47,8 @@ Recommendations for Spanish and Polish tokens
 The recommended approach for Spanish and Polish tokens is:
 
 * Create the token in English first
-* Create the Spanish token using the -ES token type that matches the English but use the English machine name (for example, custom:minimum-wage would be custom-ES:minimum-wage)
+* For Spanish, create the Spanish token using the -es token type that matches the English but use the English machine name (for example, custom:minimum-wage would be custom-es:minimum-wage)
+* For Polish, create the Ppanish token using the -pl token type that matches the English but use the English machine name (for example, custom:minimum-wage would be custom-pl:minimum-wage)
 * Set the language code to the correct language.
 
 This approach will make it easier to update the tokens in content when translating.
