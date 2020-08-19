@@ -1,0 +1,411 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Legal content reporting &mdash; IllinoisLegalAid.org 1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Basic pages" href="basic_pages_cms.html" />
+    <link rel="prev" title="ADRM content" href="cms_adrm.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> IllinoisLegalAid.org
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2020
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cms_custom_tokens.html">Custom Tokens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_legal_content.html">Legal content type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_portal_main_page.html">Portal main page content type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_toolboxes.html">Toolbox and related content types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_adrm.html">ADRM content</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Legal content reporting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#main-content-report">Main content report</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#report-data">Report data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filters">Filters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bulk-actions">Bulk actions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#legal-content-report">Legal content report</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Report data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Filters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#moderated-content-report">Moderated content report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pending-reports">Pending reports</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="legal_content_cms.html#known-workarounds">Known Workarounds</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Workarounds:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cms_custom_tokens.html">Custom Tokens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_legal_content.html">Legal content type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_portal_main_page.html">Portal main page content type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_toolboxes.html">Toolbox and related content types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_adrm.html">ADRM content</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Legal content reporting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#main-content-report">Main content report</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#report-data">Report data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filters">Filters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bulk-actions">Bulk actions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#legal-content-report">Legal content report</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Report data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Filters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#moderated-content-report">Moderated content report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pending-reports">Pending reports</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="legal_content_cms.html#known-workarounds">Known Workarounds</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">IllinoisLegalAid.org</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="legal_content_cms.html">Legal Content CMS</a> &raquo;</li>
+        
+      <li>Legal content reporting</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/cms_content_reporting.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="legal-content-reporting">
+<h1>Legal content reporting<a class="headerlink" href="#legal-content-reporting" title="Permalink to this headline">¶</a></h1>
+<p>Available reports:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://www.illinoislegalaid.org/admin/content">Content main report (all content)</a></li>
+<li><a class="reference external" href="https://www.illinoislegalaid.org/admin/reporting/content/legal-content">Find legal content report</a></li>
+</ul>
+<div class="section" id="main-content-report">
+<h2>Main content report<a class="headerlink" href="#main-content-report" title="Permalink to this headline">¶</a></h2>
+<p>This is the basic Drupal report for content.  It includes all available content types.</p>
+<div class="section" id="report-data">
+<h3>Report data<a class="headerlink" href="#report-data" title="Permalink to this headline">¶</a></h3>
+<p>The report includes:</p>
+<ul class="simple">
+<li>the ID (node ID)</li>
+<li>the title</li>
+<li>the content type</li>
+<li>the format (this applies only to legal content)</li>
+<li>the author</li>
+<li>the date published (this is the created date unless manually changed)</li>
+<li>the last updated date.  This is the system date.  For legal content specific dates, use the find legal content report.</li>
+</ul>
+</div>
+<div class="section" id="filters">
+<h3>Filters<a class="headerlink" href="#filters" title="Permalink to this headline">¶</a></h3>
+<p>This report can be filtered on:</p>
+<ul class="simple">
+<li>node ID.  This will return a specific node.</li>
+<li>Title (contains)</li>
+<li>Content type (this is the system content type like legal content, event, basic page)</li>
+<li>Published status (yes or no)</li>
+<li>Translation language.  Using this will filter out translations for the same node.</li>
+</ul>
+</div>
+<div class="section" id="bulk-actions">
+<h3>Bulk actions<a class="headerlink" href="#bulk-actions" title="Permalink to this headline">¶</a></h3>
+<p>This is the system set of actions that can be applied to content.  Some of these are not relevant.</p>
+<ul class="simple">
+<li>Delete content  <strong>Be careful</strong> this will in fact delete selected content.</li>
+<li>Save content.  This will re-save content and update the last updated/changed date.</li>
+<li>Publish content.  This will publish unpublished content AND update the last updated/changed date.  It will not move legal content revisions that is under moderation from an unpublished state like draft/revise to published.</li>
+<li>Unpublish content.  This will unpublish published content and update the last updated/changed date.</li>
+<li>Update URL alias.  <strong>Use only if Gwen tells you to</strong>  This will reset path aliases.  This is helpful for some content types <strong>other than legal content.</strong></li>
+</ul>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">Update the action list to only relevant items.</p>
+</div>
+</div>
+</div>
+<div class="section" id="legal-content-report">
+<h2>Legal content report<a class="headerlink" href="#legal-content-report" title="Permalink to this headline">¶</a></h2>
+<p>Includes the following content types:</p>
+<ul class="simple">
+<li>Legal content</li>
+<li>ADRM content</li>
+<li>Portal content</li>
+<li>Toolboxes</li>
+<li>Toolbox tools</li>
+<li>Tool steps</li>
+</ul>
+<div class="section" id="id1">
+<h3>Report data<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Node ID (ID) of the content</li>
+<li>Title of the content</li>
+<li>Format of the content.  Applies only to legal content.</li>
+<li>Primary legal category of the content.</li>
+<li>Created date.  This is the date the system creates when the node is first created in any state.  It does not necessarily represent published date.</li>
+<li>Original author</li>
+<li>Last changed.  This is the date the system last recorded a change.  This is triggered whenever:<ul>
+<li>A user saves the node</li>
+<li>A system update saves the node.  This may happen if there is a scheduled change, Google analytics data added, or any other system action that causes a call to the node save function.</li>
+</ul>
+</li>
+<li>Last revised.  This is the “last internal revision” field. This date is manually sent when a staff user makes a substantive change to the content. Does not include typos, grammatical fixes, or style changes. Does include anything that adds or removes information, especially law changes.</li>
+<li>Last expert review.</li>
+<li>Published status (Yes or No)</li>
+<li>Language of the node (content in more than one language will have multiple rows in the report)</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The last revised and last expert review fields are not translatable in legal content but are translatable in toolbox, tool, and tool step content.    The last changed date is per language.</p>
+</div>
+<div class="admonition-todo admonition" id="index-1">
+<p class="first admonition-title">Todo</p>
+<p class="last">Last revised and last expert review fields need to be added to ADRM content; standardize date fields (translatable vs not translatable), apply formats to toolbox, ADRM content, portal pages.</p>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>Filters<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>The find legal content report has many filters.  Filters are based on an AND condition.</p>
+<ul class="simple">
+<li>ID is the node ID</li>
+<li>Title is the partial match of the title</li>
+<li>Category is the primary legal category for the content.  This is the single select dropdown for category versus the legal issues multiple-select field.</li>
+<li>Published status (yes or no).  Note that publish status is per node.  An unpublished translation in Spanish with a published English version would show as published.</li>
+<li>Content format.  This applies to legal content only and is set based on the paragraphs bundles included in the node.</li>
+<li>Translation exists is duplicative of the translation language field and should be removed.</li>
+<li>Created filters on the created date and can be set with a start date and/or end date</li>
+<li>Last revised filters on the last internal revision date and can be set with a start date and/or end date</li>
+<li>Last expert review filters on the last expert review date and can be set with a start date and/or end date</li>
+<li>Level (basic or advanced)</li>
+<li>Legal position</li>
+<li>Restrict (whether content is marked as restricted to legal aid or pro bono members)</li>
+<li>Jurisdiction (whether content is marked as national, statewide or relevant only to specific counties or cities) and to what counties, cities, or zip codes the content is tagged.  Applies only to legal content type content.</li>
+<li>Annual updates tagged to the content  Applies only to legal content type content and ADRM content.</li>
+<li>Whether the translation is currently marked as outdated</li>
+<li>Whether there is an open request to create a translation.  This field applies only to legal content.</li>
+<li>Translation language.  This should be used to limit the list to English, Spanish or Polish.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">because of the way jurisdictions were handled on the D7 site, the counties, cities and zipcodes show what jurisdictions the content is tagged to but the report <strong>does not show</strong> whether the relationship between the jurisdiction (some part of Illinois) includes or excludes the jurisdictions.  As of August 2020, the jurisdiction data is not used in any way on the website’s front-end.</p>
+</div>
+<div class="admonition-todo admonition" id="index-2">
+<p class="first admonition-title">Todo</p>
+<p class="last">Determine whether toolbox and portal content should have translation fields.</p>
+</div>
+</div>
+</div>
+<div class="section" id="moderated-content-report">
+<h2>Moderated content report<a class="headerlink" href="#moderated-content-report" title="Permalink to this headline">¶</a></h2>
+<p>This is a system report accessible from the main content report.  It needs review.</p>
+</div>
+<div class="section" id="pending-reports">
+<h2>Pending reports<a class="headerlink" href="#pending-reports" title="Permalink to this headline">¶</a></h2>
+<p>We need to add reports for:</p>
+<ul class="simple">
+<li>comments and ratings</li>
+<li>localized content</li>
+<li>toolbox and tool usage reports</li>
+<li>revision historical data</li>
+<li>possibly other reports TBD under structured content grant</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="basic_pages_cms.html" class="btn btn-neutral float-right" title="Basic pages" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cms_adrm.html" class="btn btn-neutral float-left" title="ADRM content" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Illinois Legal Aid Online
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

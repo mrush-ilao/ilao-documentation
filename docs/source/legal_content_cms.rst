@@ -13,6 +13,7 @@ Content types for legal content:
    cms_portal_main_page
    cms_toolboxes
    cms_adrm
+   cms_content_reporting
 
 Known Workarounds
 ===================
