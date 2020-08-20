@@ -189,6 +189,92 @@
             
   <div class="section" id="managing-locations">
 <h1>Managing Locations<a class="headerlink" href="#managing-locations" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="creating-a-location">
+<h2>Creating a location<a class="headerlink" href="#creating-a-location" title="Permalink to this headline">¶</a></h2>
+<p>At the bottom of the form is a Parent Organization field.  This is where the organization associated with the location must be set.  When set, this will then confer all of the organizational ownership to the location so that Organization Managers can edit the location.</p>
+<div class="section" id="contact-information">
+<h3>Contact information<a class="headerlink" href="#contact-information" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Give the location a title (name).  The name should be descriptive enough that when displayed to users it makes sense.  For example:  Bond County Courthouse, Main Office, Waukegan Office.</li>
+<li>Indicate whether the address matches the organization address.  For single-location organizations or the main office, this is likely to be Yes.  If it is set to No, the address form will display and be required.</li>
+<li>Indicate whether the phone number is the same as the one in the organization profile.  If it isn’t, you’ll be required to provide a phone number.</li>
+<li>Provide additional phone numbers, if they exist for toll-free and tty numbers.</li>
+</ul>
+<img alt="_images/otis-location-header.png" src="_images/otis-location-header.png" />
+</div>
+<div class="section" id="hours-of-operations">
+<h3>Hours of Operations<a class="headerlink" href="#hours-of-operations" title="Permalink to this headline">¶</a></h3>
+<p>There are two options to set a location’s hours of operations:  regular weekly hours and less frequent hours.</p>
+<p>When a location is open at least 1 day every week, the “Is this location open at least weekly?” should be set to Yes.</p>
+<p>The weekly hours form allows one to:</p>
+<ul class="simple">
+<li>Set individual hours per day</li>
+<li>Set up to 4 time slots per day; for example:  Monday 8 am - 12pm, 1pm - 5pm</li>
+</ul>
+<img alt="_images/otis-locations-hours-regular.png" src="_images/otis-locations-hours-regular.png" />
+<p>When a location is not open at least once a week, then we have to use the irregular hours form.  This form requires:</p>
+<ul class="simple">
+<li>setting a start date for the rule</li>
+<li>setting an end date for the rule</li>
+<li>setting a rule.  The rule can be generated <a class="reference external" href="https://icalendar.org/rrule-tool.html">using this online tool</a> and then copied and pasted in.</li>
+</ul>
+<img alt="_images/otis-locations-hours-irregular.png" src="_images/otis-locations-hours-irregular.png" />
+<div class="section" id="holiday">
+<h4>Holiday<a class="headerlink" href="#holiday" title="Permalink to this headline">¶</a></h4>
+<p>Holidays should be set for the location and may be overwritten at the service level.  When holidays are set for a location:</p>
+<ul class="simple">
+<li>When used in online triage and intake, the holidays will not show up in callback hours options</li>
+<li>When used in referrals, the displayed hours will show the holidays as a closed date.</li>
+</ul>
+<p>Holidays are managed in the <a class="reference external" href="https://www.illinoislegalaid.org/admin/structure/taxonomy/manage/holidays/overview">holidays taxonomy</a>.  Common Illinois and Federal holidays are included in the taxonomy.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Custom holidays can be added to the holiday taxonomy to accommodate unusual events where one or more organizations needs to be closed (such as a staff retreat) or for unusual occurrences (such as the every 4-5 years when the day after Thanksgiving is not the 4th Friday).</p>
+</div>
+</div>
+</div>
+<div class="section" id="service-area">
+<h3>Service area<a class="headerlink" href="#service-area" title="Permalink to this headline">¶</a></h3>
+<p>The service area consists of at least one question: does the location serve all of Illinois? If the location is less than statewide, then the user is required to set the service area at the county, city, or zip code level.</p>
+<img alt="_images/otis-locations-service-area.png" src="_images/otis-locations-service-area.png" />
+<p>For example, a location that serves Kane, Kendall, and DeKalb counties would have the limit to specific area set to Counties and then would list the 3 counties.  If a location serves only part of a county (for example, just the city of Chicago in Cook county, the limit to specific area should be set to Cities and Chicago should be listed).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The service area can be overridden at the service level.  For example, a location may serve 3 counties but have a specialty service that only serves 1 county.</p>
+</div>
+</div>
+<div class="section" id="service-costs">
+<h3>Service costs<a class="headerlink" href="#service-costs" title="Permalink to this headline">¶</a></h3>
+<p>Every location should indicate what it typically charges users/clients.  There are 4 options:</p>
+<ul class="simple">
+<li>Free to everyone.  This should be used when there is generally no charge and everyone is eligible.</li>
+<li>Free to eligible persons/entities.</li>
+<li>Sliding scale based on income</li>
+<li>Flat fee regardless of income</li>
+</ul>
+<img alt="_images/otis-locations-free-income.png" src="_images/otis-locations-free-income.png" />
+<p>When free to eligible persons/entities is selected, the user is then required to set an income limit and apply an income standard.</p>
+<img alt="_images/otis-locations-fees.png" src="_images/otis-locations-fees.png" />
+<p>When the user selects sliding scale or flat fee, a description of those fees is required.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">These settings can be overwritten at the service level and services can be further restricted to specific populations for the free to eligible persons/entities.</p>
+</div>
+</div>
+<div class="section" id="additional-fields">
+<h3>Additional Fields<a class="headerlink" href="#additional-fields" title="Permalink to this headline">¶</a></h3>
+<p>There are a handful of additional fields for locations:</p>
+<ul class="simple">
+<li>Volunteer information</li>
+<li>Image</li>
+<li>Attachments.</li>
+</ul>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">The volunteer information is no longer used and should be deprecated.</p>
+</div>
+</div>
+</div>
 </div>
 
 
