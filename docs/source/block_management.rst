@@ -11,6 +11,7 @@ Custom blocks
    blocks_sectional
    blocks_configuration
    blocks_translation
+   blocks_user_profiles
    
    
 
