@@ -25,5 +25,6 @@ Users who have the Organization Manager role have a dashboard that includes a bl
    otis_manage_nodes
    otis_manage_intake_settings
    otis_organization_reports
+   otis_fast_entry
 
 
