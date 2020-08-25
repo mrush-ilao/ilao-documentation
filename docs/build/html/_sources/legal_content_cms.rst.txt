@@ -8,6 +8,7 @@ Content types for legal content:
    :maxdepth: 2
    :caption: Content types for legal content:
    
+   cms_wysiwyg
    cms_custom_tokens
    cms_legal_content
    cms_portal_main_page
