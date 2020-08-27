@@ -17,6 +17,11 @@ Welcome to IllinoisLegalAid Documentation's documentation!
    testimonials_cms
    webforms_cms
    otis_cms
+   
+See also:
+   
+   `Google groups documentation <https://docs.google.com/document/d/10jq9kULtQsnE1LlcnsoC6dLErqDeAwCpT2AsnTb3Vqc/edit>`_
+   `ContentNet <https://sites.google.com/illinoislegalaid.org/contentnet/content-team-documentation>`_
 
    
    
