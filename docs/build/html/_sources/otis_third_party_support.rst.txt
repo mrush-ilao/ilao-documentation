@@ -24,7 +24,10 @@ In these samples, the request is coming from a 3rd party chatbot.
 User is in zip code 60603, legal issue is  enforcing a joint parenting plan or agreement 
 (514616) and the household size is 3.  
 
+Looking for a lawyer:
 `https://www.illinoislegalaid.org/get-legal-help?issue=514616&zipcode=60603&household=3&helptype[]=lawyer <https://www.illinoislegalaid.org/get-legal-help?issue=514616&zipcode=60603&household=3&helptype[]=lawyer>`_
+
+Looking for a lawyer & content:
 `https://www.illinoislegalaid.org/get-legal-help?issue=514616&zipcode=60603&household=3&helptype[]=lawyer&helptype[]=content <https://www.illinoislegalaid.org/get-legal-help?issue=514616&zipcode=60603&household=3&helptype[]=lawyer&helptype[]=content>`_
 
 .. image::  ../assets/otis-prefill-mobile.png
