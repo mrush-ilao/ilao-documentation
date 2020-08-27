@@ -19,3 +19,5 @@ When embedded within legal content:
 .. image:: ../assets/testimonials-embed.png
 
 .. todo:: Style work is needed before these can be used in legal content.
+
+.. image:: ../assets/testimonials-unstyled.png
