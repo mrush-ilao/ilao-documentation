@@ -9,4 +9,5 @@ Get Legal Help
    otis_endpoints
    otis_reports
    otis_ai_integration
+   otis_third_party_support
    
