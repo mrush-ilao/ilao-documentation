@@ -31,6 +31,8 @@ Guide
 
 Hex color: #A9c3f0
 
+.. image:: ../assets/design-guide-label.png
+
 Text article
 =============
 
@@ -74,7 +76,10 @@ Blank forms
 
 Hex color: #FFB0E9
 
-.. note:: Blank forms are not coded correctly and currently display the download or link icon based on the format of the blank form.
+
+.. image:: ../assets/design-formdownload-label.png
+
+.. image:: ../assets/design-formlink-label.png
 
 Link
 ======

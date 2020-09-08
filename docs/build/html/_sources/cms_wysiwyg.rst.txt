@@ -6,3 +6,4 @@ WYSIWYG Tools
    :caption: Contents:
 
    cms_link_tool
+   cms_localization_tool
