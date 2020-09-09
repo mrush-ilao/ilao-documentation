@@ -61,95 +61,7 @@ A legal problem has:
      </xs:complexType>
    </xs:schema>       
 
-.. code-block:: xml
 
-   <legalProblem>
-     <lifeAreaAffected>
-       <lifeAreas>Family</lifeAreas>
-     </lifeAreaAffected>
-     <cause>
-       <causeOf>Unknown</causeOf>
-     </cause>
-     <possibleSolution>
-       <legalSolution>
-         <solutionType>Court solution</solutionType>
-           <legalFormsNeeded>
-              <legalForm>
-                 <formName>Petition for Order of Protection</formName>
-              </legalForm>
-              <legalForm>
-                 <formName>Emergency Order of Protection</formName>
-              </legalForm>
-              <legalForm>
-                 <formName>Order of Protection</formName>
-              </legalForm>
-           </legalFormsNeeded>
-           <informationNeeded>none</informationNeeded>
-          <estimatedCost />
-          <legalDifficulty>Hard</legalDifficulty>
-         <jurisdiction>
-           <administrativeArea>State</administrativeArea>
-           <locality>Illinois</locality>
-         </jurisdiction>
-       <usedToSolve />
-       <eligibilityRules>
-         <textBlock>
-           <heading>One of the following must be true:</heading>
-           <list>
-             <listType>ordered</listType>
-             <listItem>Petitioner lives in Illinois</listItem>
-             <listItem>Abuse happened in Illinois</listItem>
-             <listItem>Petitioner is staying in Illinois to avoid abuse</listItem>
-          </list>
-        <textBlock>
-           <body>There must have been abuse by the Respondent. Abuse includes physical abuse, harassment, intimidation of a dependent, interference with personal liberty, and willful deprivation.
-           </body>
-         </textBlock>    
-        </eligibilityRules>  
-        <process>
-    
-        </process>      
-       </legalSolution>
-     </possibleSolution>
-     <stage>Prefiling</stage>
-     <subType>Changing an order of protection</subType>
-     <subType>Renewing an order of protection</subType>
-     <legalCode>
-     </legalCode>
-     <faq>
-       <question>
-         <body>What if I have children?</body>
-         <acceptedAnswer>
-           <answer>
-            <textBlock>
-               <body>The judge can add children as protected persons on an Order of Protection. This means that they will be protected by the order. The judge may give you temporary physical care and control of your children, temporary parental duties, or both.
-               </body>
-             </textBlock>
-             <textBlock>
-             <heading>The court may also limit or deny the abuser's parenting time. The judge may do this if the abuser has done, or is likely to do, any of the following:</heading>
-             <list>
-               <listType>unordered</listType>
-               <listItem>Abuse or cause danger to the children during parenting time,</listItem>
-	           <listItem>Use parenting time as a chance to abuse or harass you and your family members,</listItem>
-               <listItem>Hide the children or keep them from you, or</listItem>
-               <listItem>Act in a way that is not in the best interests of the children.</listItem>
-
-             </list>
-             </textBlock>
-           </answer>
-         </acceptedAnswer>
-       </question>  
-       <question>
-         <body>What if my abuser lives with me?</body>
-         <answer>
-           <textBlock>
-             <body>
-             "If you live with your abuser, you can ask for exclusive possession of the home. The abuser will have to leave and stay away from the home. If the abuser has a legal right to be in the home, the judge will need to decide whether it is more difficult for you or the abuser to leave. The judge may ask if you have another place to stay, your abuser has another place to stay, any children live with you, both of you work, or if your home is near your workplace or your children's school. If the judge orders exclusive possession, call the police and ask that they escort you home. Tell the police officer that you have an Order of Protection and need the respondent removed from your home. The police will meet you at your home and tell the abuser they have to leave. The court can order that you or the abuser be able to go into the house without the police to get clothing, medicine, or other items you need
-             </body>
-           </textBlock>
-         </answer>
-     </faq>
-   </legalProblem>  
 
 Legal Solution
 ================
@@ -243,47 +155,7 @@ A legal solution has:
   
    </xs:schema>    
          
-.. code-block:: xml
 
-   <legalSolution>
-     <solutionType>Court solution</solutionType>
-     <legalFormsNeeded>
-       <legalForm>
-         <formName>Petition for Order of Protection</formName>
-       </legalForm>
-       <legalForm>
-         <formName>Emergency Order of Protection</formName>
-       </legalForm>
-       <legalForm>
-         <formName>Order of Protection</formName>
-       </legalForm>
-     </legalFormsNeeded>
-     <informationNeeded>none</informationNeeded>
-     <estimatedCost />
-     <legalDifficulty>Hard</legalDifficulty>
-     <jurisdiction>
-       <administrativeArea>State</administrativeArea>
-       <locality>Illinois</locality>
-    </jurisdiction>
-    <usedToSolve />
-    <eligibilityRules>
-      <textBlock>
-        <heading>One of the following must be true:</heading>
-        <list>
-          <listType>ordered</listType>
-          <listItem>Petitioner lives in Illinois</listItem>
-          <listItem>Abuse happened in Illinois</listItem>
-          <listItem>Petitioner is staying in Illinois to avoid abuse</listItem>
-       </list>
-      <textBlock>
-         <body>There must have been abuse by the Respondent. Abuse includes physical abuse, harassment, intimidation of a dependent, interference with personal liberty, and willful deprivation.</body>
-      </textBlock>    
-    </eligibilityRules>  
-    <process>
-    
-    </process>      
-   <legalSolution>
-   
 References from Schema.org 
 ==========================
 
@@ -327,6 +199,7 @@ See
 
 * https://schema.org/HowTo
 * https://schema.org/HowToStep
+* https://schema.org/HowToSection
 * https://schema.org/HowToDirection
 * https://en.wikipedia.org/wiki/ISO_8601#Durations
 
@@ -340,16 +213,23 @@ See
          <xs:element name="estimatedCost" type="monetaryAmount" minOccurs="0" maxOccurs="unbounded">
          <xs:element name="prepTime>" type="Duration" />
     	 <xs:element name="performTime>" type="Duration" />
-    	 <xs:element name="step" type="HowToStep" minOccurs="1" maxOccurs="unbounded"/>
+    	 <xs:element name="step" type="HowToSection" minOccurs="1" maxOccurs="unbounded"/>
     	 <xs:element name="supply" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
     	 <xs:element name="tool" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
     	 <xs:element name="totalTime>" type="Duration" />
     	 <xs:element name="yield" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>	 
        </xs:sequence>
      </xs:complexType>
+     <xs:complexType name="HowToSection">
+       <xs:sequence>
+          <xs:element name="name" type="xs:string" />
+         <xs:element name="position" type="xs:integer"/>
+         <xs:element name="HowToStep" minOccurs="1" maxOccurs="unbounded"/>
+       </xs:sequence> 
+     </xs:complexType>
      <xs:complexType name="HowToStep">
        <xs:sequence>
-         <xs:element name="name" type="xs:string" />
+         <xs:element name="name" type="xs:string" minOccurs="0" />
          <xs:element name="position" type="xs:integer"/>
          <xs:element name="howToDirection" type="HowToDirection" minOccurs="0" maxOccurs="unbounded" />  
          <xs:element name="howToTip" type="HowToTip" minOccurs="0" maxOccurs="unbounded" />  
@@ -369,7 +249,135 @@ See
      </xs:complexType>
     </xs:schema> 
     
+Sample
+=========
+
+.. code-block:: xml
+
+   <legalProblem>
+     <lifeAreaAffected>
+       <lifeAreas>Family</lifeAreas>
+     </lifeAreaAffected>
+     <cause>
+       <causeOf>Unknown</causeOf>
+     </cause>
+     <possibleSolution>
+       <legalSolution>
+         <solutionType>Court solution</solutionType>
+           <legalFormsNeeded>
+              <legalForm>
+                 <formName>Petition for Order of Protection</formName>
+              </legalForm>
+              <legalForm>
+                 <formName>Emergency Order of Protection</formName>
+              </legalForm>
+              <legalForm>
+                 <formName>Order of Protection</formName>
+              </legalForm>
+           </legalFormsNeeded>
+           <informationNeeded>none</informationNeeded>
+          <estimatedCost />
+          <legalDifficulty>Hard</legalDifficulty>
+         <jurisdiction>
+           <administrativeArea>State</administrativeArea>
+           <locality>Illinois</locality>
+         </jurisdiction>
+       <usedToSolve />
+       <eligibilityRules>
+         <textBlock>
+           <heading>One of the following must be true:</heading>
+           <list>
+             <listType>ordered</listType>
+             <listItem>Petitioner lives in Illinois</listItem>
+             <listItem>Abuse happened in Illinois</listItem>
+             <listItem>Petitioner is staying in Illinois to avoid abuse</listItem>
+          </list>
+        <textBlock>
+           <body>There must have been abuse by the Respondent. Abuse includes physical abuse, harassment, intimidation of a dependent, interference with personal liberty, and willful deprivation.
+           </body>
+         </textBlock>    
+        </eligibilityRules>  
+        <process>
+          <name>Changing or renewing an order of protection</name>
+          <description></description>
+          <prepTime>P1W</prepTime>
+          <performTime></performTime>
+          <step>
+            <name>Fill out your forms</name>
+            <position>1</position>
+            <howToStep>
+              <howToDirection>
+                <position>1</position>
+                <direction>
+                To change, renew, or end an Order of Protection, you will need to file some forms with the circuit clerk. This includes a Motion and a Notice of Motion. You can use our <a href="/node/30971" title="motion">Motion program</a> to help you fill out your forms
+                </direction>
+                <tip>
+              A motion to end an order is called a Motion to Terminate. A motion to change an order is called a Motion to Modify. A motion to renew an order is called a Motion to Extend
+                </tip>
+              </howToDirection>
+            </howToStep>
+          </step>
+          <step>
+            <name>File Your Forms</name>
+            <position>2</position>
+            <howToStep>
+              <name>E-file your forms</name>
+              <position>1</position>
+              <direction>Now that you have filled out your forms, file them with the appropriate circuit clerk. They will give you a hearing date.</direction>
+              <tip><a href="http://www.illinoiscourts.gov/CircuitCourt/CircuitCourtJudges/CCC_County.asp">This site provides a list of court locations.</a></tip>
+            </howToStep>
+            <howToStep>
+              <name>Apply for a waiver from e-filing</name>
+              <position>2</position>
+              
+              <tip>You may be able to file your forms on paper if you qualify for a waiver.
+              <direction>Go here to figure this out.</direction>
+            </howToStep>
      
+          </step>
+          <totalTime>P1Y</totalTime>
+        </process>      
+       </legalSolution>
+     </possibleSolution>
+     <stage>Prefiling</stage>
+     <subType>Changing an order of protection</subType>
+     <subType>Renewing an order of protection</subType>
+     <legalCode>
+     </legalCode>
+     <faq>
+       <question>
+         <body>What if I have children?</body>
+         <acceptedAnswer>
+           <answer>
+            <textBlock>
+               <body>The judge can add children as protected persons on an Order of Protection. This means that they will be protected by the order. The judge may give you temporary physical care and control of your children, temporary parental duties, or both.
+               </body>
+             </textBlock>
+             <textBlock>
+             <heading>The court may also limit or deny the abuser's parenting time. The judge may do this if the abuser has done, or is likely to do, any of the following:</heading>
+             <list>
+               <listType>unordered</listType>
+               <listItem>Abuse or cause danger to the children during parenting time,</listItem>
+	           <listItem>Use parenting time as a chance to abuse or harass you and your family members,</listItem>
+               <listItem>Hide the children or keep them from you, or</listItem>
+               <listItem>Act in a way that is not in the best interests of the children.</listItem>
+
+             </list>
+             </textBlock>
+           </answer>
+         </acceptedAnswer>
+       </question>  
+       <question>
+         <body>What if my abuser lives with me?</body>
+         <answer>
+           <textBlock>
+             <body>
+             "If you live with your abuser, you can ask for exclusive possession of the home. The abuser will have to leave and stay away from the home. If the abuser has a legal right to be in the home, the judge will need to decide whether it is more difficult for you or the abuser to leave. The judge may ask if you have another place to stay, your abuser has another place to stay, any children live with you, both of you work, or if your home is near your workplace or your children's school. If the judge orders exclusive possession, call the police and ask that they escort you home. Tell the police officer that you have an Order of Protection and need the respondent removed from your home. The police will meet you at your home and tell the abuser they have to leave. The court can order that you or the abuser be able to go into the house without the police to get clothing, medicine, or other items you need
+             </body>
+           </textBlock>
+         </answer>
+     </faq>
+   </legalProblem>   
      
      
    
