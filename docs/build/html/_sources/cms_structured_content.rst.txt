@@ -2,6 +2,32 @@
 Structured Content Schema
 ==========================
 
+Legal Problem
+
+.. code-block:: xml
+
+   <?xml version="1.0" encoding="UTF-8" ?>
+   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+     <xs:sequence>
+       <xs:element name="lifeAreaAffected" type="xs:string"/>
+       <xs:element name="cause" type="legalCause"/>
+       <xs:element name="possibleSolution" type="legalSolution" minoccurs="1" maxoccurs="unbounded" />
+       <xs:element name="primaryPrevention" type="legalSolution" minoccurs="0" />
+       <xs:element name="secondaryPrevention" type="legalSolution" minoccurs="0" />
+       <xs:element name="stage" type="xs:string" minoccurs="1" maxoccurs="unbounded" />
+       <xs:element name="subType" type="xs:string" minoccurs="1" maxoccurs="unbounded" />
+      </xs:sequence>
+   </xs:schema>  
+  
+.. code-block:: xml
+
+   <?xml version="1.0" encoding="UTF-8" ?>
+   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+     <xs:complexType name="legalCause">
+     </xs:complexType>
+   </xs:schema>       
+
+
 Legal Solution
 
 .. code-block:: xml
@@ -49,10 +75,10 @@ Legal Solution
    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <xs:simpleType name="solutionType">
      <xs:restriction base="xs:string">
-       <xs:enumeration value="courtSolution" />
-       <xs:enumeration value="agencySolution" />
-       <xs:enumeration value="executionSolution" />
-       <xs:enumeration value="communicationSolution" />
+       <xs:enumeration value="Court solution" />
+       <xs:enumeration value="Agency solution" />
+       <xs:enumeration value="Execution solution" />
+       <xs:enumeration value="Communication solution" />
      </xs:restriction>
    </xs:simpleType>
    <xs:complexType name="legalForm">
@@ -87,7 +113,39 @@ Legal Solution
 .. code-block:: xml
 
    <legalSolution>
-     <solutionType>
+     <solutionType>Court solution</solutionType>
+     <legalFormsNeeded>
+       <legalForm>
+         <formName>Petition for Order of Protection</formName>
+       </legalForm>
+       <legalForm>
+         <formName>Emergency Order of Protection</formName>
+       </legalForm>
+       <legalForm>
+         <formName>Order of Protection</formName>
+       </legalForm>
+     </legalFormsNeeded>
+     <informationNeeded>none</informationNeeded>
+     <estimatedCost />
+     <legalDifficulty>Hard</legalDifficulty>
+     <jurisdiction>
+       <administrativeArea>State</administrativeArea>
+       <locality>Illinois</locality>
+    </jurisdiction>
+    <usedToSolve />
+    <eligibilityRules>
+      <textBlock>
+        <heading>One of the following must be true:</heading>
+        <list>
+          <listType>ordered</listType>
+          <listItem>Petitioner lives in Illinois</listItem>
+          <listItem>Abuse happened in Illinois</listItem>
+          <listItem>Petitioner is staying in Illinois to avoid abuse</listItem>
+       </list>
+      <textBlock>
+         <body>There must have been abuse by the Respondent. Abuse includes physical abuse, harassment, intimidation of a dependent, interference with personal liberty, and willful deprivation.</body>
+      </textBlock>    
+    </eligibilityRules>        
    <legalSolution>
 
 More text here
