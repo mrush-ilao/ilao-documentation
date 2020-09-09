@@ -94,7 +94,16 @@
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Structured Content Schema</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Structured Content Schema</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#legal-problem">Legal Problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#legal-solution">Legal Solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#references-from-schema-org">References from Schema.org</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#question-and-answer">Question and Answer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to">How To</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul>
@@ -166,17 +175,28 @@
             
   <div class="section" id="structured-content-schema">
 <h1>Structured Content Schema<a class="headerlink" href="#structured-content-schema" title="Permalink to this headline">¶</a></h1>
-<p>Legal Problem</p>
+<p>A legal problem is the primary entity and has within it faqs and solutions.  A solution may have processes (how-to) included.</p>
+<div class="section" id="legal-problem">
+<h2>Legal Problem<a class="headerlink" href="#legal-problem" title="Permalink to this headline">¶</a></h2>
+<p>A legal problem has:</p>
+<ul class="simple">
+<li>one or more possible solutions</li>
+<li>possible preventions</li>
+<li>faqs associated with the problems, built on the faq schema</li>
+</ul>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
 <span class="nt">&lt;xs:schema</span> <span class="na">xmlns:xs=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;xs:include</span> <span class="na">schemaLocation=</span><span class="s">&quot;https://schema.org/Question&quot;</span><span class="nt">/&gt;</span>
   <span class="nt">&lt;xs:sequence&gt;</span>
-    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;lifeAreaAffected&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;lifeAreaAffected&quot;</span> <span class="na">type=</span><span class="s">&quot;lifeAreas&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;1&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span><span class="nt">/&gt;</span>
     <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;cause&quot;</span> <span class="na">type=</span><span class="s">&quot;legalCause&quot;</span><span class="nt">/&gt;</span>
-    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;possibleSolution&quot;</span> <span class="na">type=</span><span class="s">&quot;legalSolution&quot;</span> <span class="na">minoccurs=</span><span class="s">&quot;1&quot;</span> <span class="na">maxoccurs=</span><span class="s">&quot;unbounded&quot;</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;primaryPrevention&quot;</span> <span class="na">type=</span><span class="s">&quot;legalSolution&quot;</span> <span class="na">minoccurs=</span><span class="s">&quot;0&quot;</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;secondaryPrevention&quot;</span> <span class="na">type=</span><span class="s">&quot;legalSolution&quot;</span> <span class="na">minoccurs=</span><span class="s">&quot;0&quot;</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;stage&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="na">minoccurs=</span><span class="s">&quot;1&quot;</span> <span class="na">maxoccurs=</span><span class="s">&quot;unbounded&quot;</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;subType&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="na">minoccurs=</span><span class="s">&quot;1&quot;</span> <span class="na">maxoccurs=</span><span class="s">&quot;unbounded&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;possibleSolution&quot;</span> <span class="na">type=</span><span class="s">&quot;legalSolution&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;1&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;primaryPrevention&quot;</span> <span class="na">type=</span><span class="s">&quot;legalSolution&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;secondaryPrevention&quot;</span> <span class="na">type=</span><span class="s">&quot;legalSolution&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;stage&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;1&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;subType&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;1&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;legalCode&quot;</span> <span class="na">type=</span><span class="s">&quot;legalCode&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;1&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;questions&quot;</span> <span class="na">type=</span><span class="s">&quot;FAQPage&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span> <span class="nt">/&gt;</span>
    <span class="nt">&lt;/xs:sequence&gt;</span>
 <span class="nt">&lt;/xs:schema&gt;</span>
 </pre></div>
@@ -184,25 +204,145 @@
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
 <span class="nt">&lt;xs:schema</span> <span class="na">xmlns:xs=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;xs:complexType</span> <span class="na">name=</span><span class="s">&quot;legalCause&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;causeOf&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/xs:complexType&gt;</span>
+  <span class="nt">&lt;xs:simpleType</span> <span class="na">name=</span><span class="s">&quot;lifeAreas&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:string&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;Housing&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;Income&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;Family&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;Immigration status&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;Driving privileges&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;Ability to work&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;Last wishes&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;Freedom to move&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;Creditworthiness&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;Consumer rights&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;Health&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/xs:restriction&gt;</span>
+  <span class="nt">&lt;/xs:simpleType&gt;</span>
+  <span class="nt">&lt;xs:complexType</span> <span class="na">name=</span><span class="s">&quot;legalCode&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;xs:sequence&gt;</span>
+      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;codeValue&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;codingSystem&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/xs:sequence&gt;</span>
   <span class="nt">&lt;/xs:complexType&gt;</span>
 <span class="nt">&lt;/xs:schema&gt;</span>
 </pre></div>
 </div>
-<p>Legal Solution</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;legalProblem&gt;</span>
+  <span class="nt">&lt;lifeAreaAffected&gt;</span>
+    <span class="nt">&lt;lifeAreas&gt;</span>Family<span class="nt">&lt;/lifeAreas&gt;</span>
+  <span class="nt">&lt;/lifeAreaAffected&gt;</span>
+  <span class="nt">&lt;cause&gt;</span>
+    <span class="nt">&lt;causeOf&gt;</span>Unknown<span class="nt">&lt;/causeOf&gt;</span>
+  <span class="nt">&lt;/cause&gt;</span>
+  <span class="nt">&lt;possibleSolution&gt;</span>
+    <span class="nt">&lt;legalSolution&gt;</span>
+      <span class="nt">&lt;solutionType&gt;</span>Court solution<span class="nt">&lt;/solutionType&gt;</span>
+        <span class="nt">&lt;legalFormsNeeded&gt;</span>
+           <span class="nt">&lt;legalForm&gt;</span>
+              <span class="nt">&lt;formName&gt;</span>Petition for Order of Protection<span class="nt">&lt;/formName&gt;</span>
+           <span class="nt">&lt;/legalForm&gt;</span>
+           <span class="nt">&lt;legalForm&gt;</span>
+              <span class="nt">&lt;formName&gt;</span>Emergency Order of Protection<span class="nt">&lt;/formName&gt;</span>
+           <span class="nt">&lt;/legalForm&gt;</span>
+           <span class="nt">&lt;legalForm&gt;</span>
+              <span class="nt">&lt;formName&gt;</span>Order of Protection<span class="nt">&lt;/formName&gt;</span>
+           <span class="nt">&lt;/legalForm&gt;</span>
+        <span class="nt">&lt;/legalFormsNeeded&gt;</span>
+        <span class="nt">&lt;informationNeeded&gt;</span>none<span class="nt">&lt;/informationNeeded&gt;</span>
+       <span class="nt">&lt;estimatedCost</span> <span class="nt">/&gt;</span>
+       <span class="nt">&lt;legalDifficulty&gt;</span>Hard<span class="nt">&lt;/legalDifficulty&gt;</span>
+      <span class="nt">&lt;jurisdiction&gt;</span>
+        <span class="nt">&lt;administrativeArea&gt;</span>State<span class="nt">&lt;/administrativeArea&gt;</span>
+        <span class="nt">&lt;locality&gt;</span>Illinois<span class="nt">&lt;/locality&gt;</span>
+      <span class="nt">&lt;/jurisdiction&gt;</span>
+    <span class="nt">&lt;usedToSolve</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;eligibilityRules&gt;</span>
+      <span class="nt">&lt;textBlock&gt;</span>
+        <span class="nt">&lt;heading&gt;</span>One of the following must be true:<span class="nt">&lt;/heading&gt;</span>
+        <span class="nt">&lt;list&gt;</span>
+          <span class="nt">&lt;listType&gt;</span>ordered<span class="nt">&lt;/listType&gt;</span>
+          <span class="nt">&lt;listItem&gt;</span>Petitioner lives in Illinois<span class="nt">&lt;/listItem&gt;</span>
+          <span class="nt">&lt;listItem&gt;</span>Abuse happened in Illinois<span class="nt">&lt;/listItem&gt;</span>
+          <span class="nt">&lt;listItem&gt;</span>Petitioner is staying in Illinois to avoid abuse<span class="nt">&lt;/listItem&gt;</span>
+       <span class="nt">&lt;/list&gt;</span>
+     <span class="nt">&lt;textBlock&gt;</span>
+        <span class="nt">&lt;body&gt;</span>There must have been abuse by the Respondent. Abuse includes physical abuse, harassment, intimidation of a dependent, interference with personal liberty, and willful deprivation.
+        <span class="nt">&lt;/body&gt;</span>
+      <span class="nt">&lt;/textBlock&gt;</span>
+     <span class="nt">&lt;/eligibilityRules&gt;</span>
+     <span class="nt">&lt;process&gt;</span>
+
+     <span class="nt">&lt;/process&gt;</span>
+    <span class="nt">&lt;/legalSolution&gt;</span>
+  <span class="nt">&lt;/possibleSolution&gt;</span>
+  <span class="nt">&lt;stage&gt;</span>Prefiling<span class="nt">&lt;/stage&gt;</span>
+  <span class="nt">&lt;subType&gt;</span>Changing an order of protection<span class="nt">&lt;/subType&gt;</span>
+  <span class="nt">&lt;subType&gt;</span>Renewing an order of protection<span class="nt">&lt;/subType&gt;</span>
+  <span class="nt">&lt;legalCode&gt;</span>
+  <span class="nt">&lt;/legalCode&gt;</span>
+  <span class="nt">&lt;faq&gt;</span>
+    <span class="nt">&lt;question&gt;</span>
+      <span class="nt">&lt;body&gt;</span>What if I have children?<span class="nt">&lt;/body&gt;</span>
+      <span class="nt">&lt;acceptedAnswer&gt;</span>
+        <span class="nt">&lt;answer&gt;</span>
+         <span class="nt">&lt;textBlock&gt;</span>
+            <span class="nt">&lt;body&gt;</span>The judge can add children as protected persons on an Order of Protection. This means that they will be protected by the order. The judge may give you temporary physical care and control of your children, temporary parental duties, or both.
+            <span class="nt">&lt;/body&gt;</span>
+          <span class="nt">&lt;/textBlock&gt;</span>
+          <span class="nt">&lt;textBlock&gt;</span>
+          <span class="nt">&lt;heading&gt;</span>The court may also limit or deny the abuser&#39;s parenting time. The judge may do this if the abuser has done, or is likely to do, any of the following:<span class="nt">&lt;/heading&gt;</span>
+          <span class="nt">&lt;list&gt;</span>
+            <span class="nt">&lt;listType&gt;</span>unordered<span class="nt">&lt;/listType&gt;</span>
+            <span class="nt">&lt;listItem&gt;</span>Abuse or cause danger to the children during parenting time,<span class="nt">&lt;/listItem&gt;</span>
+                <span class="nt">&lt;listItem&gt;</span>Use parenting time as a chance to abuse or harass you and your family members,<span class="nt">&lt;/listItem&gt;</span>
+            <span class="nt">&lt;listItem&gt;</span>Hide the children or keep them from you, or<span class="nt">&lt;/listItem&gt;</span>
+            <span class="nt">&lt;listItem&gt;</span>Act in a way that is not in the best interests of the children.<span class="nt">&lt;/listItem&gt;</span>
+
+          <span class="nt">&lt;/list&gt;</span>
+          <span class="nt">&lt;/textBlock&gt;</span>
+        <span class="nt">&lt;/answer&gt;</span>
+      <span class="nt">&lt;/acceptedAnswer&gt;</span>
+    <span class="nt">&lt;/question&gt;</span>
+    <span class="nt">&lt;question&gt;</span>
+      <span class="nt">&lt;body&gt;</span>What if my abuser lives with me?<span class="nt">&lt;/body&gt;</span>
+      <span class="nt">&lt;answer&gt;</span>
+        <span class="nt">&lt;textBlock&gt;</span>
+          <span class="nt">&lt;body&gt;</span>
+          &quot;If you live with your abuser, you can ask for exclusive possession of the home. The abuser will have to leave and stay away from the home. If the abuser has a legal right to be in the home, the judge will need to decide whether it is more difficult for you or the abuser to leave. The judge may ask if you have another place to stay, your abuser has another place to stay, any children live with you, both of you work, or if your home is near your workplace or your children&#39;s school. If the judge orders exclusive possession, call the police and ask that they escort you home. Tell the police officer that you have an Order of Protection and need the respondent removed from your home. The police will meet you at your home and tell the abuser they have to leave. The court can order that you or the abuser be able to go into the house without the police to get clothing, medicine, or other items you need
+          <span class="nt">&lt;/body&gt;</span>
+        <span class="nt">&lt;/textBlock&gt;</span>
+      <span class="nt">&lt;/answer&gt;</span>
+  <span class="nt">&lt;/faq&gt;</span>
+<span class="nt">&lt;/legalProblem&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="legal-solution">
+<h2>Legal Solution<a class="headerlink" href="#legal-solution" title="Permalink to this headline">¶</a></h2>
+<p>A legal solution has:</p>
+<ul class="simple">
+<li>an associated problem (legal solution is an entity within a problem)</li>
+<li>one or more legal forms</li>
+<li>one or more steps based on the schema.org HowTo schema</li>
+</ul>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
 <span class="nt">&lt;xs:schema</span> <span class="na">xmlns:xs=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;xs:include</span> <span class="na">schemaLocation=</span><span class="s">&quot;https://schema.org/HowTo&quot;</span><span class="nt">/&gt;</span>
   <span class="nt">&lt;xs:complexType</span> <span class="na">name=</span><span class="s">&quot;textBlock&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;xs:sequence&gt;</span>
-      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;heading&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="na">minoccurs=</span><span class="s">0</span> <span class="na">maxoccurs=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;body&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="na">minoccurs=</span><span class="s">0</span> <span class="na">maxoccurs=</span><span class="s">&quot;unbounded&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;list&quot;</span> <span class="na">type=</span><span class="s">&quot;listBlock&quot;</span> <span class="na">minoccurs=</span><span class="s">0</span> <span class="na">maxoccurs=</span><span class="s">&quot;unbounded&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;heading&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="na">minOccurs=</span><span class="s">0</span> <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;body&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="na">minOccurs=</span><span class="s">0</span> <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;list&quot;</span> <span class="na">type=</span><span class="s">&quot;listBlock&quot;</span> <span class="na">minOccurs=</span><span class="s">0</span> <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span><span class="nt">&gt;</span>
      <span class="nt">&lt;/xs:sequence&gt;</span>
   <span class="nt">&lt;/xs:complexType&gt;</span>
   <span class="nt">&lt;xs:complexType</span> <span class="na">name=</span><span class="s">&quot;listBlock&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;xs:sequence&gt;</span>
-      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;heading&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="na">minoccurs=</span><span class="s">0</span> <span class="na">maxoccurs=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;listType&quot;</span> <span class="na">type=</span><span class="s">&quot;listTypes&quot;</span> <span class="na">minoccurs=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;listItem&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="na">minoccurs=</span><span class="s">0</span> <span class="na">maxoccurs=</span><span class="s">&quot;unbounded&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;heading&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="na">minOccurs=</span><span class="s">0</span> <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;listType&quot;</span> <span class="na">type=</span><span class="s">&quot;listTypes&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;listItem&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="na">minOccurs=</span><span class="s">0</span> <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span><span class="nt">&gt;</span>
      <span class="nt">&lt;/xs:sequence&gt;</span>
   <span class="nt">&lt;/xs:complexType&gt;</span>
   <span class="nt">&lt;xs:simpleType</span> <span class="na">name=</span><span class="s">&quot;solutionType&quot;</span><span class="nt">&gt;</span>
@@ -212,15 +352,16 @@
     <span class="nt">&lt;/xs:restriction&gt;</span>
   <span class="nt">&lt;/xs:simpleType&gt;</span>
   <span class="nt">&lt;xs:sequence&gt;</span>
-    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;solutionType&quot;</span> <span class="na">type=</span><span class="s">&quot;solutionType&quot;</span> <span class="na">minoccurs=</span><span class="s">&quot;1&quot;</span> <span class="na">maxoccurs=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
-    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;legalFormsNeeded&quot;</span> <span class="na">type=</span><span class="s">&quot;legalForms&quot;</span> <span class="na">minoccurs=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;solutionType&quot;</span> <span class="na">type=</span><span class="s">&quot;solutionType&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;1&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;legalFormsNeeded&quot;</span> <span class="na">type=</span><span class="s">&quot;legalForms&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
     <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;informationNeeded&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;estimatedCost&quot;</span> <span class="na">type=</span><span class="s">&quot;monetaryAmount&quot;</span> <span class="na">minoccurs=</span><span class="s">&quot;0&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;estimatedCost&quot;</span> <span class="na">type=</span><span class="s">&quot;monetaryAmount&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;legalDifficulty&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;estimatedTimeToComplete&quot;</span> <span class="na">type=</span><span class="s">&quot;&quot;</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;jurisdiction&quot;</span> <span class="na">type=</span><span class="s">&quot;jurisdiction&quot;</span><span class="nt">/&gt;</span>
     <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;usedToSolve&quot;</span> <span class="na">type=</span><span class="s">&quot;legalProblem&quot;</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;eligibilityRules&quot;</span> <span class="na">type=</span><span class="s">&quot;textBlock&quot;</span> <span class="na">minoccurs=</span><span class="s">&quot;0&quot;</span> <span class="na">maxoccurs=</span><span class="s">&quot;unbounded&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;eligibilityRules&quot;</span> <span class="na">type=</span><span class="s">&quot;textBlock&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;process&quot;</span> <span class="na">type=</span><span class="s">&quot;HowTo&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span><span class="nt">/&gt;</span>
   <span class="nt">&lt;/xs:sequence&gt;</span>
 <span class="nt">&lt;/xs:schema&gt;</span>
 </pre></div>
@@ -237,19 +378,19 @@
 <span class="nt">&lt;/xs:simpleType&gt;</span>
 <span class="nt">&lt;xs:complexType</span> <span class="na">name=</span><span class="s">&quot;legalForm&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;xs:sequence&gt;</span>
-    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;formName&quot;</span> <span class="na">minoccurs=</span><span class="s">&quot;1&quot;</span> <span class="na">maxoccurs=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;formName&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;1&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
 
   <span class="nt">&lt;/xs:sequence&gt;</span>
 <span class="nt">&lt;/xs:complexType&gt;</span>
 <span class="nt">&lt;xs:complexType</span> <span class="na">name=</span><span class="s">&quot;monetaryAmount&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;xs:sequence&gt;</span>
-    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;currency&quot;</span> <span class="na">minoccurs=</span><span class="s">&quot;1&quot;</span> <span class="na">maxoccurs=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
-    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;amount&quot;</span> <span class="na">minoccurs=</span><span class="s">&quot;1&quot;</span> <span class="na">maxoccurs=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;currency&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;1&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;amount&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;1&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
   <span class="nt">&lt;/xs:sequence&gt;</span>
 <span class="nt">&lt;/xs:complexType&gt;</span>
 <span class="nt">&lt;xs:complexType</span> <span class="na">name=</span><span class="s">&quot;jurisdiction&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;xs:sequence&gt;</span>
-    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;administrativeArea&quot;</span> <span class="na">minoccurs=</span><span class="s">&quot;1&quot;</span> <span class="na">maxoccurs=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;administrativeArea&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;1&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
     <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;locality&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span><span class="nt">/&gt;</span>
   <span class="nt">&lt;/xs:sequence&gt;</span>
 <span class="nt">&lt;/xs:complexType&gt;</span>
@@ -262,6 +403,7 @@
     <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;Postal Code&quot;</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;/xs:restriction&gt;</span>
 <span class="nt">&lt;/xs:simpleType&gt;</span>
+
 <span class="nt">&lt;/xs:schema&gt;</span>
 </pre></div>
 </div>
@@ -299,10 +441,95 @@
       <span class="nt">&lt;body&gt;</span>There must have been abuse by the Respondent. Abuse includes physical abuse, harassment, intimidation of a dependent, interference with personal liberty, and willful deprivation.<span class="nt">&lt;/body&gt;</span>
    <span class="nt">&lt;/textBlock&gt;</span>
  <span class="nt">&lt;/eligibilityRules&gt;</span>
+ <span class="nt">&lt;process&gt;</span>
+
+ <span class="nt">&lt;/process&gt;</span>
 <span class="nt">&lt;legalSolution&gt;</span>
 </pre></div>
 </div>
-<p>More text here</p>
+</div>
+<div class="section" id="references-from-schema-org">
+<h2>References from Schema.org<a class="headerlink" href="#references-from-schema-org" title="Permalink to this headline">¶</a></h2>
+<p>Schema.org does not have XML schema; I have adapted the applicable schema types to match and indicate parameters as required.</p>
+<div class="section" id="question-and-answer">
+<h3>Question and Answer<a class="headerlink" href="#question-and-answer" title="Permalink to this headline">¶</a></h3>
+<p>See:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://schema.org/Answer">https://schema.org/Answer</a></li>
+<li><a class="reference external" href="https://schema.org/Question">https://schema.org/Question</a></li>
+</ul>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;xs:schema</span> <span class="na">xmlns:xs=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;xs:complexType</span> <span class="na">name=</span><span class="s">&quot;FAQPage&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;xs:sequence&gt;</span>
+      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;question&quot;</span> <span class="na">type=</span><span class="s">&quot;Question&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;1&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/xs:sequence&gt;</span>
+  <span class="nt">&lt;/xs:complexType&gt;</span>
+  <span class="nt">&lt;xs:complexType</span> <span class="na">name=</span><span class="s">&quot;Question&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;xs:sequence&gt;</span>
+      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;body&quot;</span> <span class="na">type=</span><span class="s">&quot;textBlock&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;1&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;acceptedAnswer&quot;</span> <span class="na">type=</span><span class="s">&quot;Answer&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;suggestedAnswer&quot;</span> <span class="na">type=</span><span class="s">&quot;Answer&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/xs:sequence&gt;</span>
+  <span class="nt">&lt;/xs:complexType&gt;</span>
+  <span class="nt">&lt;xs:complexType</span> <span class="na">name=</span><span class="s">&quot;Answer&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;xs:sequence&gt;</span>
+      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;answer&quot;</span> <span class="na">type=</span><span class="s">&quot;textBlock&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;answerExplanation&quot;</span> <span class="na">type=</span><span class="s">&quot;textBlock&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/xs:sequence&gt;</span>
+  <span class="nt">&lt;/xs:complexType&gt;</span>
+<span class="nt">&lt;/xs:schema&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-to">
+<h3>How To<a class="headerlink" href="#how-to" title="Permalink to this headline">¶</a></h3>
+<p>See</p>
+<ul class="simple">
+<li><a class="reference external" href="https://schema.org/HowTo">https://schema.org/HowTo</a></li>
+<li><a class="reference external" href="https://schema.org/HowToStep">https://schema.org/HowToStep</a></li>
+<li><a class="reference external" href="https://schema.org/HowToDirection">https://schema.org/HowToDirection</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601#Durations">https://en.wikipedia.org/wiki/ISO_8601#Durations</a></li>
+</ul>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;xs:schema</span> <span class="na">xmlns:xs=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;xs:complexType</span> <span class="na">name=</span><span class="s">&quot;HowTo&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;xs:sequence&gt;</span>
+      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;description&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;estimatedCost&quot;</span> <span class="na">type=</span><span class="s">&quot;monetaryAmount&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;prepTime&gt;&quot;</span> <span class="na">type=</span><span class="s">&quot;Duration&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;performTime&gt;&quot;</span> <span class="na">type=</span><span class="s">&quot;Duration&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;step&quot;</span> <span class="na">type=</span><span class="s">&quot;HowToStep&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;1&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;supply&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;tool&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;totalTime&gt;&quot;</span> <span class="na">type=</span><span class="s">&quot;Duration&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;yield&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/xs:sequence&gt;</span>
+  <span class="nt">&lt;/xs:complexType&gt;</span>
+  <span class="nt">&lt;xs:complexType</span> <span class="na">name=</span><span class="s">&quot;HowToStep&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;xs:sequence&gt;</span>
+      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;position&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:integer&quot;</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;howToDirection&quot;</span> <span class="na">type=</span><span class="s">&quot;HowToDirection&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;howToTip&quot;</span> <span class="na">type=</span><span class="s">&quot;HowToTip&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/xs:sequence&gt;</span>
+  <span class="nt">&lt;/xs:complexType&gt;</span>
+  <span class="nt">&lt;xs:complexType</span> <span class="na">name=</span><span class="s">&quot;HowToDirection&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;xs:sequence&gt;</span>
+      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;position&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:integer&quot;</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;direction&quot;</span> <span class="na">type=</span><span class="s">&quot;textBlock&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/xs:sequence&gt;</span>
+  <span class="nt">&lt;/xs:complexType&gt;</span>
+  <span class="nt">&lt;xs:complexType</span> <span class="na">name=</span><span class="s">&quot;HowToTip&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;xs:sequence&gt;</span>
+      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;position&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:integer&quot;</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;direction&quot;</span> <span class="na">type=</span><span class="s">&quot;textBlock&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/xs:sequence&gt;</span>
+  <span class="nt">&lt;/xs:complexType&gt;</span>
+ <span class="nt">&lt;/xs:schema&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 
 
