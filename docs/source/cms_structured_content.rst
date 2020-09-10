@@ -12,6 +12,7 @@ A legal problem has:
 * one or more possible solutions
 * possible preventions
 * faqs associated with the problems, built on the faq schema
+* related resources (optionally)
 
 .. code-block:: xml
 
@@ -28,6 +29,7 @@ A legal problem has:
        <xs:element name="subType" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
        <xs:element name="legalCode" type="legalCode" minOccurs="1" maxOccurs="1" />
        <xs:element name="questions" type="FAQPage" minOccurs="0" maxOccurs="unbounded" />
+       <xs:element name="relatedResources" type="resource" minOccurs="0" maxOccurs="unbounded"> <!-- based on schema.org/WebPage-->
       </xs:sequence>
    </xs:schema>  
   
@@ -39,7 +41,7 @@ A legal problem has:
        <xs:element name="causeOf" type="xs:string" />
      </xs:complexType>
      <xs:simpleType name="lifeAreas">
-     <xs:restriction base="xs:string">
+       <xs:restriction base="xs:string">
          <xs:enumeration value="Housing" />
          <xs:enumeration value="Income" />
          <xs:enumeration value="Family" />
@@ -59,6 +61,23 @@ A legal problem has:
          <xs:element name="codingSystem" type="xs:string" />
        </xs:sequence>
      </xs:complexType>
+     <xs:complexType name="resource">
+       <xs:sequence>
+         <xs:element name="name" type="xs:string" />
+         <xs:element name="lastReviewed" type="date" />
+         <xs:element name="lastModified" type="date" />
+         <xs:element name="abstract" type="xs:string">
+         <xs:element name="url" type="xs:string"/ >
+         <xs:element name="additionalType" type="resourceTypes" />
+       </xs:sequence>
+     </xs:complexType>
+      <xs:simpleType name="resourceTypes">
+     <xs:restriction base="xs:string">
+         <xs:enumeration value="userPersona" />
+         <xs:enumeration value="video" />
+         <xs:enumeration value="flowChart" />
+       </xs:restriction>
+     </xs:simpleType>  
    </xs:schema>       
 
 
@@ -107,6 +126,7 @@ A legal solution has:
        <xs:element name="jurisdiction" type="jurisdiction"/>
        <xs:element name="usedToSolve" type="legalProblem" />
        <xs:element name="eligibilityRules" type="textBlock" minOccurs="0" maxOccurs="unbounded"/>
+       <xs:element name="helpfulOrganization" type="Organization" minOccurs="0" maxOccurs="unbounded" />
        <xs:element name="process" type="HowTo" minOccurs="0" maxOccurs="unbounded"/>
      </xs:sequence>
    </xs:schema>
@@ -127,9 +147,16 @@ A legal solution has:
    </xs:simpleType>
    <xs:complexType name="legalForm">
      <xs:sequence>
-       <xs:element name="formName" minOccurs="1" maxOccurs="1"/>
-       
+       <xs:element name="formName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+       <xs:element name="formPrepProgram" type="formPrepProgram" minOccurs="0" maxOccurs="1">
+       <xs:element name="formUse" type="xs:string" minOccurs="0" maxOccurs="1">
+   
      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="formPrepProgram">
+     <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+     <xs:element name="url" type="xs:string" minOccurs="1" maxOccurs="1"/>
+     <xs:element name="type" type="xs:string" minOccurs="1" maxOccurs="1"/>
    </xs:complexType>
    <xs:complexType name="monetaryAmount">
      <xs:sequence>
@@ -249,6 +276,45 @@ See
      </xs:complexType>
     </xs:schema> 
     
+Organization
+---------------
+
+See: 
+
+* https://schema.org/Organization
+* https://schema.org/ContactPoint
+
+.. code-block:: xml
+
+ <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+     <xs:complexType name="Organization">
+       <xs:sequence>
+         <xs:element name="name" type="xs:string" />
+         <xs:element name="address" type="postalAddress" minOccurs="0"/>
+         <xs:element name="areaServed" type="AdministrativeArea" minOccurs="1" maxOccurs="unbounded">
+         <xs:element name="email" type="xs:string" minOccurs="0" />
+         <xs:element name="telephone" type="xs:string" minOccurs="0" />
+         <xs:element name="contact" type="ContactPoint" maxOccurs="unbounded" />
+
+       </xs:sequence>
+     </xs:complexType>
+ </xs:schema>      
+    
+ <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+     <xs:complexType name="ContactPoint">
+       <xs:sequence>
+         <xs:element name="areaServed" type="AdministrativeArea" minOccurs="1" maxOccurs="unbounded">
+         <xs:element name="contactType" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
+         <xs:element name="email" type="xs:string" minOccurs="0" />
+         <xs:element name="telephone" type="xs:string" minOccurs="0" />
+         <xs:element name="hoursAvailable" type="OpeningHoursSpecification"/>
+         <xs:element name="productSupported" type="xs:string" maxOccurs="unbounded" />
+        </xs:sequence>
+     </xs:complexType>
+ </xs:schema>      
+ 
+
+    
 Sample
 =========
 
@@ -267,9 +333,23 @@ Sample
            <legalFormsNeeded>
               <legalForm>
                  <formName>Petition for Order of Protection</formName>
+                 <formPrepProgram>
+                   <name>Order of Protection program</name>
+                   <url>https://www.illinoislegalaid.org/legal-information/order-protection</url>
+                   <type>HotDocs Interview</type>
+                 </formPrepProgram>
+                 <formUse>
+                 This form is always required when applying for any type of order of protection.
+                 </formUse>
               </legalForm>
               <legalForm>
                  <formName>Emergency Order of Protection</formName>
+                 <formPrepProgram>
+                   <name>Order of Protection Blank form</name>
+                   <url>https://www.illinoislegalaid.org/legal-information/order-protection</url>
+                   <type>PDF</type>
+                 </formPrepProgram>
+                 <formUse>This form is used to apply for a short-term order of protection without an opportunity for the defendant to appear</formUse>
               </legalForm>
               <legalForm>
                  <formName>Order of Protection</formName>
@@ -282,7 +362,6 @@ Sample
            <administrativeArea>State</administrativeArea>
            <locality>Illinois</locality>
          </jurisdiction>
-       <usedToSolve />
        <eligibilityRules>
          <textBlock>
            <heading>One of the following must be true:</heading>
@@ -296,7 +375,19 @@ Sample
            <body>There must have been abuse by the Respondent. Abuse includes physical abuse, harassment, intimidation of a dependent, interference with personal liberty, and willful deprivation.
            </body>
          </textBlock>    
-        </eligibilityRules>  
+        </eligibilityRules>
+        <helpfulOrganization>
+          <name>Illinois Domestic Violence Helpline</name>
+          <areaServed>Illinois</areaServed>
+          <telephone>(877) 863-6338</telephone>
+          <contact>
+            <areaServed>Illinois</areaServed>
+            <contactType>Telephone</contactType>
+            <hoursAvailable>24 hours a day</hoursAvailable>
+            <productSupported>Social services</productSupported>
+           </contact>
+           
+        </helpfulOrganization>  
         <process>
           <name>Changing or renewing an order of protection</name>
           <description></description>
@@ -377,7 +468,18 @@ Sample
            </textBlock>
          </answer>
      </faq>
+     <relatedResources>
+       <resource>
+         <name>Domestic abuse survivor story</name>
+         <lastReviewed>20200101</lastReviewed>
+         <lastModified>20200202</lastModified>
+         <abstract>Description</abstract>
+         <url>https://www.illinoislegalaid.org/voc/domestic-abuse-sexual-assault</url>
+         <additionalType>userPersona</additionalType>
+        </resource>
+     </relatedResources>
    </legalProblem>   
+     
      
      
    
