@@ -20,26 +20,29 @@ A legal problem has:
    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
    <xs:include schemaLocation="https://schema.org/Question"/>
      <xs:sequence>
-       <xs:element name="lifeAreaAffected" type="lifeAreas" minOccurs="1" maxOccurs="unbounded"/>
-       <xs:element name="cause" type="legalCause"/>
-       <xs:element name="possibleSolution" type="legalSolution" minOccurs="1" maxOccurs="unbounded" />
-       <xs:element name="primaryPrevention" type="legalSolution" minOccurs="0" />
-       <xs:element name="secondaryPrevention" type="legalSolution" minOccurs="0" />
+       <xs:element name="name" type="xs:string" />
        <xs:element name="stage" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
        <xs:element name="subType" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
        <xs:element name="legalCode" type="legalCode" minOccurs="1" maxOccurs="1" />
+       <xs:element name="lifeAreaAffected" type="lifeAreas" minOccurs="1" maxOccurs="unbounded"/>
+       <xs:element name="possibleSolution" type="legalSolution" minOccurs="1" maxOccurs="unbounded" />
+       <xs:element name="primaryPrevention" type="legalSolution" minOccurs="0" />
+       <xs:element name="secondaryPrevention" type="legalSolution" minOccurs="0" />
        <xs:element name="questions" type="FAQPage" minOccurs="0" maxOccurs="unbounded" />
        <xs:element name="relatedResources" type="resource" minOccurs="0" maxOccurs="unbounded"> <!-- based on schema.org/WebPage-->
-      </xs:sequence>
+       <xs:element name="description" type="xs:string" />
+       <xs:element name="disambiguatingDescription" type="xs:string" minOccurs="0"/>
+       <xs:element name="identifier" type="xs:string" />
+       <xs:element name="image" type="xs:string" minOccurs="0" />
+       <xs:element name="url" type="xs:string" minOccurs="0" />
+       
+      </xs:sequence>     
    </xs:schema>  
   
 .. code-block:: xml
 
    <?xml version="1.0" encoding="UTF-8" ?>
    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-     <xs:complexType name="legalCause">
-       <xs:element name="causeOf" type="xs:string" />
-     </xs:complexType>
      <xs:simpleType name="lifeAreas">
        <xs:restriction base="xs:string">
          <xs:enumeration value="Housing" />
@@ -321,12 +324,15 @@ Sample
 .. code-block:: xml
 
    <legalProblem>
+     <name>Being a victim of domestic violence</name>
+     <stage>Prefiling</stage>
+     <subType>Changing an order of protection</subType>
+     <subType>Renewing an order of protection</subType>
+     <legalCode>
+     </legalCode>
      <lifeAreaAffected>
        <lifeAreas>Family</lifeAreas>
      </lifeAreaAffected>
-     <cause>
-       <causeOf>Unknown</causeOf>
-     </cause>
      <possibleSolution>
        <legalSolution>
          <solutionType>Court solution</solutionType>
@@ -430,11 +436,7 @@ Sample
         </process>      
        </legalSolution>
      </possibleSolution>
-     <stage>Prefiling</stage>
-     <subType>Changing an order of protection</subType>
-     <subType>Renewing an order of protection</subType>
-     <legalCode>
-     </legalCode>
+     
      <faq>
        <question>
          <body>What if I have children?</body>
