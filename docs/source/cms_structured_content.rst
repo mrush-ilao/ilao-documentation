@@ -125,7 +125,7 @@ A legal solution has:
        <xs:element name="informationNeeded" type="xs:string" />
        <xs:element name="estimatedCost" type="monetaryAmount" minOccurs="0" />
        <xs:element name="legalDifficulty" type="xs:string" />
-       <xs:element name="estimatedTimeToComplete" type="" />
+       <xs:element name="estimatedTimeToComplete" type="Duration" />
        <xs:element name="jurisdiction" type="jurisdiction"/>
        <xs:element name="usedToSolve" type="legalProblem" />
        <xs:element name="eligibilityRules" type="textBlock" minOccurs="0" maxOccurs="unbounded"/>
@@ -329,6 +329,8 @@ Sample
      <subType>Changing an order of protection</subType>
      <subType>Renewing an order of protection</subType>
      <legalCode>
+       <codeValue>FA-07-00-00-00</codeValue>
+       <codingSystem>NSMI V2</codingSystem>
      </legalCode>
      <lifeAreaAffected>
        <lifeAreas>Family</lifeAreas>
