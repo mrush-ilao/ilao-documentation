@@ -29,7 +29,7 @@ A legal problem has:
        <xs:element name="primaryPrevention" type="legalSolution" minOccurs="0" />
        <xs:element name="secondaryPrevention" type="legalSolution" minOccurs="0" />
        <xs:element name="questions" type="FAQPage" minOccurs="0" maxOccurs="unbounded" />
-       <xs:element name="relatedResources" type="resource" minOccurs="0" maxOccurs="unbounded"> <!-- based on schema.org/WebPage-->
+       <xs:element name="relatedResource" type="resource" minOccurs="0" maxOccurs="unbounded"> <!-- based on schema.org/WebPage-->
        <xs:element name="description" type="xs:string" />
        <xs:element name="disambiguatingDescription" type="xs:string" minOccurs="0"/>
        <xs:element name="identifier" type="xs:string" />
@@ -78,7 +78,9 @@ A legal problem has:
      <xs:restriction base="xs:string">
          <xs:enumeration value="userPersona" />
          <xs:enumeration value="video" />
-         <xs:enumeration value="flowChart" />
+         <xs:enumeration value="flow chart" />
+         <xs:enumeration value="blog post" />
+         <xs:enumeration value="article" />
        </xs:restriction>
      </xs:simpleType>  
    </xs:schema>       
@@ -472,16 +474,27 @@ Sample
            </textBlock>
          </answer>
      </faq>
-     <relatedResources>
-       <resource>
+     <relatedResource>
          <name>Domestic abuse survivor story</name>
          <lastReviewed>20200101</lastReviewed>
          <lastModified>20200202</lastModified>
          <abstract>Description</abstract>
          <url>https://www.illinoislegalaid.org/voc/domestic-abuse-sexual-assault</url>
          <additionalType>userPersona</additionalType>
-        </resource>
-     </relatedResources>
+     </relatedResource>
+     <relatedResource>
+         <name>Domestic abuse blog post</name>
+         <lastReviewed>20200101</lastReviewed>
+         <lastModified>20200202</lastModified>
+         <abstract>Description</abstract>
+         <url>https://www.illinoislegalaid.org/voc/domestic-abuse-sexual-assault</url>
+         <additionalType>blog post</additionalType>
+     </relatedResource>
+     <description>Description of the legal problem</description>
+     <disambiguationDescription>This differs from</disambiguationDescription>
+     <identifier>https://www.illinoislegalaid.org/rest/legal-problem/1</identifier>
+     <url>https://www.illinoislegalaid.org/rest/legal-problem/1</url>
+     
    </legalProblem>   
      
      

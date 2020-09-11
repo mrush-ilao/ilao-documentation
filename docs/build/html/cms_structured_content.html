@@ -200,7 +200,7 @@
     <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;primaryPrevention&quot;</span> <span class="na">type=</span><span class="s">&quot;legalSolution&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;secondaryPrevention&quot;</span> <span class="na">type=</span><span class="s">&quot;legalSolution&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;questions&quot;</span> <span class="na">type=</span><span class="s">&quot;FAQPage&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;relatedResources&quot;</span> <span class="na">type=</span><span class="s">&quot;resource&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span><span class="nt">&gt;</span> <span class="c">&lt;!-- based on schema.org/WebPage--&gt;</span>
+    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;relatedResource&quot;</span> <span class="na">type=</span><span class="s">&quot;resource&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span><span class="nt">&gt;</span> <span class="c">&lt;!-- based on schema.org/WebPage--&gt;</span>
     <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;description&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;disambiguatingDescription&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
     <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;identifier&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="nt">/&gt;</span>
@@ -248,7 +248,9 @@
   <span class="nt">&lt;xs:restriction</span> <span class="na">base=</span><span class="s">&quot;xs:string&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;userPersona&quot;</span> <span class="nt">/&gt;</span>
       <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;video&quot;</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;flowChart&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;flow chart&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;blog post&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;xs:enumeration</span> <span class="na">value=</span><span class="s">&quot;article&quot;</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;/xs:restriction&gt;</span>
   <span class="nt">&lt;/xs:simpleType&gt;</span>
 <span class="nt">&lt;/xs:schema&gt;</span>
@@ -628,16 +630,27 @@
         <span class="nt">&lt;/textBlock&gt;</span>
       <span class="nt">&lt;/answer&gt;</span>
   <span class="nt">&lt;/faq&gt;</span>
-  <span class="nt">&lt;relatedResources&gt;</span>
-    <span class="nt">&lt;resource&gt;</span>
+  <span class="nt">&lt;relatedResource&gt;</span>
       <span class="nt">&lt;name&gt;</span>Domestic abuse survivor story<span class="nt">&lt;/name&gt;</span>
       <span class="nt">&lt;lastReviewed&gt;</span>20200101<span class="nt">&lt;/lastReviewed&gt;</span>
       <span class="nt">&lt;lastModified&gt;</span>20200202<span class="nt">&lt;/lastModified&gt;</span>
       <span class="nt">&lt;abstract&gt;</span>Description<span class="nt">&lt;/abstract&gt;</span>
       <span class="nt">&lt;url&gt;</span>https://www.illinoislegalaid.org/voc/domestic-abuse-sexual-assault<span class="nt">&lt;/url&gt;</span>
       <span class="nt">&lt;additionalType&gt;</span>userPersona<span class="nt">&lt;/additionalType&gt;</span>
-     <span class="nt">&lt;/resource&gt;</span>
-  <span class="nt">&lt;/relatedResources&gt;</span>
+  <span class="nt">&lt;/relatedResource&gt;</span>
+  <span class="nt">&lt;relatedResource&gt;</span>
+      <span class="nt">&lt;name&gt;</span>Domestic abuse blog post<span class="nt">&lt;/name&gt;</span>
+      <span class="nt">&lt;lastReviewed&gt;</span>20200101<span class="nt">&lt;/lastReviewed&gt;</span>
+      <span class="nt">&lt;lastModified&gt;</span>20200202<span class="nt">&lt;/lastModified&gt;</span>
+      <span class="nt">&lt;abstract&gt;</span>Description<span class="nt">&lt;/abstract&gt;</span>
+      <span class="nt">&lt;url&gt;</span>https://www.illinoislegalaid.org/voc/domestic-abuse-sexual-assault<span class="nt">&lt;/url&gt;</span>
+      <span class="nt">&lt;additionalType&gt;</span>blog post<span class="nt">&lt;/additionalType&gt;</span>
+  <span class="nt">&lt;/relatedResource&gt;</span>
+  <span class="nt">&lt;description&gt;</span>Description of the legal problem<span class="nt">&lt;/description&gt;</span>
+  <span class="nt">&lt;disambiguationDescription&gt;</span>This differs from<span class="nt">&lt;/disambiguationDescription&gt;</span>
+  <span class="nt">&lt;identifier&gt;</span>https://www.illinoislegalaid.org/rest/legal-problem/1<span class="nt">&lt;/identifier&gt;</span>
+  <span class="nt">&lt;url&gt;</span>https://www.illinoislegalaid.org/rest/legal-problem/1<span class="nt">&lt;/url&gt;</span>
+
 <span class="nt">&lt;/legalProblem&gt;</span>
 </pre></div>
 </div>
