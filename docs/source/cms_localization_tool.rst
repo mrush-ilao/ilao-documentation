@@ -58,6 +58,32 @@ Generally, x is true. In Kane County, the law is different and x is true only on
 
 Generally, x is true. In Kane County, the law is different and x is true only on Tuesdays. Even within Kane County, Aurora has its own rule and x is also true on Mondays as well. And if you are on the near east side of Aurora, x is also true on Wednesdays.
 
+What users see
+==================
+
+On legal content pages, the zip code is automatically prepopulated:
+
+
+* for "new" anonymous users, using ipInfo database to detect their zip code. 
+* for "returning" anonymous users, the detected zip code is stored locally for a week
+* for logged in users, the zip code is pulled from their profile
+
+
+On legal content pages, users see text Displaying information for zipcode [change].  
+
+.. image:: ../assets/cms-legal-content-zipcode.png
+   :scale: 50%
+   :alt: image of "Displaying information for 60505 [change]"
+
+Users can click on the change link to go to a page to change their zip code:
+
+.. image:: ../assets/cms-change-zip-code.png
+   :scale: 50%
+   :alt: Zip code change page screenshot
+
+When the user changes their zip code, they are returned to the legal content they were viewing.
+
+
 
 
 
