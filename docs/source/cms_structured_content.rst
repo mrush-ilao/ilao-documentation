@@ -437,7 +437,8 @@ Sample
      
           </step>
           <totalTime>P1Y</totalTime>
-        </process>      
+        </process>
+        <result>This is the result</result>      
        </legalSolution>
      </possibleSolution>
      
