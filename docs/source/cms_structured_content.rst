@@ -14,6 +14,72 @@ A legal problem has:
 * faqs associated with the problems, built on the faq schema
 * related resources (optionally)
 
+.. code-block:: json
+
+  {
+  "$id": "https://example.com/arrays.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "LegalProblem",
+  "description": "A representation of a legal problem",
+  "type": "object",
+  "required": [
+    "name",
+    "legalCode",
+    "lifeAreaAffected",
+    "possibleSolution"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the legal problem."
+    },
+    "stage": {
+      "type": "string",
+      "description": "The stage of the legal problem, if applicable. For example, pre-filing, post-filing/pre-trial, trial, post-trial, appeals."
+    },
+    "subType": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+    "lifeAreaAffected": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Housing",
+          "Income",
+          "Family",
+          "Immigration status",
+          "Driving privileges",
+          "Ability to work",
+          "Last wishes",
+          "Freedom to move",
+          "Creditworthiness",
+          "Consumer rights",
+          "Health"
+        ]
+      }
+    }
+  },
+  "definitions": {
+  }
+  }
+
+Temporary sample
+-------------------  
+
+.. code-block:: json 
+ 
+   {"LegalProblem:" 
+     {
+     "name":"Being a victim of domestic violence",
+     "stage":"",
+     "subtype": ["Changing an order of protection","Renewing an order of protection"],
+     }
+   }
+  
 .. code-block:: xml
 
    <?xml version="1.0" encoding="UTF-8" ?>
@@ -21,7 +87,7 @@ A legal problem has:
    <xs:include schemaLocation="https://schema.org/Question"/>
      <xs:sequence>
        <xs:element name="name" type="xs:string" />
-       <xs:element name="stage" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
+       <xs:element name="stage" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
        <xs:element name="subType" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
        <xs:element name="legalCode" type="legalCode" minOccurs="1" maxOccurs="1" />
        <xs:element name="lifeAreaAffected" type="lifeAreas" minOccurs="1" maxOccurs="unbounded"/>

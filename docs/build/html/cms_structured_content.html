@@ -95,7 +95,10 @@
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Structured Content Schema</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#legal-problem">Legal Problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#legal-problem">Legal Problem</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#temporary-sample">Temporary sample</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#legal-solution">Legal Solution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#references-from-schema-org">References from Schema.org</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#question-and-answer">Question and Answer</a></li>
@@ -187,12 +190,75 @@
 <li>faqs associated with the problems, built on the faq schema</li>
 <li>related resources (optionally)</li>
 </ul>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="nt">&quot;$id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com/arrays.schema.json&quot;</span><span class="p">,</span>
+<span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;http://json-schema.org/draft-07/schema#&quot;</span><span class="p">,</span>
+<span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;LegalProblem&quot;</span><span class="p">,</span>
+<span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A representation of a legal problem&quot;</span><span class="p">,</span>
+<span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span>
+  <span class="s2">&quot;name&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;legalCode&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;lifeAreaAffected&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;possibleSolution&quot;</span>
+<span class="p">],</span>
+<span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The name of the legal problem.&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;stage&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The stage of the legal problem, if applicable. For example, pre-filing, post-filing/pre-trial, trial, post-trial, appeals.&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;subType&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="s2">&quot;lifeAreaAffected&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;enum&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;Housing&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Income&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Family&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Immigration status&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Driving privileges&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Ability to work&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Last wishes&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Freedom to move&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Creditworthiness&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Consumer rights&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Health&quot;</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">},</span>
+<span class="nt">&quot;definitions&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="section" id="temporary-sample">
+<h3>Temporary sample<a class="headerlink" href="#temporary-sample" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;LegalProblem:&quot;</span>
+  <span class="p">{</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Being a victim of domestic violence&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;stage&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;subtype&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Changing an order of protection&quot;</span><span class="p">,</span><span class="s2">&quot;Renewing an order of protection&quot;</span><span class="p">],</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
 <span class="nt">&lt;xs:schema</span> <span class="na">xmlns:xs=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema&quot;</span><span class="nt">&gt;</span>
 <span class="nt">&lt;xs:include</span> <span class="na">schemaLocation=</span><span class="s">&quot;https://schema.org/Question&quot;</span><span class="nt">/&gt;</span>
   <span class="nt">&lt;xs:sequence&gt;</span>
     <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;stage&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;1&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;stage&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;0&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;subType&quot;</span> <span class="na">type=</span><span class="s">&quot;xs:string&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;1&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;legalCode&quot;</span> <span class="na">type=</span><span class="s">&quot;legalCode&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;1&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;1&quot;</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;xs:element</span> <span class="na">name=</span><span class="s">&quot;lifeAreaAffected&quot;</span> <span class="na">type=</span><span class="s">&quot;lifeAreas&quot;</span> <span class="na">minOccurs=</span><span class="s">&quot;1&quot;</span> <span class="na">maxOccurs=</span><span class="s">&quot;unbounded&quot;</span><span class="nt">/&gt;</span>
@@ -255,6 +321,7 @@
   <span class="nt">&lt;/xs:simpleType&gt;</span>
 <span class="nt">&lt;/xs:schema&gt;</span>
 </pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="legal-solution">
