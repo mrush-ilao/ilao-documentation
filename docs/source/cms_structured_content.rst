@@ -39,6 +39,7 @@ A legal problem has:
     },
     "subType": {
       "type": "array",
+      "description": "A more specific type of the legal problem, where applicable. For example, 'being evicted from public housing' is a sub-type of the legal problem 'being evicted'",
       "items": {
         "type": "string"
       }
@@ -48,6 +49,7 @@ A legal problem has:
     }
     "lifeAreaAffected": {
       "type": "array",
+      "description": "The area of a person's life that is affected by the legal problem."
       "items": {
         "type": "string",
         "enum": [
@@ -86,11 +88,11 @@ A legal problem has:
       "properties": {
          "codeValue": {
            "type": "string",
-           "description": "",
+           "description":"A short textual code that uniquely identifies the value.",
          },
         "codingSystem": {
           "type": "string",
-          "description": "",
+          "description": "The coding system, e.g. 'ICD-10'.",
         },
       }
     },
