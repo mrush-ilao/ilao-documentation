@@ -190,7 +190,7 @@
 <li>faqs associated with the problems, built on the faq schema</li>
 <li>related resources (optionally)</li>
 </ul>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span> <span class="p">{</span>
 <span class="nt">&quot;$id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com/arrays.schema.json&quot;</span><span class="p">,</span>
 <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;http://json-schema.org/draft-07/schema#&quot;</span><span class="p">,</span>
 <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;LegalProblem&quot;</span><span class="p">,</span>
@@ -216,6 +216,9 @@
     <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
       <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
     <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;legalCode&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/LegalCode&quot;</span><span class="p">}</span>
   <span class="p">}</span>
   <span class="s2">&quot;lifeAreaAffected&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
@@ -235,9 +238,48 @@
         <span class="s2">&quot;Health&quot;</span>
       <span class="p">]</span>
     <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;possibleSolution&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/LegalSolution&quot;</span><span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;primaryPrevention&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/LegalSolution&quot;</span><span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;secondaryPrevention&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/LegalSolution&quot;</span><span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;faq&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/Question&quot;</span><span class="p">}</span>
   <span class="p">}</span>
 <span class="p">},</span>
 <span class="nt">&quot;definitions&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="nt">&quot;LegalCode&quot;</span><span class="p">:</span> <span class="p">{</span>
+   <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+       <span class="nt">&quot;codeValue&quot;</span><span class="p">:</span> <span class="p">{</span>
+         <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+         <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+       <span class="p">},</span>
+      <span class="nt">&quot;codingSystem&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+      <span class="p">},</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;LegalSolution&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span>  <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;all the fields&quot;</span><span class="p">],</span>
+    <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;definitions&quot;</span><span class="p">:</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="p">{</span>
+
+  <span class="p">}</span>
 <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -249,6 +291,7 @@
   <span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Being a victim of domestic violence&quot;</span><span class="p">,</span>
   <span class="nt">&quot;stage&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
   <span class="nt">&quot;subtype&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Changing an order of protection&quot;</span><span class="p">,</span><span class="s2">&quot;Renewing an order of protection&quot;</span><span class="p">],</span>
+  <span class="nt">&quot;lifeAreaAffected&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Family&quot;</span><span class="p">],</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>

@@ -16,7 +16,7 @@ A legal problem has:
 
 .. code-block:: json
 
-  {
+   {
   "$id": "https://example.com/arrays.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "LegalProblem",
@@ -42,6 +42,9 @@ A legal problem has:
       "items": {
         "type": "string"
       }
+    },
+    "legalCode": {
+      "type": { "$ref": "#/definitions/LegalCode"}
     }
     "lifeAreaAffected": {
       "type": "array",
@@ -61,12 +64,52 @@ A legal problem has:
           "Health"
         ]
       }
+    },
+    "possibleSolution": {
+      "type": { "$ref": "#/definitions/LegalSolution"}
+    },
+    "primaryPrevention": {
+      "type": { "$ref": "#/definitions/LegalSolution"}
+    },
+    "secondaryPrevention": {
+      "type": { "$ref": "#/definitions/LegalSolution"}
+    },
+    "faq": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/Question"}
     }
   },
   "definitions": {
+    "LegalCode": {
+     "type": "object",
+      "required": [],
+      "properties": {
+         "codeValue": {
+           "type": "string",
+           "description": "",
+         },
+        "codingSystem": {
+          "type": "string",
+          "description": "",
+        },
+      }
+    },
+    "LegalSolution": {
+      "type":  "object",
+      "required": ["all the fields"],
+      "properties": {
+      },
+      "definitions": {
+
+      }
+    },
+    "Question": {
+
+    }
   }
   }
 
+  
 Temporary sample
 -------------------  
 
@@ -77,6 +120,7 @@ Temporary sample
      "name":"Being a victim of domestic violence",
      "stage":"",
      "subtype": ["Changing an order of protection","Renewing an order of protection"],
+     "lifeAreaAffected": ["Family"],
      }
    }
   
