@@ -170,7 +170,7 @@ A legal problem has:
         },
         "jurisdiction": {
           "type": "array",
-          "items": { "$ref": "#/definitions/Jurisdiction"}
+          "items": { "$ref": "#/definitions/CoverageArea"}
         },
         "eligibilityRules": {
           "type": "array",
@@ -273,7 +273,7 @@ A legal problem has:
         }
       }
     },
-    "Jurisdiction": {
+    "CoverageArea": {
       "type": "object",
       "properties": {
         "administrativeArea": {
@@ -292,6 +292,28 @@ A legal problem has:
         }
       }
     },
+    "PostalAddress": {
+      "type": "object",
+      "properties": {
+        "addressCountry": {
+          "type": "string",
+        },
+        "addressLocality": {
+          "type": "string",
+          "description": "city"
+        },
+        "addressRegion": {
+          "type": "string",
+          "description": "state"
+        },
+        "postalCode": {
+          "type": "string"
+        },
+        "streetAddress": {
+          "type": "string"
+        }
+      }
+    },
     "Organization": {
       "type": "object",
       "properties": {
@@ -303,7 +325,7 @@ A legal problem has:
           "type": { "$ref": "#/definitions/PostalAddress"}
         },
         "areaServed": {
-          "type": { "$ref": "#/definitions/Jurisdiction"}
+          "type": { "$ref": "#/definitions/CoverageArea"}
         },
         "email": {
           "type": "string"
@@ -321,7 +343,7 @@ A legal problem has:
           "required": ["contactType"],
           "properties": {
             "areaServed": {
-              "type": { "$ref": "#/definitions/Jurisdiction"},
+              "type": { "$ref": "#/definitions/CoverageArea"},
             },
             "contactType": {
               "type": "array",
@@ -368,8 +390,56 @@ A legal problem has:
             "opens": {
               "type": "string",
               "description": "The opening hour of the place or service on the given day(s) of the week "
-            },
+            }
           }
+        }
+        "TextBlock": {
+          "type": "object",
+          "description": "An object to structure blocks of text.  Each block should have one or more body elements and/or one or more lists optionally with a heading.",
+          "properties": {
+            "heading": {
+              "type": "string",
+              "description": "A heading associated with the text block; in systems this should be delivered ahead of the body."
+            },
+            "body": {
+              "type": "array",
+              "items": "string",
+              "description": "One or more chunks of text within the block.  Items may be rendered individually depending on platform."
+            },
+            "list": {
+              "type": "array",
+              "items":  { "$ref": "#/definitions/ItemList"}
+            }
+          }
+        },
+        "ItemList": {
+          "type": "object",
+          "required": ["itemListOrder","itemListElements"],
+          "description": "Structured markup for lists.",
+          "properties": {
+            "itemListOrder": {
+              "type": "text",
+              "enum": ["Ascending","Descending","Unordered"],
+              "description": "Indicates whether the list should be rendered as an ascending or descending ordered list or as an unordered list."
+            },
+            "itemListElements": {
+              "type": "array",
+              "items":  { "$ref": "#/definitions/ItemListElement"}
+            }
+          }
+        },
+        "itemListElement": {
+          "type": "object",
+          "required": ["item"],
+          "properties": {
+            "item" : {
+              "type":"string"
+            },
+            "position": {
+              "type":"number"
+            }
+          }
+
         }
 
       }
