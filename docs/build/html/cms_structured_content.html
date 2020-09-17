@@ -190,7 +190,7 @@
 <li>faqs associated with the problems, built on the faq schema</li>
 <li>related resources (optionally)</li>
 </ul>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span> <span class="p">{</span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="nt">&quot;$id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com/arrays.schema.json&quot;</span><span class="p">,</span>
 <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;http://json-schema.org/draft-07/schema#&quot;</span><span class="p">,</span>
 <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;LegalProblem&quot;</span><span class="p">,</span>
@@ -275,7 +275,7 @@
   <span class="p">},</span>
   <span class="nt">&quot;image&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;url of an image associated with the problem.&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;url of an image associated with the problem.&quot;</span>
   <span class="p">},</span>
   <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
@@ -299,17 +299,254 @@
   <span class="p">},</span>
   <span class="nt">&quot;LegalSolution&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="nt">&quot;type&quot;</span><span class="p">:</span>  <span class="s2">&quot;object&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;all the fields&quot;</span><span class="p">],</span>
+    <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">,</span><span class="s2">&quot;description&quot;</span><span class="p">,</span><span class="s2">&quot;identifier&quot;</span><span class="p">,</span><span class="s2">&quot;url&quot;</span><span class="p">,</span><span class="s2">&quot;solutionType&quot;</span><span class="p">],</span>
     <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Name or label for the solution&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A description of the solution&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;disambiguatingDescription&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span>  <span class="s2">&quot;A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Text, UUID, or url for the legal solution&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;URL of the solution.&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;solutionType&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span> <span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;enum&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Court solution&quot;</span><span class="p">,</span><span class="s2">&quot;Agency solution&quot;</span><span class="p">,</span><span class="s2">&quot;Execution solution&quot;</span><span class="p">,</span><span class="s2">&quot;Communication solution&quot;</span><span class="p">,</span><span class="s2">&quot;Inaction solution&quot;</span><span class="p">]</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;legalFormsNeeded&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/LegalSolution/definitions/LegalForm&quot;</span><span class="p">}</span>
+
+      <span class="p">},</span>
+      <span class="nt">&quot;informationNeeded&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;legalDifficulty&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;enum&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Easy&quot;</span><span class="p">,</span><span class="s2">&quot;Hard&quot;</span><span class="p">]</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;estimatedTimeToComplete&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Formatted as a duration&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;jurisdiction&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/Jurisdiction&quot;</span><span class="p">}</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;eligibilityRules&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/TextBlock&quot;</span><span class="p">}</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;helpfulOrganizations&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/Organization&quot;</span><span class="p">}</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;process&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/LegalSolution/definitions/HowTo&quot;</span><span class="p">}</span>
+      <span class="p">}</span>
     <span class="p">},</span>
     <span class="nt">&quot;definitions&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;LegalForm&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;formName&quot;</span><span class="p">],</span>
+        <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;formName&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;name of the form&quot;</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;filledOutWith&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span> <span class="p">:</span> <span class="s2">&quot;Program used to complete the forms&quot;</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;formUse&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Explanation of how/when the form is used.&quot;</span>
+          <span class="p">}</span>
+        <span class="p">},</span>
+      <span class="p">},</span>
+       <span class="nt">&quot;HowTo&quot;</span><span class="p">:</span> <span class="p">{</span>
 
+       <span class="p">}</span>
     <span class="p">}</span>
   <span class="p">},</span>
   <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="p">{</span>
-
+    <span class="nt">&quot;type&quot;</span> <span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;body&quot;</span><span class="p">,</span><span class="s2">&quot;acceptedAnswer&quot;</span><span class="p">],</span>
+    <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/TextBlock&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Text of the question&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;acceptedAnswer&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/Question/Answer&quot;</span><span class="p">}</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;suggestedAnswer&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/Question/Answer&quot;</span><span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;definitions&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;Answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span> <span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;answer&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/TextBlock&quot;</span><span class="p">}</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;answerExplanation&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/TextBlock&quot;</span><span class="p">}</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
   <span class="p">},</span>
   <span class="nt">&quot;RelatedResource&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;name, lastModified&quot;</span><span class="p">],</span>
+    <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;name of the resource&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;lastReviewed&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;ISO 8601 date; when resource was last reviewed&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;lastModified&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;ISO 8610 date; when resource was last modified&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;URL for the related resource&quot;</span>
+      <span class="p">}</span>
+      <span class="s2">&quot;additionalType&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Type of resource&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;enum&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;userPersona&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;video&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;flow chart&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;blog post&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;article&quot;</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;Jurisdiction&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;administrativeArea&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;enum&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;Country&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;State&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;County&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;City&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;Postal code&quot;</span>
+        <span class="p">]</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;locality&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;Organization&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Name of the organization&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/PostalAddress&quot;</span><span class="p">}</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;areaServed&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/Jurisdiction&quot;</span><span class="p">}</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;telephone&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;contact&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span>  <span class="p">{</span> <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/Organization/definitions/ContactPoint&quot;</span><span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;definitions:&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;ContactPoint&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;contactType&quot;</span><span class="p">],</span>
+        <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;areaServed&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/Jurisdiction&quot;</span><span class="p">},</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;contactType&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;telephone&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;hoursAvailable&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/Organization/definitions/HoursOfOperation&quot;</span><span class="p">}</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;productSupported&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Type of service or product offered through the organization.&quot;</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;HoursOfOperation&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span>
+        <span class="s2">&quot;required&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;closes&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The closing hour of the place or service on the given day(s) of the week &quot;</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;dayOfWeek&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;enum&quot;</span><span class="p">:</span> <span class="p">[</span>
+              <span class="s2">&quot;Friday&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;Monday&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;PublicHolidays&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;Saturday&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;Sunday&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;Thursday&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;Tuesday&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;Wednesday&quot;</span>
+            <span class="p">]</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;opens&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The opening hour of the place or service on the given day(s) of the week &quot;</span>
+          <span class="p">},</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+
+    <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">}</span>
 <span class="p">}</span>

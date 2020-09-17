@@ -16,7 +16,7 @@ A legal problem has:
 
 .. code-block:: json
 
-   {
+  {
   "$id": "https://example.com/arrays.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "LegalProblem",
@@ -101,7 +101,7 @@ A legal problem has:
     },
     "image": {
       "type": "string",
-      "description": "url of an image associated with the problem.",
+      "description": "url of an image associated with the problem."
     },
     "url": {
       "type": "string",
@@ -125,21 +125,257 @@ A legal problem has:
     },
     "LegalSolution": {
       "type":  "object",
-      "required": ["all the fields"],
+      "required": ["name","description","identifier","url","solutionType"],
       "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name or label for the solution"
+        },
+        "description": {
+          "type": "string",
+          "description": "A description of the solution"
+        },
+        "disambiguatingDescription": {
+          "type": "string",
+          "description":  "A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation."
+        },
+        "identifier": {
+          "type": "string",
+          "description": "Text, UUID, or url for the legal solution"
+        },
+        "url": {
+          "type": "string",
+          "description": "URL of the solution."
+        },
+        "solutionType": {
+          "type" : "string",
+          "enum" : ["Court solution","Agency solution","Execution solution","Communication solution","Inaction solution"]
+        },
+        "legalFormsNeeded": {
+          "type": "array",
+          "items": { "$ref": "#/LegalSolution/definitions/LegalForm"}
+
+        },
+        "informationNeeded": {
+          "type": "array",
+          "items": "string"
+        },
+        "legalDifficulty": {
+          "type": "string",
+          "enum": ["Easy","Hard"]
+        },
+        "estimatedTimeToComplete": {
+          "type": "string",
+          "description": "Formatted as a duration"
+        },
+        "jurisdiction": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/Jurisdiction"}
+        },
+        "eligibilityRules": {
+          "type": "array",
+          "items": {"$ref": "#/definitions/TextBlock"}
+        },
+        "helpfulOrganizations": {
+          "type": "array",
+          "items": {"$ref": "#/definitions/Organization"}
+        },
+        "process": {
+          "type": "array",
+          "items": {"$ref": "#/LegalSolution/definitions/HowTo"}
+        }
       },
       "definitions": {
+        "LegalForm": {
+          "required": ["formName"],
+          "properties": {
+            "formName": {
+              "type": "string",
+              "description": "name of the form"
+            },
+            "filledOutWith": {
+              "type": "string",
+              "description" : "Program used to complete the forms"
+            },
+            "formUse": {
+              "type": "string",
+              "description": "Explanation of how/when the form is used."
+            }
+          },
+        },
+         "HowTo": {
 
+         }
       }
     },
     "Question": {
-
+      "type" : "object",
+      "required": ["body","acceptedAnswer"],
+      "properties": {
+        "body": {
+          "type": {
+            "$ref": "#/definitions/TextBlock"
+          },
+          "description": "Text of the question"
+        },
+        "acceptedAnswer": {
+          "type": {"$ref": "#/definitions/Question/Answer"}
+        },
+        "suggestedAnswer": {
+          "type": "array",
+          "items": {"$ref": "#/definitions/Question/Answer"}
+        }
+      },
+      "definitions": {
+        "Answer": {
+          "type" : "object",
+          "properties": {
+            "answer": {
+              "type": { "$ref": "#/definitions/TextBlock"}
+            },
+            "answerExplanation": {
+              "type": { "$ref": "#/definitions/TextBlock"}
+            }
+          }
+        }
+      }
     },
     "RelatedResource": {
+      "type": "object",
+      "required": ["name, lastModified"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "name of the resource"
+        },
+        "lastReviewed": {
+          "type": "string",
+          "description": "ISO 8601 date; when resource was last reviewed"
+        },
+        "lastModified": {
+          "type": "string",
+          "description": "ISO 8610 date; when resource was last modified"
+        },
+        "url": {
+          "type": "string",
+          "description": "URL for the related resource"
+        }
+        "additionalType": {
+          "type": "string",
+          "description": "Type of resource",
+          "enum": [
+            "userPersona",
+            "video",
+            "flow chart",
+            "blog post",
+            "article"
+          ]
+        }
+      }
+    },
+    "Jurisdiction": {
+      "type": "object",
+      "properties": {
+        "administrativeArea": {
+          "type": "string",
+          "enum": [
+            "Country",
+            "State",
+            "County",
+            "City",
+            "Postal code"
+          ]
+        },
+        "locality": {
+          "type": "array",
+          "items": "string"
+        }
+      }
+    },
+    "Organization": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the organization"
+        },
+        "address": {
+          "type": { "$ref": "#/definitions/PostalAddress"}
+        },
+        "areaServed": {
+          "type": { "$ref": "#/definitions/Jurisdiction"}
+        },
+        "email": {
+          "type": "string"
+        },
+        "telephone": {
+          "type": "string"
+        },
+        "contact": {
+          "type":  { "$ref": "#/Organization/definitions/ContactPoint"}
+        }
+      },
+      "definitions:": {
+        "ContactPoint": {
+          "type": "object",
+          "required": ["contactType"],
+          "properties": {
+            "areaServed": {
+              "type": { "$ref": "#/definitions/Jurisdiction"},
+            },
+            "contactType": {
+              "type": "array",
+              "items": "string",
+            },
+            "email": {
+              "type": "string",
+            },
+            "telephone": {
+              "type":"string",
+            },
+            "hoursAvailable": {
+              "type": "array",
+              "items": { "$ref": "#/Organization/definitions/HoursOfOperation"}
+            },
+            "productSupported": {
+              "type": "array",
+              "items": "string"
+              "description": "Type of service or product offered through the organization."
+            }
+          }
+        },
+        "HoursOfOperation": {
+          "type": "object"
+          "required": [],
+          "properties": {
+            "closes": {
+              "type": "string",
+              "description": "The closing hour of the place or service on the given day(s) of the week "
+            },
+            "dayOfWeek": {
+              "type": "string",
+              "enum": [
+                "Friday",
+                "Monday",
+                "PublicHolidays",
+                "Saturday",
+                "Sunday",
+                "Thursday",
+                "Tuesday",
+                "Wednesday"
+              ]
+            },
+            "opens": {
+              "type": "string",
+              "description": "The opening hour of the place or service on the given day(s) of the week "
+            },
+          }
+        }
+
+      }
     }
   }
   }
-
   
 Temporary sample
 -------------------  
