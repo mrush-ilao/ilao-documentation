@@ -24,14 +24,29 @@ A legal problem has:
   "type": "object",
   "required": [
     "name",
+    "description",
+    "identifier",
     "legalCode",
     "lifeAreaAffected",
-    "possibleSolution"
+    "possibleSolution",
+    "url"
   ],
   "properties": {
     "name": {
       "type": "string",
       "description": "The name of the legal problem."
+    },
+    "description": {
+      "type": "string",
+      "description":  "A description of the legal problem."
+    },
+    "disambiguatingDescription": {
+      "type": "string",
+      "description":  "A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation."
+    },
+    "identifier": {
+      "type": "string",
+      "description": "Text, UUID, or url for the legal problem"
     },
     "stage": {
       "type": "string",
@@ -79,6 +94,18 @@ A legal problem has:
     "faq": {
       "type": "array",
       "items": { "$ref": "#/definitions/Question"}
+    },
+    "relatedResources": {
+      "type": "array",
+      "items":  { "$ref": "#/definitions/RelatedResource"}
+    },
+    "image": {
+      "type": "string",
+      "description": "url of an image associated with the problem.",
+    },
+    "url": {
+      "type": "string",
+      "description": "primary url of the legal problem's source representation."
     }
   },
   "definitions": {
@@ -88,12 +115,12 @@ A legal problem has:
       "properties": {
          "codeValue": {
            "type": "string",
-           "description":"A short textual code that uniquely identifies the value.",
+           "description":"A short textual code that uniquely identifies the value."
          },
         "codingSystem": {
           "type": "string",
-          "description": "The coding system, e.g. 'ICD-10'.",
-        },
+          "description": "The coding system, e.g. 'ICD-10'."
+        }
       }
     },
     "LegalSolution": {
@@ -107,6 +134,8 @@ A legal problem has:
     },
     "Question": {
 
+    },
+    "RelatedResource": {
     }
   }
   }

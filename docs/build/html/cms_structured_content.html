@@ -198,14 +198,29 @@
 <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
 <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span>
   <span class="s2">&quot;name&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;description&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;identifier&quot;</span><span class="p">,</span>
   <span class="s2">&quot;legalCode&quot;</span><span class="p">,</span>
   <span class="s2">&quot;lifeAreaAffected&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;possibleSolution&quot;</span>
+  <span class="s2">&quot;possibleSolution&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;url&quot;</span>
 <span class="p">],</span>
 <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
     <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The name of the legal problem.&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span>  <span class="s2">&quot;A description of the legal problem.&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;disambiguatingDescription&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span>  <span class="s2">&quot;A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Text, UUID, or url for the legal problem&quot;</span>
   <span class="p">},</span>
   <span class="nt">&quot;stage&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
@@ -253,6 +268,18 @@
   <span class="nt">&quot;faq&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
     <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/Question&quot;</span><span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;relatedResources&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;items&quot;</span><span class="p">:</span>  <span class="p">{</span> <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/RelatedResource&quot;</span><span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;image&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;url of an image associated with the problem.&quot;</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;primary url of the legal problem&#39;s source representation.&quot;</span>
   <span class="p">}</span>
 <span class="p">},</span>
 <span class="nt">&quot;definitions&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -262,12 +289,12 @@
     <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
        <span class="nt">&quot;codeValue&quot;</span><span class="p">:</span> <span class="p">{</span>
          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-         <span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;A short textual code that uniquely identifies the value.&quot;</span><span class="p">,</span>
+         <span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;A short textual code that uniquely identifies the value.&quot;</span>
        <span class="p">},</span>
       <span class="nt">&quot;codingSystem&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The coding system, e.g. &#39;ICD-10&#39;.&quot;</span><span class="p">,</span>
-      <span class="p">},</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The coding system, e.g. &#39;ICD-10&#39;.&quot;</span>
+      <span class="p">}</span>
     <span class="p">}</span>
   <span class="p">},</span>
   <span class="nt">&quot;LegalSolution&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -281,6 +308,8 @@
   <span class="p">},</span>
   <span class="nt">&quot;Question&quot;</span><span class="p">:</span> <span class="p">{</span>
 
+  <span class="p">},</span>
+  <span class="nt">&quot;RelatedResource&quot;</span><span class="p">:</span> <span class="p">{</span>
   <span class="p">}</span>
 <span class="p">}</span>
 <span class="p">}</span>
