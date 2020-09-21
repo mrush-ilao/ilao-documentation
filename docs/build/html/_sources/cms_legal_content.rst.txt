@@ -8,9 +8,7 @@ The legal content type is the content type for the bulk of our legal information
    :maxdepth: 1
    :caption: Contents:
 
-   cms_legal_content_easyforms
-   cms_legal_content_guides
-   cms_legal_content_iicles
+   cms_legal_content_by_type
    cms_legal_content_annual_updates
    cms_legal_content_workflows
 
@@ -21,8 +19,8 @@ Related content, labeled "Learn More" is pulled from one of two places, dependin
 * For legal content that is included in a Guide, the learn more is pulled from the parent Guide's learn more field
 * For legal content that is not included in a Guide, the learn more is pulled from the Recommendations field.  Content managers can add or edit the Recommendations field.
 
-Forms
-=======
+(Related) Forms
+=================
 A forms block (previously related forms) is added to legal information pages based on the taxonomy term(s) associated with the legal content. 
 
 .. note:: We are considering another option to make it so that the forms block can be manually created rather than pulled by taxonomy term.
@@ -39,8 +37,8 @@ Content may be restricted:
 
 ..note :: as of September 15, 2020 the code to restrict content based on this field is in progress.
 
-Dates
-==========
+Dates on Content
+==================
 
 There are four dates that impact content:
 
