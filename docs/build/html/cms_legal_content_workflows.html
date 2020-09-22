@@ -36,8 +36,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Easy Forms" href="cms_legal_content_easyforms.html" />
-    <link rel="prev" title="Legal content type" href="cms_legal_content.html" /> 
+    <link rel="next" title="Portal main page content type" href="cms_portal_main_page.html" />
+    <link rel="prev" title="Annual Updates" href="cms_legal_content_annual_updates.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,12 +94,16 @@
 <li class="toctree-l2"><a class="reference internal" href="cms_wysiwyg.html">WYSIWYG Tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_custom_tokens.html">Custom Tokens</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="cms_legal_content.html">Legal content type</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Workflow Moderation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_legal_content_easyforms.html">Easy Forms</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_legal_content_guides.html">Guides</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_legal_content_by_type.html">Legal content formats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_legal_content_annual_updates.html">Annual Updates</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Workflow Moderation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#unpublished">Unpublished</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="cms_legal_content.html#related-content">Related content</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_legal_content.html#forms">Forms</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_legal_content.html#annual-updates">Annual Updates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_legal_content.html#related-forms">(Related) Forms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_legal_content.html#content-restrictions">Content Restrictions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_legal_content.html#dates-on-content">Dates on Content</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="cms_portal_main_page.html">Portal main page content type</a></li>
@@ -121,12 +125,16 @@
 <li class="toctree-l2"><a class="reference internal" href="cms_wysiwyg.html">WYSIWYG Tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_custom_tokens.html">Custom Tokens</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="cms_legal_content.html">Legal content type</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Workflow Moderation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_legal_content_easyforms.html">Easy Forms</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_legal_content_guides.html">Guides</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_legal_content_by_type.html">Legal content formats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_legal_content_annual_updates.html">Annual Updates</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Workflow Moderation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#unpublished">Unpublished</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="cms_legal_content.html#related-content">Related content</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_legal_content.html#forms">Forms</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_legal_content.html#annual-updates">Annual Updates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_legal_content.html#related-forms">(Related) Forms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_legal_content.html#content-restrictions">Content Restrictions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_legal_content.html#dates-on-content">Dates on Content</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="cms_portal_main_page.html">Portal main page content type</a></li>
@@ -207,6 +215,48 @@
             
   <div class="section" id="workflow-moderation">
 <h1>Workflow Moderation<a class="headerlink" href="#workflow-moderation" title="Permalink to this headline">¶</a></h1>
+<p>Our legal content type has three states:</p>
+<ul class="simple">
+<li>Published.  This is the live version on the website. Anyone can view published versions. Only one revision can ever be published at a time.  From a published revision:<ul>
+<li>Anyone with the legal aid, pro bono, staff, or intern roles can edit.</li>
+<li>Only staff or interns can move content from published to published (immediately publishing their revisions)</li>
+<li>Legal aid and pro bono members can only move content from published to draft/revise or published to ready to review.</li>
+</ul>
+</li>
+<li>Draft/revise.  This is a workflow state where the revision is not published and can be further edited by any of the following:<ul>
+<li>Staff</li>
+<li>Interns</li>
+<li>The author of the revision.  For example, if AdvocateA created the draft, AdvocateA can edit the revision</li>
+<li>Users who can normally edit content but aren’t one of these will not see an edit button until the draft has been published or deleted.</li>
+</ul>
+</li>
+<li>Ready to review.  This is a workflow state where the revision is not published but has been “turned in” for the content team to manage.  Revisions in the ready to review state can be edited by:<ul>
+<li>Staff</li>
+<li>Interns</li>
+<li>Users who can normally edit content but aren’t one of these will not see an edit button until the ready to review version has been published or deleted.</li>
+</ul>
+</li>
+</ul>
+<p>When content has a revision in the draft or ready to review mode:</p>
+<ul class="simple">
+<li>users with editing permission will see a Latest version and View version.<ul>
+<li>The View version is the latest PUBLISHED revision</li>
+<li>The Latest version is the latest drafted revision.</li>
+</ul>
+</li>
+</ul>
+<div class="section" id="unpublished">
+<h2>Unpublished<a class="headerlink" href="#unpublished" title="Permalink to this headline">¶</a></h2>
+<p>Unpublished is a state but applies to the node, not to a specific revision.  When a node is unpublished, there is no published revision.  The following users can view unpublished nodes:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Staff</li>
+<li>Interns</li>
+<li>Legal aid members (this is required to allow them to edit content)</li>
+<li>Pro bono members (this is required to allow them to edit content)</li>
+</ul>
+</div></blockquote>
+</div>
 </div>
 
 
@@ -217,10 +267,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="cms_legal_content_easyforms.html" class="btn btn-neutral float-right" title="Easy Forms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="cms_portal_main_page.html" class="btn btn-neutral float-right" title="Portal main page content type" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="cms_legal_content.html" class="btn btn-neutral float-left" title="Legal content type" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="cms_legal_content_annual_updates.html" class="btn btn-neutral float-left" title="Annual Updates" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
