@@ -217,34 +217,30 @@
 <h1>Workflow Moderation<a class="headerlink" href="#workflow-moderation" title="Permalink to this headline">¶</a></h1>
 <p>Our legal content type has three states:</p>
 <ul class="simple">
-<li>Published.  This is the live version on the website. Anyone can view published versions. Only one revision can ever be published at a time.  From a published revision:<ul>
+<li><strong>Published.</strong>  This is the live version on the website. Anyone can view published versions. Only one revision can ever be published at a time.  From a published revision:<ul>
 <li>Anyone with the legal aid, pro bono, staff, or intern roles can edit.</li>
 <li>Only staff or interns can move content from published to published (immediately publishing their revisions)</li>
 <li>Legal aid and pro bono members can only move content from published to draft/revise or published to ready to review.</li>
 </ul>
 </li>
-<li>Draft/revise.  This is a workflow state where the revision is not published and can be further edited by any of the following:<ul>
+<li><strong>Draft/revise.</strong>  This is a workflow state where the revision is not published and can be further edited by any of the following:<ul>
 <li>Staff</li>
 <li>Interns</li>
 <li>The author of the revision.  For example, if AdvocateA created the draft, AdvocateA can edit the revision</li>
 <li>Users who can normally edit content but aren’t one of these will not see an edit button until the draft has been published or deleted.</li>
 </ul>
 </li>
-<li>Ready to review.  This is a workflow state where the revision is not published but has been “turned in” for the content team to manage.  Revisions in the ready to review state can be edited by:<ul>
+<li><strong>Ready to review.</strong>  This is a workflow state where the revision is not published but has been “turned in” for the content team to manage.  An email is sent to anyone with the content manager role when content is moved into the ready to review state.  Revisions in the ready to review state can be edited by:<ul>
 <li>Staff</li>
 <li>Interns</li>
 <li>Users who can normally edit content but aren’t one of these will not see an edit button until the ready to review version has been published or deleted.</li>
 </ul>
 </li>
 </ul>
-<p>When content has a revision in the draft or ready to review mode:</p>
-<ul class="simple">
-<li>users with editing permission will see a Latest version and View version.<ul>
-<li>The View version is the latest PUBLISHED revision</li>
-<li>The Latest version is the latest drafted revision.</li>
-</ul>
-</li>
-</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">When content has a revision in the draft or ready to review mode, users with editing permission will see a Latest version and View version. The View version is the latest PUBLISHED revision. The Latest version is the latest drafted revision.</p>
+</div>
 <div class="section" id="unpublished">
 <h2>Unpublished<a class="headerlink" href="#unpublished" title="Permalink to this headline">¶</a></h2>
 <p>Unpublished is a state but applies to the node, not to a specific revision.  When a node is unpublished, there is no published revision.  The following users can view unpublished nodes:</p>
@@ -252,10 +248,11 @@
 <div><ul class="simple">
 <li>Staff</li>
 <li>Interns</li>
-<li>Legal aid members (this is required to allow them to edit content)</li>
-<li>Pro bono members (this is required to allow them to edit content)</li>
+<li>Legal aid members</li>
+<li>Pro bono members</li>
 </ul>
 </div></blockquote>
+<p>The expansiveness of the view unpublished content is required to allow legal aid members and pro bono members to edit legal content.</p>
 </div>
 </div>
 
