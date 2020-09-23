@@ -38,13 +38,19 @@ Components
 ============
 The supported components within a portal are:
 
-* Portal layout webform
-* Portal layout grid
-* Portal layout summary
-* Portal layout timeline
-* Portal layout sidebar
-* Portal layout split column layout
-* Portal layout structured content
+.. toctree::
+   :maxdepth: 1
+   :caption: Contents:
+   
+   portal_layout_webform
+   portal_layout_grid
+   portal_layout_summary
+   portal_layout_timeline
+   portal_layout_sidebar
+   portal_layout_structured_content
+   portal_layout_split_column_layout
+
+
 
 
 Navigation
