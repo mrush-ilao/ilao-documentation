@@ -34,13 +34,11 @@ Every portal page requires:
 
 .. todo::  Remove hero title, subtitle and image.
 
-Components
-============
-The supported components within a portal are:
+
 
 .. toctree::
    :maxdepth: 1
-   :caption: Contents:
+   :caption: Components:
    
    portal_layout_webform
    portal_layout_grid
