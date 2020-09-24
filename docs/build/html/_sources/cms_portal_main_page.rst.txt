@@ -57,3 +57,30 @@ Navigation
 The main portal page should be linked to in the Quick Links in the footer.  
 
 .. todo:: We will add portal main page where the page type is main page to the legal resources pages to improve findability.  
+
+
+Sample Structures
+===================
+
+The Victim of Crime portal main page (below) includes:
+
+* A sidebar with a CTA and CTA image component
+* A portal layout grid for the survivor stories
+* A split column layout component for the two text blocks
+
+.. image:: ../assets/portal-sample1.png
+
+.. image:: ../assets/portal-voc-mobile.png
+   :scale: 50%
+   
+The Gun Violence survivor story contains:
+
+* A sidebar with a CTA and CTA image component
+* A portal layout summary for Dantae's story, image, and summary
+* A timeline
+
+.. image:: ../assets/portal-sample2.png
+   :scale: 50%
+   
+   
+   

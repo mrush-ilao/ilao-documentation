@@ -1,5 +1,5 @@
 =======================
-Portal Layout Webform
+Portal layout webform
 =======================
 
 The portal layout webform is used to embed a webform into a page.  
