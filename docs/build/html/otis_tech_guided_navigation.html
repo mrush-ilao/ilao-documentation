@@ -202,18 +202,26 @@
 <div class="section" id="get-list-of-processes">
 <h3>Get list of processes<a class="headerlink" href="#get-list-of-processes" title="Permalink to this headline">¶</a></h3>
 <p>This code snippet returns the list of processes available to Guided navigation</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>$gn = ilao_gn_load_keys();
-$url = $gn[&#39;server&#39;];
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, $url);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-curl_setopt($ch, CURLOPT_USERPWD, $gn[&#39;user&#39;] . &#39;:&#39; . $gn[&#39;pass&#39;]);
-$result = curl_exec($ch);
-$processes = json_decode($result);
-return $processes;
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">$gn = ilao_gn_load_keys();</span>
+<span class="x">$url = $gn[&#39;server&#39;];</span>
+<span class="x">$ch = curl_init();</span>
+<span class="x">curl_setopt($ch, CURLOPT_URL, $url);</span>
+<span class="x">curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);</span>
+<span class="x">curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);</span>
+<span class="x">curl_setopt($ch, CURLOPT_USERPWD, $gn[&#39;user&#39;] . &#39;:&#39; . $gn[&#39;pass&#39;]);</span>
+<span class="x">$result = curl_exec($ch);</span>
+<span class="x">$processes = json_decode($result);</span>
+<span class="x">return $processes;</span>
 </pre></div>
 </div>
+<p>The resulting json contains an array of objects.  The objects contain:</p>
+<ul class="simple">
+<li>id.  This id is used throughout the system to identify which guided navigation process is involved in a transaction.</li>
+<li>name. The name in LegalServer of the process</li>
+<li>type.  The type of process</li>
+</ul>
+<p>When decoded, in Drupal this results in an array of objects as follows:</p>
+<img alt="_images/otis-gn-processes.png" src="_images/otis-gn-processes.png" />
 </div>
 <div class="section" id="start-a-new-session-for-a-specific-guided-navigation-process">
 <h3>Start a new session for a specific Guided Navigation process<a class="headerlink" href="#start-a-new-session-for-a-specific-guided-navigation-process" title="Permalink to this headline">¶</a></h3>
@@ -241,6 +249,40 @@ return $processes;
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">in the above example, $intake_id represents the process ID from the list of processes.</p>
+</div>
+</div>
+<div class="section" id="submit-data-to-guided-navigation">
+<h3>Submit data to Guided Navigation<a class="headerlink" href="#submit-data-to-guided-navigation" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">$gn = ilao_gn_load_keys();</span>
+<span class="x">$url = $gn[&#39;server&#39;] . &#39;/&#39; . $intake_id . &#39;/sessions/&#39; . $process_id . &#39;/forms/&#39; . $gn_form_id;</span>
+<span class="x">$data = json_encode($data);</span>
+<span class="x">$ch = curl_init();</span>
+<span class="x">curl_setopt($ch, CURLOPT_URL, $url);</span>
+<span class="x">curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 20);</span>
+<span class="x">curl_setopt($ch, CURLOPT_CUSTOMREQUEST, &quot;PUT&quot;);</span>
+<span class="x">curl_setopt($ch, CURLOPT_POSTFIELDS, $data);</span>
+<span class="x">curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);</span>
+<span class="x">curl_setopt($ch, CURLOPT_USERPWD, $gn[&#39;user&#39;] . &#39;:&#39; . $gn[&#39;pass&#39;]);</span>
+<span class="x">curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);</span>
+<span class="x">curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);</span>
+<span class="x">curl_setopt($ch, CURLOPT_HTTPHEADER, array(</span>
+<span class="x">        &#39;Accept: application/json&#39;,</span>
+<span class="x">        &#39;Content-Type: application/json&#39;)</span>
+<span class="x">);</span>
+<span class="x">$result = curl_exec($ch);</span>
+
+<span class="x">$response = json_decode($result);</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>In the above, it expects 4 variables to be available:</p>
+<ul class="last simple">
+<li>intake_id which is the guided navigation process id</li>
+<li>process id which is the specific process session id</li>
+<li>gn_form_id which is the specific form id</li>
+<li>data, which is an array of field ID and value.</li>
+</ul>
 </div>
 </div>
 </div>
