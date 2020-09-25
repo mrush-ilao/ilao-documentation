@@ -6,6 +6,14 @@ We have access to 2 legal issue classifiers that return one or more likely legal
 
 Both produce similar results although they don't always perform evenly.
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+   
+   otis_tech_guided_navigation
+   otis_tech_houston_ai
+   otis_tech_spot_classifier
+
 Prototype
 ===========
 
