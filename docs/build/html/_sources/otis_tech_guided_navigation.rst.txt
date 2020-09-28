@@ -184,7 +184,7 @@ Form fields will have:
 * a field_type which indicates the type of field 
 * a value field
 * validation_rules as an array, when the field has validation rules.
-* a value
+* a value.  This may be pre-filled with a default value from Guided Navigation.
 
 Select
 ^^^^^^^^^^
@@ -193,6 +193,7 @@ A select field will have:
 * a field_type of select
 * an array of options.  Each option is an object with a value and a label.  The label is shown to the user while the value is stored and shared back to Guided Navigation.
 * a boolean of is_multiple.  When this is true, the field is a multiselect and/or checkboxes.  When the value is false, the field is a single select or radio buttons.
+* a value.  This may be pre-filled with a default value from Guided Navigation.
 
 Text
 ^^^^^^^
@@ -214,6 +215,45 @@ A headline is just HTMl-formatted text. A headline will have:
 * an html_value 
 
 
+
+Display logic
+---------------------
+
+When the element's has_display_logic is true, the display_logic property will have data.
+
+The display_logic property will be an object with:
+* a condition property. Expected values are AND, OR. When there are multiple rules, this condition sits between them
+* a rules property.  This is an array of rules to test for
+* a not boolean.  When this is true, the rules should be tested as NOT. 
+* a valid boolean.  It is unclear what the purpose of this is.
+
+Rules
+^^^^^^^^
+Rules is an array that contains the conditions to test against.  Each element in the array contains an object with:
+
+* an id
+* field, which represents the field to test against.  This can be found in the profile from Guided Navigation for a particular session
+* type (known types: string)
+* input
+* operator.  Known types are contains, not_contains, equal, not_equal, begins_with, in, is_empty, is_not_empty,
+* value.  This is either a string (for contains, not contains) or an array of values (for in operators)
+* data.  For in operators, this is the data to test against.
+
+
+.. image:: ../assets/otis-gn-and-example.png
+
+In the above, the element would display if the field mr_service_area_49 had a value IN (1)
+
+
+
+.. image:: ../assets/otis-gn-display-logic-complex.png
+
+In the above, the element would display if the mr_ilao_legal_issue_58 had a value that contains 'end' OR'shut_off' OR 'no longer getting' OR 'shutoff'
+
+Validation Rules
+------------------
+
+Validation rules for an element, if not empty, is an array of rules.  Each element is an object with a proprety of type.  A type of required is the most common and indicates that a form element should be required.
 
 
 
