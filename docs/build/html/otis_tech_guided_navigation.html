@@ -102,6 +102,8 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Guided Navigation API Docs</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#stored-variables">Stored variables</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#api-invocations">API Invocations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#understanding-the-guided-navigation-form-object">Understanding the Guided Navigation form object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#elements">Elements</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="otis_tech_houston_ai.html">Houston AI Classifier API Docs</a></li>
@@ -250,6 +252,49 @@
 <p class="first admonition-title">Note</p>
 <p class="last">in the above example, $intake_id represents the process ID from the list of processes.</p>
 </div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;process_session_id&quot;</span><span class="p">:</span><span class="s2">&quot;523d0bc8-9f4d-473e-94cd-510ae576e160&quot;</span><span class="p">,</span>
+<span class="nt">&quot;profile&quot;</span><span class="p">:{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;fcdc0494-0190-11eb-995e-0e8d40a13cd5&quot;</span><span class="p">},</span>
+<span class="nt">&quot;profile_by_element_id&quot;</span><span class="p">:{</span><span class="nt">&quot;9f992bff-adca-4ae2-a6e4-9b478573b298&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+<span class="nt">&quot;25428520-5992-4638-ab45-a325af4f086b&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">},</span>
+<span class="nt">&quot;form&quot;</span><span class="p">:{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;5ef8cb29-0d0e-457b-a8a6-4d6b2983344a&quot;</span><span class="p">,</span>
+<span class="nt">&quot;elements&quot;</span><span class="p">:[{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;9f992bff-adca-4ae2-a6e4-9b478573b298&quot;</span><span class="p">,</span>
+<span class="nt">&quot;has_display_logic&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>
+<span class="nt">&quot;display_logic&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+<span class="nt">&quot;field_name&quot;</span><span class="p">:</span><span class="s2">&quot;mr_service_area_49&quot;</span><span class="p">,</span>
+<span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="s2">&quot;What service area do you live in?&quot;</span><span class="p">,</span>
+<span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;field&quot;</span><span class="p">,</span>
+<span class="nt">&quot;field_type&quot;</span><span class="p">:</span><span class="s2">&quot;select&quot;</span><span class="p">,</span>
+<span class="nt">&quot;validation_rules&quot;</span><span class="p">:[],</span>
+<span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+<span class="nt">&quot;options&quot;</span><span class="p">:[{</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+<span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="s2">&quot;Cook&quot;</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
+  <span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="s2">&quot;PSLS&quot;</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span>
+  <span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="s2">&quot;LOLLA&quot;</span><span class="p">}],</span>
+<span class="nt">&quot;is_multiple&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;25428520-5992-4638-ab45-a325af4f086b&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;has_display_logic&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>
+  <span class="nt">&quot;display_logic&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
+  <span class="nt">&quot;field_name&quot;</span><span class="p">:</span><span class="s2">&quot;mr_ilao_legal_issue_58&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="s2">&quot;Please describe your legal issue&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;field&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;field_type&quot;</span><span class="p">:</span><span class="s2">&quot;text&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;validation_rules&quot;</span><span class="p">:[],</span>
+  <span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">}],</span>
+  <span class="nt">&quot;validation_errors&quot;</span><span class="p">:[],</span>
+  <span class="nt">&quot;is_complete&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>
+  <span class="nt">&quot;should_show_previous&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">}}</span>
+</pre></div>
+</div>
+<p>The resulting JSON when decoded into a Drupal format results in</p>
+<ul class="simple">
+<li>a process_session_id (string).  This is used for the entire user’s session</li>
+<li>a profile (object).  This is updated over time as new data is gathered</li>
+<li>a profile_by_element_id (object).</li>
+<li>a form object.  This contains all the information about the form to display.</li>
+</ul>
+<img alt="_images/otis-gn-session.png" src="_images/otis-gn-session.png" />
 </div>
 <div class="section" id="submit-data-to-guided-navigation">
 <h3>Submit data to Guided Navigation<a class="headerlink" href="#submit-data-to-guided-navigation" title="Permalink to this headline">¶</a></h3>
@@ -282,6 +327,67 @@
 <li>process id which is the specific process session id</li>
 <li>gn_form_id which is the specific form id</li>
 <li>data, which is an array of field ID and value.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="understanding-the-guided-navigation-form-object">
+<h2>Understanding the Guided Navigation form object<a class="headerlink" href="#understanding-the-guided-navigation-form-object" title="Permalink to this headline">¶</a></h2>
+<p>Each form has:</p>
+<ul class="simple">
+<li>a unique ID associated with it that appears to change with each invocation.</li>
+<li>a set of elements that define the form</li>
+<li>an array of validation errors</li>
+<li>a boolean of is_complete.  When is_complete is TRUE, we’ve reached the end of the dialogue.</li>
+<li>a boolean of should_show_previous.  When TRUE, we can allow the user to go back a form page.</li>
+</ul>
+</div>
+<div class="section" id="elements">
+<h2>Elements<a class="headerlink" href="#elements" title="Permalink to this headline">¶</a></h2>
+<p>The heart of the form is the elements.</p>
+<img alt="_images/otis_gn_form_select_no_logic.png" src="_images/otis_gn_form_select_no_logic.png" />
+<p>Every (form) element has:</p>
+<ul class="simple">
+<li>a unique id</li>
+<li>a boolean to indicate whether there display logic.</li>
+<li>display_logic, which has data when has_display_logic is TRUE.</li>
+<li>a type.  Known supported types are field, headline</li>
+</ul>
+<div class="section" id="fields">
+<h3>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h3>
+<p>Known supported field types are select, text,</p>
+<p>Form fields will have:
+* a field_type which indicates the type of field
+* a value field
+* validation_rules as an array, when the field has validation rules.
+* a value</p>
+<div class="section" id="select">
+<h4>Select<a class="headerlink" href="#select" title="Permalink to this headline">¶</a></h4>
+<p>A select field will have:</p>
+<ul class="simple">
+<li>a field_type of select</li>
+<li>an array of options.  Each option is an object with a value and a label.  The label is shown to the user while the value is stored and shared back to Guided Navigation.</li>
+<li>a boolean of is_multiple.  When this is true, the field is a multiselect and/or checkboxes.  When the value is false, the field is a single select or radio buttons.</li>
+</ul>
+</div>
+<div class="section" id="text">
+<h4>Text<a class="headerlink" href="#text" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>a field_type of text</li>
+</ul>
+</div>
+</div>
+<div class="section" id="non-field-elements">
+<h3>Non-field Elements<a class="headerlink" href="#non-field-elements" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="instructions">
+<h4>Instructions<a class="headerlink" href="#instructions" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="headline">
+<h4>Headline<a class="headerlink" href="#headline" title="Permalink to this headline">¶</a></h4>
+<p>A headline is just HTMl-formatted text. A headline will have:</p>
+<ul class="simple">
+<li>a type of headline</li>
+<li>an html_value</li>
 </ul>
 </div>
 </div>
