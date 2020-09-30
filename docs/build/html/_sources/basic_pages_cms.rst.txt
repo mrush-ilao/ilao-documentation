@@ -5,7 +5,7 @@ Basic pages
 Purpose
 ==========
 
-Basic pages are used in the About section and for ancillary pages (such as Terms of Use, Privacy Policy, Contact us).  These pages are not included in legal resources sections of the website.
+Basic pages are used in the About section and for ancillary pages (such as Terms of Use, Privacy Policy, Contact us).  These pages are not included in legal resources sections of the website such as category and subcategory pages, the form library, or the blog.
 
 Elements to be removed
 ========================

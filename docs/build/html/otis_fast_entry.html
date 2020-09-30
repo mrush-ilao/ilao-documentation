@@ -111,8 +111,10 @@
 <li class="toctree-l2"><a class="reference internal" href="otis_endpoints.html">Triage rule endpoints</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_reports.html">Get Legal Help Reporting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_ai_integration.html">OTIS AI Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_third_party_support.html">Supported Integrations</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="cms_structured_content.html">Structured Content Schema</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul>
@@ -200,29 +202,64 @@
 </div>
 <div class="section" id="id1">
 <h2>Fast entry form<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://7antm8.axshare.com/good_prototype.html">Prototype form</a></p>
+<p><a class="reference external" href="https://7antm8.axshare.com/revised_prototype.html">Prototype form</a></p>
 </div>
 <div class="section" id="data-capture-reporting">
 <h2>Data capture &amp; reporting<a class="headerlink" href="#data-capture-reporting" title="Permalink to this headline">¶</a></h2>
-<p>On submission, the form will create an etransfer into legal server. In the etransfer, the unique ID will be ilao-fe[triage-id] rather than the ilao-web[triage-id].  Because there is no triage the data will be slightly different than triage intake:</p>
+<p>On submission, the form will create an etransfer into legal server. Because there is no triage the data will be slightly different than triage intake:</p>
+<div class="section" id="oas-triage-user-data-fields">
+<h3>Oas Triage User Data Fields<a class="headerlink" href="#oas-triage-user-data-fields" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>triage created and triage changed time stamps should be the submission time, which will also match the intake created and intake changed times</li>
-<li>the triage status will be Bypassed</li>
-<li>source will be Fast Entry</li>
-<li>the user id associated with the application will be that of the user submitting the form</li>
-<li>last screen viewed will be fast entry form</li>
-<li>intake_organization will be the intake settings associated with the organization.  The system will select the first intake settings for the organization that matches the county of the user.</li>
-<li>Legal problem term will be stored in the lsc_code table</li>
-<li>Legal problem term will be stored in the oas_triage_search field</li>
+<li>created should be the time stamp the form is submitted</li>
+<li>changed should be the time stamp the form is submitted</li>
+<li>intake_created should be the time stamp the form is submitted</li>
+<li>intake_changed should be the time stamp the form is submitted</li>
+<li>zip_code should be the zip code entered in the address fields</li>
+<li>last_screen_viewed should be fast-entry</li>
+<li>county should be derived from zip_code</li>
+<li>state should be pulled from address fields</li>
+<li>triage_status should be Intake Available</li>
+<li>intake_status should be eTransferred</li>
+<li>intake_organization should be: [TBD]</li>
+<li>lsc_code should be the name of the legal category term reference</li>
+<li>referral_source should be “Fast Entry”</li>
+<li>gender should be the gender name from the taxonomy</li>
+<li>race should be race name from the taxonomy</li>
+<li>marital_status should be should be the marital status name from the related taxonomy</li>
+<li>primary_language should be the language name from the related taxonomy</li>
+<li>etransfer_data should be the serialized etransfer packet</li>
 </ul>
-<div class="admonition-todo admonition" id="index-0">
-<p class="first admonition-title">Todo</p>
-<p class="last">Update triage status documentation</p>
 </div>
-<div class="admonition-todo admonition" id="index-1">
+<div class="section" id="other-fields-in-ilao-s-database">
+<h3>Other fields in ILAO’s database<a class="headerlink" href="#other-fields-in-ilao-s-database" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>If the user entered a mobile phone, it should be stored in oas_triage_user__oas_mobile_phone</li>
+<li>Response to “Does client consent to receive confirmation and follow-up text messages from IllinoisLegalAid.org?* ” should be stored in oas_triage_user__oas_opt_in_sms</li>
+<li>legal problem should be stored in oas_triage_user__oas_triage_search (check this)</li>
+</ul>
+</div>
+<div class="section" id="notes-only-elements">
+<h3>Notes only elements<a class="headerlink" href="#notes-only-elements" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Does client consent to text messages from referral organization should be appended to notes as “Client consents to text messages: Yes” or Client consents to text messages: No”</li>
+<li>Adverse party should be appended to notes as</li>
+<li>Describe the client’s problem as entered with a prefix of Problem description:</li>
+<li>Upcoming dates/deadlines should be appended to notes formatted as “Upcoming court dates and deadlines: date (description); date(description)”</li>
+<li>Additional notes as entered with a prefix of Additional notes:</li>
+</ul>
+</div>
+<div class="section" id="not-stored-elements">
+<h3>Not stored elements<a class="headerlink" href="#not-stored-elements" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Yes/no for client consents</li>
+<li>Yes/no for related court date</li>
+</ul>
+<p>If either of these are no, there should be no data saved at all and no eTransfer created.</p>
+<div class="admonition-todo admonition" id="index-0">
 <p class="first admonition-title">Todo</p>
 <p>Evaluate whether an organization should have a fast entry intake settings simply for the purpose of tagging the organization and location in reports.</p>
 <p class="last">A record will be created in ILAO’s triage user database table.</p>
+</div>
 </div>
 </div>
 </div>
