@@ -103,6 +103,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Fast Entry Form</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#fast-entry-permissions">Fast entry permissions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id1">Fast entry form</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exit-use-cases">Exit use cases</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#data-capture-reporting">Data capture &amp; reporting</a></li>
 </ul>
 </li>
@@ -202,7 +203,11 @@
 </div>
 <div class="section" id="id1">
 <h2>Fast entry form<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://7antm8.axshare.com/revised_prototype.html">Prototype form</a></p>
+<p>The fast entry form is built using webform.</p>
+</div>
+<div class="section" id="exit-use-cases">
+<h2>Exit use cases<a class="headerlink" href="#exit-use-cases" title="Permalink to this headline">¶</a></h2>
+<p>Fast entry forms will be treated as “we call client” and a field for callback times is collected via a preferred day/time field.</p>
 </div>
 <div class="section" id="data-capture-reporting">
 <h2>Data capture &amp; reporting<a class="headerlink" href="#data-capture-reporting" title="Permalink to this headline">¶</a></h2>
@@ -210,6 +215,7 @@
 <div class="section" id="oas-triage-user-data-fields">
 <h3>Oas Triage User Data Fields<a class="headerlink" href="#oas-triage-user-data-fields" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
+<li>user_id should be the user ID of the person submitting the form</li>
 <li>created should be the time stamp the form is submitted</li>
 <li>changed should be the time stamp the form is submitted</li>
 <li>intake_created should be the time stamp the form is submitted</li>
@@ -220,7 +226,7 @@
 <li>state should be pulled from address fields</li>
 <li>triage_status should be Intake Available</li>
 <li>intake_status should be eTransferred</li>
-<li>intake_organization should be: [TBD]</li>
+<li>intake_organization should be pulled from the intake_settings stored in the legal server configuration for the selected organization.</li>
 <li>lsc_code should be the name of the legal category term reference</li>
 <li>referral_source should be “Fast Entry”</li>
 <li>gender should be the gender name from the taxonomy</li>
@@ -236,30 +242,41 @@
 <li>If the user entered a mobile phone, it should be stored in oas_triage_user__oas_mobile_phone</li>
 <li>Response to “Does client consent to receive confirmation and follow-up text messages from IllinoisLegalAid.org?* ” should be stored in oas_triage_user__oas_opt_in_sms</li>
 <li>legal problem should be stored in oas_triage_user__oas_triage_search (check this)</li>
+<li>current count SHOULD NOT BE changed in intake settings when the record is saved.</li>
 </ul>
+</div>
+<div class="section" id="etransferred-elements-only">
+<h3>Etransferred elements only<a class="headerlink" href="#etransferred-elements-only" title="Permalink to this headline">¶</a></h3>
+<p>These are sent to LegalServer only and not stored as fields in ILAO’s website (except as webform submissions):
+* Client first, middle, last name
+* Client date of birth
+* Client address, phone
+* Alias first, middle, last name
+* veteran (true or false)
+* disabled (true or false)
+* eTransferOrganization pulled from legal server configuration
+* externalID should be ILAOWeb-[triage user id]
+* email of user
+* related phone notes and telephone (except for mobile numbers)</p>
 </div>
 <div class="section" id="notes-only-elements">
 <h3>Notes only elements<a class="headerlink" href="#notes-only-elements" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Does client consent to text messages from referral organization should be appended to notes as “Client consents to text messages: Yes” or Client consents to text messages: No”</li>
-<li>Adverse party should be appended to notes as</li>
-<li>Describe the client’s problem as entered with a prefix of Problem description:</li>
-<li>Upcoming dates/deadlines should be appended to notes formatted as “Upcoming court dates and deadlines: date (description); date(description)”</li>
-<li>Additional notes as entered with a prefix of Additional notes:</li>
+<li>Adverse party should be appended to notes as “Adverse party: [names]”</li>
+<li>Describe the client’s problem as entered with a prefix of “Problem description: “</li>
+<li>Upcoming dates/deadlines should be appended to notes formatted as “Upcoming court dates and deadlines: [date (description); date(description)]”</li>
+<li>Additional notes as entered with a prefix of “Additional notes:”</li>
 </ul>
 </div>
 <div class="section" id="not-stored-elements">
 <h3>Not stored elements<a class="headerlink" href="#not-stored-elements" title="Permalink to this headline">¶</a></h3>
+<p>This data is not stored anywhere except in webform submissions</p>
 <ul class="simple">
 <li>Yes/no for client consents</li>
 <li>Yes/no for related court date</li>
 </ul>
 <p>If either of these are no, there should be no data saved at all and no eTransfer created.</p>
-<div class="admonition-todo admonition" id="index-0">
-<p class="first admonition-title">Todo</p>
-<p>Evaluate whether an organization should have a fast entry intake settings simply for the purpose of tagging the organization and location in reports.</p>
-<p class="last">A record will be created in ILAO’s triage user database table.</p>
-</div>
 </div>
 </div>
 </div>
