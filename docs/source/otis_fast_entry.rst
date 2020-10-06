@@ -69,6 +69,7 @@ Other fields in ILAO's database
 Etransferred elements only
 ------------------------------
 These are sent to LegalServer only and not stored as fields in ILAO's website (except as webform submissions):
+
 * Client first, middle, last name
 * Client date of birth
 * Client address, phone
@@ -79,6 +80,7 @@ These are sent to LegalServer only and not stored as fields in ILAO's website (e
 * externalID should be ILAOWeb-[triage user id]
 * email of user
 * related phone notes and telephone (except for mobile numbers)
+
 
 Notes only elements
 ----------------------
