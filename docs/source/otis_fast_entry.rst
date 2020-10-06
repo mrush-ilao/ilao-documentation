@@ -13,6 +13,10 @@ The fast entry form is accessible at /get-legal-help/fast-entry but is only acce
 * Legal aid members who are also organization managers of an OTIS partner organization
 * Website users who have been given the fast entry role within the organization settings of an OTIS partner organization by an organization manager of the OTIS partner organization
 
+Related Intake Settings
+==========================
+Because fast entry bypasses triage rules and intake settings generally, ILAO staff will associate a single intake settings ID per organization in the Legal Server configuration.  This id will then be used for data tracking. Fast entry intakes will not impact counts on any intake settings.
+
 
 Fast entry form
 ====================
