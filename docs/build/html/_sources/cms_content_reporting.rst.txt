@@ -103,6 +103,7 @@ The find legal content report has many filters.  Filters are based on an AND con
 * Whether the translation is currently marked as outdated
 * Whether there is an open request to create a translation.  This field applies only to legal content.  
 * Translation language.  This should be used to limit the list to English, Spanish or Polish.
+* Content management tags.  This should be used to limit the results to those that have a term from the content management tags taxonomy.  Separate terms by commas.
 
 .. note:: because of the way jurisdictions were handled on the D7 site, the counties, cities and zipcodes show what jurisdictions the content is tagged to but the report **does not show** whether the relationship between the jurisdiction (some part of Illinois) includes or excludes the jurisdictions.  As of August 2020, the jurisdiction data is not used in any way on the website's front-end.
 

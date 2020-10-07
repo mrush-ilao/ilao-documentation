@@ -13,6 +13,7 @@ When creating a tool, add:
 
 * A title
 * A relationship to an existing toolbox
+* A content description.  This is used throughout the website.
 * A primary legal category
 * A selector form label; this will appear on the toolbox page
 * An effort level.  Use easy for anything that can be completed in 1 week or less, medium for anything that takes 1-6 months and hard for anything that typically takes 6 months or more.

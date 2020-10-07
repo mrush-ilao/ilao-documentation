@@ -10,6 +10,7 @@ Content types for legal content:
    
    cms_wysiwyg
    cms_custom_tokens
+   cms_content_management_tags
    cms_legal_content
    cms_portal_main_page
    cms_toolboxes
