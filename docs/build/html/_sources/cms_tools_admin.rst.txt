@@ -23,12 +23,6 @@ When creating a tool, add:
 * Add each tool step in the tools list (these can not be added until the tool steps exist)
 
 
-Do not use the pick up where I left off field
-
-.. todo:: Add tools to appear in category pages if they do not; proper search handling; add legal issues so that tools can appear in subcategory pages
-
-.. todo:: Remove publishing status field, pick up where I left off field,
-
 What users see
 ==================
 

@@ -9,7 +9,7 @@ To create a tool step:
 
 * Add a title
 * Pick the tool the step goes into
-* Indicate whether the step is always required.  If you mark NO, the text (optional) will appear next to the step in the progress block.  There is a field to explain when the step is not required but it does not appear.
+* Indicate whether the step is always required.  
 * Indicate if this is the last step in the process.  A tool should have exactly 1 last step.
 * Add a step type.  This adds the content to the page.  
 * Optionally add toolbox step components of type callout
@@ -68,13 +68,12 @@ For multiple forms, it is best to use the process step for now.
 
 Tool Step Components
 -----------------------
-There are currently 3 components listed but only the callout is supported. The other two will be removed.
+Callout is the only tool step component supported.
 
 A callout is an optional component that can be used below the main text of the page to highlight important information.  Tool steps should have no more than 1 callout and can be positioned above or below the text on process steps.
 
 Callouts display with a slightly shaded background.
 
-.. todo::  Remove key term and short answer components as they are deprecated.
 
 What users see
 ===================
