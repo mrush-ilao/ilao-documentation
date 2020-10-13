@@ -14,7 +14,8 @@ A legal problem has:
 * faqs associated with the problems, built on the faq schema
 * related resources (optionally)
 
-Download `schema file <https://drive.google.com/file/d/1wkjQz-FjeiQ3UDBs97IKXSnH4z6Mbrix/view?usp=sharing>`_
+
+Download :download:`JSON schema:  <../assets/code/structured-content.json>`
   
 .. literalinclude:: ../assets/code/structured-content.json
    :language: JSON
@@ -64,7 +65,9 @@ See:
 Order of Protection "bundle"
 ================================
   
-Download `order-protection file <https://drive.google.com/file/d/1O8iLFospqcSddxUvxHZaXoMCoYGSFFWq/view?usp=sharing>`_
+This bundle validates against the proposed schema.
+
+Download :download:`Order of protection:  <../assets/code/order-protection.json>`
   
 .. literalinclude:: ../assets/code/order-protection.json
    :language: JSON
