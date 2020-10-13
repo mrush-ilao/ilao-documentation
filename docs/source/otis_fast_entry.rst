@@ -85,6 +85,7 @@ These are sent to LegalServer only and not stored as fields in ILAO's website (e
 Notes only elements
 ----------------------
 
+* Add "Source: Fast-entry from [email address of logged in user]"
 * Does client consent to text messages from referral organization should be appended to notes as "Client consents to text messages: Yes" or Client consents to text messages: No"
 * Adverse party should be appended to notes as "Adverse party: [names]"
 * Describe the client's problem as entered with a prefix of "Problem description: "
