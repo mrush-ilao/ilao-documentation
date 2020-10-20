@@ -12,6 +12,7 @@ The legal content type is the content type for the bulk of our legal information
    cms_legal_content_annual_updates
    cms_legal_content_workflows
 
+
 Related content
 =================
 Related content, labeled "Learn More" is pulled from one of two places, depending on the legal content:

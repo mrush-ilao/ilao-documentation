@@ -16,6 +16,8 @@ Content types for legal content:
    cms_toolboxes
    cms_adrm
    cms_content_reporting
+   cms_structured_legal_content
+   
 
 Known Workarounds
 ===================

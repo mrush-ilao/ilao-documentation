@@ -178,7 +178,7 @@ Every (form) element has:
 
 Fields
 ----------
-Known supported field types are select, text,
+Known supported field types are select, text, bool,
 
 Form fields will have:
 * a field_type which indicates the type of field 
@@ -198,6 +198,13 @@ A select field will have:
 Text
 ^^^^^^^
 * a field_type of text
+
+Bool
+^^^^^^
+* a field_type of bool
+* no options; these should be Yes, No with values of t and f
+
+
 
 
 

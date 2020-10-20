@@ -1,0 +1,570 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Structured content types &mdash; IllinoisLegalAid.org 1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Basic pages" href="basic_pages_cms.html" />
+    <link rel="prev" title="Structured Content Schema" href="cms_structured_content.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> IllinoisLegalAid.org
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2020
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cms_wysiwyg.html">WYSIWYG Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_custom_tokens.html">Custom Tokens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_content_management_tags.html">Content management tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_legal_content.html">Legal content type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_portal_main_page.html">Portal main page content type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_toolboxes.html">Toolbox and related content types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_adrm.html">ADRM content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_content_reporting.html">Legal content reporting</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="cms_structured_legal_content.html">Structured Legal Content</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_content.html">Structured Content Schema</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Structured content types</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#content-types">Content Types</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#paragraph-bundles">Paragraph Bundles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#taxonomies">Taxonomies</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="legal_content_cms.html#known-workarounds">Known Workarounds</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cms_structured_content.html">Structured Content Schema</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Workarounds:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cms_wysiwyg.html">WYSIWYG Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_custom_tokens.html">Custom Tokens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_content_management_tags.html">Content management tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_legal_content.html">Legal content type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_portal_main_page.html">Portal main page content type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_toolboxes.html">Toolbox and related content types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_adrm.html">ADRM content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_content_reporting.html">Legal content reporting</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="cms_structured_legal_content.html">Structured Legal Content</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_content.html">Structured Content Schema</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Structured content types</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#content-types">Content Types</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#paragraph-bundles">Paragraph Bundles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#taxonomies">Taxonomies</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="legal_content_cms.html#known-workarounds">Known Workarounds</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">IllinoisLegalAid.org</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="legal_content_cms.html">Legal Content CMS</a> &raquo;</li>
+        
+          <li><a href="cms_structured_legal_content.html">Structured Legal Content</a> &raquo;</li>
+        
+      <li>Structured content types</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/cms_structured_content_types.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="structured-content-types">
+<h1>Structured content types<a class="headerlink" href="#structured-content-types" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="content-types">
+<h2>Content Types<a class="headerlink" href="#content-types" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="legal-problem">
+<h3>Legal Problem<a class="headerlink" href="#legal-problem" title="Permalink to this headline">¶</a></h3>
+<p>The primary content type for structured content is the Legal Problem.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="23%" />
+<col width="20%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Type</th>
+<th class="head">Cardinality</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Title (name)</td>
+<td>Title field</td>
+<td>1; required</td>
+<td>Name of the legal problem</td>
+</tr>
+<tr class="row-odd"><td>Description</td>
+<td>Text area (plain)</td>
+<td>1; required</td>
+<td>Description of the problem</td>
+</tr>
+<tr class="row-even"><td>Disambiguation
+Description</td>
+<td>Text area (plain)</td>
+<td>1</td>
+<td>A short description of the
+item used to disambiguate
+from other, similar items</td>
+</tr>
+<tr class="row-odd"><td>Identifier</td>
+<td>Hidden</td>
+<td>&#160;</td>
+<td>Node UUID</td>
+</tr>
+<tr class="row-even"><td>Stage</td>
+<td>Text field</td>
+<td>1</td>
+<td>The stage of the legal
+problem, if applicable. For
+example, pre-filing, post-
+filing/pre-trial, trial, etc</td>
+</tr>
+<tr class="row-odd"><td>Subtype</td>
+<td>Term reference
+to Legal Problem
+Subtypes</td>
+<td>unlimited</td>
+<td>A more specific type of the
+legal problem. For example,
+‘being evicted from public
+housing’ under the problem
+“being evicted”</td>
+</tr>
+<tr class="row-even"><td>LegalCode</td>
+<td>Paragraphs: Legal</td>
+<td>unlimited</td>
+<td>Legal code from standard
+coding systems</td>
+</tr>
+<tr class="row-odd"><td>LifeAreaAffected</td>
+<td>Term reference
+to Life Areas</td>
+<td>unlimited</td>
+<td>The area of a person’s life
+that is affected by the
+legal problem.</td>
+</tr>
+<tr class="row-even"><td>Possible solution</td>
+<td>Entity reference</td>
+<td>unlimited</td>
+<td>Entity reference to Legal
+Solution nodes</td>
+</tr>
+<tr class="row-odd"><td>Primary
+prevention</td>
+<td>Entity reference</td>
+<td>1</td>
+<td>Entity reference to legal
+solution nodes</td>
+</tr>
+<tr class="row-even"><td>Secondary
+prevention</td>
+<td>Entity reference</td>
+<td>1</td>
+<td>Entity reference to legal
+solution nodes</td>
+</tr>
+<tr class="row-odd"><td>FAQ</td>
+<td>Entity reference</td>
+<td>unlimited</td>
+<td>Entity reference to
+Legal Question</td>
+</tr>
+<tr class="row-even"><td>RelatedResources</td>
+<td>Entity reference</td>
+<td>unlimited</td>
+<td>Entity reference to legal
+content types</td>
+</tr>
+<tr class="row-odd"><td>Image</td>
+<td>Image</td>
+<td>1</td>
+<td>Image to associate with node</td>
+</tr>
+<tr class="row-even"><td>Language</td>
+<td>Hidden</td>
+<td>1</td>
+<td>Language of the node</td>
+</tr>
+<tr class="row-odd"><td>url</td>
+<td>Hidden</td>
+<td>1</td>
+<td>Website url for the node</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="legal-solution">
+<h3>Legal Solution<a class="headerlink" href="#legal-solution" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="23%" />
+<col width="20%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Type</th>
+<th class="head">Cardinality</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Title (body)</td>
+<td>Title field</td>
+<td>1</td>
+<td>Question title</td>
+</tr>
+<tr class="row-odd"><td>Alternate name</td>
+<td>Text field</td>
+<td>1</td>
+<td>An alternative name for the
+solution</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td>Text area</td>
+<td>1</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>Disambiguation
+Description</td>
+<td>Text area (plain)</td>
+<td>1</td>
+<td>A short description of the
+item used to disambiguate
+from other, similar items</td>
+</tr>
+<tr class="row-even"><td>Identifier</td>
+<td>Hidden</td>
+<td>1</td>
+<td>Node UUID</td>
+</tr>
+<tr class="row-odd"><td>url</td>
+<td>Hidden</td>
+<td>1</td>
+<td>Website url for the node</td>
+</tr>
+<tr class="row-even"><td>solution type</td>
+<td>Term reference</td>
+<td>1</td>
+<td>Reference to solution types</td>
+</tr>
+<tr class="row-odd"><td>legal forms
+needed</td>
+<td>Entity reference</td>
+<td>unlimited</td>
+<td>Reference to legal forms</td>
+</tr>
+<tr class="row-even"><td>information
+needed</td>
+<td>Text field</td>
+<td>unlimited</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>legalDifficulty</td>
+<td>Text area</td>
+<td>1</td>
+<td>Explanation of the legal
+difficulty involved</td>
+</tr>
+<tr class="row-even"><td>estimated time
+required</td>
+<td>Duration</td>
+<td>1</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>eligibilityRules</td>
+<td>Paragraphs</td>
+<td>unlimited</td>
+<td>Text blocks</td>
+</tr>
+<tr class="row-even"><td>jurisdiction</td>
+<td>Paragraphs</td>
+<td>unlimited</td>
+<td>Coverage area paragraphs</td>
+</tr>
+<tr class="row-odd"><td>helpful
+organizations</td>
+<td>TBD</td>
+<td>unlimited</td>
+<td>Helpful organizations to
+refer persons to</td>
+</tr>
+<tr class="row-even"><td>howTos</td>
+<td>Entity reference</td>
+<td>unlimited</td>
+<td>Reference to a legal how to</td>
+</tr>
+<tr class="row-odd"><td>result</td>
+<td>Paragraphs</td>
+<td>one</td>
+<td>Text blocks</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="legal-question">
+<h3>Legal Question<a class="headerlink" href="#legal-question" title="Permalink to this headline">¶</a></h3>
+<p>Single question; packaged within an FAQ in a legal problem.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="23%" />
+<col width="20%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Type</th>
+<th class="head">Cardinality</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Title (body)</td>
+<td>Title field</td>
+<td>1</td>
+<td>Question title</td>
+</tr>
+<tr class="row-odd"><td>Accepted Answer</td>
+<td>Paragraphs</td>
+<td>1</td>
+<td>Text block paragraphs</td>
+</tr>
+<tr class="row-even"><td>Suggested
+Answer</td>
+<td>Paragraphs</td>
+<td>unlimited</td>
+<td>Text block paragraphs</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="legal-forms">
+<h3>Legal Forms<a class="headerlink" href="#legal-forms" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="legal-how-to">
+<h3>Legal How-to<a class="headerlink" href="#legal-how-to" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="paragraph-bundles">
+<h2>Paragraph Bundles<a class="headerlink" href="#paragraph-bundles" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>LegalCode, used in LegalProblem</li>
+<li>CoverageArea, used in Legal Solution, Organization</li>
+<li>TextBlock, used in various</li>
+</ul>
+</div>
+<div class="section" id="taxonomies">
+<h2>Taxonomies<a class="headerlink" href="#taxonomies" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>life areas (used in legal problem)</li>
+<li>solution types (used in legal solutions)</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="basic_pages_cms.html" class="btn btn-neutral float-right" title="Basic pages" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cms_structured_content.html" class="btn btn-neutral float-left" title="Structured Content Schema" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Illinois Legal Aid Online
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
