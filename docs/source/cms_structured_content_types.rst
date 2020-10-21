@@ -62,6 +62,9 @@ The primary content type for structured content is the Legal Problem.
 | url             | Hidden            | 1              | Website url for the node    |
 +-----------------+-------------------+----------------+-----------------------------+
 
+.. note:: 
+   
+   The related resources will automatically pull the name, last modified (last internal revision date), last reviewed (last expert review date), url, and content format as additionalType in exporting the schema.
 
 Legal Solution
 ----------------
@@ -186,6 +189,34 @@ Legal Steps
 .. note:: There is also a position property in the legal steps in the schema.  This is computed in the step sections paragraph bundle in the How-to and not stored directly in the steps.  This will allow for step re-use.
 
 
+Legal Organization
+---------------------
+.. note::
+   ILAO already has organization profile data that should be used for any organization in our system.  New entities should only be added to reference organizations that are not legal services providers within our Organization platform.
+   
+   Fields will be hidden when an Organization is included.
+
++-----------------+-------------------+----------------+-----------------------------+
+| Field           | Type              | Cardinality    | Description                 |
++=================+===================+================+=============================+
+| Title (Name)    | Title field       | 1, required    |                             |
++-----------------+-------------------+----------------+-----------------------------+
+| Organization    | Entity reference  | 1              | Reference to an existing    |
+|                 |                   |                | organization                |
++-----------------+-------------------+----------------+-----------------------------+
+| Description     | Text area         | 1              |                             |
++-----------------+-------------------+----------------+-----------------------------+
+| Address         | Address           | 1              |                             |
++-----------------+-------------------+----------------+-----------------------------+
+| Area Served     | Paragraphs bundle | unlimited      | Coverage area               |
++-----------------+-------------------+----------------+-----------------------------+
+| Email           | Email             | 1              |                             |
++-----------------+-------------------+----------------+-----------------------------+
+| Telephone       | Text field        | 1              |                             |
++-----------------+-------------------+----------------+-----------------------------+
+| Contact         | Paragraphs bundle | one            |                             |
++-----------------+-------------------+----------------+-----------------------------+
+
 Paragraph Bundles
 ===================
 
@@ -198,6 +229,7 @@ There are a number of paragraphs bundle created to support the content entities 
 * How to directions, used in Legal Steps
 * CoverageArea, used in Legal Solution, Organization
 * TextBlock, used in various text output where we need more control over structure.
+* Contact point
 
 Legal Code
 ------------
@@ -311,7 +343,39 @@ Item list Elements
 | Item            | Hidden            | 1, required    | Clean version of direction  |
 +-----------------+-------------------+----------------+-----------------------------+
 
-.. note:: There is also a position property in the schema.  This is computed in the How-to and not stored in the database.   
+.. note:: There is also a position property in the schema.  This is computed in the How-to and not stored in the database.  
+
+Coverage Area
+----------------
+
++-----------------+-------------------+----------------+-----------------------------+
+| Field           | Type              | Cardinality    | Description                 |
++=================+===================+================+=============================+
+| Administrative  | Select            | 1, required    | Country, state, city,       |
+| area            |                   |                | postal code                 |
++-----------------+-------------------+----------------+-----------------------------+
+| Locality        | Term reference    | unlimited      | Region taxonomy             |
++-----------------+-------------------+----------------+-----------------------------+
+
+Contact Point
+------------------
++-----------------+-------------------+----------------+-----------------------------+
+| Field           | Type              | Cardinality    | Description                 |
++=================+===================+================+=============================+
+| Contact type    | Text field        | unlimited      |                             |
++-----------------+-------------------+----------------+-----------------------------+
+| Area served     | Paragraphs bundle | unlimited      | Coverage area bundle        |
++-----------------+-------------------+----------------+-----------------------------+
+| Email           | Email             | 1              |                             |
++-----------------+-------------------+----------------+-----------------------------+
+| Telephone       | Text field        | 1              |                             |
++-----------------+-------------------+----------------+-----------------------------+
+| Hours           | Hours field       | unlimited      |                             |
++-----------------+-------------------+----------------+-----------------------------+
+| Products        | Text field        | unlimited      | Type of service or product  |
+| Supported       |                   |                | offered through the         |
+|                 |                   |                | organization.               |
++-----------------+-------------------+----------------+-----------------------------+
 
 Taxonomies
 =============

@@ -340,6 +340,10 @@ content types</td>
 </tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The related resources will automatically pull the name, last modified (last internal revision date), last reviewed (last expert review date), url, and content format as additionalType in exporting the schema.</p>
+</div>
 </div>
 <div class="section" id="legal-solution">
 <h3>Legal Solution<a class="headerlink" href="#legal-solution" title="Permalink to this headline">¶</a></h3>
@@ -631,6 +635,72 @@ performing instructions</td>
 <p class="last">There is also a position property in the legal steps in the schema.  This is computed in the step sections paragraph bundle in the How-to and not stored directly in the steps.  This will allow for step re-use.</p>
 </div>
 </div>
+<div class="section" id="legal-organization">
+<h3>Legal Organization<a class="headerlink" href="#legal-organization" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>ILAO already has organization profile data that should be used for any organization in our system.  New entities should only be added to reference organizations that are not legal services providers within our Organization platform.</p>
+<p class="last">Fields will be hidden when an Organization is included.</p>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="23%" />
+<col width="20%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Type</th>
+<th class="head">Cardinality</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Title (Name)</td>
+<td>Title field</td>
+<td>1, required</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>Organization</td>
+<td>Entity reference</td>
+<td>1</td>
+<td>Reference to an existing
+organization</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td>Text area</td>
+<td>1</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>Address</td>
+<td>Address</td>
+<td>1</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>Area Served</td>
+<td>Paragraphs bundle</td>
+<td>unlimited</td>
+<td>Coverage area</td>
+</tr>
+<tr class="row-odd"><td>Email</td>
+<td>Email</td>
+<td>1</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>Telephone</td>
+<td>Text field</td>
+<td>1</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>Contact</td>
+<td>Paragraphs bundle</td>
+<td>one</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div class="section" id="paragraph-bundles">
 <h2>Paragraph Bundles<a class="headerlink" href="#paragraph-bundles" title="Permalink to this headline">¶</a></h2>
@@ -643,6 +713,7 @@ performing instructions</td>
 <li>How to directions, used in Legal Steps</li>
 <li>CoverageArea, used in Legal Solution, Organization</li>
 <li>TextBlock, used in various text output where we need more control over structure.</li>
+<li>Contact point</li>
 </ul>
 <div class="section" id="legal-code">
 <h3>Legal Code<a class="headerlink" href="#legal-code" title="Permalink to this headline">¶</a></h3>
@@ -939,6 +1010,91 @@ with markup</td>
 <p class="first admonition-title">Note</p>
 <p class="last">There is also a position property in the schema.  This is computed in the How-to and not stored in the database.</p>
 </div>
+</div>
+<div class="section" id="coverage-area">
+<h3>Coverage Area<a class="headerlink" href="#coverage-area" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="23%" />
+<col width="20%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Type</th>
+<th class="head">Cardinality</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Administrative
+area</td>
+<td>Select</td>
+<td>1, required</td>
+<td>Country, state, city,
+postal code</td>
+</tr>
+<tr class="row-odd"><td>Locality</td>
+<td>Term reference</td>
+<td>unlimited</td>
+<td>Region taxonomy</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="contact-point">
+<h3>Contact Point<a class="headerlink" href="#contact-point" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="23%" />
+<col width="20%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Type</th>
+<th class="head">Cardinality</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Contact type</td>
+<td>Text field</td>
+<td>unlimited</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>Area served</td>
+<td>Paragraphs bundle</td>
+<td>unlimited</td>
+<td>Coverage area bundle</td>
+</tr>
+<tr class="row-even"><td>Email</td>
+<td>Email</td>
+<td>1</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>Telephone</td>
+<td>Text field</td>
+<td>1</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>Hours</td>
+<td>Hours field</td>
+<td>unlimited</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>Products
+Supported</td>
+<td>Text field</td>
+<td>unlimited</td>
+<td>Type of service or product
+offered through the
+organization.</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="section" id="taxonomies">
