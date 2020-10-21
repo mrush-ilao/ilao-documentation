@@ -92,11 +92,14 @@ html_theme = 'sphinx_rtd_theme'
 #
 # html_theme_options = {}
 
+def setup(app):
+  app.add_stylesheet( "css/themeoverrides.css" )
+
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.
 # will overwrite the builtin "default.css".
-html_static_path = []
+html_static_path = ['_static']
 
 html_css_files = [
     'css/custom.css',
