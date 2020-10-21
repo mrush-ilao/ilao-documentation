@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Structured content types &mdash; IllinoisLegalAid.org 1 documentation</title>
+  <title>Structured Content Types &mdash; IllinoisLegalAid.org 1 documentation</title>
   
 
   
@@ -102,10 +102,11 @@
 <li class="toctree-l2"><a class="reference internal" href="cms_content_reporting.html">Legal content reporting</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="cms_structured_legal_content.html">Structured Legal Content</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content.html">Structured Content Schema</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Structured content types</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Structured Content Types</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#content-types">Content Types</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#paragraph-bundles">Paragraph Bundles</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#taxonomies">Taxonomies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#technical-notes">Technical Notes</a></li>
 </ul>
 </li>
 </ul>
@@ -117,7 +118,6 @@
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cms_structured_content.html">Structured Content Schema</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul class="current">
@@ -132,10 +132,11 @@
 <li class="toctree-l2"><a class="reference internal" href="cms_content_reporting.html">Legal content reporting</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="cms_structured_legal_content.html">Structured Legal Content</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content.html">Structured Content Schema</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Structured content types</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Structured Content Types</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#content-types">Content Types</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#paragraph-bundles">Paragraph Bundles</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#taxonomies">Taxonomies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#technical-notes">Technical Notes</a></li>
 </ul>
 </li>
 </ul>
@@ -193,7 +194,7 @@
         
           <li><a href="cms_structured_legal_content.html">Structured Legal Content</a> &raquo;</li>
         
-      <li>Structured content types</li>
+      <li>Structured Content Types</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -213,7 +214,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="structured-content-types">
-<h1>Structured content types<a class="headerlink" href="#structured-content-types" title="Permalink to this headline">¶</a></h1>
+<h1>Structured Content Types<a class="headerlink" href="#structured-content-types" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="content-types">
 <h2>Content Types<a class="headerlink" href="#content-types" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="legal-problem">
@@ -489,25 +490,471 @@ Answer</td>
 </div>
 <div class="section" id="legal-forms">
 <h3>Legal Forms<a class="headerlink" href="#legal-forms" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="23%" />
+<col width="20%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Type</th>
+<th class="head">Cardinality</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Title (formName)</td>
+<td>Title field</td>
+<td>1</td>
+<td>Form title</td>
+</tr>
+<tr class="row-odd"><td>FilledOutWith</td>
+<td>Paragraphs</td>
+<td>unlimited</td>
+<td>FormPrep Program paragraphs</td>
+</tr>
+<tr class="row-even"><td>formUse</td>
+<td>Text area</td>
+<td>1</td>
+<td>Explanation of how/when the
+form is used</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="legal-how-to">
 <h3>Legal How-to<a class="headerlink" href="#legal-how-to" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="23%" />
+<col width="20%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Type</th>
+<th class="head">Cardinality</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Title (Name)</td>
+<td>Title field</td>
+<td>1, required</td>
+<td>Title</td>
+</tr>
+<tr class="row-odd"><td>Description</td>
+<td>Text area</td>
+<td>1, required</td>
+<td>Description of the how-to</td>
+</tr>
+<tr class="row-even"><td>prepTime</td>
+<td>duration</td>
+<td>1, required</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>performTime</td>
+<td>duration</td>
+<td>1, required</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>totalTime</td>
+<td>duration</td>
+<td>1, required</td>
+<td>Prep time + perform time</td>
+</tr>
+<tr class="row-odd"><td>stepSections</td>
+<td>paragraphs bundle</td>
+<td>unlimited</td>
+<td>Reference to step sections</td>
+</tr>
+<tr class="row-even"><td>supply</td>
+<td>text field</td>
+<td>unlimited</td>
+<td>Things needed to complete
+the how-to</td>
+</tr>
+<tr class="row-odd"><td>tool</td>
+<td>text field</td>
+<td>unlimited</td>
+<td>Tools needed to complete the
+how to</td>
+</tr>
+<tr class="row-even"><td>yield</td>
+<td>text field</td>
+<td>one</td>
+<td>The quantity that results by
+performing instructions</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="legal-steps">
+<h3>Legal Steps<a class="headerlink" href="#legal-steps" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="23%" />
+<col width="20%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Type</th>
+<th class="head">Cardinality</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Title (Name)</td>
+<td>Title field</td>
+<td>1, required</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>Directions</td>
+<td>paragraphs bundle</td>
+<td>unlimited</td>
+<td>Directions bundle</td>
+</tr>
+<tr class="row-even"><td>Tips</td>
+<td>paragraphs bundle</td>
+<td>unlimited</td>
+<td>Tips bundle</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There is also a position property in the legal steps in the schema.  This is computed in the step sections paragraph bundle in the How-to and not stored directly in the steps.  This will allow for step re-use.</p>
+</div>
 </div>
 </div>
 <div class="section" id="paragraph-bundles">
 <h2>Paragraph Bundles<a class="headerlink" href="#paragraph-bundles" title="Permalink to this headline">¶</a></h2>
+<p>There are a number of paragraphs bundle created to support the content entities in the schema:</p>
 <ul class="simple">
 <li>LegalCode, used in LegalProblem</li>
+<li>FormPrepProgram, used in LegalForms</li>
+<li>Step section, a holder for steps in Legal How-to</li>
+<li>How to tips, used in Legal Steps</li>
+<li>How to directions, used in Legal Steps</li>
 <li>CoverageArea, used in Legal Solution, Organization</li>
-<li>TextBlock, used in various</li>
+<li>TextBlock, used in various text output where we need more control over structure.</li>
 </ul>
+<div class="section" id="legal-code">
+<h3>Legal Code<a class="headerlink" href="#legal-code" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="23%" />
+<col width="20%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Type</th>
+<th class="head">Cardinality</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Code value</td>
+<td>Text field</td>
+<td>1</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>Coding system</td>
+<td>Text field</td>
+<td>1</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="form-prep-program">
+<h3>Form Prep Program<a class="headerlink" href="#form-prep-program" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="23%" />
+<col width="20%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Type</th>
+<th class="head">Cardinality</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>name</td>
+<td>text  field</td>
+<td>1</td>
+<td>Name of the form prep
+package or Easy Form</td>
+</tr>
+<tr class="row-odd"><td>url</td>
+<td>link</td>
+<td>1</td>
+<td>link to the form prep</td>
+</tr>
+<tr class="row-even"><td>formPrepProgram</td>
+<td>term reference</td>
+<td>1</td>
+<td>Reference to the form prep
+programs taxonomy</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="legal-step-sections">
+<h3>Legal Step Sections<a class="headerlink" href="#legal-step-sections" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="23%" />
+<col width="20%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Type</th>
+<th class="head">Cardinality</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Title (Name)</td>
+<td>Title field</td>
+<td>1, required</td>
+<td>Required by Drupal only</td>
+</tr>
+<tr class="row-odd"><td>Include title?</td>
+<td>Boolean</td>
+<td>1, required</td>
+<td>Include title in API feed?</td>
+</tr>
+<tr class="row-even"><td>Steps</td>
+<td>Entity reference</td>
+<td>unlimited</td>
+<td>Reference to legal steps</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There is also a position property in the steps section in the schema.  This is computed in the How To and not stored directly in the steps.</p>
+</div>
+</div>
+<div class="section" id="how-to-tips">
+<h3>How To Tips<a class="headerlink" href="#how-to-tips" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="23%" />
+<col width="20%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Type</th>
+<th class="head">Cardinality</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Tip with markup</td>
+<td>Text area</td>
+<td>1, required</td>
+<td>WYISIWYG text</td>
+</tr>
+<tr class="row-odd"><td>Tip</td>
+<td>Hidden</td>
+<td>1, required</td>
+<td>Clean version of tip</td>
+</tr>
+<tr class="row-even"><td>referencedUrls</td>
+<td>Links</td>
+<td>unlimited</td>
+<td>Links included in markup</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There is also a position property in the schema.  This is computed in the How-to and not stored in the database.</p>
+</div>
+</div>
+<div class="section" id="how-to-directions">
+<h3>How To  Directions<a class="headerlink" href="#how-to-directions" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="23%" />
+<col width="20%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Type</th>
+<th class="head">Cardinality</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Direction
+with markup</td>
+<td>Text area</td>
+<td>1, required</td>
+<td>WYISIWYG text</td>
+</tr>
+<tr class="row-odd"><td>Direction</td>
+<td>Hidden</td>
+<td>1, required</td>
+<td>Clean version of direction</td>
+</tr>
+<tr class="row-even"><td>referencedUrls</td>
+<td>Links</td>
+<td>unlimited</td>
+<td>Links included in markup</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There is also a position property in the schema.  This is computed in the How-to and not stored in the database.</p>
+</div>
+</div>
+<div class="section" id="text-block">
+<h3>Text Block<a class="headerlink" href="#text-block" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="23%" />
+<col width="20%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Type</th>
+<th class="head">Cardinality</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Heading</td>
+<td>Text field</td>
+<td>1</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>Body</td>
+<td>Hidden</td>
+<td>unlimited,
+required</td>
+<td>Clean version of body with
+markup</td>
+</tr>
+<tr class="row-even"><td>Body with markup</td>
+<td>Text area</td>
+<td>unlimited,
+required</td>
+<td>WYSIWYG</td>
+</tr>
+<tr class="row-odd"><td>List</td>
+<td>Paragraphs bundle</td>
+<td>unlimited</td>
+<td>Item list bundle</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="item-list">
+<h3>Item List<a class="headerlink" href="#item-list" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="23%" />
+<col width="20%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Type</th>
+<th class="head">Cardinality</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Item List Order</td>
+<td>Select</td>
+<td>1, required</td>
+<td>ascending, descending, or
+unordered</td>
+</tr>
+<tr class="row-odd"><td>Item List
+Elements</td>
+<td>Paragraphs bundle</td>
+<td>unlimited,
+required</td>
+<td>Item List element bundle</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="item-list-elements">
+<h3>Item list Elements<a class="headerlink" href="#item-list-elements" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="23%" />
+<col width="20%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Type</th>
+<th class="head">Cardinality</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Item
+with markup</td>
+<td>Text area</td>
+<td>1, required</td>
+<td>WYISIWYG text</td>
+</tr>
+<tr class="row-odd"><td>Item</td>
+<td>Hidden</td>
+<td>1, required</td>
+<td>Clean version of direction</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There is also a position property in the schema.  This is computed in the How-to and not stored in the database.</p>
+</div>
+</div>
 </div>
 <div class="section" id="taxonomies">
 <h2>Taxonomies<a class="headerlink" href="#taxonomies" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>life areas (used in legal problem)</li>
 <li>solution types (used in legal solutions)</li>
+<li>form prep programs (used in Legal forms)</li>
 </ul>
+</div>
+<div class="section" id="technical-notes">
+<h2>Technical Notes<a class="headerlink" href="#technical-notes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>We can use DrupalCoreMailMailFormatHelper::htmlToText($string) to render plain text with urls as footnotes from the with markup fields.</li>
+</ul>
+<img alt="_images/clean-markup.png" src="_images/clean-markup.png" />
 </div>
 </div>
 

@@ -1,5 +1,5 @@
 =================================
-Structured content types
+Structured Content Types
 =================================
 
 Content Types
@@ -129,23 +129,205 @@ Single question; packaged within an FAQ in a legal problem.
 
 Legal Forms
 ---------------
++-----------------+-------------------+----------------+-----------------------------+
+| Field           | Type              | Cardinality    | Description                 |
++=================+===================+================+=============================+
+| Title (formName)| Title field       | 1              | Form title                  |
++-----------------+-------------------+----------------+-----------------------------+
+| FilledOutWith   | Paragraphs        | unlimited      | FormPrep Program paragraphs |
++-----------------+-------------------+----------------+-----------------------------+
+| formUse         | Text area         | 1              | Explanation of how/when the |
+|                 |                   |                | form is used                |
++-----------------+-------------------+----------------+-----------------------------+
+
+
 
 Legal How-to
 ---------------
++-----------------+-------------------+----------------+-----------------------------+
+| Field           | Type              | Cardinality    | Description                 |
++=================+===================+================+=============================+
+| Title (Name)    | Title field       | 1, required    | Title                       |
++-----------------+-------------------+----------------+-----------------------------+
+| Description     | Text area         | 1, required    | Description of the how-to   |
++-----------------+-------------------+----------------+-----------------------------+
+| prepTime        | duration          | 1, required    |                             |
++-----------------+-------------------+----------------+-----------------------------+
+| performTime     | duration          | 1, required    |                             |
++-----------------+-------------------+----------------+-----------------------------+
+| totalTime       | duration          | 1, required    | Prep time + perform time    |
++-----------------+-------------------+----------------+-----------------------------+
+| stepSections    | paragraphs bundle | unlimited      | Reference to step sections  |
++-----------------+-------------------+----------------+-----------------------------+
+| supply          | text field        | unlimited      | Things needed to complete   |
+|                 |                   |                | the how-to                  |
++-----------------+-------------------+----------------+-----------------------------+
+| tool            | text field        | unlimited      | Tools needed to complete the|
+|                 |                   |                | how to                      |
++-----------------+-------------------+----------------+-----------------------------+
+| yield           | text field        | one            | The quantity that results by|
+|                 |                   |                | performing instructions     |
++-----------------+-------------------+----------------+-----------------------------+
+
+
+
+Legal Steps
+-------------
++-----------------+-------------------+----------------+-----------------------------+
+| Field           | Type              | Cardinality    | Description                 |
++=================+===================+================+=============================+
+| Title (Name)    | Title field       | 1, required    |                             |
++-----------------+-------------------+----------------+-----------------------------+
+| Directions      | paragraphs bundle | unlimited      | Directions bundle           |
++-----------------+-------------------+----------------+-----------------------------+
+| Tips            | paragraphs bundle | unlimited      | Tips bundle                 | 
++-----------------+-------------------+----------------+-----------------------------+
+
+.. note:: There is also a position property in the legal steps in the schema.  This is computed in the step sections paragraph bundle in the How-to and not stored directly in the steps.  This will allow for step re-use.
+
 
 Paragraph Bundles
 ===================
 
-* LegalCode, used in LegalProblem
-* CoverageArea, used in Legal Solution, Organization
-* TextBlock, used in various
+There are a number of paragraphs bundle created to support the content entities in the schema:
 
+* LegalCode, used in LegalProblem
+* FormPrepProgram, used in LegalForms
+* Step section, a holder for steps in Legal How-to
+* How to tips, used in Legal Steps
+* How to directions, used in Legal Steps
+* CoverageArea, used in Legal Solution, Organization
+* TextBlock, used in various text output where we need more control over structure.
+
+Legal Code
+------------
++-----------------+-------------------+----------------+-----------------------------+
+| Field           | Type              | Cardinality    | Description                 |
++=================+===================+================+=============================+
+| Code value      | Text field        | 1              |                             |
++-----------------+-------------------+----------------+-----------------------------+
+| Coding system   | Text field        | 1              |                             |
++-----------------+-------------------+----------------+-----------------------------+
+
+Form Prep Program
+--------------------
+
++-----------------+-------------------+----------------+-----------------------------+
+| Field           | Type              | Cardinality    | Description                 |
++=================+===================+================+=============================+
+| name            | text  field       | 1              | Name of the form prep       |
+|                 |                   |                | package or Easy Form        |                
++-----------------+-------------------+----------------+-----------------------------+
+| url             | link              | 1              | link to the form prep       |
++-----------------+-------------------+----------------+-----------------------------+
+| formPrepProgram | term reference    | 1              | Reference to the form prep  |
+|                 |                   |                | programs taxonomy           |
++-----------------+-------------------+----------------+-----------------------------+
+
+Legal Step Sections
+----------------------
++-----------------+-------------------+----------------+-----------------------------+
+| Field           | Type              | Cardinality    | Description                 |
++=================+===================+================+=============================+
+| Title (Name)    | Title field       | 1, required    | Required by Drupal only     |
++-----------------+-------------------+----------------+-----------------------------+
+| Include title?  | Boolean           | 1, required    | Include title in API feed?  |
++-----------------+-------------------+----------------+-----------------------------+
+| Steps           | Entity reference  | unlimited      | Reference to legal steps    |
++-----------------+-------------------+----------------+-----------------------------+
+
+.. note:: There is also a position property in the steps section in the schema.  This is computed in the How To and not stored directly in the steps. 
+
+How To Tips
+---------------
+
++-----------------+-------------------+----------------+-----------------------------+
+| Field           | Type              | Cardinality    | Description                 |
++=================+===================+================+=============================+
+| Tip with markup | Text area         | 1, required    | WYISIWYG text               |
++-----------------+-------------------+----------------+-----------------------------+
+| Tip             | Hidden            | 1, required    | Clean version of tip        |
++-----------------+-------------------+----------------+-----------------------------+
+| referencedUrls  | Links             | unlimited      | Links included in markup    |
++-----------------+-------------------+----------------+-----------------------------+
+
+.. note:: There is also a position property in the schema.  This is computed in the How-to and not stored in the database.
+
+How To  Directions
+---------------------
+
++-----------------+-------------------+----------------+-----------------------------+
+| Field           | Type              | Cardinality    | Description                 |
++=================+===================+================+=============================+
+| Direction       | Text area         | 1, required    | WYISIWYG text               |
+| with markup     |                   |                |                             |
++-----------------+-------------------+----------------+-----------------------------+
+| Direction       | Hidden            | 1, required    | Clean version of direction  |
++-----------------+-------------------+----------------+-----------------------------+
+| referencedUrls  | Links             | unlimited      | Links included in markup    |
++-----------------+-------------------+----------------+-----------------------------+
+
+.. note:: There is also a position property in the schema.  This is computed in the How-to and not stored in the database.
+
+Text Block
+-------------
+
++-----------------+-------------------+----------------+-----------------------------+
+| Field           | Type              | Cardinality    | Description                 |
++=================+===================+================+=============================+
+| Heading         | Text field        | 1              |                             |
++-----------------+-------------------+----------------+-----------------------------+
+| Body            | Hidden            | unlimited,     | Clean version of body with  |
+|                 |                   | required       | markup                      |
++-----------------+-------------------+----------------+-----------------------------+
+| Body with markup| Text area         | unlimited,     | WYSIWYG                     |
+|                 |                   | required       |                             |
++-----------------+-------------------+----------------+-----------------------------+
+| List            | Paragraphs bundle | unlimited      | Item list bundle            |
++-----------------+-------------------+----------------+-----------------------------+            
+
+Item List
+------------
+
++-----------------+-------------------+----------------+-----------------------------+
+| Field           | Type              | Cardinality    | Description                 |
++=================+===================+================+=============================+
+| Item List Order | Select            | 1, required    | ascending, descending, or   |
+|                 |                   |                | unordered                   |
++-----------------+-------------------+----------------+-----------------------------+
+| Item List       | Paragraphs bundle | unlimited,     | Item List element bundle    |
+| Elements        |                   | required       |                             |  
++-----------------+-------------------+----------------+-----------------------------+
+
+Item list Elements
+----------------------     
+
++-----------------+-------------------+----------------+-----------------------------+
+| Field           | Type              | Cardinality    | Description                 |
++=================+===================+================+=============================+
+| Item            | Text area         | 1, required    | WYISIWYG text               |
+| with markup     |                   |                |                             |
++-----------------+-------------------+----------------+-----------------------------+
+| Item            | Hidden            | 1, required    | Clean version of direction  |
++-----------------+-------------------+----------------+-----------------------------+
+
+.. note:: There is also a position property in the schema.  This is computed in the How-to and not stored in the database.   
 
 Taxonomies
 =============
 
 * life areas (used in legal problem)
 * solution types (used in legal solutions)
+* form prep programs (used in Legal forms)
+
+
+Technical Notes
+===================
+
+* We can use \Drupal\Core\Mail\MailFormatHelper::htmlToText($string) to render plain text with urls as footnotes from the with markup fields. 
+
+
+.. image:: ../assets/clean-markup.png
 
 
 
