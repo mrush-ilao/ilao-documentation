@@ -101,7 +101,7 @@ html_static_path = ['_static']
 html_css_files = [
     'css/custom.css',
     'custom.css'
-    '
+    'theme_overrides.css'
 ]
 html_context = {
     'css_files': [
