@@ -37,7 +37,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Structured content types" href="cms_structured_content_types.html" />
+    <link rel="next" title="Structured Content Types" href="cms_structured_content_types.html" />
     <link rel="prev" title="Structured Legal Content" href="cms_structured_legal_content.html" /> 
 </head>
 
@@ -107,7 +107,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#order-of-protection-bundle">Order of Protection “bundle”</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_types.html">Structured content types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_types.html">Structured Content Types</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="legal_content_cms.html#known-workarounds">Known Workarounds</a></li>
@@ -117,17 +117,6 @@
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Structured Content Schema</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#legal-problem">Legal Problem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#references-from-schema-org">References from Schema.org</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#question-and-answer">Question and Answer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#how-to">How To</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#organization">Organization</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#order-of-protection-bundle">Order of Protection “bundle”</a></li>
-</ul>
-</li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul class="current">
@@ -147,7 +136,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#order-of-protection-bundle">Order of Protection “bundle”</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_types.html">Structured content types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_types.html">Structured Content Types</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="legal_content_cms.html#known-workarounds">Known Workarounds</a></li>
@@ -247,7 +236,8 @@
     <span class="s2">&quot;legalCode&quot;</span><span class="p">,</span>
     <span class="s2">&quot;lifeAreaAffected&quot;</span><span class="p">,</span>
     <span class="s2">&quot;possibleSolution&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;url&quot;</span>
+    <span class="s2">&quot;url&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;language&quot;</span>
   <span class="p">],</span>
   <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -266,6 +256,10 @@
       <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
       <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Text, UUID, or url for the legal problem&quot;</span>
     <span class="p">},</span>
+    <span class="nt">&quot;language&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;ISO code for language&quot;</span>
+    <span class="p">},</span>
     <span class="nt">&quot;stage&quot;</span><span class="p">:</span> <span class="p">{</span>
       <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
       <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The stage of the legal problem, if applicable. For example, pre-filing, post-filing/pre-trial, trial, post-trial, appeals.&quot;</span>
@@ -278,7 +272,11 @@
       <span class="p">}</span>
     <span class="p">},</span>
     <span class="nt">&quot;legalCode&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/LegalCode&quot;</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/LegalCode&quot;</span>
+      <span class="p">}</span>
+
     <span class="p">},</span>
     <span class="nt">&quot;lifeAreaAffected&quot;</span><span class="p">:</span> <span class="p">{</span>
       <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
@@ -408,11 +406,7 @@
           <span class="p">}</span>
         <span class="p">},</span>
         <span class="nt">&quot;legalDifficulty&quot;</span><span class="p">:</span> <span class="p">{</span>
-          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;enum&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="s2">&quot;Easy&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;Hard&quot;</span>
-          <span class="p">]</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
         <span class="p">},</span>
         <span class="nt">&quot;estimatedTimeToComplete&quot;</span><span class="p">:</span> <span class="p">{</span>
           <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
@@ -475,7 +469,7 @@
         <span class="nt">&quot;FormPrepProgram&quot;</span><span class="p">:</span> <span class="p">{</span>
           <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
           <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="s2">&quot;name&quot;</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;url&quot;</span>
           <span class="p">],</span>
           <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -728,7 +722,7 @@
           <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
           <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Type of resource&quot;</span><span class="p">,</span>
           <span class="nt">&quot;enum&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="s2">&quot;userPersona&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;userJourney&quot;</span><span class="p">,</span>
             <span class="s2">&quot;video&quot;</span><span class="p">,</span>
             <span class="s2">&quot;flow chart&quot;</span><span class="p">,</span>
             <span class="s2">&quot;blog post&quot;</span><span class="p">,</span>
@@ -897,7 +891,10 @@
           <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/PostalAddress&quot;</span>
         <span class="p">},</span>
         <span class="nt">&quot;areaServed&quot;</span><span class="p">:</span> <span class="p">{</span>
-          <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/CoverageArea&quot;</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/CoverageArea&quot;</span>
+          <span class="p">}</span>
         <span class="p">},</span>
         <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="p">{</span>
           <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
@@ -917,7 +914,10 @@
           <span class="p">],</span>
           <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="nt">&quot;areaServed&quot;</span><span class="p">:</span> <span class="p">{</span>
-              <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/CoverageArea&quot;</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/CoverageArea&quot;</span>
+              <span class="p">}</span>
             <span class="p">},</span>
             <span class="nt">&quot;contactType&quot;</span><span class="p">:</span> <span class="p">{</span>
               <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
@@ -1026,10 +1026,10 @@
   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Being a victim of domestic violence&quot;</span><span class="p">,</span>
   <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Legal problem of being a victim of domestic violence.&quot;</span><span class="p">,</span>
   <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/legal-problems/dv&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;legalCode&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="nt">&quot;legalCode&quot;</span><span class="p">:</span> <span class="p">[{</span>
     <span class="nt">&quot;codeValue&quot;</span><span class="p">:</span> <span class="s2">&quot;FA-07-00-00-00&quot;</span><span class="p">,</span>
     <span class="nt">&quot;codingSystem&quot;</span><span class="p">:</span> <span class="s2">&quot;NSMI V2&quot;</span>
-  <span class="p">},</span>
+  <span class="p">}],</span>
   <span class="nt">&quot;lifeAreaAffected&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="s2">&quot;Family&quot;</span>
   <span class="p">],</span>
@@ -1099,8 +1099,13 @@
               <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Order of Protection&quot;</span><span class="p">,</span>
               <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/legal-information/order-protection&quot;</span><span class="p">,</span>
               <span class="nt">&quot;formPrepProgramType&quot;</span><span class="p">:</span> <span class="s2">&quot;HotDocs&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Additional Case Information Report&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;AIOC link&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;formPrepProgramType&quot;</span><span class="p">:</span> <span class="s2">&quot;PDF&quot;</span>
             <span class="p">}</span>
           <span class="p">]</span>
+
         <span class="p">},</span>
         <span class="p">{</span>
           <span class="nt">&quot;formName&quot;</span><span class="p">:</span> <span class="s2">&quot;Confidential Name &amp; Location of the School or Daycare&quot;</span><span class="p">,</span>
@@ -1133,16 +1138,14 @@
         <span class="s2">&quot;Details about the abuse and when it took place.&quot;</span><span class="p">,</span>
         <span class="s2">&quot;Details about personal property that Petitioner wants back.&quot;</span>
       <span class="p">],</span>
-      <span class="nt">&quot;legalDifficulty&quot;</span><span class="p">:</span> <span class="s2">&quot;Hard&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;legalDifficulty&quot;</span><span class="p">:</span> <span class="s2">&quot;Easy&quot;</span><span class="p">,</span>
       <span class="nt">&quot;estimatedTimeToComplete&quot;</span><span class="p">:</span> <span class="s2">&quot;5W&quot;</span><span class="p">,</span>
       <span class="nt">&quot;jurisdiction&quot;</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
-          <span class="nt">&quot;CoverageArea&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="nt">&quot;administrativeArea&quot;</span><span class="p">:</span> <span class="s2">&quot;State&quot;</span><span class="p">,</span>
             <span class="nt">&quot;locality&quot;</span><span class="p">:</span> <span class="p">[</span>
               <span class="s2">&quot;Illinois&quot;</span>
             <span class="p">]</span>
-          <span class="p">}</span>
         <span class="p">}</span>
       <span class="p">],</span>
       <span class="nt">&quot;eligibilityRules&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -1214,8 +1217,24 @@
               <span class="s2">&quot;phone&quot;</span>
             <span class="p">],</span>
             <span class="nt">&quot;telephone&quot;</span><span class="p">:</span> <span class="s2">&quot;(877) 863-6338&quot;</span>
-          <span class="p">}</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;areaServed&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="nt">&quot;administrativeArea&quot;</span><span class="p">:</span> <span class="s2">&quot;County&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;locality&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;Kane&quot;</span><span class="p">,</span><span class="s2">&quot;Lake&quot;</span><span class="p">,</span><span class="s2">&quot;Will&quot;</span>
+              <span class="p">]</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+              <span class="nt">&quot;administrativeArea&quot;</span><span class="p">:</span> <span class="s2">&quot;Postal code&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;locality&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;60505&quot;</span><span class="p">,</span><span class="s2">&quot;60506&quot;</span>
+              <span class="p">]</span>
+            <span class="p">}</span>
+
+          <span class="p">]</span>
         <span class="p">}</span>
+
       <span class="p">],</span>
       <span class="nt">&quot;howTos&quot;</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
@@ -1567,10 +1586,11 @@
       <span class="nt">&quot;lastReviewed&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
       <span class="nt">&quot;lastModified&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-05-24T20:42Z&quot;</span><span class="p">,</span>
       <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/voc/domestic-abuse-sexual-assault&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;additionalType&quot;</span><span class="p">:</span> <span class="s2">&quot;userPersona&quot;</span>
+      <span class="nt">&quot;additionalType&quot;</span><span class="p">:</span> <span class="s2">&quot;userJourney&quot;</span>
     <span class="p">}</span>
   <span class="p">],</span>
-  <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org&quot;</span>
+  <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;language&quot;</span><span class="p">:</span><span class="s2">&quot;en&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -1585,7 +1605,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="cms_structured_content_types.html" class="btn btn-neutral float-right" title="Structured content types" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="cms_structured_content_types.html" class="btn btn-neutral float-right" title="Structured Content Types" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="cms_structured_legal_content.html" class="btn btn-neutral float-left" title="Structured Legal Content" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

@@ -2,10 +2,10 @@
   "name": "Being a victim of domestic violence",
   "description": "Legal problem of being a victim of domestic violence.",
   "identifier": "https://www.illinoislegalaid.org/legal-problems/dv",
-  "legalCode": {
+  "legalCode": [{
     "codeValue": "FA-07-00-00-00",
     "codingSystem": "NSMI V2"
-  },
+  }],
   "lifeAreaAffected": [
     "Family"
   ],
@@ -75,8 +75,13 @@
               "name": "Order of Protection",
               "url": "https://www.illinoislegalaid.org/legal-information/order-protection",
               "formPrepProgramType": "HotDocs"
+            },
+            { "name": "Additional Case Information Report",
+              "url": "AIOC link",
+              "formPrepProgramType": "PDF"
             }
           ]
+
         },
         {
           "formName": "Confidential Name & Location of the School or Daycare",
@@ -109,16 +114,14 @@
         "Details about the abuse and when it took place.",
         "Details about personal property that Petitioner wants back."
       ],
-      "legalDifficulty": "Hard",
+      "legalDifficulty": "Easy",
       "estimatedTimeToComplete": "5W",
       "jurisdiction": [
         {
-          "CoverageArea": {
             "administrativeArea": "State",
             "locality": [
               "Illinois"
             ]
-          }
         }
       ],
       "eligibilityRules": [
@@ -190,8 +193,24 @@
               "phone"
             ],
             "telephone": "(877) 863-6338"
-          }
+          },
+          "areaServed": [
+            {
+              "administrativeArea": "County",
+              "locality": [
+                "Kane","Lake","Will"
+              ]
+            },
+            {
+              "administrativeArea": "Postal code",
+              "locality": [
+                "60505","60506"
+              ]
+            }
+
+          ]
         }
+
       ],
       "howTos": [
         {
@@ -543,8 +562,9 @@
       "lastReviewed": "",
       "lastModified": "2020-05-24T20:42Z",
       "url": "https://www.illinoislegalaid.org/voc/domestic-abuse-sexual-assault",
-      "additionalType": "userPersona"
+      "additionalType": "userJourney"
     }
   ],
-  "url": "https://www.illinoislegalaid.org"
+  "url": "https://www.illinoislegalaid.org",
+  "language":"en"
 }

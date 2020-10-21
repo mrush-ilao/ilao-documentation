@@ -10,7 +10,8 @@
     "legalCode",
     "lifeAreaAffected",
     "possibleSolution",
-    "url"
+    "url",
+    "language"
   ],
   "properties": {
     "name": {
@@ -29,6 +30,10 @@
       "type": "string",
       "description": "Text, UUID, or url for the legal problem"
     },
+    "language": {
+      "type": "string",
+      "description": "ISO code for language"
+    },
     "stage": {
       "type": "string",
       "description": "The stage of the legal problem, if applicable. For example, pre-filing, post-filing/pre-trial, trial, post-trial, appeals."
@@ -41,7 +46,11 @@
       }
     },
     "legalCode": {
-      "$ref": "#/definitions/LegalCode"
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/LegalCode"
+      }
+
     },
     "lifeAreaAffected": {
       "type": "array",
@@ -171,11 +180,7 @@
           }
         },
         "legalDifficulty": {
-          "type": "string",
-          "enum": [
-            "Easy",
-            "Hard"
-          ]
+          "type": "string"
         },
         "estimatedTimeToComplete": {
           "type": "string",
@@ -238,7 +243,7 @@
         "FormPrepProgram": {
           "type": "object",
           "required": [
-            "name"
+            "name", "url"
           ],
           "properties": {
             "name": {
@@ -491,7 +496,7 @@
           "type": "string",
           "description": "Type of resource",
           "enum": [
-            "userPersona",
+            "userJourney",
             "video",
             "flow chart",
             "blog post",
@@ -660,7 +665,10 @@
           "$ref": "#/definitions/PostalAddress"
         },
         "areaServed": {
-          "$ref": "#/definitions/CoverageArea"
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CoverageArea"
+          }
         },
         "email": {
           "type": "string"
@@ -680,7 +688,10 @@
           ],
           "properties": {
             "areaServed": {
-              "$ref": "#/definitions/CoverageArea"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CoverageArea"
+              }
             },
             "contactType": {
               "type": "array",
