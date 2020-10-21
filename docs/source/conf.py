@@ -101,6 +101,11 @@ html_css_files = [
     'css/custom.css',
     'custom.css'
 ]
+html_context = {
+    'css_files': [
+        '_static/theme_overrides.css',  # override wide tables in RTD theme
+        ],
+     }
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
