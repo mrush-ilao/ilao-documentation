@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Sectional Blocks &mdash; IllinoisLegalAid.org 1 documentation</title>
+  <title>Smart blocks &mdash; IllinoisLegalAid.org 1 documentation</title>
   
 
   
@@ -41,7 +41,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Configuring blocks" href="blocks_configuration.html" />
-    <link rel="prev" title="Heading blocks" href="blocks_current.html" /> 
+    <link rel="prev" title="Sectional Blocks" href="blocks_sectional.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -95,11 +95,15 @@
 <li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design Guide</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="block_management.html">Custom blocks</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="blocks_current.html">Heading blocks</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Sectional Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blocks_sectional.html">Sectional Blocks</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Smart blocks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creating-segments">Creating segments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision-block">Decision Block</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="blocks_configuration.html">Configuring blocks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blocks_translation.html">Block translation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blocks_user_profiles.html">User profile blocks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blocks_smart.html">Smart blocks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="block_management.html#drupal-blocks-overview">Drupal Blocks Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="block_management.html#placing-a-block">Placing a block</a></li>
 </ul>
@@ -162,13 +166,13 @@
         
           <li><a href="block_management.html">Custom blocks</a> &raquo;</li>
         
-      <li>Sectional Blocks</li>
+      <li>Smart blocks</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/blocks_sectional.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/blocks_smart.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -181,26 +185,43 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="sectional-blocks">
-<h1>Sectional Blocks<a class="headerlink" href="#sectional-blocks" title="Permalink to this headline">¶</a></h1>
-<p>There are several blocks that are used to provide heading text and images on various sections of the website.  These include the blocks that provide the page description for thes following:</p>
+  <div class="section" id="smart-blocks">
+<h1>Smart blocks<a class="headerlink" href="#smart-blocks" title="Permalink to this headline">¶</a></h1>
+<p>Smart blocks provide some tools to allow us to display existing blocks based on defined conditions.  To use:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://www.illinoislegalaid.org/block/141">Practice resources header block</a></li>
-<li><a class="reference external" href="https://www.illinoislegalaid.org/block/136">Forms library header block</a></li>
-<li><a class="reference external" href="https://www.illinoislegalaid.org/block/151">Legal Self Help Center header block</a></li>
-<li><a class="reference external" href="https://www.illinoislegalaid.org/block/261">Get Legal Help page block</a></li>
+<li>create the blocks you need to use</li>
+<li>create a Decision block</li>
 </ul>
-<p>There are also blocks that are used in Get Legal Help sidebear that provide an image and text:</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In its initial implementation this is very limited. It only allows us to create segments based on whether the user is on mobile, browser language, operating system.  It supports cookies and localStorage but will require additional build out for ILAO to use these methods.</p>
+</div>
+<div class="section" id="creating-segments">
+<h2>Creating segments<a class="headerlink" href="#creating-segments" title="Permalink to this headline">¶</a></h2>
+<p>Segments are managed under <a class="reference external" href="https://www.illinoislegalaid.org/admin/structure/smart_content_segment_set">Structure/Smart Content</a></p>
+<p>Segment sets can include segments that filter on:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://www.illinoislegalaid.org/block/211">Referrals</a></li>
-<li><a class="reference external" href="https://www.illinoislegalaid.org/block/171">About your issue</a></li>
-<li><a class="reference external" href="https://www.illinoislegalaid.org/block/201">Matches page</a></li>
-<li><a class="reference external" href="https://www.illinoislegalaid.org/block/201">Matches page</a></li>
-<li><a class="reference external" href="https://www.illinoislegalaid.org/block/191">Intake: personal information</a></li>
-<li><a class="reference external" href="https://www.illinoislegalaid.org/block/176">Intake: household size</a></li>
-<li><a class="reference external" href="https://www.illinoislegalaid.org/block/181">Intake: income info</a></li>
-<li><a class="reference external" href="https://www.illinoislegalaid.org/block/161">Intake: address info</a></li>
+<li>Mobile</li>
+<li>Operating systems</li>
+<li>Language (browser); this may be different than their viewing language on the website.</li>
+<li>Cookies.  These require ILAO to define and store user cookies in the user’s browser</li>
+<li>LocalStorage.  These require ILAO to define and store data in the user’s local storage on their browser.</li>
 </ul>
+<p>Conditions can be complex.  In the example below, there is a condition of if the user is on mobile and either they have a donor cookie or a return user localStorage value, then the user meets this segment.</p>
+<img alt="_images/smart-block-segments.png" src="_images/smart-block-segments.png" />
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Segment sets should ideally have multiple segments so that when used in a decision block, each segment can be assigned a specific block.  For example, a mobile segment set might have a segment of mobile and a segment for not mobile.  Then in the decision block, mobile might see block A and not-mobile would see block B.</p>
+</div>
+</div>
+<div class="section" id="decision-block">
+<h2>Decision Block<a class="headerlink" href="#decision-block" title="Permalink to this headline">¶</a></h2>
+<p>To use these segments to deliver appropriate smart blocks, you would place a block of type “Decision block” and</p>
+<p>Decision blocks:
+* Can use only one segment set
+* Can display only one block per segment</p>
+<img alt="_images/decision-blocks.png" src="_images/decision-blocks.png" />
+</div>
 </div>
 
 
@@ -214,7 +235,7 @@
         <a href="blocks_configuration.html" class="btn btn-neutral float-right" title="Configuring blocks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="blocks_current.html" class="btn btn-neutral float-left" title="Heading blocks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="blocks_sectional.html" class="btn btn-neutral float-left" title="Sectional Blocks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
