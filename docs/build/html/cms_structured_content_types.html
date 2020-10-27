@@ -915,8 +915,8 @@ category</td>
 </tbody>
 </table>
 </div>
-<div class="section" id="legal-steps">
-<h3>Legal Steps<a class="headerlink" href="#legal-steps" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="legal-step">
+<h3>Legal Step<a class="headerlink" href="#legal-step" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="21%" />
@@ -937,29 +937,24 @@ category</td>
 <td>1, required</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-odd"><td>Directions</td>
+<tr class="row-odd"><td>Step information</td>
 <td>paragraphs bundle</td>
 <td>unlimited</td>
-<td>Directions bundle</td>
+<td>Directions or Tips bundle</td>
 </tr>
-<tr class="row-even"><td>Tips</td>
-<td>paragraphs bundle</td>
-<td>unlimited</td>
-<td>Tips bundle</td>
-</tr>
-<tr class="row-odd"><td>legal position</td>
+<tr class="row-even"><td>legal position</td>
 <td>List</td>
 <td>1, required</td>
 <td>Current field_legal_position</td>
 </tr>
-<tr class="row-even"><td>content managem
+<tr class="row-odd"><td>content managem
 ent tags</td>
 <td>Term reference</td>
 <td>unlimited</td>
 <td>Current content management
 tags</td>
 </tr>
-<tr class="row-odd"><td>request
+<tr class="row-even"><td>request
 to be translated</td>
 <td>Boolean</td>
 <td>1, default to
@@ -967,7 +962,7 @@ No</td>
 <td>Should translation be
 requested</td>
 </tr>
-<tr class="row-even"><td>mark translation
+<tr class="row-odd"><td>mark translation
 as outdated</td>
 <td>Boolean</td>
 <td>1, default to
@@ -975,51 +970,51 @@ No</td>
 <td>Existing field
 mark as outdated</td>
 </tr>
-<tr class="row-odd"><td>Description</td>
+<tr class="row-even"><td>Description</td>
 <td>Text area</td>
 <td>1,required</td>
 <td>Content description</td>
 </tr>
-<tr class="row-even"><td>Meta
+<tr class="row-odd"><td>Meta
 Description</td>
 <td>Text area</td>
 <td>1, required</td>
 <td>Current meta description</td>
 </tr>
-<tr class="row-odd"><td>Legal issues</td>
+<tr class="row-even"><td>Legal issues</td>
 <td>Term reference</td>
 <td>unlimited,
 required</td>
 <td>Current legal issues field</td>
 </tr>
-<tr class="row-even"><td>Primary legal
+<tr class="row-odd"><td>Primary legal
 category</td>
 <td>Term reference</td>
 <td>1, required</td>
 <td>Current primary legal
 category</td>
 </tr>
-<tr class="row-odd"><td>Annual updates</td>
+<tr class="row-even"><td>Annual updates</td>
 <td>Term reference</td>
 <td>unlimited</td>
 <td>Current annual updates field</td>
 </tr>
-<tr class="row-even"><td>Author/SME</td>
+<tr class="row-odd"><td>Author/SME</td>
 <td>Entity reference</td>
 <td>unlimited</td>
 <td>Current author/SME field</td>
 </tr>
-<tr class="row-odd"><td>jurisdiction</td>
+<tr class="row-even"><td>jurisdiction</td>
 <td>Paragraphs</td>
 <td>unlimited</td>
 <td>Coverage area paragraphs</td>
 </tr>
-<tr class="row-even"><td>Last reviewed</td>
+<tr class="row-odd"><td>Last reviewed</td>
 <td>Date time</td>
 <td>1</td>
 <td>Current last reviewed field</td>
 </tr>
-<tr class="row-odd"><td>Last revised</td>
+<tr class="row-even"><td>Last revised</td>
 <td>Date time</td>
 <td>1</td>
 <td>Current last reviewed field</td>
@@ -1245,8 +1240,8 @@ programs taxonomy</td>
 <p class="last">There is also a position property in the steps section in the schema.  This is computed in the How To and not stored directly in the steps.</p>
 </div>
 </div>
-<div class="section" id="how-to-tips">
-<h3>How To Tips<a class="headerlink" href="#how-to-tips" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="how-to-directions-tips">
+<h3>How To Directions &amp; Tips<a class="headerlink" href="#how-to-directions-tips" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="21%" />
@@ -1262,57 +1257,24 @@ programs taxonomy</td>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>Tip with markup</td>
+<tr class="row-even"><td>How-to Type</td>
+<td>Select</td>
+<td>1, required</td>
+<td>Tip or Direction</td>
+</tr>
+<tr class="row-odd"><td>Text with
+markup</td>
 <td>Text area</td>
 <td>1, required</td>
 <td>WYISIWYG text</td>
 </tr>
-<tr class="row-odd"><td>Tip</td>
+<tr class="row-even"><td>Text without
+markup</td>
 <td>Hidden</td>
 <td>1, required</td>
 <td>Clean version of tip</td>
 </tr>
-<tr class="row-even"><td>referencedUrls</td>
-<td>Links</td>
-<td>unlimited</td>
-<td>Links included in markup</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">There is also a position property in the schema.  This is computed in the How-to and not stored in the database.</p>
-</div>
-</div>
-<div class="section" id="how-to-directions">
-<h3>How To  Directions<a class="headerlink" href="#how-to-directions" title="Permalink to this headline">¶</a></h3>
-<table border="1" class="docutils">
-<colgroup>
-<col width="21%" />
-<col width="23%" />
-<col width="20%" />
-<col width="36%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Field</th>
-<th class="head">Type</th>
-<th class="head">Cardinality</th>
-<th class="head">Description</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>Direction
-with markup</td>
-<td>Text area</td>
-<td>1, required</td>
-<td>WYISIWYG text</td>
-</tr>
-<tr class="row-odd"><td>Direction</td>
-<td>Hidden</td>
-<td>1, required</td>
-<td>Clean version of direction</td>
-</tr>
-<tr class="row-even"><td>referencedUrls</td>
+<tr class="row-odd"><td>referencedUrls</td>
 <td>Links</td>
 <td>unlimited</td>
 <td>Links included in markup</td>

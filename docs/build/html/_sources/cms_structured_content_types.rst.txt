@@ -306,16 +306,14 @@ Legal How-to
 
 
 
-Legal Steps
+Legal Step
 -------------
 +-----------------+-------------------+----------------+-----------------------------+
 | Field           | Type              | Cardinality    | Description                 |
 +=================+===================+================+=============================+
 | Title (Name)    | Title field       | 1, required    |                             |
 +-----------------+-------------------+----------------+-----------------------------+
-| Directions      | paragraphs bundle | unlimited      | Directions bundle           |
-+-----------------+-------------------+----------------+-----------------------------+
-| Tips            | paragraphs bundle | unlimited      | Tips bundle                 | 
+| Step information| paragraphs bundle | unlimited      | Directions or Tips bundle   |
 +-----------------+-------------------+----------------+-----------------------------+
 | legal position  | List              | 1, required    | Current field_legal_position|
 +-----------------+-------------------+----------------+-----------------------------+ 
@@ -446,36 +444,26 @@ Legal Step Sections
 
 .. note:: There is also a position property in the steps section in the schema.  This is computed in the How To and not stored directly in the steps. 
 
-How To Tips
----------------
+How To Directions & Tips
+--------------------------
 
 +-----------------+-------------------+----------------+-----------------------------+
 | Field           | Type              | Cardinality    | Description                 |
 +=================+===================+================+=============================+
-| Tip with markup | Text area         | 1, required    | WYISIWYG text               |
+| How-to Type     | Select            | 1, required    | Tip or Direction            |
 +-----------------+-------------------+----------------+-----------------------------+
-| Tip             | Hidden            | 1, required    | Clean version of tip        |
+| Text with       | Text area         | 1, required    | WYISIWYG text               |
+| markup          |                   |                |                             |
++-----------------+-------------------+----------------+-----------------------------+
+| Text without    | Hidden            | 1, required    | Clean version of tip        | 
+| markup          |                   |                |                             |
 +-----------------+-------------------+----------------+-----------------------------+
 | referencedUrls  | Links             | unlimited      | Links included in markup    |
 +-----------------+-------------------+----------------+-----------------------------+
 
 .. note:: There is also a position property in the schema.  This is computed in the How-to and not stored in the database.
 
-How To  Directions
----------------------
 
-+-----------------+-------------------+----------------+-----------------------------+
-| Field           | Type              | Cardinality    | Description                 |
-+=================+===================+================+=============================+
-| Direction       | Text area         | 1, required    | WYISIWYG text               |
-| with markup     |                   |                |                             |
-+-----------------+-------------------+----------------+-----------------------------+
-| Direction       | Hidden            | 1, required    | Clean version of direction  |
-+-----------------+-------------------+----------------+-----------------------------+
-| referencedUrls  | Links             | unlimited      | Links included in markup    |
-+-----------------+-------------------+----------------+-----------------------------+
-
-.. note:: There is also a position property in the schema.  This is computed in the How-to and not stored in the database.
 
 Text Block
 -------------
