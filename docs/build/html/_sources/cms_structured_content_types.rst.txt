@@ -399,11 +399,11 @@ There are a number of paragraphs bundle created to support the content entities 
 * LegalCode, used in LegalProblem
 * FormPrepProgram, used in LegalForms
 * Step section, a holder for steps in Legal How-to
-* How to tips, used in Legal Steps
-* How to directions, used in Legal Steps
+* How to directions and tips, used in Legal Steps
 * CoverageArea, used in Legal Solution, Organization
 * TextBlock, used in various text output where we need more control over structure.
 * Contact point
+* Paired markup to pair a WYSIWYG item with a plain text with footnotes version
 
 Legal Code
 ------------
@@ -452,11 +452,7 @@ How To Directions & Tips
 +=================+===================+================+=============================+
 | How-to Type     | Select            | 1, required    | Tip or Direction            |
 +-----------------+-------------------+----------------+-----------------------------+
-| Text with       | Text area         | 1, required    | WYISIWYG text               |
-| markup          |                   |                |                             |
-+-----------------+-------------------+----------------+-----------------------------+
-| Text without    | Hidden            | 1, required    | Clean version of tip        | 
-| markup          |                   |                |                             |
+| Body            | Paragraphs item   | 1, required    | Paired markup               |
 +-----------------+-------------------+----------------+-----------------------------+
 | referencedUrls  | Links             | unlimited      | Links included in markup    |
 +-----------------+-------------------+----------------+-----------------------------+
@@ -465,22 +461,32 @@ How To Directions & Tips
 
 
 
-Text Block
--------------
+Structured Text Block
+------------------------
 
 +-----------------+-------------------+----------------+-----------------------------+
 | Field           | Type              | Cardinality    | Description                 |
 +=================+===================+================+=============================+
 | Heading         | Text field        | 1              |                             |
 +-----------------+-------------------+----------------+-----------------------------+
+| Body            | Paragraphs bundle | required       | Paired markup               |
+|                 |                   | unlimited      |                             |
++-----------------+-------------------+----------------+-----------------------------+
+| List            | Paragraphs bundle | unlimited      | Item list bundle            |
++-----------------+-------------------+----------------+-----------------------------+   
+
+Paired Markup
+-----------------         
+
++-----------------+-------------------+----------------+-----------------------------+
+| Field           | Type              | Cardinality    | Description                 |
++=================+===================+================+=============================+
 | Body            | Hidden            | unlimited,     | Clean version of body with  |
 |                 |                   | required       | markup                      |
 +-----------------+-------------------+----------------+-----------------------------+
 | Body with markup| Text area         | unlimited,     | WYSIWYG                     |
 |                 |                   | required       |                             |
 +-----------------+-------------------+----------------+-----------------------------+
-| List            | Paragraphs bundle | unlimited      | Item list bundle            |
-+-----------------+-------------------+----------------+-----------------------------+            
 
 Item List
 ------------
@@ -491,23 +497,10 @@ Item List
 | Item List Order | Select            | 1, required    | ascending, descending, or   |
 |                 |                   |                | unordered                   |
 +-----------------+-------------------+----------------+-----------------------------+
-| Item List       | Paragraphs bundle | unlimited,     | Item List element bundle    |
+| Item List       | Paragraphs bundle | unlimited,     | Paired markup               |
 | Elements        |                   | required       |                             |  
 +-----------------+-------------------+----------------+-----------------------------+
 
-Item list Elements
-----------------------     
-
-+-----------------+-------------------+----------------+-----------------------------+
-| Field           | Type              | Cardinality    | Description                 |
-+=================+===================+================+=============================+
-| Item            | Text area         | 1, required    | WYISIWYG text               |
-| with markup     |                   |                |                             |
-+-----------------+-------------------+----------------+-----------------------------+
-| Item            | Hidden            | 1, required    | Clean version of direction  |
-+-----------------+-------------------+----------------+-----------------------------+
-
-.. note:: There is also a position property in the schema.  This is computed in the How-to and not stored in the database.  
 
 Coverage Area
 ----------------
