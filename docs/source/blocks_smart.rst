@@ -36,3 +36,15 @@ Decision blocks:
 * Can display only one block per segment
 
 .. image:: ../assets/decision-blocks.png
+
+<div style="border: 1 px; border-color: #CEDBE1; border-style: solid; box-shadow: 2px 0px 2px 0px  #686b71;">
+<div style="background-color: #fff;">
+<p style="padding-left: 24px; font-family: Helvetica; margin-bottom: -10px;color:#181c36">Live help<span style="padding-left:515px">X</span></p>
+<div style="background-color: #f8fafa; color: #181c36;">
+<p style="text-align: center; font-family: Helvetica; font-weight: normal; font-size: 28px; padding: 64px 48px 64px 48px;">Need help finding legal information or forms?</p>
+</div>
+<div>
+<p style="text-align: right; margin-bottom: 20px; font-size: 16px; font-family: Helvetica;"><a style="background: #0079d0; color: #fff; padding: 16px 32px 16px 32px; margin-right: 20px;">Chat Now</a></p>
+</div>
+</div>
+</div>                             

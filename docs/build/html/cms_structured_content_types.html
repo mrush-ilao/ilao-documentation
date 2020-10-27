@@ -121,6 +121,7 @@
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul class="current">
@@ -244,11 +245,17 @@
 <td>Name of the legal problem</td>
 </tr>
 <tr class="row-odd"><td>Description</td>
-<td>Text area (plain)</td>
-<td>1; required</td>
-<td>Description of the problem</td>
+<td>Text area</td>
+<td>1,required</td>
+<td>Content description</td>
 </tr>
-<tr class="row-even"><td>Disambiguation
+<tr class="row-even"><td>Meta
+Description</td>
+<td>Text area</td>
+<td>1, required</td>
+<td>Current meta description</td>
+</tr>
+<tr class="row-odd"><td>Disambiguation
 Description</td>
 <td>Text area (plain)</td>
 <td>1</td>
@@ -256,12 +263,25 @@ Description</td>
 item used to disambiguate
 from other, similar items</td>
 </tr>
-<tr class="row-odd"><td>Identifier</td>
+<tr class="row-even"><td>Identifier</td>
 <td>Hidden</td>
 <td>&#160;</td>
 <td>Node UUID</td>
 </tr>
-<tr class="row-even"><td>Stage</td>
+<tr class="row-odd"><td>Legal issues</td>
+<td>Term reference</td>
+<td>unlimited,
+required</td>
+<td>Current legal issues field</td>
+</tr>
+<tr class="row-even"><td>Primary legal
+category</td>
+<td>Term reference</td>
+<td>1, required</td>
+<td>Current primary legal
+category</td>
+</tr>
+<tr class="row-odd"><td>Stage</td>
 <td>Text field</td>
 <td>1</td>
 <td>The stage of the legal
@@ -269,7 +289,7 @@ problem, if applicable. For
 example, pre-filing, post-
 filing/pre-trial, trial, etc</td>
 </tr>
-<tr class="row-odd"><td>Subtype</td>
+<tr class="row-even"><td>Subtype</td>
 <td>Term reference
 to Legal Problem
 Subtypes</td>
@@ -280,13 +300,13 @@ legal problem. For example,
 housing’ under the problem
 “being evicted”</td>
 </tr>
-<tr class="row-even"><td>LegalCode</td>
+<tr class="row-odd"><td>LegalCode</td>
 <td>Paragraphs: Legal</td>
 <td>unlimited</td>
 <td>Legal code from standard
 coding systems</td>
 </tr>
-<tr class="row-odd"><td>LifeAreaAffected</td>
+<tr class="row-even"><td>LifeAreaAffected</td>
 <td>Term reference
 to Life Areas</td>
 <td>unlimited</td>
@@ -294,52 +314,80 @@ to Life Areas</td>
 that is affected by the
 legal problem.</td>
 </tr>
-<tr class="row-even"><td>Possible solution</td>
+<tr class="row-odd"><td>Possible solution</td>
 <td>Entity reference</td>
 <td>unlimited</td>
 <td>Entity reference to Legal
 Solution nodes</td>
 </tr>
-<tr class="row-odd"><td>Primary
+<tr class="row-even"><td>Primary
 prevention</td>
 <td>Entity reference</td>
 <td>1</td>
 <td>Entity reference to legal
 solution nodes</td>
 </tr>
-<tr class="row-even"><td>Secondary
+<tr class="row-odd"><td>Secondary
 prevention</td>
 <td>Entity reference</td>
 <td>1</td>
 <td>Entity reference to legal
 solution nodes</td>
 </tr>
-<tr class="row-odd"><td>FAQ</td>
+<tr class="row-even"><td>FAQ</td>
 <td>Entity reference</td>
 <td>unlimited</td>
 <td>Entity reference to
 Legal Question</td>
 </tr>
-<tr class="row-even"><td>RelatedResources</td>
+<tr class="row-odd"><td>RelatedResources</td>
 <td>Entity reference</td>
 <td>unlimited</td>
 <td>Entity reference to legal
 content types</td>
 </tr>
-<tr class="row-odd"><td>Image</td>
+<tr class="row-even"><td>Image</td>
 <td>Image</td>
 <td>1</td>
 <td>Image to associate with node</td>
 </tr>
-<tr class="row-even"><td>Language</td>
+<tr class="row-odd"><td>Language</td>
 <td>Hidden</td>
 <td>1</td>
 <td>Language of the node</td>
 </tr>
-<tr class="row-odd"><td>url</td>
+<tr class="row-even"><td>url</td>
 <td>Hidden</td>
 <td>1</td>
 <td>Website url for the node</td>
+</tr>
+<tr class="row-odd"><td>legal position</td>
+<td>List</td>
+<td>1, required</td>
+<td>Current field_legal_position</td>
+</tr>
+<tr class="row-even"><td>content managem
+ent tags</td>
+<td>Term reference</td>
+<td>unlimited</td>
+<td>Current content management
+tags</td>
+</tr>
+<tr class="row-odd"><td>request
+to be translated</td>
+<td>Boolean</td>
+<td>1, default to
+No</td>
+<td>Should translation be
+requested</td>
+</tr>
+<tr class="row-even"><td>mark translation
+as outdated</td>
+<td>Boolean</td>
+<td>1, default to
+No</td>
+<td>Existing field
+mark as outdated</td>
 </tr>
 </tbody>
 </table>
@@ -378,10 +426,16 @@ solution</td>
 </tr>
 <tr class="row-even"><td>Description</td>
 <td>Text area</td>
-<td>1</td>
-<td>&#160;</td>
+<td>1,required</td>
+<td>Content description</td>
 </tr>
-<tr class="row-odd"><td>Disambiguation
+<tr class="row-odd"><td>Meta
+Description</td>
+<td>Text area</td>
+<td>1, required</td>
+<td>Current meta description</td>
+</tr>
+<tr class="row-even"><td>Disambiguation
 Description</td>
 <td>Text area (plain)</td>
 <td>1</td>
@@ -389,71 +443,112 @@ Description</td>
 item used to disambiguate
 from other, similar items</td>
 </tr>
-<tr class="row-even"><td>Identifier</td>
+<tr class="row-odd"><td>Legal issues</td>
+<td>Term reference</td>
+<td>unlimited,
+required</td>
+<td>Current legal issues field</td>
+</tr>
+<tr class="row-even"><td>Primary legal
+category</td>
+<td>Term reference</td>
+<td>1, required</td>
+<td>Current primary legal
+category</td>
+</tr>
+<tr class="row-odd"><td>Identifier</td>
 <td>Hidden</td>
 <td>1</td>
 <td>Node UUID</td>
 </tr>
-<tr class="row-odd"><td>url</td>
+<tr class="row-even"><td>url</td>
 <td>Hidden</td>
 <td>1</td>
 <td>Website url for the node</td>
 </tr>
-<tr class="row-even"><td>solution type</td>
+<tr class="row-odd"><td>solution type</td>
 <td>Term reference</td>
 <td>1</td>
 <td>Reference to solution types</td>
 </tr>
-<tr class="row-odd"><td>legal forms
+<tr class="row-even"><td>legal forms
 needed</td>
 <td>Entity reference</td>
 <td>unlimited</td>
 <td>Reference to legal forms</td>
 </tr>
-<tr class="row-even"><td>information
+<tr class="row-odd"><td>information
 needed</td>
 <td>Text field</td>
 <td>unlimited</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-odd"><td>legalDifficulty</td>
+<tr class="row-even"><td>legalDifficulty</td>
 <td>Text area</td>
 <td>1</td>
 <td>Explanation of the legal
 difficulty involved</td>
 </tr>
-<tr class="row-even"><td>estimated time
+<tr class="row-odd"><td>estimated time
 required</td>
 <td>Duration</td>
 <td>1</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-odd"><td>eligibilityRules</td>
+<tr class="row-even"><td>eligibilityRules</td>
 <td>Paragraphs</td>
 <td>unlimited</td>
 <td>Text blocks</td>
 </tr>
-<tr class="row-even"><td>jurisdiction</td>
+<tr class="row-odd"><td>jurisdiction</td>
 <td>Paragraphs</td>
 <td>unlimited</td>
 <td>Coverage area paragraphs</td>
 </tr>
-<tr class="row-odd"><td>helpful
+<tr class="row-even"><td>helpful
 organizations</td>
 <td>TBD</td>
 <td>unlimited</td>
 <td>Helpful organizations to
 refer persons to</td>
 </tr>
-<tr class="row-even"><td>howTos</td>
+<tr class="row-odd"><td>howTos</td>
 <td>Entity reference</td>
 <td>unlimited</td>
 <td>Reference to a legal how to</td>
 </tr>
-<tr class="row-odd"><td>result</td>
+<tr class="row-even"><td>result</td>
 <td>Paragraphs</td>
 <td>one</td>
 <td>Text blocks</td>
+</tr>
+<tr class="row-odd"><td>legal position</td>
+<td>List</td>
+<td>1, required</td>
+<td>Current field_legal_position</td>
+</tr>
+<tr class="row-even"><td>content managem
+ent tags</td>
+<td>Term reference</td>
+<td>unlimited</td>
+<td>Current content management
+tags</td>
+</tr>
+<tr class="row-odd"><td>request
+to be translated</td>
+<td>Boolean</td>
+<td>1, default to
+No</td>
+<td>Should translation be
+requested</td>
+</tr>
+<tr class="row-even"><td>mark translation
+as outdated</td>
+<td>Boolean</td>
+<td>1, default to
+No</td>
+<td>Existing field
+mark as outdated</td>
 </tr>
 </tbody>
 </table>
@@ -492,6 +587,83 @@ Answer</td>
 <td>unlimited</td>
 <td>Text block paragraphs</td>
 </tr>
+<tr class="row-odd"><td>legal position</td>
+<td>List</td>
+<td>1, required</td>
+<td>Current field_legal_position</td>
+</tr>
+<tr class="row-even"><td>content managem
+ent tags</td>
+<td>Term reference</td>
+<td>unlimited</td>
+<td>Current content management
+tags</td>
+</tr>
+<tr class="row-odd"><td>request
+to be translated</td>
+<td>Boolean</td>
+<td>1, default to
+No</td>
+<td>Should translation be
+requested</td>
+</tr>
+<tr class="row-even"><td>mark translation
+as outdated</td>
+<td>Boolean</td>
+<td>1, default to
+No</td>
+<td>Existing field
+mark as outdated</td>
+</tr>
+<tr class="row-odd"><td>Description</td>
+<td>Text area</td>
+<td>1,required</td>
+<td>Content description</td>
+</tr>
+<tr class="row-even"><td>Meta
+Description</td>
+<td>Text area</td>
+<td>1, required</td>
+<td>Current meta description</td>
+</tr>
+<tr class="row-odd"><td>Legal issues</td>
+<td>Term reference</td>
+<td>unlimited,
+required</td>
+<td>Current legal issues field</td>
+</tr>
+<tr class="row-even"><td>Primary legal
+category</td>
+<td>Term reference</td>
+<td>1, required</td>
+<td>Current primary legal
+category</td>
+</tr>
+<tr class="row-odd"><td>Annual updates</td>
+<td>Term reference</td>
+<td>unlimited</td>
+<td>Current annual updates field</td>
+</tr>
+<tr class="row-even"><td>Author/SME</td>
+<td>Entity reference</td>
+<td>unlimited</td>
+<td>Current author/SME field</td>
+</tr>
+<tr class="row-odd"><td>jurisdiction</td>
+<td>Paragraphs</td>
+<td>unlimited</td>
+<td>Coverage area paragraphs</td>
+</tr>
+<tr class="row-even"><td>Last reviewed</td>
+<td>Date time</td>
+<td>1</td>
+<td>Current last reviewed field</td>
+</tr>
+<tr class="row-odd"><td>Last revised</td>
+<td>Date time</td>
+<td>1</td>
+<td>Current last reviewed field</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -527,6 +699,73 @@ Answer</td>
 <td>1</td>
 <td>Explanation of how/when the
 form is used</td>
+</tr>
+<tr class="row-odd"><td>legal position</td>
+<td>List</td>
+<td>1, required</td>
+<td>Current field_legal_position</td>
+</tr>
+<tr class="row-even"><td>content managem
+ent tags</td>
+<td>Term reference</td>
+<td>unlimited</td>
+<td>Current content management
+tags</td>
+</tr>
+<tr class="row-odd"><td>request
+to be translated</td>
+<td>Boolean</td>
+<td>1, default to
+No</td>
+<td>Should translation be
+requested</td>
+</tr>
+<tr class="row-even"><td>mark translation
+as outdated</td>
+<td>Boolean</td>
+<td>1, default to
+No</td>
+<td>Existing field
+mark as outdated</td>
+</tr>
+<tr class="row-odd"><td>Description</td>
+<td>Text area</td>
+<td>1,required</td>
+<td>Content description</td>
+</tr>
+<tr class="row-even"><td>Meta
+Description</td>
+<td>Text area</td>
+<td>1, required</td>
+<td>Current meta description</td>
+</tr>
+<tr class="row-odd"><td>jurisdiction</td>
+<td>Paragraphs</td>
+<td>unlimited</td>
+<td>Coverage area paragraphs</td>
+</tr>
+<tr class="row-even"><td>Legal issues</td>
+<td>Term reference</td>
+<td>unlimited,
+required</td>
+<td>Current legal issues field</td>
+</tr>
+<tr class="row-odd"><td>Primary legal
+category</td>
+<td>Term reference</td>
+<td>1, required</td>
+<td>Current primary legal
+category</td>
+</tr>
+<tr class="row-even"><td>Last reviewed</td>
+<td>Date time</td>
+<td>1</td>
+<td>Current last reviewed field</td>
+</tr>
+<tr class="row-odd"><td>Last revised</td>
+<td>Date time</td>
+<td>1</td>
+<td>Current last reviewed field</td>
 </tr>
 </tbody>
 </table>
@@ -596,6 +835,83 @@ how to</td>
 <td>The quantity that results by
 performing instructions</td>
 </tr>
+<tr class="row-odd"><td>legal position</td>
+<td>List</td>
+<td>1, required</td>
+<td>Current field_legal_position</td>
+</tr>
+<tr class="row-even"><td>content managem
+ent tags</td>
+<td>Term reference</td>
+<td>unlimited</td>
+<td>Current content management
+tags</td>
+</tr>
+<tr class="row-odd"><td>request
+to be translated</td>
+<td>Boolean</td>
+<td>1, default to
+No</td>
+<td>Should translation be
+requested</td>
+</tr>
+<tr class="row-even"><td>mark translation
+as outdated</td>
+<td>Boolean</td>
+<td>1, default to
+No</td>
+<td>Existing field
+mark as outdated</td>
+</tr>
+<tr class="row-odd"><td>Description</td>
+<td>Text area</td>
+<td>1,required</td>
+<td>Content description</td>
+</tr>
+<tr class="row-even"><td>Meta
+Description</td>
+<td>Text area</td>
+<td>1, required</td>
+<td>Current meta description</td>
+</tr>
+<tr class="row-odd"><td>Legal issues</td>
+<td>Term reference</td>
+<td>unlimited,
+required</td>
+<td>Current legal issues field</td>
+</tr>
+<tr class="row-even"><td>Primary legal
+category</td>
+<td>Term reference</td>
+<td>1, required</td>
+<td>Current primary legal
+category</td>
+</tr>
+<tr class="row-odd"><td>Annual updates</td>
+<td>Term reference</td>
+<td>unlimited</td>
+<td>Current annual updates field</td>
+</tr>
+<tr class="row-even"><td>Author/SME</td>
+<td>Entity reference</td>
+<td>unlimited</td>
+<td>Current author/SME field</td>
+</tr>
+<tr class="row-odd"><td>jurisdiction</td>
+<td>Paragraphs</td>
+<td>unlimited</td>
+<td>Coverage area paragraphs</td>
+</tr>
+<tr class="row-even"><td>Last reviewed</td>
+<td>Date time</td>
+<td>1</td>
+<td>Current last reviewed field</td>
+</tr>
+<tr class="row-odd"><td>Last revised</td>
+<td>Date time</td>
+<td>1</td>
+<td>Current last reviewed field</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -630,6 +946,83 @@ performing instructions</td>
 <td>paragraphs bundle</td>
 <td>unlimited</td>
 <td>Tips bundle</td>
+</tr>
+<tr class="row-odd"><td>legal position</td>
+<td>List</td>
+<td>1, required</td>
+<td>Current field_legal_position</td>
+</tr>
+<tr class="row-even"><td>content managem
+ent tags</td>
+<td>Term reference</td>
+<td>unlimited</td>
+<td>Current content management
+tags</td>
+</tr>
+<tr class="row-odd"><td>request
+to be translated</td>
+<td>Boolean</td>
+<td>1, default to
+No</td>
+<td>Should translation be
+requested</td>
+</tr>
+<tr class="row-even"><td>mark translation
+as outdated</td>
+<td>Boolean</td>
+<td>1, default to
+No</td>
+<td>Existing field
+mark as outdated</td>
+</tr>
+<tr class="row-odd"><td>Description</td>
+<td>Text area</td>
+<td>1,required</td>
+<td>Content description</td>
+</tr>
+<tr class="row-even"><td>Meta
+Description</td>
+<td>Text area</td>
+<td>1, required</td>
+<td>Current meta description</td>
+</tr>
+<tr class="row-odd"><td>Legal issues</td>
+<td>Term reference</td>
+<td>unlimited,
+required</td>
+<td>Current legal issues field</td>
+</tr>
+<tr class="row-even"><td>Primary legal
+category</td>
+<td>Term reference</td>
+<td>1, required</td>
+<td>Current primary legal
+category</td>
+</tr>
+<tr class="row-odd"><td>Annual updates</td>
+<td>Term reference</td>
+<td>unlimited</td>
+<td>Current annual updates field</td>
+</tr>
+<tr class="row-even"><td>Author/SME</td>
+<td>Entity reference</td>
+<td>unlimited</td>
+<td>Current author/SME field</td>
+</tr>
+<tr class="row-odd"><td>jurisdiction</td>
+<td>Paragraphs</td>
+<td>unlimited</td>
+<td>Coverage area paragraphs</td>
+</tr>
+<tr class="row-even"><td>Last reviewed</td>
+<td>Date time</td>
+<td>1</td>
+<td>Current last reviewed field</td>
+</tr>
+<tr class="row-odd"><td>Last revised</td>
+<td>Date time</td>
+<td>1</td>
+<td>Current last reviewed field</td>
 </tr>
 </tbody>
 </table>
@@ -700,6 +1093,34 @@ organization</td>
 <td>Paragraphs bundle</td>
 <td>one</td>
 <td>&#160;</td>
+</tr>
+<tr class="row-even"><td>content managem
+ent tags</td>
+<td>Term reference</td>
+<td>unlimited</td>
+<td>Current content management
+tags</td>
+</tr>
+<tr class="row-odd"><td>request
+to be translated</td>
+<td>Boolean</td>
+<td>1, default to
+No</td>
+<td>Should translation be
+requested</td>
+</tr>
+<tr class="row-even"><td>mark translation
+as outdated</td>
+<td>Boolean</td>
+<td>1, default to
+No</td>
+<td>Existing field
+mark as outdated</td>
+</tr>
+<tr class="row-odd"><td>Last revised</td>
+<td>Date time</td>
+<td>1</td>
+<td>Current last reviewed field</td>
 </tr>
 </tbody>
 </table>

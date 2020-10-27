@@ -14,13 +14,22 @@ The primary content type for structured content is the Legal Problem.
 +=================+===================+================+=============================+
 | Title (name)    | Title field       | 1; required    | Name of the legal problem   |
 +-----------------+-------------------+----------------+-----------------------------+
-| Description     | Text area (plain) | 1; required    | Description of the problem  |
+| Description     | Text area         | 1,required     | Content description         |
++-----------------+-------------------+----------------+-----------------------------+
+| Meta            | Text area         | 1, required    | Current meta description    |
+| Description     |                   |                |                             |  
 +-----------------+-------------------+----------------+-----------------------------+
 | Disambiguation  | Text area (plain) | 1              | A short description of the  |
 | Description     |                   |                | item used to disambiguate   |
 |                 |                   |                | from other, similar items   |
 +-----------------+-------------------+----------------+-----------------------------+
 | Identifier      | Hidden            |                | Node UUID                   |
++-----------------+-------------------+----------------+-----------------------------+
+| Legal issues    | Term reference    | unlimited,     | Current legal issues field  |
+|                 |                   | required       |                             |
++-----------------+-------------------+----------------+-----------------------------+
+| Primary legal   | Term reference    | 1, required    | Current primary legal       |
+| category        |                   |                | category                    |
 +-----------------+-------------------+----------------+-----------------------------+
 | Stage           | Text field        | 1              | The stage of the legal      |
 |                 |                   |                | problem, if applicable. For |
@@ -61,6 +70,17 @@ The primary content type for structured content is the Legal Problem.
 +-----------------+-------------------+----------------+-----------------------------+ 
 | url             | Hidden            | 1              | Website url for the node    |
 +-----------------+-------------------+----------------+-----------------------------+
+| legal position  | List              | 1, required    | Current field_legal_position|
++-----------------+-------------------+----------------+-----------------------------+ 
+| content managem | Term reference    | unlimited      | Current content management  |
+| ent tags        |                   |                | tags                        |
++-----------------+-------------------+----------------+-----------------------------+
+| request         | Boolean           | 1, default to  | Should translation be       |
+| to be translated|                   | No             | requested                   |
++-----------------+-------------------+----------------+-----------------------------+
+| mark translation| Boolean           | 1, default to  | Existing field              |
+| as outdated     |                   | No             | mark as outdated            |
++-----------------+-------------------+----------------+-----------------------------+
 
 .. note:: 
    
@@ -77,11 +97,20 @@ Legal Solution
 | Alternate name  | Text field        | 1              | An alternative name for the |
 |                 |                   |                | solution                    |
 +-----------------+-------------------+----------------+-----------------------------+
-| Description     | Text area         | 1              |                             |
+| Description     | Text area         | 1,required     | Content description         |
++-----------------+-------------------+----------------+-----------------------------+
+| Meta            | Text area         | 1, required    | Current meta description    |
+| Description     |                   |                |                             |                
 +-----------------+-------------------+----------------+-----------------------------+
 | Disambiguation  | Text area (plain) | 1              | A short description of the  |
 | Description     |                   |                | item used to disambiguate   |
 |                 |                   |                | from other, similar items   |
++-----------------+-------------------+----------------+-----------------------------+
+| Legal issues    | Term reference    | unlimited,     | Current legal issues field  |
+|                 |                   | required       |                             |
++-----------------+-------------------+----------------+-----------------------------+
+| Primary legal   | Term reference    | 1, required    | Current primary legal       |
+| category        |                   |                | category                    |
 +-----------------+-------------------+----------------+-----------------------------+
 | Identifier      | Hidden            | 1              | Node UUID                   |
 +-----------------+-------------------+----------------+-----------------------------+
@@ -112,6 +141,17 @@ Legal Solution
 +-----------------+-------------------+----------------+-----------------------------+
 | result          | Paragraphs        | one            | Text blocks                 |
 +-----------------+-------------------+----------------+-----------------------------+ 
+| legal position  | List              | 1, required    | Current field_legal_position|
++-----------------+-------------------+----------------+-----------------------------+ 
+| content managem | Term reference    | unlimited      | Current content management  |
+| ent tags        |                   |                | tags                        |
++-----------------+-------------------+----------------+-----------------------------+
+| request         | Boolean           | 1, default to  | Should translation be       |
+| to be translated|                   | No             | requested                   |
++-----------------+-------------------+----------------+-----------------------------+
+| mark translation| Boolean           | 1, default to  | Existing field              |
+| as outdated     |                   | No             | mark as outdated            |
++-----------------+-------------------+----------------+-----------------------------+
 
 
 Legal Question
@@ -129,6 +169,38 @@ Single question; packaged within an FAQ in a legal problem.
 | Suggested       | Paragraphs        | unlimited      | Text block paragraphs       |
 | Answer          |                   |                |                             |
 +-----------------+-------------------+----------------+-----------------------------+
+| legal position  | List              | 1, required    | Current field_legal_position|
++-----------------+-------------------+----------------+-----------------------------+ 
+| content managem | Term reference    | unlimited      | Current content management  |
+| ent tags        |                   |                | tags                        |
++-----------------+-------------------+----------------+-----------------------------+
+| request         | Boolean           | 1, default to  | Should translation be       |
+| to be translated|                   | No             | requested                   |
++-----------------+-------------------+----------------+-----------------------------+
+| mark translation| Boolean           | 1, default to  | Existing field              |
+| as outdated     |                   | No             | mark as outdated            |
++-----------------+-------------------+----------------+-----------------------------+
+| Description     | Text area         | 1,required     | Content description         |
++-----------------+-------------------+----------------+-----------------------------+
+| Meta            | Text area         | 1, required    | Current meta description    |
+| Description     |                   |                |                             |                
++-----------------+-------------------+----------------+-----------------------------+
+| Legal issues    | Term reference    | unlimited,     | Current legal issues field  |
+|                 |                   | required       |                             |
++-----------------+-------------------+----------------+-----------------------------+
+| Primary legal   | Term reference    | 1, required    | Current primary legal       |
+| category        |                   |                | category                    |
++-----------------+-------------------+----------------+-----------------------------+
+| Annual updates  | Term reference    | unlimited      | Current annual updates field|
++-----------------+-------------------+----------------+-----------------------------+
+| Author/SME      | Entity reference  | unlimited      | Current author/SME field    |
++-----------------+-------------------+----------------+-----------------------------+
+| jurisdiction    | Paragraphs        | unlimited      | Coverage area paragraphs    |
++-----------------+-------------------+----------------+-----------------------------+
+| Last reviewed   | Date time         | 1              | Current last reviewed field |
++-----------------+-------------------+----------------+-----------------------------+
+| Last revised    | Date time         | 1              | Current last reviewed field |
++-----------------+-------------------+----------------+-----------------------------+
 
 Legal Forms
 ---------------
@@ -141,6 +213,34 @@ Legal Forms
 +-----------------+-------------------+----------------+-----------------------------+
 | formUse         | Text area         | 1              | Explanation of how/when the |
 |                 |                   |                | form is used                |
++-----------------+-------------------+----------------+-----------------------------+
+| legal position  | List              | 1, required    | Current field_legal_position|
++-----------------+-------------------+----------------+-----------------------------+ 
+| content managem | Term reference    | unlimited      | Current content management  |
+| ent tags        |                   |                | tags                        |
++-----------------+-------------------+----------------+-----------------------------+
+| request         | Boolean           | 1, default to  | Should translation be       |
+| to be translated|                   | No             | requested                   |
++-----------------+-------------------+----------------+-----------------------------+
+| mark translation| Boolean           | 1, default to  | Existing field              |
+| as outdated     |                   | No             | mark as outdated            |
++-----------------+-------------------+----------------+-----------------------------+
+| Description     | Text area         | 1,required     | Content description         |
++-----------------+-------------------+----------------+-----------------------------+
+| Meta            | Text area         | 1, required    | Current meta description    |
+| Description     |                   |                |                             |                
++-----------------+-------------------+----------------+-----------------------------+
+| jurisdiction    | Paragraphs        | unlimited      | Coverage area paragraphs    |
++-----------------+-------------------+----------------+-----------------------------+
+| Legal issues    | Term reference    | unlimited,     | Current legal issues field  |
+|                 |                   | required       |                             |
++-----------------+-------------------+----------------+-----------------------------+
+| Primary legal   | Term reference    | 1, required    | Current primary legal       |
+| category        |                   |                | category                    |
++-----------------+-------------------+----------------+-----------------------------+
+| Last reviewed   | Date time         | 1              | Current last reviewed field |
++-----------------+-------------------+----------------+-----------------------------+
+| Last revised    | Date time         | 1              | Current last reviewed field |
 +-----------------+-------------------+----------------+-----------------------------+
 
 
@@ -171,6 +271,38 @@ Legal How-to
 | yield           | text field        | one            | The quantity that results by|
 |                 |                   |                | performing instructions     |
 +-----------------+-------------------+----------------+-----------------------------+
+| legal position  | List              | 1, required    | Current field_legal_position|
++-----------------+-------------------+----------------+-----------------------------+ 
+| content managem | Term reference    | unlimited      | Current content management  |
+| ent tags        |                   |                | tags                        |
++-----------------+-------------------+----------------+-----------------------------+
+| request         | Boolean           | 1, default to  | Should translation be       |
+| to be translated|                   | No             | requested                   |
++-----------------+-------------------+----------------+-----------------------------+
+| mark translation| Boolean           | 1, default to  | Existing field              |
+| as outdated     |                   | No             | mark as outdated            |
++-----------------+-------------------+----------------+-----------------------------+
+| Description     | Text area         | 1,required     | Content description         |
++-----------------+-------------------+----------------+-----------------------------+
+| Meta            | Text area         | 1, required    | Current meta description    |
+| Description     |                   |                |                             |                
++-----------------+-------------------+----------------+-----------------------------+
+| Legal issues    | Term reference    | unlimited,     | Current legal issues field  |
+|                 |                   | required       |                             |
++-----------------+-------------------+----------------+-----------------------------+
+| Primary legal   | Term reference    | 1, required    | Current primary legal       |
+| category        |                   |                | category                    |
++-----------------+-------------------+----------------+-----------------------------+
+| Annual updates  | Term reference    | unlimited      | Current annual updates field|
++-----------------+-------------------+----------------+-----------------------------+
+| Author/SME      | Entity reference  | unlimited      | Current author/SME field    |
++-----------------+-------------------+----------------+-----------------------------+
+| jurisdiction    | Paragraphs        | unlimited      | Coverage area paragraphs    |
++-----------------+-------------------+----------------+-----------------------------+
+| Last reviewed   | Date time         | 1              | Current last reviewed field |
++-----------------+-------------------+----------------+-----------------------------+
+| Last revised    | Date time         | 1              | Current last reviewed field |
++-----------------+-------------------+----------------+-----------------------------+
 
 
 
@@ -185,6 +317,39 @@ Legal Steps
 +-----------------+-------------------+----------------+-----------------------------+
 | Tips            | paragraphs bundle | unlimited      | Tips bundle                 | 
 +-----------------+-------------------+----------------+-----------------------------+
+| legal position  | List              | 1, required    | Current field_legal_position|
++-----------------+-------------------+----------------+-----------------------------+ 
+| content managem | Term reference    | unlimited      | Current content management  |
+| ent tags        |                   |                | tags                        |
++-----------------+-------------------+----------------+-----------------------------+
+| request         | Boolean           | 1, default to  | Should translation be       |
+| to be translated|                   | No             | requested                   |
++-----------------+-------------------+----------------+-----------------------------+
+| mark translation| Boolean           | 1, default to  | Existing field              |
+| as outdated     |                   | No             | mark as outdated            |
++-----------------+-------------------+----------------+-----------------------------+
+| Description     | Text area         | 1,required     | Content description         |
++-----------------+-------------------+----------------+-----------------------------+
+| Meta            | Text area         | 1, required    | Current meta description    |
+| Description     |                   |                |                             |                
++-----------------+-------------------+----------------+-----------------------------+
+| Legal issues    | Term reference    | unlimited,     | Current legal issues field  |
+|                 |                   | required       |                             |
++-----------------+-------------------+----------------+-----------------------------+
+| Primary legal   | Term reference    | 1, required    | Current primary legal       |
+| category        |                   |                | category                    |
++-----------------+-------------------+----------------+-----------------------------+
+| Annual updates  | Term reference    | unlimited      | Current annual updates field|
++-----------------+-------------------+----------------+-----------------------------+
+| Author/SME      | Entity reference  | unlimited      | Current author/SME field    |
++-----------------+-------------------+----------------+-----------------------------+
+| jurisdiction    | Paragraphs        | unlimited      | Coverage area paragraphs    |
++-----------------+-------------------+----------------+-----------------------------+
+| Last reviewed   | Date time         | 1              | Current last reviewed field |
++-----------------+-------------------+----------------+-----------------------------+
+| Last revised    | Date time         | 1              | Current last reviewed field |
++-----------------+-------------------+----------------+-----------------------------+
+
 
 .. note:: There is also a position property in the legal steps in the schema.  This is computed in the step sections paragraph bundle in the How-to and not stored directly in the steps.  This will allow for step re-use.
 
@@ -215,6 +380,17 @@ Legal Organization
 | Telephone       | Text field        | 1              |                             |
 +-----------------+-------------------+----------------+-----------------------------+
 | Contact         | Paragraphs bundle | one            |                             |
++-----------------+-------------------+----------------+-----------------------------+
+| content managem | Term reference    | unlimited      | Current content management  |
+| ent tags        |                   |                | tags                        |
++-----------------+-------------------+----------------+-----------------------------+
+| request         | Boolean           | 1, default to  | Should translation be       |
+| to be translated|                   | No             | requested                   |
++-----------------+-------------------+----------------+-----------------------------+
+| mark translation| Boolean           | 1, default to  | Existing field              |
+| as outdated     |                   | No             | mark as outdated            |
++-----------------+-------------------+----------------+-----------------------------+
+| Last revised    | Date time         | 1              | Current last reviewed field |
 +-----------------+-------------------+----------------+-----------------------------+
 
 Paragraph Bundles
