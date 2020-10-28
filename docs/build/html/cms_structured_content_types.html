@@ -792,62 +792,57 @@ category</td>
 <td>1, required</td>
 <td>Title</td>
 </tr>
-<tr class="row-odd"><td>Description</td>
-<td>Text area</td>
-<td>1, required</td>
-<td>Description of the how-to</td>
-</tr>
-<tr class="row-even"><td>prepTime</td>
+<tr class="row-odd"><td>prepTime</td>
 <td>duration</td>
 <td>1, required</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-odd"><td>performTime</td>
+<tr class="row-even"><td>performTime</td>
 <td>duration</td>
 <td>1, required</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-even"><td>totalTime</td>
+<tr class="row-odd"><td>totalTime</td>
 <td>duration</td>
 <td>1, required</td>
 <td>Prep time + perform time</td>
 </tr>
-<tr class="row-odd"><td>stepSections</td>
+<tr class="row-even"><td>stepSections</td>
 <td>paragraphs bundle</td>
 <td>unlimited</td>
 <td>Reference to step sections</td>
 </tr>
-<tr class="row-even"><td>supply</td>
+<tr class="row-odd"><td>supply</td>
 <td>text field</td>
 <td>unlimited</td>
 <td>Things needed to complete
 the how-to</td>
 </tr>
-<tr class="row-odd"><td>tool</td>
+<tr class="row-even"><td>tool</td>
 <td>text field</td>
 <td>unlimited</td>
 <td>Tools needed to complete the
 how to</td>
 </tr>
-<tr class="row-even"><td>yield</td>
+<tr class="row-odd"><td>yield</td>
 <td>text field</td>
 <td>one</td>
 <td>The quantity that results by
 performing instructions</td>
 </tr>
-<tr class="row-odd"><td>legal position</td>
+<tr class="row-even"><td>legal position</td>
 <td>List</td>
 <td>1, required</td>
 <td>Current field_legal_position</td>
 </tr>
-<tr class="row-even"><td>content managem
+<tr class="row-odd"><td>content managem
 ent tags</td>
 <td>Term reference</td>
 <td>unlimited</td>
 <td>Current content management
 tags</td>
 </tr>
-<tr class="row-odd"><td>request
+<tr class="row-even"><td>request
 to be translated</td>
 <td>Boolean</td>
 <td>1, default to
@@ -855,7 +850,7 @@ No</td>
 <td>Should translation be
 requested</td>
 </tr>
-<tr class="row-even"><td>mark translation
+<tr class="row-odd"><td>mark translation
 as outdated</td>
 <td>Boolean</td>
 <td>1, default to
@@ -863,51 +858,51 @@ No</td>
 <td>Existing field
 mark as outdated</td>
 </tr>
-<tr class="row-odd"><td>Description</td>
+<tr class="row-even"><td>Description</td>
 <td>Text area</td>
 <td>1,required</td>
 <td>Content description</td>
 </tr>
-<tr class="row-even"><td>Meta
+<tr class="row-odd"><td>Meta
 Description</td>
 <td>Text area</td>
 <td>1, required</td>
 <td>Current meta description</td>
 </tr>
-<tr class="row-odd"><td>Legal issues</td>
+<tr class="row-even"><td>Legal issues</td>
 <td>Term reference</td>
 <td>unlimited,
 required</td>
 <td>Current legal issues field</td>
 </tr>
-<tr class="row-even"><td>Primary legal
+<tr class="row-odd"><td>Primary legal
 category</td>
 <td>Term reference</td>
 <td>1, required</td>
 <td>Current primary legal
 category</td>
 </tr>
-<tr class="row-odd"><td>Annual updates</td>
+<tr class="row-even"><td>Annual updates</td>
 <td>Term reference</td>
 <td>unlimited</td>
 <td>Current annual updates field</td>
 </tr>
-<tr class="row-even"><td>Author/SME</td>
+<tr class="row-odd"><td>Author/SME</td>
 <td>Entity reference</td>
 <td>unlimited</td>
 <td>Current author/SME field</td>
 </tr>
-<tr class="row-odd"><td>jurisdiction</td>
+<tr class="row-even"><td>jurisdiction</td>
 <td>Paragraphs</td>
 <td>unlimited</td>
 <td>Coverage area paragraphs</td>
 </tr>
-<tr class="row-even"><td>Last reviewed</td>
+<tr class="row-odd"><td>Last reviewed</td>
 <td>Date time</td>
 <td>1</td>
 <td>Current last reviewed field</td>
 </tr>
-<tr class="row-odd"><td>Last revised</td>
+<tr class="row-even"><td>Last revised</td>
 <td>Date time</td>
 <td>1</td>
 <td>Current last reviewed field</td>
@@ -1221,7 +1216,7 @@ programs taxonomy</td>
 <tr class="row-even"><td>Title (Name)</td>
 <td>Title field</td>
 <td>1, required</td>
-<td>Required by Drupal only</td>
+<td>Title or heading for section</td>
 </tr>
 <tr class="row-odd"><td>Include title?</td>
 <td>Boolean</td>
@@ -1348,8 +1343,8 @@ required</td>
 </tbody>
 </table>
 </div>
-<div class="section" id="item-list">
-<h3>Item List<a class="headerlink" href="#item-list" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="structured-item-list">
+<h3>Structured Item List<a class="headerlink" href="#structured-item-list" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="21%" />
@@ -1405,10 +1400,25 @@ area</td>
 <td>Country, state, city,
 postal code</td>
 </tr>
-<tr class="row-odd"><td>Locality</td>
+<tr class="row-odd"><td>Counties</td>
 <td>Term reference</td>
 <td>unlimited</td>
 <td>Region taxonomy</td>
+</tr>
+<tr class="row-even"><td>Cities</td>
+<td>Term reference</td>
+<td>unlimited</td>
+<td>Region taxonomy</td>
+</tr>
+<tr class="row-odd"><td>Zip codes</td>
+<td>Term reference</td>
+<td>unlimited</td>
+<td>Region taxonomy</td>
+</tr>
+<tr class="row-even"><td>Countries</td>
+<td>Country</td>
+<td>unlimited</td>
+<td>Defaults to United States</td>
 </tr>
 </tbody>
 </table>

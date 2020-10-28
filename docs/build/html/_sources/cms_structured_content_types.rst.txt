@@ -252,8 +252,6 @@ Legal How-to
 +=================+===================+================+=============================+
 | Title (Name)    | Title field       | 1, required    | Title                       |
 +-----------------+-------------------+----------------+-----------------------------+
-| Description     | Text area         | 1, required    | Description of the how-to   |
-+-----------------+-------------------+----------------+-----------------------------+
 | prepTime        | duration          | 1, required    |                             |
 +-----------------+-------------------+----------------+-----------------------------+
 | performTime     | duration          | 1, required    |                             |
@@ -435,7 +433,7 @@ Legal Step Sections
 +-----------------+-------------------+----------------+-----------------------------+
 | Field           | Type              | Cardinality    | Description                 |
 +=================+===================+================+=============================+
-| Title (Name)    | Title field       | 1, required    | Required by Drupal only     |
+| Title (Name)    | Title field       | 1, required    | Title or heading for section|
 +-----------------+-------------------+----------------+-----------------------------+
 | Include title?  | Boolean           | 1, required    | Include title in API feed?  |
 +-----------------+-------------------+----------------+-----------------------------+
@@ -488,8 +486,8 @@ Paired Markup
 |                 |                   | required       |                             |
 +-----------------+-------------------+----------------+-----------------------------+
 
-Item List
-------------
+Structured Item List
+----------------------
 
 +-----------------+-------------------+----------------+-----------------------------+
 | Field           | Type              | Cardinality    | Description                 |
@@ -511,7 +509,13 @@ Coverage Area
 | Administrative  | Select            | 1, required    | Country, state, city,       |
 | area            |                   |                | postal code                 |
 +-----------------+-------------------+----------------+-----------------------------+
-| Locality        | Term reference    | unlimited      | Region taxonomy             |
+| Counties        | Term reference    | unlimited      | Region taxonomy             |
++-----------------+-------------------+----------------+-----------------------------+
+| Cities          | Term reference    | unlimited      | Region taxonomy             |
++-----------------+-------------------+----------------+-----------------------------+
+| Zip codes       | Term reference    | unlimited      | Region taxonomy             |
++-----------------+-------------------+----------------+-----------------------------+
+| Countries       | Country           | unlimited      | Defaults to United States   |
 +-----------------+-------------------+----------------+-----------------------------+
 
 Contact Point
