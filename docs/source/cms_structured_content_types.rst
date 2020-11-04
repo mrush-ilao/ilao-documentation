@@ -92,7 +92,7 @@ Legal Solution
 +-----------------+-------------------+----------------+-----------------------------+
 | Field           | Type              | Cardinality    | Description                 |
 +=================+===================+================+=============================+
-| Title (body)    | Title field       | 1              | Question title              |
+| Title (body)    | Title field       | 1              | Solution title              |
 +-----------------+-------------------+----------------+-----------------------------+
 | Alternate name  | Text field        | 1              | An alternative name for the |
 |                 |                   |                | solution                    |
@@ -199,7 +199,7 @@ Single question; packaged within an FAQ in a legal problem.
 +-----------------+-------------------+----------------+-----------------------------+
 | Last reviewed   | Date time         | 1              | Current last reviewed field |
 +-----------------+-------------------+----------------+-----------------------------+
-| Last revised    | Date time         | 1              | Current last reviewed field |
+| Last revised    | Date time         | 1              | Current last revise field   |
 +-----------------+-------------------+----------------+-----------------------------+
 
 Legal Forms
@@ -240,7 +240,7 @@ Legal Forms
 +-----------------+-------------------+----------------+-----------------------------+
 | Last reviewed   | Date time         | 1              | Current last reviewed field |
 +-----------------+-------------------+----------------+-----------------------------+
-| Last revised    | Date time         | 1              | Current last reviewed field |
+| Last revised    | Date time         | 1              | Current last revised field  |
 +-----------------+-------------------+----------------+-----------------------------+
 
 
@@ -299,7 +299,7 @@ Legal How-to
 +-----------------+-------------------+----------------+-----------------------------+
 | Last reviewed   | Date time         | 1              | Current last reviewed field |
 +-----------------+-------------------+----------------+-----------------------------+
-| Last revised    | Date time         | 1              | Current last reviewed field |
+| Last revised    | Date time         | 1              | Current last revised field  |
 +-----------------+-------------------+----------------+-----------------------------+
 
 
@@ -343,7 +343,7 @@ Legal Step
 +-----------------+-------------------+----------------+-----------------------------+
 | Last reviewed   | Date time         | 1              | Current last reviewed field |
 +-----------------+-------------------+----------------+-----------------------------+
-| Last revised    | Date time         | 1              | Current last reviewed field |
+| Last revised    | Date time         | 1              | Current last revised field  |
 +-----------------+-------------------+----------------+-----------------------------+
 
 
