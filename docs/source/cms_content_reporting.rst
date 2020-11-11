@@ -10,6 +10,7 @@ Available reports:
 * `Take action in Guides report <illinoislegalaid.org/admin/reporting/content/guides/take-action>`_
 * `Toolbox tool usage report <https://www.illinoislegalaid.org/admin/reporting/content/toolboxes/tool-usage>`_
 * `Toolbox tool step usage report <https://www.illinoislegalaid.org/admin/reporting/content/toolboxes/tool-usage>`_
+* `Content page views report (basic) <https://www.illinoislegalaid.org/admin/reporting/content-page-views>`_
 
 Main content report
 =====================
@@ -171,6 +172,16 @@ The toolbox tool displays data captured as users interact with the steps in a to
 
 
 .. warning:: Data from before June 24, 2020 is not reliable.  The last activity date was updated for the time of migration and changes to the toolbox platform changed the way the toolbox activity works.
+
+Content page views report
+===========================
+
+This is a basic report to support A/B testing based on the page views stored from Google Analytics that are used to sort category pages.  The report includes:
+
+* a row number; when exported to excel, a formula of =mod(a2,2) will return a 1 or 0 based on whether the row number is even or odd, allowing it to be split.
+* the content title
+* the page views
+* the unaliased path; this can be dropped into block configuration to cause a block to display on those pages.
 
 
 Moderated content report

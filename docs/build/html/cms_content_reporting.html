@@ -118,6 +118,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#take-action-in-guide-report">Take action in Guide report</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#toolbox-tool-report">Toolbox Tool report</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id3">Toolbox Tool Usage report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#content-page-views-report">Content page views report</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#moderated-content-report">Moderated content report</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pending-reports">Pending reports</a></li>
 </ul>
@@ -158,6 +159,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#take-action-in-guide-report">Take action in Guide report</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#toolbox-tool-report">Toolbox Tool report</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id3">Toolbox Tool Usage report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#content-page-views-report">Content page views report</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#moderated-content-report">Moderated content report</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pending-reports">Pending reports</a></li>
 </ul>
@@ -243,6 +245,7 @@
 <li><a class="reference external" href="illinoislegalaid.org/admin/reporting/content/guides/take-action">Take action in Guides report</a></li>
 <li><a class="reference external" href="https://www.illinoislegalaid.org/admin/reporting/content/toolboxes/tool-usage">Toolbox tool usage report</a></li>
 <li><a class="reference external" href="https://www.illinoislegalaid.org/admin/reporting/content/toolboxes/tool-usage">Toolbox tool step usage report</a></li>
+<li><a class="reference external" href="https://www.illinoislegalaid.org/admin/reporting/content-page-views">Content page views report (basic)</a></li>
 </ul>
 <div class="section" id="main-content-report">
 <h2>Main content report<a class="headerlink" href="#main-content-report" title="Permalink to this headline">¶</a></h2>
@@ -413,6 +416,16 @@
 <p class="first admonition-title">Warning</p>
 <p class="last">Data from before June 24, 2020 is not reliable.  The last activity date was updated for the time of migration and changes to the toolbox platform changed the way the toolbox activity works.</p>
 </div>
+</div>
+<div class="section" id="content-page-views-report">
+<h2>Content page views report<a class="headerlink" href="#content-page-views-report" title="Permalink to this headline">¶</a></h2>
+<p>This is a basic report to support A/B testing based on the page views stored from Google Analytics that are used to sort category pages.  The report includes:</p>
+<ul class="simple">
+<li>a row number; when exported to excel, a formula of =mod(a2,2) will return a 1 or 0 based on whether the row number is even or odd, allowing it to be split.</li>
+<li>the content title</li>
+<li>the page views</li>
+<li>the unaliased path; this can be dropped into block configuration to cause a block to display on those pages.</li>
+</ul>
 </div>
 <div class="section" id="moderated-content-report">
 <h2>Moderated content report<a class="headerlink" href="#moderated-content-report" title="Permalink to this headline">¶</a></h2>
