@@ -6,6 +6,10 @@ Available reports:
 
 * `Content main report (all content) <https://www.illinoislegalaid.org/admin/content>`_
 * `Find legal content report <https://www.illinoislegalaid.org/admin/reporting/content/legal-content>`_
+* `Learn more in Guides report <https://www.illinoislegalaid.org/admin/reporting/content/guides/learn-more>`_
+* `Take action in Guides report <illinoislegalaid.org/admin/reporting/content/guides/take-action>`_
+* `Toolbox tool usage report <https://www.illinoislegalaid.org/admin/reporting/content/toolboxes/tool-usage>`_
+* `Toolbox tool step usage report <https://www.illinoislegalaid.org/admin/reporting/content/toolboxes/tool-usage>`_
 
 Main content report
 =====================
@@ -109,6 +113,66 @@ The find legal content report has many filters.  Filters are based on an AND con
 
 .. todo:: Determine whether toolbox and portal content should have translation fields.  
 
+Learn more in Guide report
+============================
+
+This report shows all of the articles that are included in a Guide and listed under Learn More.  This report shows English language only.  If a translation does not exist for a Learn More article, the English article will be listed in Spanish and Polish.
+
+The report is exportable to CSV and includes:
+* the ID of the guide
+* the title of the guide
+* the title of the learn more article
+* the ID of the learn more article
+
+All four fields are available as filters.
+
+Take action in Guide report
+============================
+
+This report shows all of the articles that are included in a Guide and listed under Take action.  This report shows English language only.  If a translation does not exist for a Take action article, the English article will be listed in Spanish and Polish.
+
+The report is exportable to CSV and includes:
+* the ID of the guide
+* the title of the guide
+* the title of the take action article
+* the ID of the take action article
+
+All four fields are available as filters.
+
+Toolbox Tool report
+======================
+
+The toolbox tool displays data captured as users interact with a toolbox tool.  The fields included are:
+
+* Toolbox ID - this is the unique ID associated with a toolbox user's interaction.  If they are logged in and return to a tool, this ID is re-used, allowing us to track a user over time.  Anonymous users do not have activity tracked over time.
+* User ID - this is the user's id from our website. User ID 0 is an anonymous user.
+* Toolbox title - title of the toolbox the tool is a part of
+* Toolbox tool title - title of the toolbox tool the user is working on
+* Started - timestamp of when the record was created
+* Last activity - timestamp of the last recorded interaction
+* Status - started, saved, or completed.  Started means the user started the tool but has not yet saved any steps; completed means they marked the tool complete and saved means they've marked at least one step complete.
+
+
+.. warning:: Data from before June 24, 2020 is not reliable.  The last activity date was updated for the time of migration and changes to the toolbox platform changed the way the toolbox activity works.
+
+Toolbox Tool Usage report
+==========================
+
+The toolbox tool displays data captured as users interact with the steps in a toolbox tool.  The fields included are:
+
+* Toolbox ID - this is the unique ID associated with a toolbox user's interaction.  If they are logged in and return to a tool, this ID is re-used, allowing us to track a user over time.  Anonymous users do not have activity tracked over time.
+* Toolbox usage id - this is the unique ID for the specific interaction
+* User ID - this is the user's id from our website. User ID 0 is an anonymous user.
+* Toolbox tool title - title of the toolbox tool the user is working on
+* Tool step title - title of the step
+* Started - timestamp of when the record was created
+* Changed - timestamp of the last recorded interaction
+* Status - started, saved, or completed.  Started means the user viewed the tool step;saved means they've marked the step complete and complete means they've completed all the applicable steps in a tool.  
+
+
+.. warning:: Data from before June 24, 2020 is not reliable.  The last activity date was updated for the time of migration and changes to the toolbox platform changed the way the toolbox activity works.
+
+
 Moderated content report
 ===========================
 This is a system report accessible from the main content report.  It needs review.
@@ -120,7 +184,6 @@ We need to add reports for:
 
 * comments and ratings
 * localized content
-* toolbox and tool usage reports
 * revision historical data
 * possibly other reports TBD under structured content grant
 
