@@ -507,34 +507,41 @@ required</td>
 </tr>
 <tr class="row-even"><td>helpful
 organizations</td>
-<td>TBD</td>
+<td>entity reference</td>
 <td>unlimited</td>
-<td>Helpful organizations to
-refer persons to</td>
+<td>Helpful organizations
+content type</td>
 </tr>
-<tr class="row-odd"><td>howTos</td>
+<tr class="row-odd"><td>legal organiza
+tions</td>
+<td>entity reference</td>
+<td>unlimited</td>
+<td>reference to organization
+(group)</td>
+</tr>
+<tr class="row-even"><td>howTos</td>
 <td>Entity reference</td>
 <td>unlimited</td>
 <td>Reference to a legal how to</td>
 </tr>
-<tr class="row-even"><td>result</td>
+<tr class="row-odd"><td>result</td>
 <td>Paragraphs</td>
 <td>one</td>
 <td>Text blocks</td>
 </tr>
-<tr class="row-odd"><td>legal position</td>
+<tr class="row-even"><td>legal position</td>
 <td>List</td>
 <td>1, required</td>
 <td>Current field_legal_position</td>
 </tr>
-<tr class="row-even"><td>content managem
+<tr class="row-odd"><td>content managem
 ent tags</td>
 <td>Term reference</td>
 <td>unlimited</td>
 <td>Current content management
 tags</td>
 </tr>
-<tr class="row-odd"><td>request
+<tr class="row-even"><td>request
 to be translated</td>
 <td>Boolean</td>
 <td>1, default to
@@ -542,7 +549,7 @@ No</td>
 <td>Should translation be
 requested</td>
 </tr>
-<tr class="row-even"><td>mark translation
+<tr class="row-odd"><td>mark translation
 as outdated</td>
 <td>Boolean</td>
 <td>1, default to
@@ -1021,8 +1028,8 @@ category</td>
 <p class="last">There is also a position property in the legal steps in the schema.  This is computed in the step sections paragraph bundle in the How-to and not stored directly in the steps.  This will allow for step re-use.</p>
 </div>
 </div>
-<div class="section" id="legal-organization">
-<h3>Legal Organization<a class="headerlink" href="#legal-organization" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="helpful-organization">
+<h3>Helpful Organization<a class="headerlink" href="#helpful-organization" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p>ILAO already has organization profile data that should be used for any organization in our system.  New entities should only be added to reference organizations that are not legal services providers within our Organization platform.</p>
@@ -1048,50 +1055,44 @@ category</td>
 <td>1, required</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-odd"><td>Organization</td>
-<td>Entity reference</td>
-<td>1</td>
-<td>Reference to an existing
-organization</td>
-</tr>
-<tr class="row-even"><td>Description</td>
+<tr class="row-odd"><td>Description</td>
 <td>Text area</td>
 <td>1</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-odd"><td>Address</td>
+<tr class="row-even"><td>Address</td>
 <td>Address</td>
 <td>1</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-even"><td>Area Served</td>
+<tr class="row-odd"><td>Area Served</td>
 <td>Paragraphs bundle</td>
 <td>unlimited</td>
 <td>Coverage area</td>
 </tr>
-<tr class="row-odd"><td>Email</td>
+<tr class="row-even"><td>Email</td>
 <td>Email</td>
 <td>1</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-even"><td>Telephone</td>
+<tr class="row-odd"><td>Telephone</td>
 <td>Text field</td>
 <td>1</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-odd"><td>Contact</td>
+<tr class="row-even"><td>Contact</td>
 <td>Paragraphs bundle</td>
-<td>one</td>
+<td>unlimited</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-even"><td>content managem
+<tr class="row-odd"><td>content managem
 ent tags</td>
 <td>Term reference</td>
 <td>unlimited</td>
 <td>Current content management
 tags</td>
 </tr>
-<tr class="row-odd"><td>request
+<tr class="row-even"><td>request
 to be translated</td>
 <td>Boolean</td>
 <td>1, default to
@@ -1099,7 +1100,7 @@ No</td>
 <td>Should translation be
 requested</td>
 </tr>
-<tr class="row-even"><td>mark translation
+<tr class="row-odd"><td>mark translation
 as outdated</td>
 <td>Boolean</td>
 <td>1, default to
@@ -1107,7 +1108,7 @@ No</td>
 <td>Existing field
 mark as outdated</td>
 </tr>
-<tr class="row-odd"><td>Last revised</td>
+<tr class="row-even"><td>Last revised</td>
 <td>Date time</td>
 <td>1</td>
 <td>Current last reviewed field</td>

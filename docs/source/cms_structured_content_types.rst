@@ -36,21 +36,21 @@ The primary content type for structured content is the Legal Problem.
 |                 |                   |                | example, pre-filing, post-  |
 |                 |                   |                | filing/pre-trial, trial, etc|
 +-----------------+-------------------+----------------+-----------------------------+
-| Subtype         | Term reference    | unlimited      | A more specific type of the |
-|                 | to Legal Problem  |                | legal problem. For example, |
-|                 | Subtypes          |                | 'being evicted from public  |
+| Subtype         | Text field        | unlimited      | A more specific type of the |
+|                 |                   |                | legal problem. For example, |
+|                 |                   |                | 'being evicted from public  |
 |                 |                   |                | housing' under the problem  |
 |                 |                   |                | "being evicted"             |
 +-----------------+-------------------+----------------+-----------------------------+
 | LegalCode       | Paragraphs: Legal | unlimited      | Legal code from standard    |
-|                 |                   |                | coding systems              |
+|                 |                   | required       | coding systems              |
 +-----------------+-------------------+----------------+-----------------------------+
 | LifeAreaAffected| Term reference    | unlimited      | The area of a person's life |
-|                 | to Life Areas     |                | that is affected by the     |
+|                 | to Life Areas     | required       | that is affected by the     |
 |                 |                   |                | legal problem.              |
 +-----------------+-------------------+----------------+-----------------------------+
 |Possible solution| Entity reference  | unlimited      | Entity reference to Legal   |
-|                 |                   |                | Solution nodes              |
+|                 |                   | required       | Solution nodes              |
 +-----------------+-------------------+----------------+-----------------------------+ 
 | Primary         | Entity reference  | 1              | Entity reference to legal   |
 | prevention      |                   |                | solution nodes              |
@@ -134,8 +134,11 @@ Legal Solution
 +-----------------+-------------------+----------------+-----------------------------+
 | jurisdiction    | Paragraphs        | unlimited      | Coverage area paragraphs    |
 +-----------------+-------------------+----------------+-----------------------------+
-| helpful         | TBD               | unlimited      | Helpful organizations to    |
-| organizations   |                   |                | refer persons to            |
+| helpful         | entity reference  | unlimited      | Helpful organizations       |
+| organizations   |                   |                | content type                |
++-----------------+-------------------+----------------+-----------------------------+
+| legal organiza  | entity reference  | unlimited      | reference to organization   |
+| tions           |                   |                | (group)                     |
 +-----------------+-------------------+----------------+-----------------------------+
 | howTos          | Entity reference  | unlimited      | Reference to a legal how to |
 +-----------------+-------------------+----------------+-----------------------------+
@@ -350,7 +353,7 @@ Legal Step
 .. note:: There is also a position property in the legal steps in the schema.  This is computed in the step sections paragraph bundle in the How-to and not stored directly in the steps.  This will allow for step re-use.
 
 
-Legal Organization
+Helpful Organization
 ---------------------
 .. note::
    ILAO already has organization profile data that should be used for any organization in our system.  New entities should only be added to reference organizations that are not legal services providers within our Organization platform.
@@ -362,9 +365,6 @@ Legal Organization
 +=================+===================+================+=============================+
 | Title (Name)    | Title field       | 1, required    |                             |
 +-----------------+-------------------+----------------+-----------------------------+
-| Organization    | Entity reference  | 1              | Reference to an existing    |
-|                 |                   |                | organization                |
-+-----------------+-------------------+----------------+-----------------------------+
 | Description     | Text area         | 1              |                             |
 +-----------------+-------------------+----------------+-----------------------------+
 | Address         | Address           | 1              |                             |
@@ -375,7 +375,7 @@ Legal Organization
 +-----------------+-------------------+----------------+-----------------------------+
 | Telephone       | Text field        | 1              |                             |
 +-----------------+-------------------+----------------+-----------------------------+
-| Contact         | Paragraphs bundle | one            |                             |
+| Contact         | Paragraphs bundle | unlimited      |                             |
 +-----------------+-------------------+----------------+-----------------------------+
 | content managem | Term reference    | unlimited      | Current content management  |
 | ent tags        |                   |                | tags                        |
