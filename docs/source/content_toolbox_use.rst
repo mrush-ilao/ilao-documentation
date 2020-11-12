@@ -27,10 +27,6 @@ Users can access tool steps:
 Keeping Track of Progress
 =============================
 
-.. todo:: Reporting tools coming soon
-
-
-
 Users who start a toolbox or tool will have records created in our website that captures:
 
 * the language they accessed the content in
@@ -47,6 +43,8 @@ For each node viewed:
 
   * Tool steps will have a status of started when the tool step is viewed and completed when the user marks it complete
   * Tools will have a status of started when the user first views the page and a status of completed when the user has marked.  If they accessed it from the toolbox form and did not start it, it will have a status of saved until they start.  
+  
+See the `toolbox tools reports <https://ilao-documentation.readthedocs.io/en/latest/cms_content_reporting.html#toolbox-tool-report>`_ under CMS content reporting.  
   
 Website members
 -----------------

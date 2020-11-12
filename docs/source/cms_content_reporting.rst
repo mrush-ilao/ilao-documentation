@@ -84,7 +84,7 @@ Report data
 
 .. note::  The last revised and last expert review fields are not translatable in legal content but are translatable in toolbox, tool, and tool step content.    The last changed date is per language. 
 
-.. todo:: Last revised and last expert review fields need to be added to ADRM content; standardize date fields (translatable vs not translatable), apply formats to toolbox, ADRM content, portal pages.    
+.. todo:: standardize date fields (translatable vs not translatable)
 
 
 Filters
