@@ -8,7 +8,7 @@ The testimonials content type is used:
 
 .. image:: ../assets/cms-testimonial.png
 
-.. todo:: Add fields that will make it easier to track and use:  date of feedback as a field, legal issue(s), feedback source.
+.. todo:: Add fields that will make it easier to track and use:  date of feedback as a field, legal issue(s), feedback source.  Update the embed button to limit use to testimonials and to teaser view.
 
 When rendered on the home page:
 
@@ -18,6 +18,6 @@ When embedded within legal content:
 
 .. image:: ../assets/testimonials-embed.png
 
-.. todo:: Style work is needed before these can be used in legal content.
+Mobile:
 
-.. image:: ../assets/testimonials-unstyled.png
+.. image:: ../assets/testimonial-final.png
