@@ -45,17 +45,17 @@ There are four dates that impact content:
 
 * Created date.  This is the date the content was created.  This can (but shouldn't be except in exceptional circumstances in the authoring section on the content edit form)
 * Last updated date.  This is a system-generated date created every time a node is changed in anyway.
-* Last internal revision.  
+* Last revised.  
 
   * This is set manually by staff.
   * Defaults to the current date/time on new content but is not changed on future edits unless it is manually changed.
   * This appears on legal content as the Last revised date.
   
-* Last expert review. This is set manually by staff. This appears on legal content as the Last reviewed date.
+* Last reviewed. This is set manually by staff. This appears on legal content as the Last reviewed date.
 
 .. image:: ../assets/cms-legal-content-dates.png
 
-.. note::  The last internal revision and last expert review are not translatable.  The dates apply to all translations of a piece of legal content.
+.. note::  The last revised and last reviewed dates are not translatable.  The dates apply to all translations of a piece of legal content.
 
 
 

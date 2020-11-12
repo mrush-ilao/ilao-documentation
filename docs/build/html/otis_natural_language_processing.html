@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Get Legal Help &mdash; IllinoisLegalAid.org 1 documentation</title>
+  <title>Natural language processing of legal problem &mdash; IllinoisLegalAid.org 1 documentation</title>
   
 
   
@@ -40,8 +40,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Organization management" href="otis_organization_management.html" />
-    <link rel="prev" title="Webforms" href="webforms_cms.html" /> 
+    <link rel="next" title="Supported Integrations" href="otis_third_party_support.html" />
+    <link rel="prev" title="Spot Classsifer API Docs" href="otis_tech_spot_classifier.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -98,11 +98,21 @@
 <li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Get Legal Help</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="otis_cms.html">Get Legal Help</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="otis_organization_management.html">Organization management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_endpoints.html">Triage rule endpoints</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_reports.html">Get Legal Help Reporting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_ai_integration.html">OTIS AI Integration</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="otis_ai_integration.html">OTIS AI Integration</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="otis_tech_guided_navigation.html">Guided Navigation API Docs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_tech_houston_ai.html">Houston AI Classifier API Docs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_tech_spot_classifier.html">Spot Classsifer API Docs</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Natural language processing of legal problem</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#processor-algorithm">Processor Algorithm</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="otis_ai_integration.html#prototype">Prototype</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="otis_third_party_support.html">Supported Integrations</a></li>
 </ul>
 </li>
@@ -157,13 +167,17 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Get Legal Help</li>
+          <li><a href="otis_cms.html">Get Legal Help</a> &raquo;</li>
+        
+          <li><a href="otis_ai_integration.html">OTIS AI Integration</a> &raquo;</li>
+        
+      <li>Natural language processing of legal problem</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/otis_cms.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/otis_natural_language_processing.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -176,44 +190,35 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="get-legal-help">
-<h1>Get Legal Help<a class="headerlink" href="#get-legal-help" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="otis_organization_management.html">Organization management</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="otis_manage_organization.html">Managing organization profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_manage_nodes.html">Organization content</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_manage_intake_settings.html">Intake settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_organization_reports.html">Organization Reports</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_fast_entry.html">Fast Entry Form</a></li>
+  <div class="section" id="natural-language-processing-of-legal-problem">
+<h1>Natural language processing of legal problem<a class="headerlink" href="#natural-language-processing-of-legal-problem" title="Permalink to this headline">¶</a></h1>
+<p>The current website uses an autocomplete to our legal issues taxonomy to direct a user to the appropriate triage rules or referrals.  The accuracy of this is dependent on how the user interacts with the field:</p>
+<ul class="simple">
+<li>Users can pick a term from the autocomplete.  If they do:<ul>
+<li>and it is the lowest level term in the taxonomy, they are matched to the triage rules</li>
+<li>and it is not the lowest level term in the taxonomy, they are taken to a screen to filter through the taxonomy to the lowest level, starting with the term they entered.</li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="otis_endpoints.html">Triage rule endpoints</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="otis_endpoints.html#standard-usage">Standard Usage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_endpoints.html#prioritization">Prioritization</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="otis_reports.html">Get Legal Help Reporting</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="otis_reports_glh_summary.html">Get Legal Help Summary Report</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_reports_etransfer.html">Intake/Triage Report</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_reports_referral_counts.html">GLH Referral Count Report</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_reports_referrals.html">Referrals Report</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="otis_ai_integration.html">OTIS AI Integration</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="otis_tech_guided_navigation.html">Guided Navigation API Docs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_tech_houston_ai.html">Houston AI Classifier API Docs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_tech_spot_classifier.html">Spot Classsifer API Docs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_natural_language_processing.html">Natural language processing of legal problem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_ai_integration.html#prototype">Prototype</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="otis_third_party_support.html">Supported Integrations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="otis_third_party_support.html#url-pre-fill-method">URL Pre-fill method</a></li>
+<li>Users can type text into the autocomplete.  If they do:<ul>
+<li>and it is an exact match to a term in the taxonomy, then it is treated as if the user selected the term from the autocomplete</li>
+<li>and it is not an exact match to a term in the taxonomy, the user is taken to the top of our legal issues taxonomy to filter down to the lowest level problem.</li>
 </ul>
 </li>
 </ul>
+<p>The classifiers will be used to improve that last use case, where the user doesn’t match to anything in the taxonomy, to at least get the user into a more discrete top level category than the full list of top categories.</p>
+<div class="section" id="processor-algorithm">
+<h2>Processor Algorithm<a class="headerlink" href="#processor-algorithm" title="Permalink to this headline">¶</a></h2>
+<p>If the user’s input is an exact match to the legal issues taxonomy =&gt; no change in the current system is made</p>
+<p>If the user’s input is not an exact match to the legal issues taxonomy:</p>
+<ul class="simple">
+<li>User input is passed to both Houston.ai and Spot classifier</li>
+<li>A combined list of results are culled together, ranked and mapped back to ILAO’s IA</li>
+<li>The user is presented with a short list of options based on the classifier data.</li>
+</ul>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">Figure out how to map all these taxonomies to a single index.  We have our IA, a LSC code to our IA.  Nothing that maps our IA to NSMI</p>
+</div>
 </div>
 </div>
 
@@ -225,10 +230,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="otis_organization_management.html" class="btn btn-neutral float-right" title="Organization management" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="otis_third_party_support.html" class="btn btn-neutral float-right" title="Supported Integrations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="webforms_cms.html" class="btn btn-neutral float-left" title="Webforms" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="otis_tech_spot_classifier.html" class="btn btn-neutral float-left" title="Spot Classsifer API Docs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

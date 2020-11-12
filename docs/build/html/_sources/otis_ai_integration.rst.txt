@@ -13,6 +13,7 @@ Both produce similar results although they don't always perform evenly.
    otis_tech_guided_navigation
    otis_tech_houston_ai
    otis_tech_spot_classifier
+   otis_natural_language_processing
 
 Prototype
 ===========

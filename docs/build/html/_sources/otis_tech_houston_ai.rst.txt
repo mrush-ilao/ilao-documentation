@@ -9,8 +9,10 @@ Configuration in Drupal
 We have a configuration page that allows us to store:
 
 * Our API key, required to interact with the classifier
-* The URL for the classifier
+* The URL for the classifier API call
+* the URL for the problem codes API call
 * a default location
+* minimum prediction score (this is not used by the API but is used by ILAO to exclude irrelevant results)
 
 Methods
 ===========
