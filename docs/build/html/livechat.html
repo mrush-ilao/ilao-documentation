@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Other Website Features &mdash; IllinoisLegalAid.org 1 documentation</title>
+  <title>Live Chat &mdash; IllinoisLegalAid.org 1 documentation</title>
   
 
   
@@ -40,8 +40,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Live Chat" href="livechat.html" />
-    <link rel="prev" title="Supported Integrations" href="otis_third_party_support.html" /> 
+    <link rel="prev" title="Other Website Features" href="other_cms_features.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -99,8 +98,12 @@
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Other Website Features</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="livechat.html">Live Chat</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="other_cms_features.html">Other Website Features</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Live Chat</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#on-our-website">On our website</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#on-comm100">On Comm100</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -153,13 +156,15 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Other Website Features</li>
+          <li><a href="other_cms_features.html">Other Website Features</a> &raquo;</li>
+        
+      <li>Live Chat</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/other_cms_features.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/livechat.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -172,17 +177,36 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="other-website-features">
-<h1>Other Website Features<a class="headerlink" href="#other-website-features" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="livechat.html">Live Chat</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="livechat.html#on-our-website">On our website</a></li>
-<li class="toctree-l2"><a class="reference internal" href="livechat.html#on-comm100">On Comm100</a></li>
+  <div class="section" id="live-chat">
+<h1>Live Chat<a class="headerlink" href="#live-chat" title="Permalink to this headline">¶</a></h1>
+<p>Our live chat system is powered by Comm100.</p>
+<div class="section" id="on-our-website">
+<h2>On our website<a class="headerlink" href="#on-our-website" title="Permalink to this headline">¶</a></h2>
+<p>Comm100 is configured on our website using a block in the footer region.</p>
+<ul class="simple">
+<li><a class="reference external" href="https://www.illinoislegalaid.org/admin/structure/block/manage/comm100">Configure the block</a> (choose where it shows up)</li>
+<li><a class="reference external" href="https://www.illinoislegalaid.org/block/266">Edit the block</a> (update the JavaScript to include).  The Javascript is only visible if you click on Source in the WYSIWYG window.</li>
 </ul>
-</li>
+<p>The block is configured to:</p>
+<ul class="simple">
+<li>Show on English pages only</li>
+<li>Show for all authenticated and anonymous users</li>
+<li>Only in our main theme (which prevents it from showing on admin pages like the CMS)</li>
 </ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The previous chat system allowed us to exclude users by role from seeing the Live chat icon and pop up (specifically staff and legal aid members).  The new system only allows us to include users by role.  Because all logged in users have the authenticated role and community members ONLY have the authenticated role, we can not disable that role.  This then results in the chat buttons appearing for all logged in users.</p>
+</div>
+</div>
+<div class="section" id="on-comm100">
+<h2>On Comm100<a class="headerlink" href="#on-comm100" title="Permalink to this headline">¶</a></h2>
+<p>Comm100 controls:</p>
+<ul class="simple">
+<li>Whether the chat icon appears on our website.  The icon disappears if no agent is logged into the Comm100 console.</li>
+<li>When the pop up appears (currently set after the user has been on the site for 30 seconds)</li>
+<li>What the chat button, pop up image, and chat box looks like and where it is placed on the site.</li>
+</ul>
+<p>Comm100 also provides the JavaScript we include in our Drupal block to control Comm100.</p>
 </div>
 </div>
 
@@ -194,10 +218,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="livechat.html" class="btn btn-neutral float-right" title="Live Chat" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-      
-        <a href="otis_third_party_support.html" class="btn btn-neutral float-left" title="Supported Integrations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="other_cms_features.html" class="btn btn-neutral float-left" title="Other Website Features" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

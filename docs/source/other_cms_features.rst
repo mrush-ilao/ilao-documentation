@@ -6,5 +6,5 @@ Other Website Features
    :maxdepth: 2
    :caption: Contents:
 
-   
+   livechat
    
