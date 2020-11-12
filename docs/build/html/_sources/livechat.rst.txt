@@ -4,6 +4,17 @@ Live Chat
 
 Our live chat system is powered by Comm100.  
 
+Overview
+===========
+Our Live chat solution includes:
+
+* a static chat button.  This button is managed entirely through Comm100.
+* an invitation to chat
+
+.. image:: ../assets/live-chat.png
+
+The image is editable through our designers' Figma files.  See Gwen if you need a revision.  The close region is set in Comm100.
+
 On our website
 ===============
 Comm100 is configured on our website using a block in the footer region.
