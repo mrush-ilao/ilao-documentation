@@ -106,6 +106,8 @@
 <li class="toctree-l3"><a class="reference internal" href="otis_tech_guided_navigation.html">Guided Navigation API Docs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="otis_tech_houston_ai.html">Houston AI Classifier API Docs</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Spot Classsifer API Docs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#configuration-in-drupal">Configuration in Drupal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">Methods</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
 </ul>
 </li>
@@ -191,7 +193,45 @@
             
   <div class="section" id="spot-classsifer-api-docs">
 <h1>Spot Classsifer API Docs<a class="headerlink" href="#spot-classsifer-api-docs" title="Permalink to this headline">¶</a></h1>
-<p>The <a class="reference external" href="https://houston.ai/api/classify-docs">Houston.AI classifier</a> is an API service that takes text and returns one or more legal problem codes.</p>
+<p>The <a class="reference external" href="https://app.swaggerhub.com/apis-docs/suffolklitlab/spot/">LIT Spot classifier</a> is an API service that takes text and returns one or more legal problem codes based on the <a class="reference external" href="https://taxonomy.legal/">LIST taxonomy</a>.</p>
+<div class="section" id="configuration-in-drupal">
+<h2>Configuration in Drupal<a class="headerlink" href="#configuration-in-drupal" title="Permalink to this headline">¶</a></h2>
+<p>We have a configuration page that allows us to store:</p>
+<ul class="simple">
+<li>Our API key, required to interact with the classifier</li>
+<li>The URL for the classifier</li>
+<li>Whether to allow SPOT to save submitted text or not</li>
+<li>The cutoff values (lower, upper, and prediction)</li>
+</ul>
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<p>We currently support:</p>
+<ul class="simple">
+<li>/taxonomy which returns the labels of the LIST taxonomy in use in the classifier</li>
+<li>/entities-terminal and /entities-nested which accepts:<ul>
+<li>text (a string up to 5000 characters)</li>
+<li>save-text (0 or 1; whether the classifier is allowed to save our text)</li>
+<li>cutoff-lower (between 0-1; default 0); the lower prediction must exceed this to be returned</li>
+<li>cutoff-pred (between 0-1; default .5); the prediction must exceed this to be returned</li>
+<li>cutoff-upper (between 0-1; default .5); the upper bound of the prediction must exceed this to be returned.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">We will still need to build out the feedback loop to confirm correctness in a future iteration.</p>
+</div>
+<div class="section" id="entities-nested">
+<h3>Entities-nested<a class="headerlink" href="#entities-nested" title="Permalink to this headline">¶</a></h3>
+<p>Entities nested returns the entire LIST tree for a provided text.  For example, it might return Housing-&gt;Evictions from a home</p>
+</div>
+<div class="section" id="entities-terminal">
+<h3>Entities-terminal<a class="headerlink" href="#entities-terminal" title="Permalink to this headline">¶</a></h3>
+<p>Entities terminal returns only the lowest LIST terms that match a text.  For example, it might return Evictions from a Home but not the parent Housing term.</p>
+<p>..note :: Not all levels of the LIST taxonomy are currently supported in the classifier.</p>
+</div>
+</div>
 <div class="section" id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
 <p>When using entities-nested, the results return the entire hierarchical chain of problem codes where they exist.</p>

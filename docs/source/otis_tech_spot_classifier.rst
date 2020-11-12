@@ -3,7 +3,41 @@ Spot Classsifer API Docs
 =============================
 
 
-The `Houston.AI classifier <https://houston.ai/api/classify-docs>`_ is an API service that takes text and returns one or more legal problem codes.  
+The `LIT Spot classifier <https://app.swaggerhub.com/apis-docs/suffolklitlab/spot/>`_ is an API service that takes text and returns one or more legal problem codes based on the `LIST taxonomy <https://taxonomy.legal/>`_.  
+
+Configuration in Drupal
+========================
+We have a configuration page that allows us to store:
+
+* Our API key, required to interact with the classifier
+* The URL for the classifier
+* Whether to allow SPOT to save submitted text or not
+* The cutoff values (lower, upper, and prediction)
+
+Methods
+=========
+We currently support:
+
+* /taxonomy which returns the labels of the LIST taxonomy in use in the classifier
+* /entities-terminal and /entities-nested which accepts:
+
+  * text (a string up to 5000 characters)
+  * save-text (0 or 1; whether the classifier is allowed to save our text)
+  * cutoff-lower (between 0-1; default 0); the lower prediction must exceed this to be returned
+  * cutoff-pred (between 0-1; default .5); the prediction must exceed this to be returned
+  * cutoff-upper (between 0-1; default .5); the upper bound of the prediction must exceed this to be returned.
+  
+.. note:: We will still need to build out the feedback loop to confirm correctness in a future iteration.
+  
+Entities-nested
+----------------
+Entities nested returns the entire LIST tree for a provided text.  For example, it might return Housing->Evictions from a home
+
+Entities-terminal
+------------------
+Entities terminal returns only the lowest LIST terms that match a text.  For example, it might return Evictions from a Home but not the parent Housing term.
+
+..note :: Not all levels of the LIST taxonomy are currently supported in the classifier.  
 
 
 Example

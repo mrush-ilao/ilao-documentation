@@ -4,6 +4,14 @@ Houston AI Classifier API Docs
 
 The `Houston.AI classifier <https://houston.ai/api/classify-docs>`_ is an API service that takes text and returns one or more legal problem codes based on the LSC problem code/Legal Server problem code taxonomy.  
 
+Configuration in Drupal
+=========================
+We have a configuration page that allows us to store:
+
+* Our API key, required to interact with the classifier
+* The URL for the classifier
+* a default location
+
 Methods
 ===========
 We support invoking:
