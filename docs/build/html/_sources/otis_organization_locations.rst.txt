@@ -6,6 +6,8 @@ Organizations have locations, which have services.
 
 ILAO staff, organization managers, and OTIS managers can all add or edit locations.  
 
+The add/edit location form is the same for both ILAO staff and organization/OTIS managers.
+
 Title
 ========
 Every location requires a title, or name.  The name should be descriptive enough that when displayed to users it makes sense.  For example:  Bond County Courthouse, Main Office, Waukegan Office.  
@@ -102,3 +104,6 @@ There are a handful of additional fields for locations that are not currently di
 
 .. todo:: The volunteer information is no longer used and should be deprecated.
 
+Parent Organization
+=====================
+This needs to be set to the organization the location belongs to.  "Same as" fields will not copy correctly without this being set.
