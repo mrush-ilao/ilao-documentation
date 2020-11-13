@@ -2,22 +2,33 @@
 Managing Locations
 =======================
 
-Creating a location
-=====================
-At the bottom of the form is a Parent Organization field.  This is where the organization associated with the location must be set.  When set, this will then confer all of the organizational ownership to the location so that Organization Managers can edit the location.
+Organizations have locations, which have services.  
 
-Contact information
---------------------
-* Give the location a title (name).  The name should be descriptive enough that when displayed to users it makes sense.  For example:  Bond County Courthouse, Main Office, Waukegan Office.  
-* Indicate whether the address matches the organization address.  For single-location organizations or the main office, this is likely to be Yes.  If it is set to No, the address form will display and be required.
-* Indicate whether the phone number is the same as the one in the organization profile.  If it isn't, you'll be required to provide a phone number. 
-* Provide additional phone numbers, if they exist for toll-free and tty numbers. 
+ILAO staff, organization managers, and OTIS managers can all add or edit locations.  
+
+Title
+========
+Every location requires a title, or name.  The name should be descriptive enough that when displayed to users it makes sense.  For example:  Bond County Courthouse, Main Office, Waukegan Office.  
+
+Address
+==========
+Every location requires an address.  By checking "Yes" to the "Same address as the organization" will copy the physical address of the organization to the location.
+
+
+Phone numbers
+================
+Every location requires a phone number.  By checking "Yes" to "Same phone number as organization," the phone number from the organization will be copied.
+
+In addition, additional phone numbers for TTY and Toll-free numbers are optional.
+
+Phone numbers should be formatted as (xxx) xxx-xxxx.
+
 
 .. image:: ../assets/otis-location-header.png
 
 Hours of Operations
------------------------
-There are two options to set a location's hours of operations:  regular weekly hours and less frequent hours.  
+=======================
+There are two options to set a location's hours of operations: regular weekly hours and less frequent hours.  These may be overwritten at the service level.
 
 When a location is open at least 1 day every week, the "Is this location open at least weekly?" should be set to Yes.
 
@@ -36,8 +47,8 @@ When a location is not open at least once a week, then we have to use the irregu
 
 .. image:: ../assets/otis-locations-hours-irregular.png
 
-Holiday
-^^^^^^^^^
+Holidays
+==========
 Holidays should be set for the location and may be overwritten at the service level.  When holidays are set for a location:
 
 * When used in online triage and intake, the holidays will not show up in callback hours options
@@ -50,7 +61,7 @@ Holidays are managed in the `holidays taxonomy <https://www.illinoislegalaid.org
 .. note:: Custom holidays can be added to the holiday taxonomy to accommodate unusual events where one or more organizations needs to be closed (such as a staff retreat) or for unusual occurrences (such as the every 4-5 years when the day after Thanksgiving is not the 4th Friday).  
 
 Service area
------------------
+===============
 The service area consists of at least one question: does the location serve all of Illinois? If the location is less than statewide, then the user is required to set the service area at the county, city, or zip code level.  
 
 .. image:: ../assets/otis-locations-service-area.png
@@ -60,14 +71,13 @@ For example, a location that serves Kane, Kendall, and DeKalb counties would hav
 .. note:: The service area can be overridden at the service level.  For example, a location may serve 3 counties but have a specialty service that only serves 1 county.
 
 
-
-Service costs
------------------
+Income eligibility & fees
+============================
 Every location should indicate what it typically charges users/clients.  There are 4 options:
 
 * Free to everyone.  This should be used when there is generally no charge and everyone is eligible.
-* Free to eligible persons/entities.
-* Sliding scale based on income
+* Free to eligible persons/entities.  This should be used when the location generally has income limits.  For example, the location only serves clients with income less than 125% of the federal poverty level.
+* Sliding scale based on income.  
 * Flat fee regardless of income
 
 .. image:: ../assets/otis-locations-free-income.png
@@ -81,9 +91,9 @@ When the user selects sliding scale or flat fee, a description of those fees is 
 .. note:: These settings can be overwritten at the service level and services can be further restricted to specific populations for the free to eligible persons/entities.
 
 Additional Fields
---------------------
+=====================
 
-There are a handful of additional fields for locations:
+There are a handful of additional fields for locations that are not currently displayed to users:
 
 * Volunteer information
 * Image
