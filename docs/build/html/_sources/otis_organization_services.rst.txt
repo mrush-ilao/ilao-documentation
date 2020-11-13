@@ -183,7 +183,7 @@ When holidays are set for a service:
 * When used in online triage and intake, the holidays will not show up in callback hours options
 * When used in referrals, the displayed hours will show the holidays as a closed date.
 
-.. image:  ../assets/otis-locations-holidays.png
+.. image::  ../assets/otis-locations-holidays.png
 
 Holidays are managed in the `holidays taxonomy <https://www.illinoislegalaid.org/admin/structure/taxonomy/manage/holidays/overview>`_.  Common Illinois and Federal holidays are included in the taxonomy.
 

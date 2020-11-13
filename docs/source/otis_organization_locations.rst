@@ -53,7 +53,7 @@ Holidays
 ==========
 Holidays should be set for the location and may be overwritten at the service level.  
 
-.. image:  ../assets/otis-locations-holidays.png
+.. image::  ../assets/otis-locations-holidays.png
 
 Holidays are managed in the `holidays taxonomy <https://www.illinoislegalaid.org/admin/structure/taxonomy/manage/holidays/overview>`_.  Common Illinois and Federal holidays are included in the taxonomy.
 
