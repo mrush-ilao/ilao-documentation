@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Managing organization profile &mdash; IllinoisLegalAid.org 1 documentation</title>
+  <title>Adding/editing organizations &mdash; IllinoisLegalAid.org 1 documentation</title>
   
 
   
@@ -100,7 +100,11 @@
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="otis_cms.html">Get Legal Help</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="otis_organization_management.html">Organization management</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Managing organization profile</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Adding/editing organizations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#adding-an-organization">Adding an organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#editing-an-organization">Editing an organization</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="otis_manage_nodes.html">Organization content</a></li>
 <li class="toctree-l3"><a class="reference internal" href="otis_manage_intake_settings.html">Intake settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="otis_organization_reports.html">Organization Reports</a></li>
@@ -113,6 +117,7 @@
 <li class="toctree-l2"><a class="reference internal" href="otis_third_party_support.html">Supported Integrations</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul>
@@ -167,7 +172,7 @@
         
           <li><a href="otis_organization_management.html">Organization management</a> &raquo;</li>
         
-      <li>Managing organization profile</li>
+      <li>Adding/editing organizations</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -186,8 +191,60 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="managing-organization-profile">
-<h1>Managing organization profile<a class="headerlink" href="#managing-organization-profile" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="adding-editing-organizations">
+<h1>Adding/editing organizations<a class="headerlink" href="#adding-editing-organizations" title="Permalink to this headline">¶</a></h1>
+<p>Organizations can only be added under <a class="reference external" href="https://www.illinoislegalaid.org/admin/group">Groups</a> (not under Content).  This is because the website relies on group management to bind organizations, locations, services, triage rules, intake settings, and organization staff members together and to provide the correct organizational permissions to select organization staff.</p>
+<img alt="_images/orgs-group-list.png" src="_images/orgs-group-list.png" />
+<div class="section" id="adding-an-organization">
+<h2>Adding an organization<a class="headerlink" href="#adding-an-organization" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Only ILAO staff can add an organization.  Please check <a class="reference external" href="https://docs.google.com/document/d/1VDLQhaYR-o_0Lwaq1dMM_Rpv27i6tRLfg3y1uHx0GGc/edit">our guidelines</a> before adding an organization to the system.</p>
+</div>
+<p>To add an organization:</p>
+<ul class="simple">
+<li>Click on Add Group</li>
+<li>Fill out the organization profile which requires:<ul>
+<li>A name.  This name must be unique in the system</li>
+<li>An alternate name, if one exists for the organization</li>
+<li>An optional description.  This is highly encouraged as this may be automatically displayed on the website or in structured content.</li>
+<li>A physical address</li>
+<li>A mailing address.  There is an option to copy from physical address</li>
+<li>A phone number</li>
+<li>A contact email address</li>
+<li>A website address</li>
+<li>Whether the organization provides services to the public.  Organizations that do not provide services to the public may still be included in the site but will not be shown in referrals.</li>
+<li>Whether to show the physical address to public users.  If this is set to no, the address will not show in referrals.</li>
+<li>ILAO staff only have an option to associate an email domain with the organization.  This is used to auto-approve users with the legal aid member role.  It is not retroactive.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Adding an email domain will add that domain to the list of domains to automatically approve future users.  If an organization changes their email domain, existing users will still need to be manually updated.    <strong>Do not add an email domain for organizations whose members should not be given legal aid permissions.</strong></p>
+</div>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">Verify that the physical address does not show in referrals.</p>
+</div>
+</div>
+<div class="section" id="editing-an-organization">
+<h2>Editing an organization<a class="headerlink" href="#editing-an-organization" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Organizations can only be edited by ILAO staff or by members of the specific organization who have the Organization manager role in the group.</p>
+</div>
+<p>The edit form is the same as the add form.</p>
+<img alt="_images/org-edit-form.png" src="_images/org-edit-form.png" />
+<div class="section" id="staff-users">
+<h3>Staff users<a class="headerlink" href="#staff-users" title="Permalink to this headline">¶</a></h3>
+<p>Edit an organization by going to <a class="reference external" href="https://www.illinoislegalaid.org/admin/group">Groups</a> and editing from the list.</p>
+</div>
+<div class="section" id="organization-managers">
+<h3>Organization managers<a class="headerlink" href="#organization-managers" title="Permalink to this headline">¶</a></h3>
+<p>Edit an organization by going to their dashboard and selecting Edit organization profile in the “You can” block.</p>
+</div>
+</div>
 </div>
 
 

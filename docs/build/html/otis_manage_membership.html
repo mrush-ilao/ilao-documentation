@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Organization management &mdash; IllinoisLegalAid.org 1 documentation</title>
+  <title>Organization “group” roles &mdash; IllinoisLegalAid.org 1 documentation</title>
   
 
   
@@ -40,8 +40,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Adding/editing organizations" href="otis_manage_organization.html" />
-    <link rel="prev" title="Get Legal Help" href="otis_cms.html" /> 
+    <link rel="next" title="Organization content" href="otis_manage_nodes.html" />
+    <link rel="prev" title="Adding/editing organizations" href="otis_manage_organization.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -99,9 +99,14 @@
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="otis_cms.html">Get Legal Help</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Organization management</a><ul>
+<li class="toctree-l2 current"><a class="reference internal" href="otis_organization_management.html">Organization management</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="otis_manage_organization.html">Adding/editing organizations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="otis_manage_membership.html">Organization “group” roles</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Organization “group” roles</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#organization-manager">Organization manager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#otis-manager">OTIS manager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#coming-soon-fast-entry-user">Coming soon:  Fast entry user</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="otis_manage_nodes.html">Organization content</a></li>
 <li class="toctree-l3"><a class="reference internal" href="otis_manage_intake_settings.html">Intake settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="otis_organization_reports.html">Organization Reports</a></li>
@@ -167,13 +172,15 @@
         
           <li><a href="otis_cms.html">Get Legal Help</a> &raquo;</li>
         
-      <li>Organization management</li>
+          <li><a href="otis_organization_management.html">Organization management</a> &raquo;</li>
+        
+      <li>Organization “group” roles</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/otis_organization_management.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/otis_manage_membership.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -186,40 +193,42 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="organization-management">
-<h1>Organization management<a class="headerlink" href="#organization-management" title="Permalink to this headline">¶</a></h1>
-<p>Organization serve as the core owner of locations, services, and triage rules.  Legal aid members are associated with an organization.</p>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="otis_manage_organization.html">Adding/editing organizations</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="otis_manage_organization.html#adding-an-organization">Adding an organization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_manage_organization.html#editing-an-organization">Editing an organization</a></li>
+  <div class="section" id="organization-group-roles">
+<h1>Organization “group” roles<a class="headerlink" href="#organization-group-roles" title="Permalink to this headline">¶</a></h1>
+<p>Organizations have their own membership roles, separate from the user roles that ILAO staff manage when approving users.  Most users are not assigned any role other than the default “member.”</p>
+<p>There are 3 specialty permissions that grant access to specific organization tools:</p>
+<ul class="simple">
+<li>Organization manager</li>
+<li>OAS manager</li>
+<li>Fast entry user</li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="otis_manage_membership.html">Organization “group” roles</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="otis_manage_membership.html#organization-manager">Organization manager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_manage_membership.html#otis-manager">OTIS manager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_manage_membership.html#coming-soon-fast-entry-user">Coming soon:  Fast entry user</a></li>
+<p>All legal aid members can add and edit their own job postings and calendar events.  Organization managers can no longer edit job postings or events posted by other users.</p>
+<div class="section" id="organization-manager">
+<h2>Organization manager<a class="headerlink" href="#organization-manager" title="Permalink to this headline">¶</a></h2>
+<p>Organization managers can edit the organization profile, locations, and services and have a custom block on their dashboard to link to these pages.</p>
+<p>Organization managers can also manage members within their organization including:</p>
+<ul class="simple">
+<li>adding users to their organization</li>
+<li>removing members from their organization</li>
+<li>editing the group permissions associated with a member of their organization</li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="otis_manage_nodes.html">Organization content</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="otis_organization_locations.html">Managing Locations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_organization_services.html">Managing Location Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_organization_triage_rules.html">Managing Triage Rules</a></li>
+</div>
+<div class="section" id="otis-manager">
+<h2>OTIS manager<a class="headerlink" href="#otis-manager" title="Permalink to this headline">¶</a></h2>
+<p>OTIS managers can do everything an organization manager can do plus:</p>
+<ul class="simple">
+<li>Edit triage rule content</li>
+<li>Edit triage webforms</li>
+<li>Edit intake settings</li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="otis_manage_intake_settings.html">Intake settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="otis_organization_reports.html">Organization Reports</a></li>
-<li class="toctree-l1"><a class="reference internal" href="otis_fast_entry.html">Fast Entry Form</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="otis_fast_entry.html#fast-entry-permissions">Fast entry permissions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_fast_entry.html#related-intake-settings">Related Intake Settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_fast_entry.html#id1">Fast entry form</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_fast_entry.html#exit-use-cases">Exit use cases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="otis_fast_entry.html#data-capture-reporting">Data capture &amp; reporting</a></li>
-</ul>
-</li>
-</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">As of November 13, 2020 triage rule webforms and intake settings are not yet editable by OTIS managers.</p>
+</div>
+</div>
+<div class="section" id="coming-soon-fast-entry-user">
+<h2>Coming soon:  Fast entry user<a class="headerlink" href="#coming-soon-fast-entry-user" title="Permalink to this headline">¶</a></h2>
+<p>The fast entry user has access to the fast entry intake form (once complete).</p>
 </div>
 </div>
 
@@ -231,10 +240,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="otis_manage_organization.html" class="btn btn-neutral float-right" title="Adding/editing organizations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="otis_manage_nodes.html" class="btn btn-neutral float-right" title="Organization content" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="otis_cms.html" class="btn btn-neutral float-left" title="Get Legal Help" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="otis_manage_organization.html" class="btn btn-neutral float-left" title="Adding/editing organizations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
