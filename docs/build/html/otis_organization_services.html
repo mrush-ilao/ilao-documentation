@@ -205,15 +205,26 @@
 <p class="first admonition-title">Note</p>
 <p class="last">Because of the complexity of the logic behind the location services form, it does take longer than other forms to load.</p>
 </div>
+<div class="section" id="when-should-a-service-be-created">
+<h2>When should a service be created<a class="headerlink" href="#when-should-a-service-be-created" title="Permalink to this headline">¶</a></h2>
+<p>Add a service for each project or program an organization offers (and for which they want to get referrals). Do not lump services together if they vary by:</p>
+<ul class="simple">
+<li>Income eligibility</li>
+<li>Service area</li>
+<li>Days and hours open</li>
+<li>Demographic eligibility (kids, seniors, homeless, veterans, etc.) or</li>
+<li>Legal issue(s) or problem code(s)</li>
+</ul>
+</div>
 <div class="section" id="types-of-location-services">
 <h2>Types of Location Services<a class="headerlink" href="#types-of-location-services" title="Permalink to this headline">¶</a></h2>
 <p>Our platform supports five types of location services, each with different fields that must be captured in the location services form.  These are:</p>
 <ul class="simple">
-<li>Direct representation</li>
-<li>Legal information and education (not a legal self-help center)</li>
-<li>Legal self-help center</li>
-<li>Lawyer referral service</li>
-<li>Policy, impact litigation, support, or other</li>
+<li><strong>Direct representation</strong>:  select this if you offer extended representation, advice, brief services, pro bono placements, or mediation/ADR services</li>
+<li><strong>Legal self-help center</strong>: select this if your service helps people with legal information and tools but does not provide legal representation (including advice or brief services). A center has a physical location where services are provided.</li>
+<li><strong>Legal information and education</strong>: select this if your service helps people with legal information and tools but does not provide legal representation (including advice or brief services) and may or may not be staffed by attorneys.</li>
+<li><strong>Lawyer referral service</strong>: select this if your service connects people in need to legal representation to lawyers with experience in the area of need.</li>
+<li><strong>Policy, support other</strong>:  select this if your service does policy work, provides support to legal aid advocates or pro bono outside of your own direct representation services.</li>
 </ul>
 </div>
 <div class="section" id="common-elements">
@@ -288,6 +299,42 @@
 <li>Hours</li>
 <li>Holidays</li>
 </ul>
+<div class="section" id="level-of-service">
+<h3>Level of service<a class="headerlink" href="#level-of-service" title="Permalink to this headline">¶</a></h3>
+<p>This allows multiple selections.  We have defined most of these terms as:</p>
+<ul class="simple">
+<li><strong>Extended representation:</strong> Extended representation is when a lawyer takes your case from beginning to end. The lawyer will advise you on your case, draft legal papers, negotiate with the other party, and appear in court for you.</li>
+<li><strong>Advice:</strong> Advice is when a lawyer tells you how the law applies to the facts of your case. This may happen in a private meeting, phone call, letter or online portal.</li>
+<li><strong>Brief Service:</strong> Brief service is when a lawyer gives you legal advice and also provides another service, such as drafting or reviewing court papers for you.</li>
+<li><strong>Pro bono placement:</strong> Pro bono lawyers are attorneys who volunteer for a legal aid program. The legal aid program may place your case with a volunteer lawyer.</li>
+</ul>
+</div>
+<div class="section" id="practice-areas">
+<h3>Practice areas<a class="headerlink" href="#practice-areas" title="Permalink to this headline">¶</a></h3>
+<p>From ILAO’s legal issues taxonomy, this is a hierarchical list of legal problems.  Legal issues at the service level must be tagged individually.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This is different than legal content, where checking a lower level term automatically inherits everything above it.</p>
+</div>
+</div>
+<div class="section" id="average-volume-for-the-service">
+<h3>Average volume for the service<a class="headerlink" href="#average-volume-for-the-service" title="Permalink to this headline">¶</a></h3>
+<p>This should be a number.  It is used to weight referrals in that services that have more capacity will be returned more often than other referrals.</p>
+</div>
+<div class="section" id="application-process">
+<h3>Application process<a class="headerlink" href="#application-process" title="Permalink to this headline">¶</a></h3>
+<p>The application process supports 5 options:</p>
+<ul class="simple">
+<li>Telephone</li>
+<li>Walk-in</li>
+<li>Online</li>
+<li>Email</li>
+<li>Online through IllinoisLegalAid.org</li>
+</ul>
+<p>For each option other than Online through IllinoisLegalAid.org, a text field allows for a description of the process to apply using that method.  For email applications, an email address is also required.</p>
+<img alt="_images/otis-application-process.png" src="_images/otis-application-process.png" />
+<p>Checking the Online through IllinoisLegalAid.org exposes the organization to our etransfer system but otherwise has no effect until ILAO staff has configured the organization for online intake.</p>
+</div>
 </div>
 <div class="section" id="legal-information-and-education">
 <h2>Legal information and education<a class="headerlink" href="#legal-information-and-education" title="Permalink to this headline">¶</a></h2>
@@ -329,6 +376,25 @@
 <img alt="_images/otis-lshc-featured-content.png" src="_images/otis-lshc-featured-content.png" />
 <p>Featured content is limited to legal content and to 6 items.</p>
 </div>
+</div>
+<div class="section" id="lawyer-referral-service">
+<h2>Lawyer Referral Service<a class="headerlink" href="#lawyer-referral-service" title="Permalink to this headline">¶</a></h2>
+<p>Services designated as the type “Lawyer Referral Service,” have the following additional fields:</p>
+<ul class="simple">
+<li>Application process</li>
+</ul>
+<p>(see Direct Representation for field information)</p>
+</div>
+<div class="section" id="policy-impact-litigation-suppor-or-other">
+<h2>Policy, impact litigation, suppor or other<a class="headerlink" href="#policy-impact-litigation-suppor-or-other" title="Permalink to this headline">¶</a></h2>
+<p>Services designated as the type “Policy, impact litigation, suppor or other,” have the following additional fields:</p>
+<ul class="simple">
+<li>Practice areas</li>
+<li>Service availability</li>
+<li>Hours</li>
+<li>Holidays</li>
+</ul>
+<p>(see Direct Representation for field information)</p>
 </div>
 </div>
 

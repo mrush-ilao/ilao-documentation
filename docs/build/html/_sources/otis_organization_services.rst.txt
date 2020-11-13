@@ -10,16 +10,25 @@ The add/edit location form is the same for both ILAO staff and organization/OTIS
 
 .. note:: Because of the complexity of the logic behind the location services form, it does take longer than other forms to load.
 
+When should a service be created
+==================================
+Add a service for each project or program an organization offers (and for which they want to get referrals). Do not lump services together if they vary by:
+
+* Income eligibility
+* Service area
+* Days and hours open 
+* Demographic eligibility (kids, seniors, homeless, veterans, etc.) or
+* Legal issue(s) or problem code(s)
 
 Types of Location Services
 ============================
 Our platform supports five types of location services, each with different fields that must be captured in the location services form.  These are:
 
-* Direct representation
-* Legal information and education (not a legal self-help center)
-* Legal self-help center
-* Lawyer referral service
-* Policy, impact litigation, support, or other
+* **Direct representation**:  select this if you offer extended representation, advice, brief services, pro bono placements, or mediation/ADR services
+* **Legal self-help center**: select this if your service helps people with legal information and tools but does not provide legal representation (including advice or brief services). A center has a physical location where services are provided.
+* **Legal information and education**: select this if your service helps people with legal information and tools but does not provide legal representation (including advice or brief services) and may or may not be staffed by attorneys.
+* **Lawyer referral service**: select this if your service connects people in need to legal representation to lawyers with experience in the area of need. 
+* **Policy, support other**:  select this if your service does policy work, provides support to legal aid advocates or pro bono outside of your own direct representation services.
 
 Common Elements
 ==================
@@ -99,6 +108,47 @@ Services designated as the type "Direct representation," have the following addi
 * Hours
 * Holidays
 
+Level of service
+------------------
+
+This allows multiple selections.  We have defined most of these terms as: 
+
+* **Extended representation:** Extended representation is when a lawyer takes your case from beginning to end. The lawyer will advise you on your case, draft legal papers, negotiate with the other party, and appear in court for you. 
+
+* **Advice:** Advice is when a lawyer tells you how the law applies to the facts of your case. This may happen in a private meeting, phone call, letter or online portal. 
+
+* **Brief Service:** Brief service is when a lawyer gives you legal advice and also provides another service, such as drafting or reviewing court papers for you. 
+
+* **Pro bono placement:** Pro bono lawyers are attorneys who volunteer for a legal aid program. The legal aid program may place your case with a volunteer lawyer. 
+
+Practice areas
+----------------
+From ILAO's legal issues taxonomy, this is a hierarchical list of legal problems.  Legal issues at the service level must be tagged individually.  
+
+.. note:: This is different than legal content, where checking a lower level term automatically inherits everything above it.
+
+Average volume for the service
+--------------------------------
+This should be a number.  It is used to weight referrals in that services that have more capacity will be returned more often than other referrals.
+
+Application process
+---------------------
+The application process supports 5 options:
+
+* Telephone
+* Walk-in
+* Online
+* Email
+* Online through IllinoisLegalAid.org
+
+For each option other than Online through IllinoisLegalAid.org, a text field allows for a description of the process to apply using that method.  For email applications, an email address is also required.
+
+.. image:: ../assets/otis-application-process.png
+
+Checking the Online through IllinoisLegalAid.org exposes the organization to our etransfer system but otherwise has no effect until ILAO staff has configured the organization for online intake.
+
+
+
 Legal information and education
 ==================================
 
@@ -140,5 +190,24 @@ LSHC pages feature a list of legal content that the local center has identified 
 
 Featured content is limited to legal content and to 6 items.
 
+Lawyer Referral Service
+=========================
 
+Services designated as the type "Lawyer Referral Service," have the following additional fields: 
+
+* Application process
+
+(see Direct Representation for field information)
+
+Policy, impact litigation, suppor or other
+============================================
+
+Services designated as the type "Policy, impact litigation, suppor or other," have the following additional fields: 
+
+* Practice areas
+* Service availability
+* Hours
+* Holidays
+
+(see Direct Representation for field information)
 
