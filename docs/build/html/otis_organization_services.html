@@ -335,6 +335,43 @@
 <img alt="_images/otis-application-process.png" src="_images/otis-application-process.png" />
 <p>Checking the Online through IllinoisLegalAid.org exposes the organization to our etransfer system but otherwise has no effect until ILAO staff has configured the organization for online intake.</p>
 </div>
+<div class="section" id="hours-of-operation-fields">
+<h3>Hours of operation fields<a class="headerlink" href="#hours-of-operation-fields" title="Permalink to this headline">¶</a></h3>
+<p>Service availability indicates if the service has limited hours or is available at all times.</p>
+<p>Services can inherit the hours of their location by selecting “Yes” to the same hours as location field.</p>
+<p>If they select “No,” they are must indicate if the service is open at least weekly. When a location is open at least 1 day every week, the “Is this location open at least weekly?” should be set to Yes.</p>
+<p>The weekly hours form allows one to:</p>
+<ul class="simple">
+<li>Set individual hours per day</li>
+<li>Set up to 4 time slots per day; for example:  Monday 8 am - 12pm, 1pm - 5pm</li>
+</ul>
+<img alt="_images/otis-locations-hours-regular.png" src="_images/otis-locations-hours-regular.png" />
+<p>When a location is not open at least once a week, then we have to use the irregular hours form.  This form requires:</p>
+<ul class="simple">
+<li>setting a start date for the rule</li>
+<li>setting an end date for the rule</li>
+<li>setting a rule.  The rule can be generated <a class="reference external" href="https://icalendar.org/rrule-tool.html">using this online tool</a> and then copied and pasted in.</li>
+</ul>
+<img alt="_images/otis-locations-hours-irregular.png" src="_images/otis-locations-hours-irregular.png" />
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Same hours as location, hours of operation, and dates and hours are ignored when service availability is 24/7.</p>
+</div>
+</div>
+<div class="section" id="holidays">
+<h3>Holidays<a class="headerlink" href="#holidays" title="Permalink to this headline">¶</a></h3>
+<p>Holidays should be set for the service only when they are different from the location.  If they are the same, one should set the Same holidays as location to yes.</p>
+<p>When holidays are set for a service:</p>
+<ul class="simple">
+<li>When used in online triage and intake, the holidays will not show up in callback hours options</li>
+<li>When used in referrals, the displayed hours will show the holidays as a closed date.</li>
+</ul>
+<p>Holidays are managed in the <a class="reference external" href="https://www.illinoislegalaid.org/admin/structure/taxonomy/manage/holidays/overview">holidays taxonomy</a>.  Common Illinois and Federal holidays are included in the taxonomy.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Custom holidays can be added to the holiday taxonomy to accommodate unusual events where one or more organizations needs to be closed (such as a staff retreat) or for unusual occurrences (such as the every 4-5 years when the day after Thanksgiving is not the 4th Friday).</p>
+</div>
+</div>
 </div>
 <div class="section" id="legal-information-and-education">
 <h2>Legal information and education<a class="headerlink" href="#legal-information-and-education" title="Permalink to this headline">¶</a></h2>

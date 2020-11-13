@@ -147,7 +147,47 @@ For each option other than Online through IllinoisLegalAid.org, a text field all
 
 Checking the Online through IllinoisLegalAid.org exposes the organization to our etransfer system but otherwise has no effect until ILAO staff has configured the organization for online intake.
 
+Hours of operation fields
+---------------------------
+Service availability indicates if the service has limited hours or is available at all times.
 
+Services can inherit the hours of their location by selecting "Yes" to the same hours as location field.  
+
+If they select "No," they are must indicate if the service is open at least weekly. When a location is open at least 1 day every week, the "Is this location open at least weekly?" should be set to Yes.
+
+The weekly hours form allows one to:
+
+* Set individual hours per day
+* Set up to 4 time slots per day; for example:  Monday 8 am - 12pm, 1pm - 5pm
+
+.. image:: ../assets/otis-locations-hours-regular.png
+
+When a location is not open at least once a week, then we have to use the irregular hours form.  This form requires:
+
+* setting a start date for the rule
+* setting an end date for the rule
+* setting a rule.  The rule can be generated `using this online tool <https://icalendar.org/rrule-tool.html>`_ and then copied and pasted in.
+
+.. image:: ../assets/otis-locations-hours-irregular.png
+
+.. note:: 
+   Same hours as location, hours of operation, and dates and hours are ignored when service availability is 24/7.
+
+
+Holidays
+----------
+Holidays should be set for the service only when they are different from the location.  If they are the same, one should set the Same holidays as location to yes.  
+
+When holidays are set for a service:
+
+* When used in online triage and intake, the holidays will not show up in callback hours options
+* When used in referrals, the displayed hours will show the holidays as a closed date.
+
+.. image:  ../assets/otis-locations-holidays.png
+
+Holidays are managed in the `holidays taxonomy <https://www.illinoislegalaid.org/admin/structure/taxonomy/manage/holidays/overview>`_.  Common Illinois and Federal holidays are included in the taxonomy.
+
+.. note:: Custom holidays can be added to the holiday taxonomy to accommodate unusual events where one or more organizations needs to be closed (such as a staff retreat) or for unusual occurrences (such as the every 4-5 years when the day after Thanksgiving is not the 4th Friday).  
 
 Legal information and education
 ==================================
