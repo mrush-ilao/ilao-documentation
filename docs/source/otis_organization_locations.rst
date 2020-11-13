@@ -51,10 +51,7 @@ When a location is not open at least once a week, then we have to use the irregu
 
 Holidays
 ==========
-Holidays should be set for the location and may be overwritten at the service level.  When holidays are set for a location:
-
-* When used in online triage and intake, the holidays will not show up in callback hours options
-* When used in referrals, the displayed hours will show the holidays as a closed date.
+Holidays should be set for the location and may be overwritten at the service level.  
 
 .. image:  ../assets/otis-locations-holidays.png
 
