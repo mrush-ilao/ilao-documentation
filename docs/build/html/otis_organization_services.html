@@ -100,11 +100,13 @@
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="otis_cms.html">Get Legal Help</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="otis_organization_management.html">Organization management</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="otis_manage_organization.html">Managing organization profile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_manage_organization.html">Adding/editing organizations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_manage_membership.html">Organization “group” roles</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="otis_manage_nodes.html">Organization content</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="otis_organization_locations.html">Managing Locations</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Managing Location Services</a></li>
 <li class="toctree-l4"><a class="reference internal" href="otis_organization_triage_rules.html">Managing Triage Rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="otis_manage_nodes.html#add-existing-versus-add-new-content">Add existing versus add new content</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="otis_manage_intake_settings.html">Intake settings</a></li>
@@ -118,6 +120,7 @@
 <li class="toctree-l2"><a class="reference internal" href="otis_third_party_support.html">Supported Integrations</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul>
@@ -195,6 +198,91 @@
             
   <div class="section" id="managing-location-services">
 <h1>Managing Location Services<a class="headerlink" href="#managing-location-services" title="Permalink to this headline">¶</a></h1>
+<p>Locations within an organization have services.  An organization may have one service or may have multiple services, each with different eligibility rules and service areas.</p>
+<p>ILAO staff, organization managers, and OTIS managers can all add or edit locations.</p>
+<p>The add/edit location form is the same for both ILAO staff and organization/OTIS managers.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Because of the complexity of the logic behind the location services form, it does take longer than other forms to load.</p>
+</div>
+<div class="section" id="types-of-location-services">
+<h2>Types of Location Services<a class="headerlink" href="#types-of-location-services" title="Permalink to this headline">¶</a></h2>
+<p>Our platform supports five types of location services, each with different fields that must be captured in the location services form.  These are:</p>
+<ul class="simple">
+<li>Direct representation</li>
+<li>Legal information and education (not a legal self-help center)</li>
+<li>Legal self-help center</li>
+<li>Lawyer referral service</li>
+<li>Policy, impact litigation, support, or other</li>
+</ul>
+</div>
+<div class="section" id="common-elements">
+<h2>Common Elements<a class="headerlink" href="#common-elements" title="Permalink to this headline">¶</a></h2>
+<p>All 5 types share some fields:</p>
+<ul class="simple">
+<li>Title</li>
+<li>Whether the service is open or not.  A service must be both open and published to be returned in referrals or displayed on the website.</li>
+<li>Location.  The location associated with the service.</li>
+<li>Service type (the 5 available types)</li>
+<li>Phone number</li>
+<li>Income eligibility</li>
+<li>Populations</li>
+<li>Service area</li>
+<li>Parent organization</li>
+</ul>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">The location dropdown is difficult to use as it list the locations by name and does not filter out locations organization managers do not manage.</p>
+</div>
+<div class="section" id="phone-number">
+<h3>Phone number<a class="headerlink" href="#phone-number" title="Permalink to this headline">¶</a></h3>
+<p>Every service requires a phone number.  By checking “Yes” to “Same phone number as location,” the phone number from the location will be copied.</p>
+</div>
+<div class="section" id="income-eligibility">
+<h3>Income eligibility<a class="headerlink" href="#income-eligibility" title="Permalink to this headline">¶</a></h3>
+<p>Every service should provide income eligibility and costs.  These can be inherited from the location by checking “Same income eligibility as location” or be entered individually if they differ from the location.</p>
+<p>Like the location, there are 4 options:</p>
+<ul class="simple">
+<li>Free to everyone.  This should be used when there is generally no charge and everyone is eligible.</li>
+<li>Free to eligible persons/entities.  This should be used when the location generally has income limits.  For example, the location only serves clients with income less than 125% of the federal poverty level.</li>
+<li>Sliding scale based on income.</li>
+<li>Flat fee regardless of income</li>
+</ul>
+<p>When free to eligible persons/entities is selected, the user is then required to set an income limit and apply an income standard.</p>
+<img alt="_images/otis-locations-free-income.png" src="_images/otis-locations-free-income.png" />
+<p>When the user selects sliding scale or flat fee, a description of those fees is required.</p>
+<img alt="_images/otis-locations-fees.png" src="_images/otis-locations-fees.png" />
+</div>
+<div class="section" id="populations">
+<h3>Populations<a class="headerlink" href="#populations" title="Permalink to this headline">¶</a></h3>
+<p>Services can be limited to one or more populations.  Users self-identify populations on the main Get Legal Help page and referrals will not return any population-restricted service the user does not match and OTIS will prioritize population-specific services over unrestricted services.</p>
+<img alt="_images/otis-populations.png" src="_images/otis-populations.png" />
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Populations are managed in the <a class="reference external" href="https://www.illinoislegalaid.org/admin/structure/taxonomy/manage/intake_populations/overview">intake populations taxonomy</a>.  Only ILAO staff can add or edit this taxonomy.</p>
+</div>
+</div>
+<div class="section" id="service-area">
+<h3>Service area<a class="headerlink" href="#service-area" title="Permalink to this headline">¶</a></h3>
+<p>The service can inherit the service area from the location by checking “Yes” to the “Same service area as location” question.  Or the service can set its own service area.</p>
+<img alt="_images/otis-service-service-area.png" src="_images/otis-service-service-area.png" />
+<p>For example, a service that serves Kane, Kendall, and DeKalb counties would have the limit to specific area set to Counties and then would list the 3 counties.  If a location serves only part of a county (for example, just the city of Chicago in Cook county, the limit to specific area should be set to Cities and Chicago should be listed).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It is not possible to limit a service to a mix of counties, cities, and zip codes.  In those scenarios, multiple services should be created with different service areas.</p>
+</div>
+</div>
+</div>
+<div class="section" id="direct-representation">
+<h2>Direct Representation<a class="headerlink" href="#direct-representation" title="Permalink to this headline">¶</a></h2>
+<p>Services designated as the type “Direct representation,” have additional fields.</p>
+<ul class="simple">
+<li>Whether the service is a hotline</li>
+<li>Whether the service is an advice desk or walk-in clinic</li>
+<li>Level of service provided.  This is a multi-select and includes options for extended representation, brief services, advice, mediation/ADR, and pro bono placement.</li>
+<li>How the service is delivered (in person, phone, or online/remote)</li>
+</ul>
+</div>
 </div>
 
 
