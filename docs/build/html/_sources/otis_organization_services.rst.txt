@@ -86,13 +86,59 @@ For example, a service that serves Kane, Kendall, and DeKalb counties would have
 Direct Representation
 =======================
 
-Services designated as the type "Direct representation," have additional fields.  
+Services designated as the type "Direct representation," have the following additional fields: 
 
 * Whether the service is a hotline
 * Whether the service is an advice desk or walk-in clinic
 * Level of service provided.  This is a multi-select and includes options for extended representation, brief services, advice, mediation/ADR, and pro bono placement.
 * How the service is delivered (in person, phone, or online/remote)
+* Practice areas 
+* Average volume for the service
+* Application process
+* Service availability
+* Hours
+* Holidays
 
+Legal information and education
+==================================
+
+Services designated as the type "Legal information and education (not a legal self-help center)," have the following additional fields: 
+
+* Practice areas 
+* Service availability
+* Hours
+* Holidays
+
+Legal Self-Help Center
+========================
+
+Services designated as the type "Legal information and education (not a legal self-help center)," have the following additional fields: 
+
+* Amenities offered
+* JusticeCorps availability
+* Website address
+* Featured content
+
+.. note:: Because legal self-help centers are always a single location with a single service, service availability, hours and holidays are managed only at the location level.
+
+Amenities offered
+--------------------
+The amenities offered list is pulled from the `amenities taxonomy </admin/structure/taxonomy/manage/amenities/overview>`_.
+
+.. image:: ../assets/otis_lshc_amenities.png
+
+* If lawyer in the library is an amenity, there is a field to provide a description
+* If printers are selected as an amenity, there is a field to indicate if printing is free, and a field to provide a description when printing is not free.
+* If scanners are selected as an amenity, there is a field to indicate if scanning is free, and a field to provide a description when scanning is not free.
+* If website navigator is an amenity, there is a field to indicate navigator availability, and when it is on a part-time regular schedule, a field to indicate the availability.
+
+Featured content
+-------------------
+LSHC pages feature a list of legal content that the local center has identified as relevant to their users.  
+
+.. image:: ../assets/otis-lshc-featured-content.png
+
+Featured content is limited to legal content and to 6 items.
 
 
 
