@@ -27,8 +27,6 @@ ILAO staff must provide webform admin access per user and per webform.  To do th
 
 Once permission is granted, the webform will appear on the list of available webforms to edit
 
-
-
 .. image:: ../assets/otis-org-admin-webform-list.png
 
 Building a webform
