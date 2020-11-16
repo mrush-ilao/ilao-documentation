@@ -15,7 +15,21 @@ There are several available operations from this report:
 Granting Access
 ================
 
-ILAO staff must provide webform admin access per user and per webform.
+ILAO staff must provide webform admin access per user and per webform.  To do this:
+
+* Select settings from the webform
+* Select Access
+* Go to the Administer Webform & Submissions section
+* Use the autocomplete to add a user.  Multiple users must be separated by commas.
+
+
+.. note:: Users who have been granted permission to use a webform can also add additional users but should be careful in doing so.
+
+Once permission is granted, the webform will appear on the list of available webforms to edit
+
+
+
+.. image:: ../assets/otis-org-admin-webform-list.png
 
 Building a webform
 =========================
@@ -71,5 +85,5 @@ Be sure to check Clear value(s) when hidden to prevent default data being captur
 Webform endpoints
 ===================
 
+See `documentation <https://ilao-documentation.readthedocs.io/en/latest/otis_endpoints.html>`_ for the specific endpoints required to direct completed webforms to bypass, intake, or divert points.
 
-.. image:: ../assets/otis-org-admin-webform-list.png
