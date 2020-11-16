@@ -1,5 +1,5 @@
 =======================================
-Organization content
+Locations & Services
 =======================================
 
 .. toctree::
@@ -8,11 +8,10 @@ Organization content
 
    otis_organization_locations
    otis_organization_services
-   otis_organization_triage_rules
 
 
    
-Organization managers can manage the organization's content from the organization's nodes page when editing their organization profile.
+Organization managers can manage the organization's locations and services (and triage rules) from the organization's nodes page when editing their organization profile.
 
 .. image:: ../assets/otis-manage-nodes.png  
 

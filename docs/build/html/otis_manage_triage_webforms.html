@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Locations &amp; Services &mdash; IllinoisLegalAid.org 1 documentation</title>
+  <title>Triage rule webforms &mdash; IllinoisLegalAid.org 1 documentation</title>
   
 
   
@@ -40,8 +40,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Managing Locations" href="otis_organization_locations.html" />
-    <link rel="prev" title="Organization “group” roles" href="otis_manage_membership.html" /> 
+    <link rel="next" title="Intake settings" href="otis_manage_intake_settings.html" />
+    <link rel="prev" title="Managing Triage Rules" href="otis_organization_triage_rules.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -102,13 +102,14 @@
 <li class="toctree-l2 current"><a class="reference internal" href="otis_organization_management.html">Organization management</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="otis_manage_organization.html">Adding/editing organizations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="otis_manage_membership.html">Organization “group” roles</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Locations &amp; Services</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="otis_organization_locations.html">Managing Locations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="otis_organization_services.html">Managing Location Services</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#add-existing-versus-add-new-content">Add existing versus add new content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_manage_nodes.html">Locations &amp; Services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="otis_organization_triage_rules.html">Managing Triage Rules</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Triage rule webforms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#granting-access">Granting Access</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#building-a-webform">Building a webform</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#webform-endpoints">Webform endpoints</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="otis_manage_triage_webforms.html">Triage rule webforms</a></li>
 <li class="toctree-l3"><a class="reference internal" href="otis_manage_intake_settings.html">Intake settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="otis_organization_reports.html">Organization Reports</a></li>
 <li class="toctree-l3"><a class="reference internal" href="otis_fast_entry.html">Fast Entry Form</a></li>
@@ -175,13 +176,13 @@
         
           <li><a href="otis_organization_management.html">Organization management</a> &raquo;</li>
         
-      <li>Locations &amp; Services</li>
+      <li>Triage rule webforms</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/otis_manage_nodes.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/otis_manage_triage_webforms.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -194,26 +195,66 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="locations-services">
-<h1>Locations &amp; Services<a class="headerlink" href="#locations-services" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="otis_organization_locations.html">Managing Locations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="otis_organization_services.html">Managing Location Services</a></li>
-</ul>
-</div>
-<p>Organization managers can manage the organization’s locations and services (and triage rules) from the organization’s nodes page when editing their organization profile.</p>
-<img alt="_images/otis-manage-nodes.png" src="_images/otis-manage-nodes.png" />
-<p>This report can be filtered by whether the item is published or not and the content type.  Only 3 content types above are owned by organizations but all of the website content types are listed in the drop down. Those three types are:</p>
+  <div class="section" id="triage-rule-webforms">
+<h1>Triage rule webforms<a class="headerlink" href="#triage-rule-webforms" title="Permalink to this headline">¶</a></h1>
+<p>We use webforms to power our triage rules.  On the webform list, you will see the webforms you have access to.  You can filter the list by name or element (for example, if you wanted to see all webforms that have a phone end point, you could filter on phone_end)</p>
+<p>There are several available operations from this report:</p>
 <ul class="simple">
-<li>locations</li>
-<li>services</li>
-<li>triage rules</li>
+<li>Build - this is where you can edit your triage rule form</li>
+<li>View - this allows you to view what users see.  There are style differences between this and the OTIS pages.  Also, this will not lead you to referrals or intake.</li>
+<li>Test - this allows you to test the webform without actually submitting data</li>
+<li>Results - this will allow you to see triage submissions.  This is not tied to OTIS data but does provide a way to see triage rule only submissions.</li>
 </ul>
-<div class="section" id="add-existing-versus-add-new-content">
-<h2>Add existing versus add new content<a class="headerlink" href="#add-existing-versus-add-new-content" title="Permalink to this headline">¶</a></h2>
-<p>In almost all cases, organization managers will add new content.  Adding existing content should only be used if the location, service or triage rules was created by ILAO staff who and not properly associated with the organization.</p>
+<div class="section" id="granting-access">
+<h2>Granting Access<a class="headerlink" href="#granting-access" title="Permalink to this headline">¶</a></h2>
+<p>ILAO staff must provide webform admin access per user and per webform.</p>
+</div>
+<div class="section" id="building-a-webform">
+<h2>Building a webform<a class="headerlink" href="#building-a-webform" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For complex logic, please work with Mike Rush to create this.  The webform interface is limited to simple AND/OR conditional logic.  If you need more complex logic (such as X AND (Y OR Z)), ILAO will need to hand-code that logic and the webform will not be editable via the built-in user interface.</p>
+</div>
+<img alt="_images/otis-org-triage-webform-build.png" src="_images/otis-org-triage-webform-build.png" />
+<p>On the build form, you will see a list of existing elements (if this is an existing webform).  These can be re-ordered using the drag and drop as needed.</p>
+<p>If you click “Add element,” you will see a long list of elements.  For triage rules please limit yourself to the following elements:</p>
+<ul class="simple">
+<li>checkbox</li>
+<li>text field</li>
+<li>radios (under option elements)</li>
+<li>hidden</li>
+<li>advanced HTML/text (under markup elements)</li>
+</ul>
+<img alt="_images/otis-org-triage-add-elements.png" src="_images/otis-org-triage-add-elements.png" />
+<div class="section" id="radio-example">
+<h3>Radio Example<a class="headerlink" href="#radio-example" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/otis-triage-radio-example.png" src="_images/otis-triage-radio-example.png" />
+</div>
+<div class="section" id="textfield-example">
+<h3>Textfield Example<a class="headerlink" href="#textfield-example" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/otis-text-field-example.png" src="_images/otis-text-field-example.png" />
+</div>
+<div class="section" id="conditions">
+<h3>Conditions<a class="headerlink" href="#conditions" title="Permalink to this headline">¶</a></h3>
+<p>The conditions apply generally across the different types.</p>
+<img alt="_images/otis-triage-conditions-example.png" src="_images/otis-triage-conditions-example.png" />
+<p>The two condition states we typically need to use are:</p>
+<ul class="simple">
+<li>Visible:  when the condition is met, the form element will be visible.</li>
+<li>Required:  when the condition is met, the form element will be required.</li>
+</ul>
+<p>Types of conditions:</p>
+<ul class="simple">
+<li>Checked and unchecked:  Use these to test whether a radio or checkbox element has any value (checked) or if no selection has been made (unchecked).</li>
+<li>Empty and filled: Use these to test whether a textfield has been filled out or not.</li>
+<li>Value is/Value is not:  use for radio buttons and checkboxes to specify the specific value(s) to check for.</li>
+</ul>
+<p>Be sure to check Clear value(s) when hidden to prevent default data being captured and transferred.</p>
+</div>
+</div>
+<div class="section" id="webform-endpoints">
+<h2>Webform endpoints<a class="headerlink" href="#webform-endpoints" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/otis-org-admin-webform-list.png" src="_images/otis-org-admin-webform-list.png" />
 </div>
 </div>
 
@@ -225,10 +266,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="otis_organization_locations.html" class="btn btn-neutral float-right" title="Managing Locations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="otis_manage_intake_settings.html" class="btn btn-neutral float-right" title="Intake settings" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="otis_manage_membership.html" class="btn btn-neutral float-left" title="Organization “group” roles" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="otis_organization_triage_rules.html" class="btn btn-neutral float-left" title="Managing Triage Rules" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
