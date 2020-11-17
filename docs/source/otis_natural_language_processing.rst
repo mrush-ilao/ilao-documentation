@@ -79,7 +79,8 @@ Technical Implementation
 
 * Implement classifier module for Houston AI (DEV-2809/DEV-2881)
 * Implement classifier module for Spot AI (DEV-2812/DEV-2882)
-* Update the legal issues taxonomy to map LSC and NSMI codes against it (DEV-2886)
+* Add fields to the legal issues taxonomy to map LSC and NSMI codes against it (DEV-2886)
+* Update the legal issues taxonomy to include codes where they should be added (Gwen)
 * Write code to invoke the classifier where needed and return the right data sets (DEV-2887)
 
   
