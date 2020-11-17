@@ -52,7 +52,7 @@ These examples require a score of .8 or higher in Houston AI and .6 for LIT Spot
 * Spot returns family
 * ILAO would drop the user into Divorce
 
-"I was denied unemployemnt"
+"I was denied unemployment"
 
 * Houston AI returns unemployment compensation
 * Spot returns unemployment benefits, compensation, and insurance

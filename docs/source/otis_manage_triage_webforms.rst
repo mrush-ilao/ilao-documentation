@@ -3,7 +3,7 @@ Triage rule webforms
 ============================
 
 
-We use webforms to power our triage rules.  On the webform list, you will see the webforms you have access to.  You can filter the list by name or element (for example, if you wanted to see all webforms that have a phone end point, you could filter on phone_end)
+We use webforms to power our triage rules.  On the `webform list <https://www.illinoislegalaid.org/admin/structure/webform>`_, you will see the webforms you have access to.  You can filter the list by name or element (for example, if you wanted to see all webforms that have a phone end point, you could filter on phone_end)
 
 There are several available operations from this report:
 
@@ -11,6 +11,9 @@ There are several available operations from this report:
 * View - this allows you to view what users see.  There are style differences between this and the OTIS pages.  Also, this will not lead you to referrals or intake.
 * Test - this allows you to test the webform without actually submitting data
 * Results - this will allow you to see triage submissions.  This is not tied to OTIS data but does provide a way to see triage rule only submissions.  
+
+
+.. image:: ../assets/otis-org-admin-webform-list.png
 
 Granting Access
 ================
@@ -22,12 +25,13 @@ ILAO staff must provide webform admin access per user and per webform.  To do th
 * Go to the Administer Webform & Submissions section
 * Use the autocomplete to add a user.  Multiple users must be separated by commas.
 
+.. image:: ../assets/otis_webform_permissions.png
 
 .. note:: Users who have been granted permission to use a webform can also add additional users but should be careful in doing so.
 
 Once permission is granted, the webform will appear on the list of available webforms to edit
 
-.. image:: ../assets/otis-org-admin-webform-list.png
+
 
 Building a webform
 =========================
