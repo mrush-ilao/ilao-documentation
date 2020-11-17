@@ -25,7 +25,7 @@ ILAO staff must provide webform admin access per user and per webform.  To do th
 * Go to the Administer Webform & Submissions section
 * Use the autocomplete to add a user.  Multiple users must be separated by commas.
 
-.. image:: ../assets/otis_webform_permissions.png
+.. image::ßœ ../assets/otis_webform_permissions.png
 
 .. note:: Users who have been granted permission to use a webform can also add additional users but should be careful in doing so.
 
