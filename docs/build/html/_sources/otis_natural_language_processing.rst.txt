@@ -28,5 +28,62 @@ If the user's input is not an exact match to the legal issues taxonomy:
 * The user is presented with a short list of options based on the classifier data.
 
 .. todo:: Figure out how to map all these taxonomies to a single index.  We have our IA, a LSC code to our IA.  Nothing that maps our IA to NSMI 
+
+Examples
+------------
+These examples require a score of .8 or higher in Houston AI and .6 for LIT Spot
+
+"I am getting evicted from my apartment"
+
+* Houston AI returns private/landlord tenant
+* Spot returns:
+
+  * Eviction from a homeless shelter or group home (83.968495156154)
+  * Eviction from private rental housing (not public or subsidized) (88.335262899271)
+  * Notice and Procedural defenses against an eviction (76.408919436079)
+  * Living conditions (habitability) defenses against an eviction (83.987595048243)
+  * Title and ownership defenses against an eviction (78.661704605665)
+  * Retaliatory Eviction defenses against an eviction (76.335103161464)
+* ILAO would offer the user ?
+
+"I want a divorce"
+
+* Houston AI returns Divorce/Sep/Annul
+* Spot returns family
+* ILAO would drop the user into Divorce
+
+"I was denied unemployemnt"
+
+* Houston AI returns unemployment compensation
+* Spot returns unemployment benefits, compensation, and insurance
+* ILAO would drop the user into unemployment benefits
+
+"my spouse beat me up"
+
+* Neither returns anything good
+* ILAO would drop the user at the top of the tree
+  
+"I can't afford my groceries"
+
+* Houston AI returns Bankruptcy/Debtor relief
+* Spot returns Food and cash benefits
+* ILAO would offer the user multiple options to pick from:
+
+  * Food stamps
+  * TANF
+  * Bankruptcy
+  
+  
+Technical Implementation
+=========================
+
+* Implement classifier module for Houston AI (DEV-2809/DEV-2881)
+* Implement classifier module for Spot AI (DEV-2812/DEV-2882)
+* Update the legal issues taxonomy to map LSC and NSMI codes against it (DEV-2886)
+* Write code to invoke the classifier where needed and return the right data sets (DEV-2887)
+
+  
+
+  
   
     
