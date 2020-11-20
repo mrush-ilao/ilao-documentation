@@ -13,6 +13,28 @@ The fast entry form is accessible at /get-legal-help/fast-entry but is only acce
 * Legal aid members who are also organization managers of an OTIS partner organization
 * Website users who have been given the fast entry role within the organization settings of an OTIS partner organization by an organization manager of the OTIS partner organization
 
+An OTIS manager or organization manager will need to:
+
+* Invite the fast entry user to register on IllinoisLegalAid.org
+* Once the user has registered, give them the fast entry user role in their organization by:
+
+Click on Manage your organization, locations, and services from your dashboard
+
+.. image:: ../assets/otis-oas-manager-dashboard.png
+
+Go to Members
+
+.. image:: ../assets/otis-group-menu.png
+
+Select edit member next to the person you want to add (or remove) the fast entry role from:
+
+.. image:: ../assets/otis-edit-member.png
+
+Check Fast entry user and save
+
+.. image:: ../assets/otis-fast-entry-add.png
+
+
 Related Intake Settings
 ==========================
 Because fast entry bypasses triage rules and intake settings generally, ILAO staff will associate a single intake settings ID per organization in the Legal Server configuration.  This id will then be used for data tracking. Fast entry intakes will not impact counts on any intake settings.
