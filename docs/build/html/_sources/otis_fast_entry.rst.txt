@@ -13,14 +13,32 @@ The fast entry form is accessible at /get-legal-help/fast-entry but is only acce
 * Legal aid members who are also organization managers of an OTIS partner organization
 * Website users who have been given the fast entry role within the organization settings of an OTIS partner organization by an organization manager of the OTIS partner organization
 
+Adding a fast entry user
+--------------------------
 An OTIS manager or organization manager will need to:
 
+* Add the user to their organization
 * Invite the fast entry user to register on IllinoisLegalAid.org
 * Once the user has registered, give them the fast entry user role in their organization by:
 
 Click on Manage your organization, locations, and services from your dashboard
 
 .. image:: ../assets/otis-oas-manager-dashboard.png
+
+Go to All entities and select Add existing entity
+
+.. image:: ../assets/otis-add-entity-main.png
+
+and then click Group Membership
+
+.. image:: ../assets/otis-add-existing-content.png
+
+use the autocomplete to look up the user and give them the Fast entry user role by checking the box and clicking save:
+
+.. image:: ../assets/otis-add-user-entity.png
+
+To Remove the permission:
+--------------------------
 
 Go to Members
 
@@ -30,7 +48,7 @@ Select edit member next to the person you want to add (or remove) the fast entry
 
 .. image:: ../assets/otis-edit-member.png
 
-Check Fast entry user and save
+Uncheck Fast entry user and save
 
 .. image:: ../assets/otis-fast-entry-add.png
 
