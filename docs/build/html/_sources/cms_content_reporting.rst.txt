@@ -11,6 +11,7 @@ Available reports:
 * `Toolbox tool usage report <https://www.illinoislegalaid.org/admin/reporting/content/toolboxes/tool-usage>`_
 * `Toolbox tool step usage report <https://www.illinoislegalaid.org/admin/reporting/content/toolboxes/tool-usage>`_
 * `Content page views report (basic) <https://www.illinoislegalaid.org/admin/reporting/content-page-views>`_
+* `Historical review/revised date data <https://www.illinoislegalaid.org/admin/reporting/content/legal-revisions>`_
 
 Main content report
 =====================
@@ -183,6 +184,22 @@ This is a basic report to support A/B testing based on the page views stored fro
 * the page views
 * the unaliased path; this can be dropped into block configuration to cause a block to display on those pages.
 
+Historical Revision report
+===============================
+
+This report should be used only to track date fields over time.  It's primary purpose is to pull data for reports where we need to report on internal revisions and expert reviews from a given time period and that data is not reflected in the current revision because the content was later revised/reviewed.
+
+.. note::  For data before May 24, 2020:
+
+   * Content revisions were handled differently in that each unpublished change was within a single revision.
+   * Language management was handled differently; it is impossible to sort by language on older revisions.
+   * All legal content was set with a last internal revision date of 5/24/2020 when it was migrated over.  
+   
+.. note:: For data after May 24, 2020:
+   * ADRM (lawyer manual) content did not have the internal revision/expert review fields until recently.  
+   * Older toolbox tools do not have an internal revision or expert review dates because they did not exist on the old website.
+   * Language filtering does not work because the date fields are not translatable on legal content.  That means that an edit to the Spanish or Polish version will still have an English field revision causing every revision to be displayed.  That is why this report should be limited to date field tracking.
+   
 
 Moderated content report
 ===========================

@@ -41,7 +41,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Structured Legal Content" href="cms_structured_legal_content.html" />
-    <link rel="prev" title="ADRM content" href="cms_adrm.html" /> 
+    <link rel="prev" title="Lawyer Manuals" href="cms_adrm.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -101,7 +101,7 @@
 <li class="toctree-l2"><a class="reference internal" href="cms_legal_content.html">Legal content type</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_portal_main_page.html">Portal main page content type</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_toolboxes.html">Toolbox and related content types</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cms_adrm.html">ADRM content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_adrm.html">Lawyer Manuals</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Legal content reporting</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#main-content-report">Main content report</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#report-data">Report data</a></li>
@@ -119,6 +119,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#toolbox-tool-report">Toolbox Tool report</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id3">Toolbox Tool Usage report</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#content-page-views-report">Content page views report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#historical-revision-report">Historical Revision report</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#moderated-content-report">Moderated content report</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pending-reports">Pending reports</a></li>
 </ul>
@@ -142,7 +143,7 @@
 <li class="toctree-l2"><a class="reference internal" href="cms_legal_content.html">Legal content type</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_portal_main_page.html">Portal main page content type</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_toolboxes.html">Toolbox and related content types</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cms_adrm.html">ADRM content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_adrm.html">Lawyer Manuals</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Legal content reporting</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#main-content-report">Main content report</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#report-data">Report data</a></li>
@@ -160,6 +161,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#toolbox-tool-report">Toolbox Tool report</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id3">Toolbox Tool Usage report</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#content-page-views-report">Content page views report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#historical-revision-report">Historical Revision report</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#moderated-content-report">Moderated content report</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pending-reports">Pending reports</a></li>
 </ul>
@@ -246,6 +248,7 @@
 <li><a class="reference external" href="https://www.illinoislegalaid.org/admin/reporting/content/toolboxes/tool-usage">Toolbox tool usage report</a></li>
 <li><a class="reference external" href="https://www.illinoislegalaid.org/admin/reporting/content/toolboxes/tool-usage">Toolbox tool step usage report</a></li>
 <li><a class="reference external" href="https://www.illinoislegalaid.org/admin/reporting/content-page-views">Content page views report (basic)</a></li>
+<li><a class="reference external" href="https://www.illinoislegalaid.org/admin/reporting/content/legal-revisions">Historical review/revised date data</a></li>
 </ul>
 <div class="section" id="main-content-report">
 <h2>Main content report<a class="headerlink" href="#main-content-report" title="Permalink to this headline">¶</a></h2>
@@ -427,6 +430,26 @@
 <li>the unaliased path; this can be dropped into block configuration to cause a block to display on those pages.</li>
 </ul>
 </div>
+<div class="section" id="historical-revision-report">
+<h2>Historical Revision report<a class="headerlink" href="#historical-revision-report" title="Permalink to this headline">¶</a></h2>
+<p>This report should be used only to track date fields over time.  It’s primary purpose is to pull data for reports where we need to report on internal revisions and expert reviews from a given time period and that data is not reflected in the current revision because the content was later revised/reviewed.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>For data before May 24, 2020:</p>
+<ul class="last simple">
+<li>Content revisions were handled differently in that each unpublished change was within a single revision.</li>
+<li>Language management was handled differently; it is impossible to sort by language on older revisions.</li>
+<li>All legal content was set with a last internal revision date of 5/24/2020 when it was migrated over.</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For data after May 24, 2020:
+* ADRM (lawyer manual) content did not have the internal revision/expert review fields until recently.
+* Older toolbox tools do not have an internal revision or expert review dates because they did not exist on the old website.
+* Language filtering does not work because the date fields are not translatable on legal content.  That means that an edit to the Spanish or Polish version will still have an English field revision causing every revision to be displayed.  That is why this report should be limited to date field tracking.</p>
+</div>
+</div>
 <div class="section" id="moderated-content-report">
 <h2>Moderated content report<a class="headerlink" href="#moderated-content-report" title="Permalink to this headline">¶</a></h2>
 <p>This is a system report accessible from the main content report.  It needs review.</p>
@@ -454,7 +477,7 @@
         <a href="cms_structured_legal_content.html" class="btn btn-neutral float-right" title="Structured Legal Content" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="cms_adrm.html" class="btn btn-neutral float-left" title="ADRM content" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="cms_adrm.html" class="btn btn-neutral float-left" title="Lawyer Manuals" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
