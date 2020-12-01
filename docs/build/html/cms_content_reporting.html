@@ -119,9 +119,10 @@
 <li class="toctree-l3"><a class="reference internal" href="#toolbox-tool-report">Toolbox Tool report</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id3">Toolbox Tool Usage report</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#content-page-views-report">Content page views report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Localized content report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#comments-and-ratings-report">Comments and Ratings report</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#historical-revision-report">Historical Revision report</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#moderated-content-report">Moderated content report</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pending-reports">Pending reports</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_content.html">Structured Legal Content</a></li>
@@ -161,9 +162,10 @@
 <li class="toctree-l3"><a class="reference internal" href="#toolbox-tool-report">Toolbox Tool report</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id3">Toolbox Tool Usage report</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#content-page-views-report">Content page views report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Localized content report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#comments-and-ratings-report">Comments and Ratings report</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#historical-revision-report">Historical Revision report</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#moderated-content-report">Moderated content report</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pending-reports">Pending reports</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="cms_structured_legal_content.html">Structured Legal Content</a></li>
@@ -249,6 +251,8 @@
 <li><a class="reference external" href="https://www.illinoislegalaid.org/admin/reporting/content/toolboxes/tool-usage">Toolbox tool step usage report</a></li>
 <li><a class="reference external" href="https://www.illinoislegalaid.org/admin/reporting/content-page-views">Content page views report (basic)</a></li>
 <li><a class="reference external" href="https://www.illinoislegalaid.org/admin/reporting/content/legal-revisions">Historical review/revised date data</a></li>
+<li><a class="reference external" href="https://www.illinoislegalaid.org/admin/reporting/content/localized-content">Localized content report</a></li>
+<li>Comments/Ratings report</li>
 </ul>
 <div class="section" id="main-content-report">
 <h2>Main content report<a class="headerlink" href="#main-content-report" title="Permalink to this headline">¶</a></h2>
@@ -430,6 +434,37 @@
 <li>the unaliased path; this can be dropped into block configuration to cause a block to display on those pages.</li>
 </ul>
 </div>
+<div class="section" id="id4">
+<h2>Localized content report<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>This report shows what legal content contains markup for localized content.  At this point, it can only show that it contains the span| markup used in localized content.</p>
+<p>The list can be exported to CSV.</p>
+<div class="admonition-todo admonition" id="index-3">
+<p class="first admonition-title">Todo</p>
+<p class="last">Explore if we can expose the field filters to allow for searching on span|County|[values] for example to support better filtering.</p>
+</div>
+</div>
+<div class="section" id="comments-and-ratings-report">
+<h2>Comments and Ratings report<a class="headerlink" href="#comments-and-ratings-report" title="Permalink to this headline">¶</a></h2>
+<p>This report lists  all of the comments and associated ratings for legal content.  The report includes:</p>
+<ul class="simple">
+<li>Node ID</li>
+<li>Content title</li>
+<li>Total rating, with average and count, for the content</li>
+<li>Comment</li>
+<li>Comment author</li>
+<li>Individual rating associated with the comment</li>
+</ul>
+<p>The report has filters for:</p>
+<ul class="simple">
+<li>Content title</li>
+<li>Node ID</li>
+<li>Whether to exclude staff comments or not</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The “hide staff users” requires that the user have the staff role. If former staff have been left active but had the staff role removed, they will not be filtered out.  The better practice for former staff is to block their account but leave their permission in place.</p>
+</div>
+</div>
 <div class="section" id="historical-revision-report">
 <h2>Historical Revision report<a class="headerlink" href="#historical-revision-report" title="Permalink to this headline">¶</a></h2>
 <p>This report should be used only to track date fields over time.  It’s primary purpose is to pull data for reports where we need to report on internal revisions and expert reviews from a given time period and that data is not reflected in the current revision because the content was later revised/reviewed.</p>
@@ -453,16 +488,6 @@
 <div class="section" id="moderated-content-report">
 <h2>Moderated content report<a class="headerlink" href="#moderated-content-report" title="Permalink to this headline">¶</a></h2>
 <p>This is a system report accessible from the main content report.  It needs review.</p>
-</div>
-<div class="section" id="pending-reports">
-<h2>Pending reports<a class="headerlink" href="#pending-reports" title="Permalink to this headline">¶</a></h2>
-<p>We need to add reports for:</p>
-<ul class="simple">
-<li>comments and ratings</li>
-<li>localized content</li>
-<li>revision historical data</li>
-<li>possibly other reports TBD under structured content grant</li>
-</ul>
 </div>
 </div>
 

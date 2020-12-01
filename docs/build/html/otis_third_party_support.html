@@ -40,7 +40,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Spot Classsifer API Docs" href="otis_tech_spot_classifier.html" /> 
+    <link rel="next" title="ILAO OTIS API" href="otis_ilao_api.html" />
+    <link rel="prev" title="Natural language processing of legal problem" href="otis_natural_language_processing.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -103,14 +104,15 @@
 <li class="toctree-l2"><a class="reference internal" href="otis_reports.html">Get Legal Help Reporting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_ai_integration.html">OTIS AI Integration</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Supported Integrations</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#url-pre-fill-method">URL Pre-fill method</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sample-usage">Sample usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#url-pre-fill-method">URL Pre-fill method</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#source-parameters">Source parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#examples">Examples</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="otis_ilao_api.html">ILAO OTIS API</a></li>
 </ul>
 </li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul>
@@ -192,23 +194,30 @@
 <li>issue, which is the legal issues taxonomy term ID.  ILAO will provide a list of taxonomy term IDs for interested partners of the lowest-level terms so that users bypass additional screening.</li>
 <li>zipcode, the user’s zipcode</li>
 <li>household, the size of the household as a number</li>
+<li>source (a valid intake settings ID)</li>
 <li>helptype[]<ul>
 <li>up to 3 instances of helptype[] are allowed</li>
 <li>the accepted values for these are lawyer, content, forms</li>
 </ul>
 </li>
 </ul>
-<div class="section" id="sample-usage">
-<h3>Sample usage<a class="headerlink" href="#sample-usage" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="source-parameters">
+<h2>Source parameters<a class="headerlink" href="#source-parameters" title="Permalink to this headline">¶</a></h2>
+<p>When the source parameter is present, the specific intake settings will receive priority over any other intake settings.  This is expected to be used by organization partners on their own websites or via social media to prioritize traffic from those partners into OTIS.  For example, if the url is /get-legal-help?source=1226 then Legal Aid Chicago’s housing rules would take priority over other organizations.</p>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <p>In these samples, the request is coming from a 3rd party chatbot.</p>
 <p>User is in zip code 60603, legal issue is  enforcing a joint parenting plan or agreement
 (514616) and the household size is 3.</p>
+<p>Direct referral to Legal Aid Chicago’s housing practice group:</p>
+<p><a class="reference external" href="https://www.illinoislegalaid.org/get-legal-help?source=1226&amp;helptype[]=lawyer">https://www.illinoislegalaid.org/get-legal-help?source=1226&amp;helptype[]=lawyer</a></p>
 <p>Looking for a lawyer:
 <a class="reference external" href="https://www.illinoislegalaid.org/get-legal-help?issue=514616&amp;zipcode=60603&amp;household=3&amp;helptype[]=lawyer">https://www.illinoislegalaid.org/get-legal-help?issue=514616&amp;zipcode=60603&amp;household=3&amp;helptype[]=lawyer</a></p>
 <p>Looking for a lawyer &amp; content:
 <a class="reference external" href="https://www.illinoislegalaid.org/get-legal-help?issue=514616&amp;zipcode=60603&amp;household=3&amp;helptype[]=lawyer&amp;helptype[]=content">https://www.illinoislegalaid.org/get-legal-help?issue=514616&amp;zipcode=60603&amp;household=3&amp;helptype[]=lawyer&amp;helptype[]=content</a></p>
 <img alt="_images/otis-prefill-mobile.png" src="_images/otis-prefill-mobile.png" />
-</div>
 </div>
 </div>
 
@@ -220,8 +229,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="otis_ilao_api.html" class="btn btn-neutral float-right" title="ILAO OTIS API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="otis_tech_spot_classifier.html" class="btn btn-neutral float-left" title="Spot Classsifer API Docs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="otis_natural_language_processing.html" class="btn btn-neutral float-left" title="Natural language processing of legal problem" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -12,6 +12,8 @@ Available reports:
 * `Toolbox tool step usage report <https://www.illinoislegalaid.org/admin/reporting/content/toolboxes/tool-usage>`_
 * `Content page views report (basic) <https://www.illinoislegalaid.org/admin/reporting/content-page-views>`_
 * `Historical review/revised date data <https://www.illinoislegalaid.org/admin/reporting/content/legal-revisions>`_
+* `Localized content report <https://www.illinoislegalaid.org/admin/reporting/content/localized-content>`_
+* Comments/Ratings report
 
 Main content report
 =====================
@@ -184,6 +186,37 @@ This is a basic report to support A/B testing based on the page views stored fro
 * the page views
 * the unaliased path; this can be dropped into block configuration to cause a block to display on those pages.
 
+Localized content report
+=========================
+
+This report shows what legal content contains markup for localized content.  At this point, it can only show that it contains the span| markup used in localized content.
+
+
+The list can be exported to CSV.  
+
+.. todo::
+   Explore if we can expose the field filters to allow for searching on span|County|[values] for example to support better filtering.
+   
+Comments and Ratings report
+===========================
+
+This report lists  all of the comments and associated ratings for legal content.  The report includes:
+
+* Node ID
+* Content title
+* Total rating, with average and count, for the content
+* Comment
+* Comment author
+* Individual rating associated with the comment
+
+The report has filters for:
+
+* Content title
+* Node ID
+* Whether to exclude staff comments or not
+
+.. note:: The "hide staff users" requires that the user have the staff role. If former staff have been left active but had the staff role removed, they will not be filtered out.  The better practice for former staff is to block their account but leave their permission in place.   
+
 Historical Revision report
 ===============================
 
@@ -204,14 +237,4 @@ This report should be used only to track date fields over time.  It's primary pu
 Moderated content report
 ===========================
 This is a system report accessible from the main content report.  It needs review.
-
-Pending reports
-=================
-
-We need to add reports for:
-
-* comments and ratings
-* localized content
-* revision historical data
-* possibly other reports TBD under structured content grant
 

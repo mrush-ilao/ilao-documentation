@@ -105,14 +105,16 @@
 <li class="toctree-l2"><a class="reference internal" href="otis_ai_integration.html">OTIS AI Integration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_third_party_support.html">Supported Integrations</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">ILAO OTIS API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#status">Status</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#permissions">Permissions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#triage-user">Triage User</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#get-triage-user-s">Get Triage User(s)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#create-triage-user">Create Triage User</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#update-triage-user">Update triage user</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#delete-triage-user">Delete triage user</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#update-triage-user">Update triage user</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#delete-triage-user">Delete triage user</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#taxonomies">Taxonomies</a></li>
 </ul>
 </li>
 </ul>
@@ -191,9 +193,11 @@
             
   <div class="section" id="ilao-otis-api">
 <h1>ILAO OTIS API<a class="headerlink" href="#ilao-otis-api" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="status">
+<h2>Status<a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
+</div>
 <div class="section" id="permissions">
 <h2>Permissions<a class="headerlink" href="#permissions" title="Permalink to this headline">¶</a></h2>
-<p>As of November 2020, permissions are based on existing Drupal permissions.  This limits its utility.</p>
 <div class="admonition-todo admonition" id="index-0">
 <p class="first admonition-title">Todo</p>
 <p class="last">Understand how the authentication that was created works.</p>
@@ -304,9 +308,8 @@
 </pre></div>
 </div>
 </div>
-</div>
 <div class="section" id="update-triage-user">
-<h2>Update triage user<a class="headerlink" href="#update-triage-user" title="Permalink to this headline">¶</a></h2>
+<h3>Update triage user<a class="headerlink" href="#update-triage-user" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><dl class="docutils">
 <dt>curl -X PATCH -H “Content-Type:application/vnd.api+json” -d ‘{</dt>
@@ -330,9 +333,15 @@
 <p>}’ <a class="reference external" href="http://ilaodrupal8.prod.dd:8083/jsonapi/oas_triage_user/oas_triage_user/e08ff647-362f-4428-bcaf-8b45191a8df7">http://ilaodrupal8.prod.dd:8083/jsonapi/oas_triage_user/oas_triage_user/e08ff647-362f-4428-bcaf-8b45191a8df7</a></p>
 </div>
 <div class="section" id="delete-triage-user">
-<h2>Delete triage user<a class="headerlink" href="#delete-triage-user" title="Permalink to this headline">¶</a></h2>
+<h3>Delete triage user<a class="headerlink" href="#delete-triage-user" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div>curl -X DELETE <a class="reference external" href="http://ilaodrupal8.prod.dd:8083/jsonapi/oas_triage_user/oas_triage_user/e08ff647-362f-4428-bcaf-8b45191a8df7">http://ilaodrupal8.prod.dd:8083/jsonapi/oas_triage_user/oas_triage_user/e08ff647-362f-4428-bcaf-8b45191a8df7</a></div></blockquote>
+</div>
+</div>
+<div class="section" id="taxonomies">
+<h2>Taxonomies<a class="headerlink" href="#taxonomies" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>curl -X GET -H “Content-Type:application/vnd.api+json” http://ilaodrupal8.prod.dd:8083/jsonapi/taxonomy_term/oas_marital_status</div></blockquote>
 </div>
 </div>
 

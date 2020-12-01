@@ -2,9 +2,13 @@
 ILAO OTIS API
 ============================
 
+Status
+========
+
+
 Permissions
 =============
-As of November 2020, permissions are based on existing Drupal permissions.  This limits its utility.
+ 
 
 .. todo:: Understand how the authentication that was created works.
 
@@ -120,7 +124,7 @@ Create Triage User
             
             
 Update triage user
-===================
+---------------------
 
  curl -X PATCH -H "Content-Type:application/vnd.api+json" -d '{
   "data": {
@@ -134,9 +138,11 @@ Update triage user
 }' http://ilaodrupal8.prod.dd:8083/jsonapi/oas_triage_user/oas_triage_user/e08ff647-362f-4428-bcaf-8b45191a8df7
             
 Delete triage user
-====================
+---------------------
             
    curl -X DELETE http://ilaodrupal8.prod.dd:8083/jsonapi/oas_triage_user/oas_triage_user/e08ff647-362f-4428-bcaf-8b45191a8df7          
             
-            
-            
+ 
+Taxonomies 
+============          
+      curl -X GET -H "Content-Type:application/vnd.api+json" http://ilaodrupal8.prod.dd:8083/jsonapi/taxonomy_term/oas_marital_status    
