@@ -23,6 +23,9 @@ Source parameters
 ===================
 
 When the source parameter is present, the specific intake settings will receive priority over any other intake settings.  This is expected to be used by organization partners on their own websites or via social media to prioritize traffic from those partners into OTIS.  For example, if the url is /get-legal-help?source=1226 then Legal Aid Chicago's housing rules would take priority over other organizations.  
+
+.. note::  
+   Because the source parameter is tied to the intake settings, it is best practice to include a relevant taxonomy term as the parameter will be ignored if the user selects a topic that is unrelated to the intake settings
   
 Examples
 ================

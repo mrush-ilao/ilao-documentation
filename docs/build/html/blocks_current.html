@@ -40,7 +40,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Section-level Blocks" href="blocks_sectional.html" />
+    <link rel="next" title="Sectional Blocks" href="blocks_sectional.html" />
     <link rel="prev" title="Custom blocks" href="block_management.html" /> 
 </head>
 
@@ -99,7 +99,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#current-header-banner-blocks">Current header banner blocks</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="blocks_sectional.html">Section-level Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blocks_sectional.html">Sectional Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blocks_smart.html">Smart blocks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blocks_configuration.html">Configuring blocks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blocks_translation.html">Block translation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blocks_user_profiles.html">User profile blocks</a></li>
@@ -112,6 +113,7 @@
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul>
@@ -198,7 +200,9 @@
 <ul class="simple">
 <li>add the block to the Header section on the block layout page by clicking Place block</li>
 <li>the block must be ordered just above the disabled blocks to keep the block from interfering with menus, site slogan blocks.</li>
+<li>set the block CSS class to ilao-banner-block to cause it to display correctly full-width.</li>
 </ul>
+<img alt="_images/header-block-config.png" src="_images/header-block-config.png" />
 <div class="section" id="header-banner-code">
 <h2>Header banner code<a class="headerlink" href="#header-banner-code" title="Permalink to this headline">¶</a></h2>
 <p>This is the code used in the header banner to provide the correct style.</p>
@@ -213,9 +217,11 @@ Text goes here
 <div class="section" id="current-header-banner-blocks">
 <h2>Current header banner blocks<a class="headerlink" href="#current-header-banner-blocks" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Covid banner (appears on all pages except those that show the worning to landlords banner)</li>
-<li>Landlord warning banner (appears on selected legal content pages in place of Covid banner)</li>
+<li>Donation-A</li>
+<li>Donation-B</li>
+<li>Donation-C</li>
 </ul>
+<p>The covid-banner block has been moved to the left sidebar.</p>
 </div>
 </div>
 
@@ -227,7 +233,7 @@ Text goes here
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="blocks_sectional.html" class="btn btn-neutral float-right" title="Section-level Blocks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="blocks_sectional.html" class="btn btn-neutral float-right" title="Sectional Blocks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="block_management.html" class="btn btn-neutral float-left" title="Custom blocks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

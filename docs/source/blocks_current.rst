@@ -15,6 +15,9 @@ When placing the block:
 
 * add the block to the Header section on the block layout page by clicking Place block
 * the block must be ordered just above the disabled blocks to keep the block from interfering with menus, site slogan blocks.
+* set the block CSS class to ilao-banner-block to cause it to display correctly full-width.
+
+.. image:: ../assets/header-block-config.png
 
 
 Header banner code
@@ -34,5 +37,9 @@ This is the code used in the header banner to provide the correct style.
 
 Current header banner blocks
 ==============================
-* Covid banner (appears on all pages except those that show the worning to landlords banner)
-* Landlord warning banner (appears on selected legal content pages in place of Covid banner)
+
+* Donation-A
+* Donation-B
+* Donation-C
+
+The covid-banner block has been moved to the left sidebar.
