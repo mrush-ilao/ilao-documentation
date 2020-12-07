@@ -108,10 +108,21 @@
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content.html">Structured Content Schema</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_types.html">Structured Content Types</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Structured content API</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#list-of-api-calls">List of API calls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#taxonomy-terms">Taxonomy terms</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#get-list-of-legal-problems">Get list of legal problems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-specific-problem">Get specific problem</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#get-list-of-solutions">Get list of solutions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#get-legal-problem">Get legal problem</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#get-solution">Get solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-list-of-questions">Get list of questions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-faq">Get FAQ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-question">Get question</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-eligibility-rules">Get eligibility rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-information-needed">Get information needed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-legal-forms-needed">Get legal forms needed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-list-of-how-to-s">Get list of how-to’s</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-a-specific-how-to">Get a specific how-to</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-a-result-from-a-solution">Get a result from a solution</a></li>
 </ul>
 </li>
 </ul>
@@ -141,10 +152,21 @@
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content.html">Structured Content Schema</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_types.html">Structured Content Types</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Structured content API</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#list-of-api-calls">List of API calls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#taxonomy-terms">Taxonomy terms</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#get-list-of-legal-problems">Get list of legal problems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-specific-problem">Get specific problem</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#get-list-of-solutions">Get list of solutions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#get-legal-problem">Get legal problem</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#get-solution">Get solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-list-of-questions">Get list of questions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-faq">Get FAQ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-question">Get question</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-eligibility-rules">Get eligibility rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-information-needed">Get information needed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-legal-forms-needed">Get legal forms needed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-list-of-how-to-s">Get list of how-to’s</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-a-specific-how-to">Get a specific how-to</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-a-result-from-a-solution">Get a result from a solution</a></li>
 </ul>
 </li>
 </ul>
@@ -223,6 +245,50 @@
             
   <div class="section" id="structured-content-api">
 <h1>Structured content API<a class="headerlink" href="#structured-content-api" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="list-of-api-calls">
+<h2>List of API calls<a class="headerlink" href="#list-of-api-calls" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>taxonomy terms</li>
+<li>list of legal problems</li>
+<li>specific legal problem</li>
+<li>list of solutions</li>
+<li>specific solution</li>
+<li>list of questions</li>
+<li>specific questions in a specific FAQ</li>
+<li>specific question</li>
+<li>list of how-tos</li>
+<li>specific how-to from a specific solution</li>
+<li>eligibility rules from a specific solution</li>
+<li>information needed from a specific solution</li>
+<li>forms needed from a specific solution</li>
+<li>result for a specific solution</li>
+</ul>
+</div>
+<div class="section" id="taxonomy-terms">
+<h2>Taxonomy terms<a class="headerlink" href="#taxonomy-terms" title="Permalink to this headline">¶</a></h2>
+<p>Returns the list of taxonomy terms from ILAO’s structured content:</p>
+<ul class="simple">
+<li>life areas</li>
+<li>solution types</li>
+<li>form prep programs</li>
+</ul>
+<div class="section" id="function-call">
+<h3>Function call<a class="headerlink" href="#function-call" title="Permalink to this headline">¶</a></h3>
+<p>Method: GET</p>
+</div>
+<div class="section" id="sample-output">
+<h3>Sample Output<a class="headerlink" href="#sample-output" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[{</span>
+<span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;White&quot;</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Black&quot;</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Red&quot;</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Green&quot;</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Blue&quot;</span><span class="p">},</span>
+<span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Orange&quot;</span><span class="p">}]</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="section" id="get-list-of-legal-problems">
 <h2>Get list of legal problems<a class="headerlink" href="#get-list-of-legal-problems" title="Permalink to this headline">¶</a></h2>
 <p>Returns a list of legal problem content from the website.  This is a simple list of:</p>
@@ -232,38 +298,420 @@
 <li>identifier</li>
 <li>language</li>
 </ul>
+<div class="section" id="id1">
+<h3>Function call<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Method: GET</p>
 </div>
-<div class="section" id="get-list-of-solutions">
-<h2>Get list of solutions<a class="headerlink" href="#get-list-of-solutions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>Sample Output<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>   <span class="p">[{</span>
+               <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Being a victim of domestic violence&quot;</span><span class="p">,</span>
+               <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Legal problem of being a victim of DV&quot;</span><span class="p">,</span>
+               <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;a6a6eb74-38c3-11eb-adc1-0242ac120002&quot;</span><span class="p">,</span>
+               <span class="nt">&quot;language&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span>
+
+       <span class="p">},</span>
+       <span class="p">{</span>
+               <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Being evicted&quot;</span><span class="p">,</span>
+               <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Legal problem of being evicted&quot;</span><span class="p">,</span>
+               <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;a6a6eb74-38c3-11eb-adc1-0242ac120002&quot;</span><span class="p">,</span>
+               <span class="nt">&quot;language&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span>
+       <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="parameters">
+<h3>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>lifeAreaAffected (optional)</li>
+<li>legal code (array of code values and coding system); NSMI and LSC problem codes are supported (optional)</li>
+<li>language based on the 2 character ISO language codes (optional)</li>
+</ul>
+</div>
+</div>
+<div class="section" id="get-specific-problem">
+<h2>Get specific problem<a class="headerlink" href="#get-specific-problem" title="Permalink to this headline">¶</a></h2>
+<p>Returns a specific legal problem package.  This includes the full content:  problem, solutions, etc.</p>
+<div class="section" id="id3">
+<h3>Parameters<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>exactly one identifier</li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>Sample Output<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>See the order of protection JSON file.</p>
 <p>Get list of questions
 Get list of how-tos
 Get list of steps</p>
 </div>
-<div class="section" id="get-legal-problem">
-<h2>Get legal problem<a class="headerlink" href="#get-legal-problem" title="Permalink to this headline">¶</a></h2>
-<p>Returns a specific legal problem package.  This includes the full packet of information.</p>
-<p>Accepted parameters:</p>
+</div>
+<div class="section" id="get-list-of-solutions">
+<h2>Get list of solutions<a class="headerlink" href="#get-list-of-solutions" title="Permalink to this headline">¶</a></h2>
+<p>Returns a list of solutions along with nested information on the problem(s) the solution solves.</p>
+<div class="section" id="id5">
+<h3>Function call<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>Method: GET</p>
+</div>
+<div class="section" id="id6">
+<h3>Sample Output<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>  <span class="p">[{</span>
+              <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Order of Protection&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;An Order of Protection is a court order that helps someone who is being abused. It stops the abuser from further abusing the victim&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;a6a6eb74-38c3-11eb-adc1-0242ac120002&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;language&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;solutionType&quot;</span><span class="p">:</span> <span class="s2">&quot;Court solution&quot;</span>
+              <span class="s2">&quot;solutionFor&quot;</span><span class="p">:</span> <span class="p">[</span>
+              <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Being a victim of domestic violence&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Legal problem of being a victim of DV&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/legal-problems/dv&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;language&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span>
+              <span class="p">}]</span>
+      <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h3>Parameters<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>url (if known)</li>
-<li>problem</li>
-<li>jurisdiction (city, state, or zip code)</li>
+<li>problem_identifier:  the identifier of the legal problem the solution is attached to; will return all solutions if this is omitted</li>
+<li>solution type</li>
 </ul>
-<p>For a problem:
-* get available solutions
-* get solution</p>
+</div>
 </div>
 <div class="section" id="get-solution">
 <h2>Get solution<a class="headerlink" href="#get-solution" title="Permalink to this headline">¶</a></h2>
-<p>For a specific</p>
-<p>Reply 1 for eligibility rules,  2 for information needed, 4 for instructions or  M to return to the main menu</p>
-<p>SMS needs:</p>
-<p>[[legal_problem.title.toLowerCase]]
-[[legal_problem.legal_questions.listOfQuestions]]
-[[legal_problem.solution.title]] . [[legal_problem.solution.result]]
-[[legal_solution]][[components]]
-[[legal_solution]].[[howTo]].list of How Tos with descriptions
-[[lega-solution]][[legal forms needed]] [[list of forms]] + optional use description
-+ ILAO website link if it exists;</p>
+<p>Returns the entire schema for a specific solution.  While solutions exist within problems, it is sometimes helpful to pull in just the solution segment.</p>
+<div class="section" id="id8">
+<h3>Function call<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>Method: GET</p>
+</div>
+</div>
+<div class="section" id="get-list-of-questions">
+<h2>Get list of questions<a class="headerlink" href="#get-list-of-questions" title="Permalink to this headline">¶</a></h2>
+<p>Returns list of questions from the legal question content type.</p>
+<div class="section" id="id9">
+<h3>Function call<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p>Method: GET</p>
+</div>
+<div class="section" id="id10">
+<h3>Sample Output<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span> <span class="p">[{</span>
+      <span class="nt">&quot;questions&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;How long does an Order of Protection last?&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;b06e8c24-38ab-11eb-adc1-0242ac120002&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;language&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span>
+              <span class="p">},</span>
+              <span class="p">{</span>
+                      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;What if my abuser lives with me?&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;b06e8c24-38ab-11eb-adc1-0242ac120002&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;language&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span>
+              <span class="p">},</span>
+              <span class="p">{</span>
+                      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;What if I have pets?&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;b06e8c24-38ab-11eb-adc1-0242ac120002&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;language&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span>
+              <span class="p">}</span>
+
+      <span class="p">]</span>
+<span class="p">}]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id11">
+<h3>Parameters<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="get-faq">
+<h2>Get FAQ<a class="headerlink" href="#get-faq" title="Permalink to this headline">¶</a></h2>
+<p>Returns set of questions with answers from a specific problem</p>
+<div class="section" id="id12">
+<h3>Function call<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<p>Method: GET</p>
+</div>
+<div class="section" id="id13">
+<h3>Sample Output<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>    <span class="p">[{</span>
+    <span class="nt">&quot;questions&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;How long does an Order of Protection last?&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;acceptedAnswer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                            <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;If you live with your abuser, you can ask for exclusive possession of the home. The abuser will have to leave and stay away from the home. If the abuser has a legal right to be in the home, the judge will need to decide whether it is more difficult for you or the abuser to leave.&quot;</span><span class="p">,</span>
+                                    <span class="s2">&quot;The judge may ask if you have another place to stay, your abuser has another place to stay, any children live with you, both of you work, or if your home is near your workplace or your children&#39;s school. &quot;</span><span class="p">,</span>
+                                    <span class="s2">&quot;If the judge orders exclusive possession, call the police and ask that they escort you home. Tell the police officer that you have an Order of Protection and need the respondent removed from your home. The police will meet you at your home and tell the abuser they have to leave.&quot;</span><span class="p">,</span>
+                                    <span class="s2">&quot;The court can order that you or the abuser be able to go into the house without the police to get clothing, medicine, or other items you need.&quot;</span>
+                            <span class="p">]</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;b06e8c24-38ab-11eb-adc1-0242ac120002&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;language&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;What if my abuser lives with me?&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;acceptedAnswer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                            <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;If you live with your abuser, you can ask for exclusive possession of the home. The abuser will have to leave and stay away from the home. If the abuser has a legal right to be in the home, the judge will need to decide whether it is more difficult for you or the abuser to leave.&quot;</span><span class="p">,</span>
+                                    <span class="s2">&quot;The judge may ask if you have another place to stay, your abuser has another place to stay, any children live with you, both of you work, or if your home is near your workplace or your children&#39;s school. &quot;</span><span class="p">,</span>
+                                    <span class="s2">&quot;If the judge orders exclusive possession, call the police and ask that they escort you home. Tell the police officer that you have an Order of Protection and need the respondent removed from your home. The police will meet you at your home and tell the abuser they have to leave.&quot;</span><span class="p">,</span>
+                                    <span class="s2">&quot;The court can order that you or the abuser be able to go into the house without the police to get clothing, medicine, or other items you need.&quot;</span>
+                            <span class="p">]</span>
+                    <span class="p">},</span>
+                    <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;b06e8c24-38ab-11eb-adc1-0242ac120002&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;language&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;What if I have pets?&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;b06e8c24-38ab-11eb-adc1-0242ac120002&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;language&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span>
+            <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id14">
+<h3>Parameters<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>problem_identifier = the identifier for the specific problem.  Required and limited to 1.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="get-question">
+<h2>Get question<a class="headerlink" href="#get-question" title="Permalink to this headline">¶</a></h2>
+<p>Returns a specific question</p>
+<div class="section" id="id15">
+<h3>Function call<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id16">
+<h3>Sample Output<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span> <span class="p">[{</span>
+      <span class="nt">&quot;question&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;How long does an Order of Protection last?&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;acceptedAnswer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                              <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;If you live with your abuser, you can ask for exclusive possession of the home. The abuser will have to leave and stay away from the home. If the abuser has a legal right to be in the home, the judge will need to decide whether it is more difficult for you or the abuser to leave.&quot;</span><span class="p">,</span>
+                                      <span class="s2">&quot;The judge may ask if you have another place to stay, your abuser has another place to stay, any children live with you, both of you work, or if your home is near your workplace or your children&#39;s school. &quot;</span><span class="p">,</span>
+                                      <span class="s2">&quot;If the judge orders exclusive possession, call the police and ask that they escort you home. Tell the police officer that you have an Order of Protection and need the respondent removed from your home. The police will meet you at your home and tell the abuser they have to leave.&quot;</span><span class="p">,</span>
+                                      <span class="s2">&quot;The court can order that you or the abuser be able to go into the house without the police to get clothing, medicine, or other items you need.&quot;</span>
+                              <span class="p">]</span>
+                      <span class="p">},</span>
+                      <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;b06e8c24-38ab-11eb-adc1-0242ac120002&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;language&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span>
+              <span class="p">}</span>
+
+      <span class="p">]</span>
+<span class="p">}]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id17">
+<h3>Parameters<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>question_identifier:  uuid of the question to return.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="get-eligibility-rules">
+<h2>Get eligibility rules<a class="headerlink" href="#get-eligibility-rules" title="Permalink to this headline">¶</a></h2>
+<p>Returns the eligibility rules for a specific legal solution.</p>
+<div class="section" id="id18">
+<h3>Function call<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id19">
+<h3>Sample Output<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>  <span class="p">[{</span>
+               <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">[</span>
+                       <span class="s2">&quot;One of the following must be true:&quot;</span>
+               <span class="p">],</span>
+               <span class="nt">&quot;list&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                       <span class="nt">&quot;itemListOrder&quot;</span><span class="p">:</span> <span class="s2">&quot;Ascending&quot;</span><span class="p">,</span>
+                       <span class="nt">&quot;itemListElements&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                                       <span class="nt">&quot;item&quot;</span><span class="p">:</span> <span class="s2">&quot;Petitioner lives in Illinois&quot;</span><span class="p">,</span>
+                                       <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">1</span>
+                               <span class="p">},</span>
+                               <span class="p">{</span>
+                                       <span class="nt">&quot;item&quot;</span><span class="p">:</span> <span class="s2">&quot;Abuse happened in Illinois, or&quot;</span><span class="p">,</span>
+                                       <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">2</span>
+                               <span class="p">},</span>
+                               <span class="p">{</span>
+                                       <span class="nt">&quot;item&quot;</span><span class="p">:</span> <span class="s2">&quot;Petitioner is staying in Illinois to avoid abuse&quot;</span><span class="p">,</span>
+                                       <span class="nt">&quot;position&quot;</span><span class="p">:</span> <span class="mi">3</span>
+                               <span class="p">}</span>
+                       <span class="p">]</span>
+               <span class="p">}]</span>
+       <span class="p">},</span>
+       <span class="p">{</span>
+               <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">[</span>
+                       <span class="s2">&quot;There must have been abuse by the Respondent. Abuse includes physical abuse, harassment, intimidation of a dependent, interference with personal liberty, and willful deprivation.&quot;</span>
+               <span class="p">]</span>
+       <span class="p">},</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id20">
+<h3>Parameters<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>solution_identifier:  uuid of the solution.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="get-information-needed">
+<h2>Get information needed<a class="headerlink" href="#get-information-needed" title="Permalink to this headline">¶</a></h2>
+<p>Returns the eligibility rules for a specific legal solution.</p>
+<div class="section" id="id21">
+<h3>Function call<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id22">
+<h3>Sample Output<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+       <span class="s2">&quot;Petitioner&#39;s address&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;Petitioner&#39;s alternate address for safety (optional)&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;Respondent&#39;s address&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;Physical description of Respondent&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;Respondent&#39;s employer&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;Details about any other Orders of Protection or other court cases involving the Petitioner or the Respondent.&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;Details about the abuse and when it took place.&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;Details about personal property that Petitioner wants back.&quot;</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id23">
+<h3>Parameters<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>solution_identifier:  uuid of the solution.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="get-legal-forms-needed">
+<h2>Get legal forms needed<a class="headerlink" href="#get-legal-forms-needed" title="Permalink to this headline">¶</a></h2>
+<p>Returns the list of legal forms needed from a specific solution</p>
+<div class="section" id="id24">
+<h3>Function call<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id25">
+<h3>Sample Output<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span> <span class="p">[{</span>
+              <span class="nt">&quot;formName&quot;</span><span class="p">:</span> <span class="s2">&quot;Petition for Order of Protection&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;filledOutWith&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                              <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Order of Protection&quot;</span><span class="p">,</span>
+                              <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/legal-information/order-protection&quot;</span><span class="p">,</span>
+                              <span class="nt">&quot;formPrepProgramType&quot;</span><span class="p">:</span> <span class="s2">&quot;HotDocs&quot;</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                              <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Petition for Order of Protection&quot;</span><span class="p">,</span>
+                              <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/legal-information/order-protection.pdf&quot;</span><span class="p">,</span>
+                              <span class="nt">&quot;formPrepProgramType&quot;</span><span class="p">:</span> <span class="s2">&quot;PDF&quot;</span>
+                      <span class="p">}</span>
+              <span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+              <span class="nt">&quot;formName&quot;</span><span class="p">:</span> <span class="s2">&quot;Emergency Order of Protection&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;filledOutWith&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Order of Protection&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.illinoislegalaid.org/legal-information/order-protection&quot;</span><span class="p">,</span>
+                      <span class="nt">&quot;formPrepProgramType&quot;</span><span class="p">:</span> <span class="s2">&quot;HotDocs&quot;</span>
+              <span class="p">}],</span>
+              <span class="nt">&quot;formUse&quot;</span><span class="p">:</span> <span class="s2">&quot;An EOP is only valid for 14 to 21 days&quot;</span>
+      <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id26">
+<h3>Parameters<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>solution_identifier:  uuid of the solution.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="get-list-of-how-to-s">
+<h2>Get list of how-to’s<a class="headerlink" href="#get-list-of-how-to-s" title="Permalink to this headline">¶</a></h2>
+<p>Returns a list of all how-to’s</p>
+<div class="section" id="id27">
+<h3>Function call<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id28">
+<h3>Sample output<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span> <span class="p">[{</span>
+              <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Getting an order of protection&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;An Order of Protection can help protect you or a loved one from abuse. This article explains how to get one&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;9ea16654-38cb-11eb-adc1-0242ac120002&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;language&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+              <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Changing or renewing an order of protection&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The person who asked for an Order of Protection can ask the judge to change, end, or renew it.&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;9ea16654-38cb-11eb-adc1-0242ac120002&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;language&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span>
+      <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id29">
+<h3>Parameters<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>solution_identifier:  uuid of the solution; when provided will limit the list of how-tos to those tied to a solution.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="get-a-specific-how-to">
+<h2>Get a specific how-to<a class="headerlink" href="#get-a-specific-how-to" title="Permalink to this headline">¶</a></h2>
+<p>Returns a specific how-to for a legal solution.</p>
+<div class="section" id="id30">
+<h3>Function call<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id31">
+<h3>Sample output<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h3>
+<p>See the order of protection json</p>
+</div>
+<div class="section" id="id32">
+<h3>Parameters<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>howto_identifier:  uuid of the howto.  Required</li>
+</ul>
+</div>
+</div>
+<div class="section" id="get-a-result-from-a-solution">
+<h2>Get a result from a solution<a class="headerlink" href="#get-a-result-from-a-solution" title="Permalink to this headline">¶</a></h2>
+<p>Returns the result for a solution.</p>
+<div class="section" id="id33">
+<h3>Function call<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id34">
+<h3>Sample output<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[{</span>
+             <span class="nt">&quot;body&quot;</span><span class="p">:</span> <span class="p">[</span>
+                     <span class="s2">&quot;When a judge signs an Order of Protection, it makes it illegal for the Respondent to do or not do certain things.  A judge may require the Respondent to:&quot;</span>
+             <span class="p">],</span>
+             <span class="nt">&quot;list&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                     <span class="nt">&quot;itemListOrder&quot;</span><span class="p">:</span> <span class="s2">&quot;Unordered&quot;</span><span class="p">,</span>
+                     <span class="nt">&quot;itemListElements&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                                     <span class="nt">&quot;item&quot;</span><span class="p">:</span> <span class="s2">&quot;Stop abusive acts,&quot;</span>
+                             <span class="p">},</span>
+                             <span class="p">{</span>
+                                     <span class="nt">&quot;item&quot;</span><span class="p">:</span> <span class="s2">&quot;Stay away from the victim and other people protected by the order,&quot;</span>
+                             <span class="p">},</span>
+                             <span class="p">{</span>
+                                     <span class="nt">&quot;item&quot;</span><span class="p">:</span> <span class="s2">&quot;Not contact the victim via telephone calls, mail, email, written notes, or third parties,&quot;</span>
+                             <span class="p">},</span>
+                             <span class="p">{</span>
+                                     <span class="nt">&quot;item&quot;</span><span class="p">:</span> <span class="s2">&quot;Stay away from the victim&#39;s home, school, or work,&quot;</span>
+                             <span class="p">}</span>
+                     <span class="p">]</span>
+             <span class="p">}]</span>
+     <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id35">
+<h3>Parameters<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>solution_identifier:  uuid of the solution; required.</li>
+</ul>
+</div>
 </div>
 </div>
 

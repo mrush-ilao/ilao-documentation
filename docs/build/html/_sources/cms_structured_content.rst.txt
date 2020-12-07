@@ -21,8 +21,6 @@ Download :download:`JSON schema:  <../assets/code/structured-content.json>`
    :language: JSON
 
 
-
-
          
 
 References from Schema.org 
