@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Structured Legal Content &mdash; IllinoisLegalAid.org 1 documentation</title>
+  <title>Structured content API &mdash; IllinoisLegalAid.org 1 documentation</title>
   
 
   
@@ -40,8 +40,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Structured Content Overview" href="cms_structured_content_overview.html" />
-    <link rel="prev" title="Legal content reporting" href="cms_content_reporting.html" /> 
+    <link rel="next" title="Basic pages" href="basic_pages_cms.html" />
+    <link rel="prev" title="Structured Content Types" href="cms_structured_content_types.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -103,11 +103,17 @@
 <li class="toctree-l2"><a class="reference internal" href="cms_toolboxes.html">Toolbox and related content types</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_adrm.html">Lawyer Manuals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_content_reporting.html">Legal content reporting</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Structured Legal Content</a><ul>
+<li class="toctree-l2 current"><a class="reference internal" href="cms_structured_legal_content.html">Structured Legal Content</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_overview.html">Structured Content Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content.html">Structured Content Schema</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_types.html">Structured Content Types</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_api.html">Structured content API</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Structured content API</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#get-list-of-legal-problems">Get list of legal problems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-list-of-solutions">Get list of solutions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-legal-problem">Get legal problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-solution">Get solution</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="legal_content_cms.html#known-workarounds">Known Workarounds</a></li>
@@ -130,11 +136,17 @@
 <li class="toctree-l2"><a class="reference internal" href="cms_toolboxes.html">Toolbox and related content types</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_adrm.html">Lawyer Manuals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_content_reporting.html">Legal content reporting</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Structured Legal Content</a><ul>
+<li class="toctree-l2 current"><a class="reference internal" href="cms_structured_legal_content.html">Structured Legal Content</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_overview.html">Structured Content Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content.html">Structured Content Schema</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_types.html">Structured Content Types</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_api.html">Structured content API</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Structured content API</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#get-list-of-legal-problems">Get list of legal problems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-list-of-solutions">Get list of solutions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-legal-problem">Get legal problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-solution">Get solution</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="legal_content_cms.html#known-workarounds">Known Workarounds</a></li>
@@ -188,13 +200,15 @@
         
           <li><a href="legal_content_cms.html">Legal Content CMS</a> &raquo;</li>
         
-      <li>Structured Legal Content</li>
+          <li><a href="cms_structured_legal_content.html">Structured Legal Content</a> &raquo;</li>
+        
+      <li>Structured content API</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/cms_structured_legal_content.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/cms_structured_content_api.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -207,16 +221,49 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="structured-legal-content">
-<h1>Structured Legal Content<a class="headerlink" href="#structured-legal-content" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="cms_structured_content_overview.html">Structured Content Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cms_structured_content.html">Structured Content Schema</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cms_structured_content_types.html">Structured Content Types</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cms_structured_content_api.html">Structured content API</a></li>
+  <div class="section" id="structured-content-api">
+<h1>Structured content API<a class="headerlink" href="#structured-content-api" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="get-list-of-legal-problems">
+<h2>Get list of legal problems<a class="headerlink" href="#get-list-of-legal-problems" title="Permalink to this headline">¶</a></h2>
+<p>Returns a list of legal problem content from the website.  This is a simple list of:</p>
+<ul class="simple">
+<li>name</li>
+<li>description</li>
+<li>identifier</li>
+<li>language</li>
 </ul>
+</div>
+<div class="section" id="get-list-of-solutions">
+<h2>Get list of solutions<a class="headerlink" href="#get-list-of-solutions" title="Permalink to this headline">¶</a></h2>
+<p>Get list of questions
+Get list of how-tos
+Get list of steps</p>
+</div>
+<div class="section" id="get-legal-problem">
+<h2>Get legal problem<a class="headerlink" href="#get-legal-problem" title="Permalink to this headline">¶</a></h2>
+<p>Returns a specific legal problem package.  This includes the full packet of information.</p>
+<p>Accepted parameters:</p>
+<ul class="simple">
+<li>url (if known)</li>
+<li>problem</li>
+<li>jurisdiction (city, state, or zip code)</li>
+</ul>
+<p>For a problem:
+* get available solutions
+* get solution</p>
+</div>
+<div class="section" id="get-solution">
+<h2>Get solution<a class="headerlink" href="#get-solution" title="Permalink to this headline">¶</a></h2>
+<p>For a specific</p>
+<p>Reply 1 for eligibility rules,  2 for information needed, 4 for instructions or  M to return to the main menu</p>
+<p>SMS needs:</p>
+<p>[[legal_problem.title.toLowerCase]]
+[[legal_problem.legal_questions.listOfQuestions]]
+[[legal_problem.solution.title]] . [[legal_problem.solution.result]]
+[[legal_solution]][[components]]
+[[legal_solution]].[[howTo]].list of How Tos with descriptions
+[[lega-solution]][[legal forms needed]] [[list of forms]] + optional use description
++ ILAO website link if it exists;</p>
 </div>
 </div>
 
@@ -228,10 +275,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="cms_structured_content_overview.html" class="btn btn-neutral float-right" title="Structured Content Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="basic_pages_cms.html" class="btn btn-neutral float-right" title="Basic pages" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="cms_content_reporting.html" class="btn btn-neutral float-left" title="Legal content reporting" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="cms_structured_content_types.html" class="btn btn-neutral float-left" title="Structured Content Types" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

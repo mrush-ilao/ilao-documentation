@@ -96,7 +96,10 @@
 <li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Testimonials Content Type</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Testimonials Content Type</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-users-see">What users see</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
@@ -171,21 +174,38 @@
             
   <div class="section" id="testimonials-content-type">
 <h1>Testimonials Content Type<a class="headerlink" href="#testimonials-content-type" title="Permalink to this headline">¶</a></h1>
-<p>The testimonials content type is used:</p>
+<p>The testimonials content type is used to store positive stories that can be highlighted on the home page and within content.</p>
+<p>The content type supports:</p>
 <ul class="simple">
-<li>to store positive stories that can be highlighted on the home page and (eventually) within content.</li>
+<li>a person name.  This can be the first name of the actual user or a fictionalized name for anonymous content.  Gender-neutral names are preferred for fictionalized names.</li>
+<li>a person image.  This image should be resized to be relatively small before being uploaded to decrease page load time on the home page and in content as it is a small image generally.  225x190 is a good size.</li>
+<li>Legal issue the person got help with.  This is the narrative ILAO provides that includes what the user was looking for, what content (with links) the user accessed.  It also includes the month and year of the feedback.  It should not have any leading – or other characters</li>
+<li>Body.  This is where the quote from the user feedback should go.</li>
+<li>Primary legal category.  The best primary category that the feedback should be associated with.</li>
+<li>The date submitted</li>
+<li>The feedback source.</li>
 </ul>
 <img alt="_images/cms-testimonial.png" src="_images/cms-testimonial.png" />
-<div class="admonition-todo admonition" id="index-0">
-<p class="first admonition-title">Todo</p>
-<p class="last">Add fields that will make it easier to track and use:  date of feedback as a field, legal issue(s), feedback source.  Update the embed button to limit use to testimonials and to teaser view.</p>
-</div>
+<div class="section" id="what-users-see">
+<h2>What users see<a class="headerlink" href="#what-users-see" title="Permalink to this headline">¶</a></h2>
 <p>When rendered on the home page:</p>
+<ul class="simple">
+<li>the person image and name</li>
+<li>the body as the quote</li>
+<li>the “legal problem helped with” body under their name; the month and year are part of this field.</li>
+</ul>
 <img alt="_images/testimonial-homepage.png" src="_images/testimonial-homepage.png" />
 <p>When embedded within legal content:</p>
+<ul class="simple">
+<li>the person image</li>
+<li>the body</li>
+<li>– the person name</li>
+<li>the legal problem they got help with field</li>
+</ul>
 <img alt="_images/testimonials-embed.png" src="_images/testimonials-embed.png" />
 <p>Mobile:</p>
 <img alt="_images/testimonial-final.png" src="_images/testimonial-final.png" />
+</div>
 </div>
 
 

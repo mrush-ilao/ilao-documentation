@@ -84,6 +84,7 @@ Report data
 * Last expert review. 
 * Published status (Yes or No)
 * Language of the node (content in more than one language will have multiple rows in the report)
+* Page views from Google analytics.  These are pulled in from the English content and associated with the node (so it will show the same page views on Spanish and Polish versions).  These are pulled in as a scheduled task in batches and are based on the last 60 days +/- 14 days depending on when it was last imported.  **This was added to aid in prioritization not as a 100% accurate measure**
 
 .. note::  The last revised and last expert review fields are not translatable in legal content but are translatable in toolbox, tool, and tool step content.    The last changed date is per language. 
 
@@ -99,7 +100,6 @@ The find legal content report has many filters.  Filters are based on an AND con
 * Category is the primary legal category for the content.  This is the single select dropdown for category versus the legal issues multiple-select field.
 * Published status (yes or no).  Note that publish status is per node.  An unpublished translation in Spanish with a published English version would show as published.
 * Content format.  This applies to legal content only and is set based on the paragraphs bundles included in the node.  
-* Translation exists is duplicative of the translation language field and should be removed.
 * Created filters on the created date and can be set with a start date and/or end date
 * Last revised filters on the last internal revision date and can be set with a start date and/or end date
 * Last expert review filters on the last expert review date and can be set with a start date and/or end date
@@ -112,8 +112,9 @@ The find legal content report has many filters.  Filters are based on an AND con
 * Whether there is an open request to create a translation.  This field applies only to legal content.  
 * Translation language.  This should be used to limit the list to English, Spanish or Polish.
 * Content management tags.  This should be used to limit the results to those that have a term from the content management tags taxonomy.  Separate terms by commas.
+* Legal issue.  This is a single autocomplete of the legal issues taxonomy.  Filtering on this will include any content tagged to that term or any child term, if a child term exists.
 
-.. note:: because of the way jurisdictions were handled on the D7 site, the counties, cities and zipcodes show what jurisdictions the content is tagged to but the report **does not show** whether the relationship between the jurisdiction (some part of Illinois) includes or excludes the jurisdictions.  As of August 2020, the jurisdiction data is not used in any way on the website's front-end.
+.. note:: because of the way jurisdictions were handled on the D7 site, the counties, cities and zipcodes show what jurisdictions the content is tagged to but the report **does not show** whether the relationship between the jurisdiction (some part of Illinois) includes or excludes the jurisdictions.  The jurisdiction data is not used in any way on the website's front-end.
 
 .. todo:: Determine whether toolbox and portal content should have translation fields.  
 
