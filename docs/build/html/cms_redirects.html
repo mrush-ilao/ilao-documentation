@@ -200,11 +200,15 @@
   <div class="section" id="creating-redirects-between-pages">
 <h1>Creating redirects between pages<a class="headerlink" href="#creating-redirects-between-pages" title="Permalink to this headline">¶</a></h1>
 <p>If you need to redirect one page to another page (for example, “Old article” to “New article”) so that users who access the old url are automatically moved to the new url.</p>
-<p>Step 1: Grab the url you need to redirect from (for example, for an English legal content, legal-information/old-article)
-Step 2: Go to the edit form of the new page that you are redirecting TO
-Step 3: Click the Add URL redirect in the right pane</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You will need to do this for each language that the old article is available in as the path alias is different per language.</p>
+</div>
+<p><strong>Step 1</strong>: Grab the url you need to redirect from (for example, for an English legal content, legal-information/old-article)</p>
+<p><strong>Step 2</strong>: Go to the edit form of the new page that you are redirecting TO</p>
+<p><strong>Step 3</strong>: Click the Add URL redirect in the right pane</p>
 <img alt="_images/cms-url-redirect-pane.png" src="_images/cms-url-redirect-pane.png" />
-<p>Step 4:  Fill out the add URL redirect form</p>
+<p><strong>Step 4</strong>:  Fill out the add URL redirect form</p>
 <ul class="simple">
 <li>Enter the path you are redirecting from.  This is the legal-information/old-article for example</li>
 <li>The To is likely already pre-populated but you likely have to edit it to trigger the autocomplete or you will get a path error on saving.</li>
@@ -215,7 +219,7 @@ Step 3: Click the Add URL redirect in the right pane</p>
 <p class="first admonition-title">Warning</p>
 <p class="last">If you get an error that the redirect will create a loop or is circular STOP and reach out to Gwen for help.  There’s likely an existing redirect that needs to be fixed first.</p>
 </div>
-<p>Step 5:  Clean up the old path alias</p>
+<p><strong>Step 5</strong>:  Clean up the old path alias</p>
 <p>There is a conflict between path aliases and redirect where the path alias will override the redirect.  You need to:</p>
 <ul class="simple">
 <li>Go to the old article</li>
@@ -225,7 +229,7 @@ Step 3: Click the Add URL redirect in the right pane</p>
 <li>Save the content (for legal content, you will need to add a revision log)</li>
 </ul>
 <img alt="_images/cms-url-alias-empty.png" src="_images/cms-url-alias-empty.png" />
-<p>Step 6:  Verify that the redirect works.  If it doesn’t, wait 15 minutes and check again.  If it still isn’t working, reach out to Gwen.</p>
+<p><strong>Step 6</strong>:  Verify that the redirect works.  If it doesn’t, wait 15 minutes for cache to clear and check again.  If it still isn’t working, reach out to Gwen.</p>
 </div>
 
 

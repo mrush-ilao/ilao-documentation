@@ -4,13 +4,17 @@ Creating redirects between pages
 
 If you need to redirect one page to another page (for example, "Old article" to "New article") so that users who access the old url are automatically moved to the new url.
 
-Step 1: Grab the url you need to redirect from (for example, for an English legal content, legal-information/old-article)
-Step 2: Go to the edit form of the new page that you are redirecting TO
-Step 3: Click the Add URL redirect in the right pane
+.. note:: You will need to do this for each language that the old article is available in as the path alias is different per language.
+
+**Step 1**: Grab the url you need to redirect from (for example, for an English legal content, legal-information/old-article)
+
+**Step 2**: Go to the edit form of the new page that you are redirecting TO
+
+**Step 3**: Click the Add URL redirect in the right pane
 
 .. image:: ../assets/cms-url-redirect-pane.png
 
-Step 4:  Fill out the add URL redirect form
+**Step 4**:  Fill out the add URL redirect form
 
 * Enter the path you are redirecting from.  This is the legal-information/old-article for example
 * The To is likely already pre-populated but you likely have to edit it to trigger the autocomplete or you will get a path error on saving.
@@ -19,7 +23,7 @@ Step 4:  Fill out the add URL redirect form
 
 .. warning:: If you get an error that the redirect will create a loop or is circular STOP and reach out to Gwen for help.  There's likely an existing redirect that needs to be fixed first.
 
-Step 5:  Clean up the old path alias
+**Step 5**:  Clean up the old path alias
 
 There is a conflict between path aliases and redirect where the path alias will override the redirect.  You need to:
 
@@ -31,5 +35,6 @@ There is a conflict between path aliases and redirect where the path alias will 
 
 .. image:: ../assets/cms-url-alias-empty.png
 
-Step 6:  Verify that the redirect works.  If it doesn't, wait 15 minutes and check again.  If it still isn't working, reach out to Gwen.
+
+**Step 6**:  Verify that the redirect works.  If it doesn't, wait 15 minutes for cache to clear and check again.  If it still isn't working, reach out to Gwen.
 
