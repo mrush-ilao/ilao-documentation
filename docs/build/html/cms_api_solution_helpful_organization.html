@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Structured content API &mdash; IllinoisLegalAid.org 1 documentation</title>
+  <title>Content API: Legal Solution Helpful Organization &mdash; IllinoisLegalAid.org 1 documentation</title>
   
 
   
@@ -40,8 +40,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Content taxonomy terms" href="cms_api_taxonomy_terms.html" />
-    <link rel="prev" title="Structured Content Types" href="cms_structured_content_types.html" /> 
+    <link rel="next" title="Basic pages" href="basic_pages_cms.html" />
+    <link rel="prev" title="Content API: Solution Result" href="cms_api_solution_result.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -108,7 +108,7 @@
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_overview.html">Structured Content Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content.html">Structured Content Schema</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_types.html">Structured Content Types</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Structured content API</a><ul>
+<li class="toctree-l3 current"><a class="reference internal" href="cms_structured_content_api.html">Structured content API</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="cms_api_taxonomy_terms.html">Content taxonomy terms</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_api_legal_problems_list.html">Content API: Legal Problems List</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_api_legal_problem.html">Content API: Legal Problem</a></li>
@@ -125,7 +125,7 @@
 <li class="toctree-l4"><a class="reference internal" href="cms_api_solution_forms.html">Content API:  Legal Solution Forms Needed</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_api_solution_form.html">Content API:  Legal Form</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_api_solution_result.html">Content API:  Solution Result</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cms_api_solution_helpful_organization.html">Content API: Legal Solution Helpful Organization</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Content API: Legal Solution Helpful Organization</a></li>
 </ul>
 </li>
 </ul>
@@ -155,7 +155,7 @@
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_overview.html">Structured Content Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content.html">Structured Content Schema</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_types.html">Structured Content Types</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Structured content API</a><ul>
+<li class="toctree-l3 current"><a class="reference internal" href="cms_structured_content_api.html">Structured content API</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="cms_api_taxonomy_terms.html">Content taxonomy terms</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_api_legal_problems_list.html">Content API: Legal Problems List</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_api_legal_problem.html">Content API: Legal Problem</a></li>
@@ -172,7 +172,7 @@
 <li class="toctree-l4"><a class="reference internal" href="cms_api_solution_forms.html">Content API:  Legal Solution Forms Needed</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_api_solution_form.html">Content API:  Legal Form</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_api_solution_result.html">Content API:  Solution Result</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cms_api_solution_helpful_organization.html">Content API: Legal Solution Helpful Organization</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Content API: Legal Solution Helpful Organization</a></li>
 </ul>
 </li>
 </ul>
@@ -230,13 +230,15 @@
         
           <li><a href="cms_structured_legal_content.html">Structured Legal Content</a> &raquo;</li>
         
-      <li>Structured content API</li>
+          <li><a href="cms_structured_content_api.html">Structured content API</a> &raquo;</li>
+        
+      <li>Content API: Legal Solution Helpful Organization</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/cms_structured_content_api.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/cms_api_solution_helpful_organization.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -249,28 +251,47 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="structured-content-api">
-<h1>Structured content API<a class="headerlink" href="#structured-content-api" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="cms_api_taxonomy_terms.html">Content taxonomy terms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cms_api_legal_problems_list.html">Content API: Legal Problems List</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cms_api_legal_problem.html">Content API: Legal Problem</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cms_api_solutions_list.html">Content API:  Solutions List</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cms_api_solution.html">Content API: Legal Solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cms_api_questions_list.html">Content API:  Legal Questions List</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cms_api_faq.html">Content API:  Legal Problem FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cms_api_question.html">Content API:  Legal Question</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cms_api_solution_eligibility.html">Content API:  Solution Eligibility Rules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cms_api_solution_information_needed.html">Content API:  Solution Information Needed</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cms_api_how_to_list.html">Content API:  How To List</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cms_api_solution_how_to.html">Content API: Solution How-To</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cms_api_step.html">Content API:  Legal Step</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cms_api_solution_forms.html">Content API:  Legal Solution Forms Needed</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cms_api_solution_form.html">Content API:  Legal Form</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cms_api_solution_result.html">Content API:  Solution Result</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cms_api_solution_helpful_organization.html">Content API: Legal Solution Helpful Organization</a></li>
+  <div class="section" id="content-api-legal-solution-helpful-organization">
+<h1>Content API: Legal Solution Helpful Organization<a class="headerlink" href="#content-api-legal-solution-helpful-organization" title="Permalink to this headline">¶</a></h1>
+<p>Returns a specific helpful organization</p>
+<div class="section" id="function-call">
+<h2>Function call<a class="headerlink" href="#function-call" title="Permalink to this headline">¶</a></h2>
+<p>Method: GET</p>
+</div>
+<div class="section" id="sample-response">
+<h2>Sample response<a class="headerlink" href="#sample-response" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[{</span>
+              <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Illinois Domestic Violence Helpline&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;e862348a-3a3d-11eb-adc1-0242ac120002&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A hotline open 24/7 for people in Illinois who need help with domestic violence.&quot;</span><span class="p">,</span>
+              <span class="nt">&quot;contact&quot;</span><span class="p">:</span> <span class="p">{</span>
+                      <span class="nt">&quot;contactType&quot;</span><span class="p">:</span> <span class="p">[</span>
+                              <span class="s2">&quot;phone&quot;</span>
+                      <span class="p">],</span>
+                      <span class="nt">&quot;telephone&quot;</span><span class="p">:</span> <span class="s2">&quot;(877) 863-6338&quot;</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;areaServed&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                              <span class="nt">&quot;administrativeArea&quot;</span><span class="p">:</span> <span class="s2">&quot;County&quot;</span><span class="p">,</span>
+                              <span class="nt">&quot;locality&quot;</span><span class="p">:</span> <span class="p">[</span>
+                                      <span class="s2">&quot;Kane&quot;</span><span class="p">,</span> <span class="s2">&quot;Lake&quot;</span><span class="p">,</span> <span class="s2">&quot;Will&quot;</span>
+                              <span class="p">]</span>
+                      <span class="p">},</span>
+                      <span class="p">{</span>
+                              <span class="nt">&quot;administrativeArea&quot;</span><span class="p">:</span> <span class="s2">&quot;Postal code&quot;</span><span class="p">,</span>
+                              <span class="nt">&quot;locality&quot;</span><span class="p">:</span> <span class="p">[</span>
+                                      <span class="s2">&quot;60505&quot;</span><span class="p">,</span> <span class="s2">&quot;60506&quot;</span>
+                              <span class="p">]</span>
+                      <span class="p">}</span>
+
+              <span class="p">]</span>
+      <span class="p">}]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>identifier: uuid of the organization; required</li>
 </ul>
 </div>
 </div>
@@ -283,10 +304,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="cms_api_taxonomy_terms.html" class="btn btn-neutral float-right" title="Content taxonomy terms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="basic_pages_cms.html" class="btn btn-neutral float-right" title="Basic pages" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="cms_structured_content_types.html" class="btn btn-neutral float-left" title="Structured Content Types" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="cms_api_solution_result.html" class="btn btn-neutral float-left" title="Content API: Solution Result" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

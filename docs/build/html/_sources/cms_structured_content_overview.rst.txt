@@ -32,9 +32,9 @@ Every problem in our structured content:
     * When it may or may not be used (optional)
     
   * Jurisdiction applicable to the solution.  
-  * Expected result from completing the solution  
+  * Expected result from completing the solution. This may include segments of text and/or structured lists.  
 
-* May have prevention solutions, which are based on the same solution 
+* May have a primary and secondary prevention solutions, which are based on the same solution structure
 * May have related resources    
 
 .. note::  
