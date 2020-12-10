@@ -39,7 +39,7 @@ There is a conflict between path aliases and redirect where the path alias will 
 
 * Repeat the same steps as Step 3 and 4 only this time, the path should be node/[node-id]
 
-.. warning:  This step must be done after the path alias is removed or you will likely get an infinite loop message and/or service unavailable message
+.. warning::  This step must be done after the path alias is removed or you will likely get an infinite loop message and/or service unavailable message
 
 .. image:: ../assets/cms-redirect-node-id.png
 
