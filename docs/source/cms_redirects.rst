@@ -35,6 +35,13 @@ There is a conflict between path aliases and redirect where the path alias will 
 
 .. image:: ../assets/cms-url-alias-empty.png
 
+**Step 6**:  Redirect the actual node.  
 
-**Step 6**:  Verify that the redirect works.  If it doesn't, wait 15 minutes for cache to clear and check again.  If it still isn't working, reach out to Gwen.
+* Repeat the same steps as Step 3 and 4 only this time, the path should be node/[node-id]
+
+.. warning:  This step must be done after the path alias is removed or you will likely get an infinite loop message and/or service unavailable message
+
+.. image:: ../assets/cms-redirect-node-id.png
+
+**Step 7**:  Verify that the redirect works.  If it doesn't, wait 15 minutes for cache to clear and check again.  If it still isn't working, reach out to Gwen.
 
