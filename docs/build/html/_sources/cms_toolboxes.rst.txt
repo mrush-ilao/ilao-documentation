@@ -9,6 +9,7 @@ Toolbox and related content types
    cms_toolboxes_admin
    cms_tools_admin
    cms_tool_step_admin
+   cms_tools_offline_communications
    content_toolbox_use
 
 The toolboxes are a form of legal content designed to help guide a user through a long-term process.  The toolbox includes features that differentiate it from other forms of legal content, including:

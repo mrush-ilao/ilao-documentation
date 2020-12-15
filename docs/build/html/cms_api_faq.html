@@ -126,6 +126,7 @@
 <li class="toctree-l4"><a class="reference internal" href="cms_api_solution_form.html">Content API:  Legal Form</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_api_solution_result.html">Content API:  Solution Result</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_api_solution_helpful_organization.html">Content API: Legal Solution Helpful Organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_content_api.html#authentication">Authentication</a></li>
 </ul>
 </li>
 </ul>
@@ -173,6 +174,7 @@
 <li class="toctree-l4"><a class="reference internal" href="cms_api_solution_form.html">Content API:  Legal Form</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_api_solution_result.html">Content API:  Solution Result</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_api_solution_helpful_organization.html">Content API: Legal Solution Helpful Organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_content_api.html#authentication">Authentication</a></li>
 </ul>
 </li>
 </ul>
@@ -257,9 +259,10 @@
 <div class="section" id="function-call">
 <h2>Function call<a class="headerlink" href="#function-call" title="Permalink to this headline">¶</a></h2>
 <p>Method: GET</p>
+<p>get <a class="reference external" href="https://www.illinoislegalaid.org/services/content/faq?problem=[uuid">https://www.illinoislegalaid.org/services/content/faq?problem=[uuid</a> of Legal Problem]</p>
 </div>
 <div class="section" id="sample-response">
-<h2>Sample Response<a class="headerlink" href="#sample-response" title="Permalink to this headline">¶</a></h2>
+<h2>Sample response<a class="headerlink" href="#sample-response" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span>    <span class="p">[{</span>
     <span class="nt">&quot;questions&quot;</span><span class="p">:</span> <span class="p">[{</span>
                     <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;How long does an Order of Protection last?&quot;</span><span class="p">,</span>
@@ -298,7 +301,7 @@
 <div class="section" id="parameters">
 <h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>problem_identifier = the UUID identifier for the specific problem.  Required and limited to 1.</li>
+<li>problem = the UUID identifier for the specific problem.  Required and limited to 1.</li>
 </ul>
 </div>
 </div>

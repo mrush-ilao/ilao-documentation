@@ -27,3 +27,8 @@ Structured content API
 
 
 
+Authentication
+===================
+
+An authorization token will be required to access the API.
+

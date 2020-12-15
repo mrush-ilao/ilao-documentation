@@ -9,8 +9,10 @@ Function call
 
 Method: GET
 
+get https://www.illinoislegalaid.org/services/content/faq?problem=[uuid of Legal Problem]
 
-Sample Response
+
+Sample response
 =================
 
 .. code-block:: json
@@ -52,4 +54,4 @@ Sample Response
 Parameters
 =============
 
-* problem_identifier = the UUID identifier for the specific problem.  Required and limited to 1.
+* problem = the UUID identifier for the specific problem.  Required and limited to 1.
