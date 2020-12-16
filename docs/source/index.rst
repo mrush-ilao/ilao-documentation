@@ -12,6 +12,7 @@ Welcome to IllinoisLegalAid Documentation's documentation!
 
    design_guide
    block_management
+   people_management
    legal_content_cms
    basic_pages_cms
    testimonials_cms
