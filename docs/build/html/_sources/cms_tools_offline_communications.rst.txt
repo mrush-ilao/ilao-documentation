@@ -31,7 +31,7 @@ A tool step can have multiple ticklers.  Each tickler should have:
 
 Users will receive only one of these.  
 
-.. note::  there is no automated additional text included in the messages sent.  The tickler messages should be complete enough to provide context for a user who may have not been on the site recently.
+.. note::  There is no automated additional text included in the messages sent.  The tickler messages should be complete enough to provide context for a user who may have not been on the site recently.
 
 Scheduling methodology
 ------------------------
