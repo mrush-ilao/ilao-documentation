@@ -19,6 +19,8 @@ The tickler system allows for the sending of email or text messages to community
 
 Configuring Tickler Messages
 =============================
+Ticklers can be added from the edit form of any tool step content.
+
 .. image::  ../assets/cms-toolbox-tickler.png
 
 A tool step can have multiple ticklers.  Each tickler should have:
@@ -50,4 +52,14 @@ A user completes step 1 on 1/1/2021, step 2 on 1/9/2022, the user will receive t
 * On 1/15/2021 from Step 3
 * On 1/22/2021 from Step 2
 * They won't receive the final tickler message unless they complete step 3
+
+Sample messages
+-----------------
+Hello from ILAO!  This is a reminder that you recently completed "Get your police records" from our criminal expungement tool.  The next step is to [name of step].  https://www.illinoislegalaid.org/[link to next step].
+
+Hello from ILAO!  This is a reminder that you have an incomplete step in [name of tool].  https://www.illinoislegalaid.org/[link to next step].
+
+Hello from ILAO!  You recently completed our cannabis tool.  We'd appreciate your feedback on your experience.  https://www.surveymonkey.com/toolbox-survey.
+
+
 
