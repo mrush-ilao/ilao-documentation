@@ -9,5 +9,6 @@ Structured Legal Content
    cms_structured_content_overview
    cms_structured_content
    cms_structured_content_types
+   cms_structured_legal_content_admin
    cms_structured_content_api
   

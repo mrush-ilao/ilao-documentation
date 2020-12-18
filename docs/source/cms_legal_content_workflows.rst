@@ -1,5 +1,5 @@
 ============================
-Workflow Moderation
+Workflow Moderation States
 ============================
 
 Our legal content type has three states:
