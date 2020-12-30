@@ -1,5 +1,5 @@
 ==============================
-Structured Legal Solution
+Legal Solution
 ==============================
 
 

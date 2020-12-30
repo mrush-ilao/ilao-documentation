@@ -37,7 +37,15 @@ Content may be restricted:
 
 .. image:: ../assets/cms-legal-content-restrict.png
 
-..note :: as of September 15, 2020 the code to restrict content based on this field is in progress.
+When these are checked:
+
+* Staff or legal aid members may access content restricted to legal aid members
+* Staff or pro bono members may access content restricted to pro bono members
+* Staff, legal aid members, and pro bono members may view restricted content when both checkboxes are checked.
+
+.. note::  When content is restricted by role, it can also only be edited by users with that role.  A legal aid member editor can not edit content that is restricted to only pro bono members for example.
+
+
 
 Dates on Content
 ==================
