@@ -26,14 +26,14 @@ Organization managers can also manage members within their organization includin
 .. image:: ../assets/otis-org-manager-dashboard.png
 
 
-OTIS manager
+OAS manager
 =============
-OTIS managers can do everything an organization manager can do plus:
+OAS managers can do everything an organization manager can do plus:
 
 * Edit triage rule content
 * Edit intake settings
 
-.. note:: Webform management is accessible from the OTIS manager dashboard but webform management permissions must be set per-user per-webform.  Intake settings are not yet editable by OTIS managers (as of November 2020)
+.. note:: Webform management is accessible from the OTIS manager dashboard but webform management permissions must be set per-user per-webform.  Intake settings are not yet editable by OAS managers (as of November 2020)
 
 .. image:: ../assets/otis-otis-manager-dashboard.png
 
