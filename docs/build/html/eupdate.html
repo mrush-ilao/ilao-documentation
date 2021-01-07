@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Other Website Features &mdash; IllinoisLegalAid.org 1 documentation</title>
+  <title>Automated eUpdate &mdash; IllinoisLegalAid.org 1 documentation</title>
   
 
   
@@ -40,8 +40,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Live Chat" href="livechat.html" />
-    <link rel="prev" title="ILAO OTIS API" href="otis_ilao_api.html" /> 
+    <link rel="prev" title="Live Chat" href="livechat.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -100,9 +99,15 @@
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Other Website Features</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="other_cms_features.html">Other Website Features</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="livechat.html">Live Chat</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eupdate.html">Automated eUpdate</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Automated eUpdate</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#timeframes">Timeframes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#include-content">Include content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sending">Sending</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tracking">Tracking</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -155,13 +160,15 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Other Website Features</li>
+          <li><a href="other_cms_features.html">Other Website Features</a> &raquo;</li>
+        
+      <li>Automated eUpdate</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/other_cms_features.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/eupdate.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -174,25 +181,41 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="other-website-features">
-<h1>Other Website Features<a class="headerlink" href="#other-website-features" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="livechat.html">Live Chat</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="livechat.html#overview">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="livechat.html#on-our-website">On our website</a></li>
-<li class="toctree-l2"><a class="reference internal" href="livechat.html#on-comm100">On Comm100</a></li>
+  <div class="section" id="automated-eupdate">
+<h1>Automated eUpdate<a class="headerlink" href="#automated-eupdate" title="Permalink to this headline">¶</a></h1>
+<p>The automated eUpdate compiles information from the website into a Mailchimp template that is then sent to targeted groups.</p>
+<div class="section" id="timeframes">
+<h2>Timeframes<a class="headerlink" href="#timeframes" title="Permalink to this headline">¶</a></h2>
+<p>The weekly version includes content from the current date minus 7 days
+The monthly version includes content from the current date minus 30 days</p>
+</div>
+<div class="section" id="include-content">
+<h2>Include content<a class="headerlink" href="#include-content" title="Permalink to this headline">¶</a></h2>
+<p>The content includes:</p>
+<ul class="simple">
+<li>Legal content, portal main pages, tools, toolboxes, and ADRM content that has a last revised date within the selected timeframe</li>
+<li>The next 3 upcoming calendar events</li>
+<li>The 3 most recently updated published job postings</li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="eupdate.html">Automated eUpdate</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="eupdate.html#timeframes">Timeframes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eupdate.html#include-content">Include content</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eupdate.html#sending">Sending</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eupdate.html#tracking">Tracking</a></li>
+</div>
+<div class="section" id="sending">
+<h2>Sending<a class="headerlink" href="#sending" title="Permalink to this headline">¶</a></h2>
+<p>The eUpdate is scheduled to send at:</p>
+<ul class="simple">
+<li>9am Tuesdays for weekly subscribers.</li>
+<li>9am on the 1st of the month for weekly subscribers.</li>
 </ul>
-</li>
+<p>Because the scheduled task runs once per hour, it may be delayed and run anytime between 9am and 10am.</p>
+</div>
+<div class="section" id="tracking">
+<h2>Tracking<a class="headerlink" href="#tracking" title="Permalink to this headline">¶</a></h2>
+<p>Links within the eUpdate are tracked using:</p>
+<ul class="simple">
+<li>campaign = date the eUpdate is sent</li>
+<li>source = eUpdate</li>
+<li>medium = email</li>
 </ul>
+<p>These can be tracked in Google Analytics.  Mailchimp also tracks data.</p>
 </div>
 </div>
 
@@ -204,10 +227,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="livechat.html" class="btn btn-neutral float-right" title="Live Chat" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-      
-        <a href="otis_ilao_api.html" class="btn btn-neutral float-left" title="ILAO OTIS API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="livechat.html" class="btn btn-neutral float-left" title="Live Chat" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
