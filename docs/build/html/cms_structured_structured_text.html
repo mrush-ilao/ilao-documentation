@@ -252,6 +252,37 @@
 <li>Legal solution (for eligibility rules and result)</li>
 <li>Legal question (for answers and suggested answers)</li>
 </ul>
+<p>A Structured text block:</p>
+<ul class="simple">
+<li>May have a heading</li>
+<li>Must have a body segment.  The body segment must have at least one of:<ul>
+<li>a Paired markup section</li>
+<li>a List segments section</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You must remove the segment that you are not using in order for the form to validate.</p>
+</div>
+<div class="section" id="paired-markup-section">
+<h2>Paired markup section<a class="headerlink" href="#paired-markup-section" title="Permalink to this headline">¶</a></h2>
+<p>Please see the paired markup documentation on how the paired markup works.</p>
+</div>
+<div class="section" id="list-segments-section">
+<h2>List segments section<a class="headerlink" href="#list-segments-section" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/cms_structured_structured_text_list.png" src="_images/cms_structured_structured_text_list.png" />
+<p>The list segment section consists of:</p>
+<ul class="simple">
+<li>a item list order.  This indicates whether a list should be:<ul>
+<li>in ascending order (items are rendered in the order they exist and numbered 1, 2, 3)</li>
+<li>in descending order (items are rendered in the order they exist and items are numbered 3, 2, 1)</li>
+<li>unordered (items are rendered in the order they exist but with no numbering)</li>
+</ul>
+</li>
+<li>one or more list items.  Each list item is a paired markup segment.</li>
+</ul>
+</div>
 </div>
 
 

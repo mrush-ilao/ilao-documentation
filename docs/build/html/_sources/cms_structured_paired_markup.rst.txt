@@ -5,7 +5,7 @@ Paired Markup
 Paired markup is used in:
 
 * Legal step content
-* Something else
+* Within structured text blocks
 
 Paired markup is used to automatically generate a second copy of any HTML block to strip out formatting and to create footnotes for any inserted urls, which makes it easier to deliver the information on platforms other than websites.
 

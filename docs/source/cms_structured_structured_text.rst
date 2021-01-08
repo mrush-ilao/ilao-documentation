@@ -30,3 +30,17 @@ Please see the paired markup documentation on how the paired markup works.
 
 List segments section
 =======================  
+
+.. image:: ../assets/cms_structured_structured_text_list.png
+
+The list segment section consists of:
+
+* a item list order.  This indicates whether a list should be:
+  
+  * in ascending order (items are rendered in the order they exist and numbered 1, 2, 3)
+  * in descending order (items are rendered in the order they exist and items are numbered 3, 2, 1)
+  * unordered (items are rendered in the order they exist but with no numbering)
+
+* one or more list items.  Each list item is a paired markup segment.
+
+
