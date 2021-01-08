@@ -19,7 +19,7 @@ An OTIS manager or organization manager will need to:
 
 * Add the user to their organization
 * Invite the fast entry user to register on IllinoisLegalAid.org
-* Once the user has registered, give them the fast entry user role in their organization by:
+* Once the user has registered, give them the fast entry user role in your organization:
 
 Click on Manage your organization, locations, and services from your dashboard
 
