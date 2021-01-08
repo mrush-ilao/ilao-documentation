@@ -12,6 +12,8 @@ The component is used in:
 * Legal solution (for eligibility rules and result)
 * Legal question (for answers and suggested answers)
 
+Paired markup and/or list segments in structured text & lists should be sufficiently discrete to work well when delivered over SMS and similar.  It is perfectly okay to use multiple paired markup segments to answer a question or explain an eligibility rule or result.
+
 A Structured text block:
 
 * May have a heading

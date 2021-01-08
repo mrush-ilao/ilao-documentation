@@ -9,12 +9,18 @@ A Legal Problem is the top-level container for structured content. All other typ
 To create a legal problem:
 
 * Add a title. This should describe the problem to be solved or prevented using the embedded solutions.
+* Add a subtype.  This should describe any subcategory of a problem.  For example, if the legal problem is "Being a victim of domestic violence," the subtypes might include:
+
+  * Getting an order of protection against a spouse
+  * Changing or renewing an order of protection against a spouse
+  * Getting a civil no contact order for sexual assault, rape, or sexual abuse.
+  
 * Add a content description.  This is the description that will 
 * Add a meta description.  This is the description that will be used in social media, search indexes, and in any API.  This should be limited to 300 characters.
 * Optionally, add a disambiguation description.  This is used to better describe how one problem is different from a related problem.  Examples:
 
-  * For the problem "Being evicted from an apartment - private housing" it may have a disambiguation description of "This applies when the tenant is not using a housing voucher and/or their rent is not based on their income." to distinguish it from the problem "Being evicted from an apartment - subsidized housing"
-  * For the problem "Being a victim of abuse" it may have a disambiguation description of "This applies when you do not currently have an order of protection and need to protect yourself from abuse" to distinguish it from identically or similarly named problems that have solutions for when the person already has an order of protection.
+  * For the problem "Being evicted from an apartment" with a subtype of "Private housing" it may have a disambiguation description of "This applies when the tenant is not using a housing voucher and/or their rent is not based on their income." to distinguish it from the problem "Being evicted from an apartment" with a subtype of "subsidized housing"
+  * For the problem "Being a victim of abuse" with a subtype of "Getting an order of protection against a spouse," it may have a disambiguation description of "This applies when you do not currently have an order of protection and need to protect yourself from abuse" to distinguish it from other subtypes.
 
 * Tag the legal problem to one or more legal issues. 
 * Select the primary legal category
@@ -50,6 +56,8 @@ The above image includes the legal code for Food stamps from both the LSC proble
 * Optionally, add any content management tags
 * Indicate whether a translation should be requested. 
 * Indicate whether an existing transation should be marked as outdated.
+
+.. note:: A legal problem itself contains no real content.  It is a container for other content.  As such, it does not have the last reviewed/revised dates that other content types have.  It will inherit the oldest reviewed/revised dates from its child components.
 
 Full add/edit form
 ====================

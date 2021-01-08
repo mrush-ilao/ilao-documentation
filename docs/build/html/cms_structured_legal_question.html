@@ -40,7 +40,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Structured content API" href="cms_structured_content_api.html" />
+    <link rel="next" title="Structured Helpful Organization" href="cms_structured_legal_helpful_organization.html" />
     <link rel="prev" title="Legal forms" href="cms_structured_legal_forms.html" /> 
 </head>
 
@@ -110,12 +110,16 @@
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content.html">Structured Content Schema</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_types.html">Structured Content Types</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="cms_structured_legal_content_admin.html">Creating and editing structured content</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_problem.html">Structured Legal Problem</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_solution.html">Structured Legal Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_problem.html">Legal Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_solution.html">Legal Solution</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_howto.html">Legal How-To</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_step.html">Legal Step</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_forms.html">Legal forms</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Legal Question</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_helpful_organization.html">Structured Helpful Organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_paired_markup.html">Paired Markup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_jurisdiction.html">Coverage area</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_structured_text.html">Structured Text &amp; Lists</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_api.html">Structured content API</a></li>
@@ -147,12 +151,16 @@
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content.html">Structured Content Schema</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_types.html">Structured Content Types</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="cms_structured_legal_content_admin.html">Creating and editing structured content</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_problem.html">Structured Legal Problem</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_solution.html">Structured Legal Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_problem.html">Legal Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_solution.html">Legal Solution</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_howto.html">Legal How-To</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_step.html">Legal Step</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_forms.html">Legal forms</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Legal Question</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_helpful_organization.html">Structured Helpful Organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_paired_markup.html">Paired Markup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_jurisdiction.html">Coverage area</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_structured_text.html">Structured Text &amp; Lists</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_api.html">Structured content API</a></li>
@@ -234,7 +242,42 @@
             
   <div class="section" id="legal-question">
 <h1>Legal Question<a class="headerlink" href="#legal-question" title="Permalink to this headline">¶</a></h1>
+<p>Legal questions can potentially “stand alone” or be part of a larger FAQ within a specific legal problem.</p>
+<p>To create a Legal Question:</p>
+<ul class="simple">
+<li>Add the Question title</li>
+<li>Add the Answer as the Accepted Answer.  An accepted answer uses the structured text block.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Answers should be broken into segments, either paired markup or list items to avoid having to deliver large blocks of text over non-web interfaces.  Web interfaces can concatenate segments back together.</p>
+</div>
+<ul class="simple">
+<li>Optionally add one or more suggested answers.</li>
+<li>Add a jurisdiction for the question.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">By adding jurisdictions to questions, we can offer location-specific answers.  For example, in answering “Can I deduct a repair cost?,” the answer may be different in Chicago than in Naperville.  When included in an Illinois problem of “My landlord won’t fix my bathroom,” we can deliver the right Legal Questions to the right users.</p>
+</div>
+<ul class="simple">
+<li>Add a content description.  This is the description that will</li>
+<li>Add a meta description.  This is the description that will be used in social media, search indexes, and in any API.  This should be limited to 300 characters.</li>
+<li>Optionally, add a disambiguation description.  This is used to better describe how one problem is different from a related problem.</li>
+<li>Tag the legal question to one or more legal issues.</li>
+<li>Select the primary legal category</li>
+<li>Add the legal position associated with the problem.</li>
+<li>Tag the legal question to annual updates.</li>
+<li>Optionally, add an author/SME to the question</li>
+<li>Indicate whether a translation should be requested.</li>
+<li>Indicate whether an existing transation should be marked as outdated.</li>
+<li>Optionally, add any content management tags</li>
+<li>Set the last reviewed and last revised date per content policy.</li>
+</ul>
+<div class="section" id="full-add-edit-form">
+<h2>Full add/edit form<a class="headerlink" href="#full-add-edit-form" title="Permalink to this headline">¶</a></h2>
 <img alt="_images/cms-legal-question-edit-form.png" src="_images/cms-legal-question-edit-form.png" />
+</div>
 </div>
 
 
@@ -245,7 +288,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="cms_structured_content_api.html" class="btn btn-neutral float-right" title="Structured content API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="cms_structured_legal_helpful_organization.html" class="btn btn-neutral float-right" title="Structured Helpful Organization" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="cms_structured_legal_forms.html" class="btn btn-neutral float-left" title="Legal forms" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
