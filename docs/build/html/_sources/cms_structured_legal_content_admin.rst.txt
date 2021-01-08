@@ -22,7 +22,7 @@ Structured legal content needs to be created in a specific ways as certain conte
 
 .. toctree::
    :maxdepth: 2
-   :caption: There are 7 structured content types
+   :caption: There are 7 structured content types:
 
    cms_structured_legal_problem
    cms_structured_legal_solution
@@ -32,5 +32,12 @@ Structured legal content needs to be created in a specific ways as certain conte
    cms_structured_legal_question
    cms_structured_legal_helpful_organization
    
+.. toctree::
+   :maxdepth: 2
+   :caption: They often rely on:
+
+   cms_structured_paired_markup
+   cms_structured_jurisdiction
+   cms_structured_structured_text   
    
 
