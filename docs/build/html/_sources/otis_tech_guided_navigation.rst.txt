@@ -213,6 +213,11 @@ Non-field Elements
 
 Instructions
 ^^^^^^^^^^^^^^^
+Instructions will have:
+
+* a type of "instructions"
+* an html_value
+* may have display logic
 
 Headline
 ^^^^^^^^^
@@ -220,13 +225,17 @@ A headline is just HTMl-formatted text. A headline will have:
 
 * a type of headline
 * an html_value 
+* may have display logic
 
 
 
 Display logic
 ---------------------
 
-When the element's has_display_logic is true, the display_logic property will have data.
+When the element's has_display_logic is true, the display_logic property will have data.  There are two use cases we have to be concerned with:
+
+* Display logic dependent on a previous form submission
+* Display logic dependent on a previous field submission in the current form.
 
 The display_logic property will be an object with:
 * a condition property. Expected values are AND, OR. When there are multiple rules, this condition sits between them
@@ -260,7 +269,10 @@ In the above, the element would display if the mr_ilao_legal_issue_58 had a valu
 Validation Rules
 ------------------
 
-Validation rules for an element, if not empty, is an array of rules.  Each element is an object with a proprety of type.  A type of required is the most common and indicates that a form element should be required.
+Validation rules for an element, if not empty, is an array of rules.
+
+Each element is an object with a proprety of type.  A type of required is the most common and indicates that a form element should be required.
+
 
 
 

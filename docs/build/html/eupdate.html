@@ -102,10 +102,11 @@
 <li class="toctree-l1 current"><a class="reference internal" href="other_cms_features.html">Other Website Features</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="livechat.html">Live Chat</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Automated eUpdate</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#timeframes">Timeframes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#include-content">Include content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#who-gets-the-eupdate">Who Gets the eUpdate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-in-the-eupdate">What is in the eUpdate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#sending">Sending</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#tracking">Tracking</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#testing">Testing</a></li>
 </ul>
 </li>
 </ul>
@@ -184,13 +185,22 @@
   <div class="section" id="automated-eupdate">
 <h1>Automated eUpdate<a class="headerlink" href="#automated-eupdate" title="Permalink to this headline">¶</a></h1>
 <p>The automated eUpdate compiles information from the website into a Mailchimp template that is then sent to targeted groups.</p>
-<div class="section" id="timeframes">
-<h2>Timeframes<a class="headerlink" href="#timeframes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="who-gets-the-eupdate">
+<h2>Who Gets the eUpdate<a class="headerlink" href="#who-gets-the-eupdate" title="Permalink to this headline">¶</a></h2>
+<p>Any registered user of IllinoisLegalAid.org can get the eUpdate.  When creating an account:</p>
+<ul class="simple">
+<li>Legal aid members default newsletter settings to select the eUpdate every Tuesday morning</li>
+<li>All others membership types default newsletter settings to select the eUpdate every month.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Users may unselect the defaults before saving their account.</p>
+</div>
+</div>
+<div class="section" id="what-is-in-the-eupdate">
+<h2>What is in the eUpdate<a class="headerlink" href="#what-is-in-the-eupdate" title="Permalink to this headline">¶</a></h2>
 <p>The weekly version includes content from the current date minus 7 days
 The monthly version includes content from the current date minus 30 days</p>
-</div>
-<div class="section" id="include-content">
-<h2>Include content<a class="headerlink" href="#include-content" title="Permalink to this headline">¶</a></h2>
 <p>The content includes:</p>
 <ul class="simple">
 <li>Legal content, portal main pages, tools, toolboxes, and ADRM content that has a last revised date within the selected timeframe</li>
@@ -216,6 +226,14 @@ The monthly version includes content from the current date minus 30 days</p>
 <li>medium = email</li>
 </ul>
 <p>These can be tracked in Google Analytics.  Mailchimp also tracks data.</p>
+</div>
+<div class="section" id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h2>
+<p>There is a check group in the master segment that is made up of Gwen and various members of the QED42 team.  This is the default send-to on all non-production instances to prevent accidentally sending from these machines to all users.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Mailchimp campaigns sent to the check group may be safely deleted.</p>
+</div>
 </div>
 </div>
 
