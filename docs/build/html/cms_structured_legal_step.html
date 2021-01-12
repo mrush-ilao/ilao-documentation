@@ -110,13 +110,16 @@
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content.html">Structured Content Schema</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_types.html">Structured Content Types</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="cms_structured_legal_content_admin.html">Creating and editing structured content</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_problem.html">Structured Legal Problem</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_solution.html">Structured Legal Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_problem.html">Legal Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_solution.html">Legal Solution</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_howto.html">Legal How-To</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Legal Step</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_forms.html">Legal forms</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_question.html">Legal Question</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_helpful_organization.html">Structured Helpful Organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_paired_markup.html">Paired Markup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_jurisdiction.html">Coverage area</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_structured_text.html">Structured Text &amp; Lists</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_api.html">Structured content API</a></li>
@@ -148,13 +151,16 @@
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content.html">Structured Content Schema</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_types.html">Structured Content Types</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="cms_structured_legal_content_admin.html">Creating and editing structured content</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_problem.html">Structured Legal Problem</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_solution.html">Structured Legal Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_problem.html">Legal Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_solution.html">Legal Solution</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_howto.html">Legal How-To</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Legal Step</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_forms.html">Legal forms</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_question.html">Legal Question</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_helpful_organization.html">Structured Helpful Organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_paired_markup.html">Paired Markup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_jurisdiction.html">Coverage area</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_structured_text.html">Structured Text &amp; Lists</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_api.html">Structured content API</a></li>
@@ -236,7 +242,87 @@
             
   <div class="section" id="legal-step">
 <h1>Legal Step<a class="headerlink" href="#legal-step" title="Permalink to this headline">¶</a></h1>
+<p>Legal steps are part of Legal How-Tos which are part of Legal Solutions.</p>
+<p>A step is composed of 1 or more directions and 0 or more tips.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Legal steps can be re-used in multiple how-tos.</p>
+</div>
+<div class="section" id="direction-vs-tip">
+<h2>Direction vs Tip<a class="headerlink" href="#direction-vs-tip" title="Permalink to this headline">¶</a></h2>
+<p>A direction is “A direction indicating a <strong>single</strong> action to do in the instructions for how to achieve a result.”</p>
+<p>A tip is “An explanation in the instructions for how to achieve a result. It provides supplementary information about a technique, supply, author’s preference, etc. It can explain what could be done, or what should not be done, but doesn’t specify what should be done.”  What should be done is a direction.</p>
+<p>For example, the step “Move out and clean the apartment” might have:</p>
+<ul class="simple">
+<li>a Direction of “Move all of your items from the unit.”</li>
+<li>a Direction of “Clean the unit thoroughly”</li>
+<li>a Tip of “This includes all floors and surfaces, the refrigerator, the freezer, the oven, and all bathrooms.”</li>
+<li>a Direction of “Check the written lease, if there is one, to make sure you have followed all of the instructions for moving out.”</li>
+</ul>
+</div>
+<div class="section" id="bulleted-lists">
+<h2>Bulleted lists<a class="headerlink" href="#bulleted-lists" title="Permalink to this headline">¶</a></h2>
+<p>Bulleted lists are not supported within a Direction or Tip as direction and tips are themselves list items within a step.</p>
+<p>Return all of the keys to the landlord right after you move. If you do not, the landlord may charge you. If you return the keys to a leasing office, have the landlord write up a receipt acknowledging that the keys have been returned. If you are returning keys by mail, send the keys with a tracking number and keep that tracking number for your records.</p>
+<p>This could be structured as:</p>
+<ul class="simple">
+<li>A Direction of “Return all of the keys to the landlord right after you move.”</li>
+<li>A Tip of “If you do not, the landlord may charge you.”</li>
+<li>A Direction of “Get proof that you returned the keys.”</li>
+<li>A Tip with 2 body elements of “If you return the keys to a leasing office, have the landlord write up a receipt acknowledging that the keys have been returned.”and “If you are returning keys by mail, send the keys with a tracking number and keep that tracking number for your records.”</li>
+</ul>
+<p>This might render on the web as:</p>
+<ol class="arabic simple">
+<li>Return all of the keys to the landlord right after you move. If you do not, the landlord may charge you.</li>
+<li>Get proof that you returned the keys. If you return the keys to a leasing office, have the landlord write up a receipt acknowledging that the keys have been returned. If you are returning keys by mail, send the keys with a tracking number and keep that tracking number for your records.</li>
+</ol>
+<p>and over SMS may be:</p>
+<ul class="simple">
+<li>Segment 1:  Return all of the keys to the landlord right after you move.</li>
+<li>Segment 2:  Tip:  If you do not, the landlord may charge you.  Reply N for the next direction</li>
+<li>Segment 3:  Get proof that you returned the keys.</li>
+<li>Segment 4:  Tip:  If you return the keys to a leasing office, have the landlord write up a receipt acknowledging that the keys have been returned.</li>
+<li>If you are returning keys by mail, send the keys with a tracking number and keep that tracking number for your records.</li>
+</ul>
+</div>
+<div class="section" id="creating-or-editing-a-step">
+<h2>Creating or editing a step<a class="headerlink" href="#creating-or-editing-a-step" title="Permalink to this headline">¶</a></h2>
+<p>Every step:</p>
+<ul class="simple">
+<li>must have a title; this</li>
+<li>should have a content description</li>
+<li>should have a meta description</li>
+<li>should have one or more legal issues</li>
+<li>should have a primary legal category</li>
+<li>one or more step blocks (see below)</li>
+<li>should have a legal position</li>
+<li>may have an annual update selection</li>
+<li>may have an author/SME</li>
+<li>may request a translation</li>
+<li>may mark translation as outdated</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">While content description, meta description, legal issues, primary legal category, and legal position are not technically required, we recommend including them for future-proofing and filtering/reporting purposes.</p>
+</div>
+<div class="section" id="step-block">
+<h3>Step block<a class="headerlink" href="#step-block" title="Permalink to this headline">¶</a></h3>
+<p>A  step block consists of:</p>
+<ul class="simple">
+<li>a type (direction or tip)</li>
+<li>one or more body elements, using paired markup.  Using multiple body elements allows us to better segment content over non-web channels.</li>
+<li>reference URLS (links within the content)</li>
+</ul>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">Determine whether the metadata fields should be required, whether last revised/reviewed dates should be added (or is at the how-to level sufficient) and whether we need the referenceUrls field (those were added before we had paired markup).</p>
+</div>
+</div>
+</div>
+<div class="section" id="full-add-edit-step-form">
+<h2>Full add/edit step form<a class="headerlink" href="#full-add-edit-step-form" title="Permalink to this headline">¶</a></h2>
 <img alt="_images/cms-legal-step-edit.png" src="_images/cms-legal-step-edit.png" />
+</div>
 </div>
 
 

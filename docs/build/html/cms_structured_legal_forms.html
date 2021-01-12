@@ -110,13 +110,16 @@
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content.html">Structured Content Schema</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_types.html">Structured Content Types</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="cms_structured_legal_content_admin.html">Creating and editing structured content</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_problem.html">Structured Legal Problem</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_solution.html">Structured Legal Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_problem.html">Legal Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_solution.html">Legal Solution</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_howto.html">Legal How-To</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_step.html">Legal Step</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Legal forms</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_question.html">Legal Question</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_helpful_organization.html">Structured Helpful Organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_paired_markup.html">Paired Markup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_jurisdiction.html">Coverage area</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_structured_text.html">Structured Text &amp; Lists</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_api.html">Structured content API</a></li>
@@ -148,13 +151,16 @@
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content.html">Structured Content Schema</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_types.html">Structured Content Types</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="cms_structured_legal_content_admin.html">Creating and editing structured content</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_problem.html">Structured Legal Problem</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_solution.html">Structured Legal Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_problem.html">Legal Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_solution.html">Legal Solution</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_howto.html">Legal How-To</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_step.html">Legal Step</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Legal forms</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_question.html">Legal Question</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_helpful_organization.html">Structured Helpful Organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_paired_markup.html">Paired Markup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_jurisdiction.html">Coverage area</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_structured_text.html">Structured Text &amp; Lists</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_api.html">Structured content API</a></li>
@@ -236,7 +242,59 @@
             
   <div class="section" id="legal-forms">
 <h1>Legal forms<a class="headerlink" href="#legal-forms" title="Permalink to this headline">¶</a></h1>
+<p>Legal forms can be part of a legal solution. Legal forms should be the <strong>specific</strong> form, not to a form generator packet.</p>
+<div class="section" id="relationship-to-easy-forms">
+<h2>Relationship to Easy Forms<a class="headerlink" href="#relationship-to-easy-forms" title="Permalink to this headline">¶</a></h2>
+<p>Easy forms are our guided interviews that generate one or more court forms.  An Easy form may be referenced as the form prep program that generates the specific legal form.</p>
+<p>For example, our Order of Protection Easy Form generates:</p>
+<ul class="simple">
+<li>Petition for Order of Protection</li>
+<li>Emergency Order of Protection</li>
+<li>Order of Protection</li>
+<li>Summons (Protective Orders)</li>
+<li>Additional Incidents of Abuse</li>
+<li>Additional Case Information</li>
+<li>Confidential Name &amp; Location of the School or Daycare</li>
+<li>Affidavit of Parenting Time Supervisor</li>
+</ul>
+<p>Each of these would be created as Legal forms and would link to the Easy form.</p>
+<img alt="_images/cms-structured-form-example.png" src="_images/cms-structured-form-example.png" />
+</div>
+<div class="section" id="relationship-to-statewide-fillable-pdfs">
+<h2>Relationship to Statewide fillable PDFs<a class="headerlink" href="#relationship-to-statewide-fillable-pdfs" title="Permalink to this headline">¶</a></h2>
+<p>Like Easy forms, PDF is a type of form prep program that can be added to a legal form.</p>
+</div>
+<div class="section" id="creating-and-editing-a-legal-form">
+<h2>Creating and editing a legal form<a class="headerlink" href="#creating-and-editing-a-legal-form" title="Permalink to this headline">¶</a></h2>
+<p>A legal form should have:</p>
+<ul class="simple">
+<li>A title (the name of the form)</li>
+<li>A content and meta description</li>
+<li>A form can be generated by using section with 1 or more generators:<ul>
+<li>The name of the Easy form or PDF that can be used to complete the form</li>
+<li>The url to the form</li>
+<li>The link text (this is optional)</li>
+<li>The form preparation program type.  This is an <a class="reference external" href="https://www.illinoislegalaid.org/admin/structure/taxonomy_manager/voc/form_prep_programs">ILAO taxonomy</a> that includes:<ul>
+<li>A2J interview</li>
+<li>Docassemble</li>
+<li>HotDocs</li>
+<li>PDF</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Optionally, indicate the form use.  This is particularly helpful when the form is part of a larger package and is only sometimes generated.  For example:  This form is required when there are minor children in a divorce-related case.</li>
+<li>Indicate the jurisdiction for the legal form.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Both legal forms and legal solutions have jurisdiction tags.  It is possible for a solution to be statewide and have legal forms that apply only to a specific jurisdiction.  It is not necessary to create individual solutions for jurisdictions unless the solution content itself varies by zip code, city, county, or state.</p>
+</div>
+</div>
+<div class="section" id="full-add-edit-form">
+<h2>Full add/edit form<a class="headerlink" href="#full-add-edit-form" title="Permalink to this headline">¶</a></h2>
 <img alt="_images/cms-structured-legal-forms-edit.png" src="_images/cms-structured-legal-forms-edit.png" />
+</div>
 </div>
 
 

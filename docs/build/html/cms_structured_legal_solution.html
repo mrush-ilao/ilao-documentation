@@ -117,6 +117,9 @@
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_forms.html">Legal forms</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_question.html">Legal Question</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_helpful_organization.html">Structured Helpful Organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_paired_markup.html">Paired Markup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_jurisdiction.html">Coverage area</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_structured_text.html">Structured Text &amp; Lists</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_api.html">Structured content API</a></li>
@@ -155,6 +158,9 @@
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_forms.html">Legal forms</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_question.html">Legal Question</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_helpful_organization.html">Structured Helpful Organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_paired_markup.html">Paired Markup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_jurisdiction.html">Coverage area</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_structured_text.html">Structured Text &amp; Lists</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_api.html">Structured content API</a></li>
@@ -236,7 +242,124 @@
             
   <div class="section" id="legal-solution">
 <h1>Legal Solution<a class="headerlink" href="#legal-solution" title="Permalink to this headline">¶</a></h1>
+<p>A legal solution is tied to one or more legal problems and features:</p>
+<ul class="simple">
+<li>content metadata</li>
+<li>a solution type</li>
+<li>0 or more legal forms</li>
+<li>0 or more pieces of needed information</li>
+<li>Legal difficulty (optional)</li>
+<li>Estimated time required to complete the entire process</li>
+<li>One or more eligibility rules to be able to use a specific solution</li>
+<li>A jurisdiction</li>
+<li>Zero or more helpful organizations</li>
+<li>Zero or more legal organizations</li>
+<li>One or more HowTos</li>
+<li>A result</li>
+</ul>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">Determine if we should have information needed when we have tools/supplies in the how-to; This is especially important if the information needed might vary at a local level.  How Tos should be required.</p>
+</div>
+<div class="section" id="eligibility-rules">
+<h2>Eligibility Rules<a class="headerlink" href="#eligibility-rules" title="Permalink to this headline">¶</a></h2>
+<p>Eligibility rules use the structured text block.  Each eligibility rule should have its own structured text block.</p>
+<div class="section" id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<p>The single eligiblity rule below</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>To use this program, you or the person you are filing the order against must:<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Live in the county you are filing the request in;<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>The abuse must have taken place in the county;<span class="ni">&amp;nbsp;</span><span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>OR<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+       <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>You must be living in the county temporarily to avoid abuse elsewhere<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>might be created:</p>
+<ul class="simple">
+<li>with a heading of “One of the following must be true”</li>
+<li>with an unordered list of 3 list items:</li>
+<li>You or the person you are filing the order against must live in the county you are filing the request in</li>
+<li>The abuse must have taken place in the county</li>
+<li>You must be living in the county temporarily to avoid abuse elsewhere</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Because these may be rendered differently in different services, we’ve removed any punctuation at the end of each list item and have removed any AND/OR parts (instead, the header makes that case clear).</p>
+</div>
+</div>
+</div>
+<div class="section" id="jurisdiction">
+<h2>Jurisdiction<a class="headerlink" href="#jurisdiction" title="Permalink to this headline">¶</a></h2>
+<p>Structured content supports jurisdiction across different pieces of data.  A solution may have a jurisdiction that is broader than an attached How-to, attached legal forms, or attached organization.  A solution, even if it has How-tos that vary by location or forms that apply only to some jurisdictions, can still be marked at a broader jurisdiction so long as:</p>
+<ul class="simple">
+<li>the eligibility rules apply to the solution jurisdiction</li>
+<li>the legal difficulty varies by location</li>
+<li>the result varies by location</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Example:  The steps for getting an order of protection are different in Cook county than in the rest of the states.  McHenry county requires a specific form that no one else does.  But the eligibility rules, difficulty, and result is the same across Illinois.  The solution should be set to Illinois while there should be 2 How-tos (one for Cook county, one for the other 101 counties), and the McHenry form should be specificially tagged to McHenry county.</p>
+</div>
+</div>
+<div class="section" id="legal-organization-vs-helpful-organization">
+<h2>Legal organization vs Helpful organization<a class="headerlink" href="#legal-organization-vs-helpful-organization" title="Permalink to this headline">¶</a></h2>
+<p>Solutions support both helpful organizations and legal organizations.</p>
+<p>A helpful organization is one that exists as a structured helpful organization.</p>
+<p>Structured helpful organizations have much less information in our system.  These are organizations that do not belong in our organization system but that may still be helpful to users  This might include:</p>
+<ul class="simple">
+<li>DV shelters and/or hotlines</li>
+<li>Social services</li>
+<li>Government offices</li>
+</ul>
+<p>A legal organization is one that exists in ILAO’s organization system.  Rather than replicate the data as a structured helpful organization, these can be referenced directly as needed in the legal organization field.</p>
+</div>
+<div class="section" id="result">
+<h2>Result<a class="headerlink" href="#result" title="Permalink to this headline">¶</a></h2>
+<p>The result also uses the structured text block.  A result should describe the outcome when a solution is completed.  It should be broken down to best support delivery across channels.</p>
+<div class="section" id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>When a judge signs an Order of Protection, it makes it illegal for the abuser to do or not do certain things. For example, a judge can order the abuser to:<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Stop abusive acts;<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Stay away from the victim and other people protected by the order;<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Stop contacting the victim via telephone calls, mail, email, written notes, or third parties;<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Stay away from the victim&#39;s home, school, or work;<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Attend counseling;<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Pay child support;<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Return or stay away from the property; and<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Move out of a home they share with the victim.<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>A judge can prevent an abuser from viewing the phone records of the victim and any minor child in the victim&#39;s custody. The <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>Order of Protection <span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>can require phone service providers to transfer service so that the victim can keep the same phone number. The victim will have to pay the bill.<span class="ni">&amp;nbsp;</span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>A judge can also change a person&#39;s parental duties<span class="ni">&amp;nbsp;</span>(custody/visitation) in an<span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span> Order of Protection<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>This segment above may be structured as:</p>
+<ul class="simple">
+<li>Structured text block 1:<ul>
+<li>Body markup: When a judge signs an Order of Protection, it makes it illegal for the abuser to do or not do certain things. For example, a judge can order the abuser to:</li>
+<li>List segments - unordered</li>
+<li>A paired markup segment for each list item.<ul>
+<li>Pay child support</li>
+<li>Return or stay away from the property</li>
+<li>Move out of a home they share with the victim</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Structured text block 2 with body markup of “A judge can prevent an abuser from viewing the phone records of the victim and any minor child in the victim’s custody. The &lt;em&gt;Order of Protection &lt;/em&gt;can require phone service providers to transfer service so that the victim can keep the same phone number. The victim will have to pay the bill.”</li>
+<li>Structured text block 3 with body markup of “A judge can also change a person’s parental duties (custody/visitation) in an Order of Protection.”</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Like in the example for eligibility rules, we have stripped off punctuation and and/or.  Basic html markup like italics can be used in body markup but will be stripped in the plain text version.</p>
+</div>
+</div>
+</div>
+<div class="section" id="full-add-edit-form">
+<h2>Full add/edit form<a class="headerlink" href="#full-add-edit-form" title="Permalink to this headline">¶</a></h2>
 <img alt="_images/cms-legal-solution-edit-form.png" src="_images/cms-legal-solution-edit-form.png" />
+</div>
 </div>
 
 
