@@ -16,7 +16,7 @@ To use:
 * Add the body (with Markup)
 * Do not complete the body (Plain Text)
 
-The plain text will automatically be created and visible when editing the content.
+The plain text will automatically be created and visible when editing the content. **It can not be directly edited.**
 
 .. note:: If you use the url lookup to link to legal content, it will automatically add the domain prefix (https://www.illinoislegalaid.org on production, for example) when creating the plain text.
 

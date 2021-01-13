@@ -21,7 +21,7 @@ A Structured text block:
 * May have a heading
 * Must have a body segment.  The body segment must have at least one of:
 
-  * a Paired markup section
+  * a :ref:`cms-paired-markup` section
   * a List segments section
   
 .. note:: You must remove the segment that you are not using in order for the form to validate.
@@ -30,7 +30,7 @@ A Structured text block:
 Paired markup section
 =======================
 
-Please see the paired markup documentation on how the paired markup works.
+Please see the :ref:`cms-paired-markup` documentation on how to use paired markup.
 
 List segments section
 =======================  

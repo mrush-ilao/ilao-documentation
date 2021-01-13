@@ -29,7 +29,7 @@ A solution type are defined by our `solution types taxonomy <https://www.illinoi
 
 Eligibility rules
 ===================
-Eligibility rules use the structured text block.  Each eligibility rule should have its own structured text block.
+Eligibility rules use the :ref:`cms-structured-text` block.  Each eligibility rule should have its own structured text block.
 
 Examples
 ----------
@@ -57,7 +57,7 @@ might be created:
 
 Jurisdiction
 ================
-Structured content supports jurisdiction across different pieces of data.  A solution may have a jurisdiction that is broader than an attached How-to, attached legal forms, or attached organization.  A solution, even if it has How-tos that vary by location or forms that apply only to some jurisdictions, can still be marked at a broader jurisdiction so long as:
+Structured content supports jurisdiction across different pieces of data. See :ref:`cms-coverage-area` documentation.  A solution may have a jurisdiction that is broader than an attached How-to, attached legal forms, or attached organization.  A solution, even if it has How-tos that vary by location or forms that apply only to some jurisdictions, can still be marked at a broader jurisdiction so long as:
 
 * the eligibility rules apply to the solution jurisdiction
 * the legal difficulty varies by location
@@ -68,7 +68,7 @@ Structured content supports jurisdiction across different pieces of data.  A sol
 Legal organization vs Helpful organization
 ===========================================
 
-Solutions support both helpful organizations and legal organizations.
+Solutions support both :ref:`cms-legal-helpful-org` and legal organizations.
 
 A helpful organization is one that exists as a structured helpful organization.  
 
@@ -78,7 +78,7 @@ Structured helpful organizations have much less information in our system.  Thes
 * Social services
 * Government offices
 
-A legal organization is one that exists in ILAO's organization system.  Rather than replicate the data as a structured helpful organization, these can be referenced directly as needed in the legal organization field.
+A legal organization is one that exists in `ILAO's organization system <https://www.illinoislegalaid.org/admin/group>`_.  Rather than replicate the data as a structured helpful organization, these can be referenced directly as needed in the legal organization field.
 
 Result
 ==========

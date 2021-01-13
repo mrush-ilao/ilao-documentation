@@ -1,3 +1,5 @@
+.. _cms-legal-helpful-org:
+
 ================================
 Structured Helpful Organization
 ================================

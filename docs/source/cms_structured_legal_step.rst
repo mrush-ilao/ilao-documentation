@@ -73,7 +73,7 @@ Step block
 A  step block consists of:
 
 * a type (direction or tip)
-* one or more body elements, using paired markup.  Using multiple body elements allows us to better segment content over non-web channels.  
+* one or more body elements, using :ref:`cms-paired-markup`.  Using multiple body elements allows us to better segment content over non-web channels.  
 * reference URLS (links within the content)
 
 .. todo:: Determine whether the metadata fields should be required, whether last revised/reviewed dates should be added (or is at the how-to level sufficient) and whether we need the referenceUrls field (those were added before we had paired markup).
