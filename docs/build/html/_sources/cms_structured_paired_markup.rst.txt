@@ -1,3 +1,5 @@
+.. _cms-paired-markup:
+
 ===================
 Paired Markup
 ===================

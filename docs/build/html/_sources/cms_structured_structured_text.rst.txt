@@ -1,3 +1,5 @@
+.. _cms-structured-text:
+
 ============================
 Structured Text & Lists
 ============================

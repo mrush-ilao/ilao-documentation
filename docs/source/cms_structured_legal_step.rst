@@ -1,8 +1,10 @@
+.. _cms-legal-step:
+
 ===================
 Legal Step
 ===================
 
-Legal steps are part of Legal How-Tos which are part of Legal Solutions. 
+Legal steps are part of a :ref:`cms-legal-howto` which are part of a :ref:`cms-legal-solution`. 
 
 A step is composed of 1 or more directions and 0 or more tips.
 

@@ -1,8 +1,10 @@
+.. _cms-legal-question:
+
 ======================
 Legal Question
 ======================
 
-Legal questions can potentially "stand alone" or be part of a larger FAQ within a specific legal problem.
+Legal questions can potentially "stand alone" or be part of a larger FAQ within a specific  :ref:`cms-legal-problem`.
 
 To create a Legal Question:
 

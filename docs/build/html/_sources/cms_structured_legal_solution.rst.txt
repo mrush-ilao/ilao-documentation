@@ -1,12 +1,14 @@
+.. _cms-legal-solution:
+
 ==============================
 Legal Solution
 ==============================
 
-A legal solution is tied to one or more legal problems and features:
+A legal solution is tied to one or more legal problems (see :ref:`cms-legal-problem`) and features:
 
 * content metadata
 * a solution type
-* 0 or more legal forms
+* 0 or more :ref:`cms-legal-forms`
 * 0 or more pieces of needed information 
 * Legal difficulty (optional)
 * Estimated time required to complete the entire process
@@ -19,13 +21,19 @@ A legal solution is tied to one or more legal problems and features:
 
 .. todo:: Determine if we should have information needed when we have tools/supplies in the how-to; This is especially important if the information needed might vary at a local level.  How Tos should be required.
 
-Eligibility Rules
+Solution type
+=================
+
+A solution type are defined by our `solution types taxonomy <https://www.illinoislegalaid.org/admin/structure/taxonomy_manager/voc/solution_types>`_.
+
+
+Eligibility rules
 ===================
 Eligibility rules use the structured text block.  Each eligibility rule should have its own structured text block.
 
 Examples
 ----------
-The single eligiblity rule below
+The single eligibility rule below
 
 .. code-block:: html
 

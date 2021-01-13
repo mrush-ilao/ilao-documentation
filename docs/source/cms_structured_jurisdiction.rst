@@ -1,3 +1,5 @@
+.. _cms-coverage-area:
+
 ===================
 Coverage area
 ===================

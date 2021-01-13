@@ -1,3 +1,5 @@
+.. _cms-legal-howto:
+
 ======================
 Legal How-To
 ======================
@@ -11,6 +13,7 @@ A legal how-to is a container made up of:
 * tools
 * jurisdiction
 
+It is attached to one or more Legal solutions.  See the :ref:`cms-legal-solution` documentation.
 
 Times
 =========
@@ -90,7 +93,7 @@ Yield is likely not applicable but is part of the standard.  It's used to indica
 Jurisdiction
 ===============
 
-Each how-to should be coded to the jurisdiction(s) it applies to. See coverage area. A solution can have multiple how-tos, each with different jurisdictions.  Individual steps are not tagged by jurisdiction.
+Each how-to should be coded to the jurisdiction(s) it applies to. See :ref:`cms-coverage-area`. A :ref:`cms-legal-solution` can have multiple how-tos, each with different jurisdictions.  Individual steps are not tagged by jurisdiction.
 
 For example:
 

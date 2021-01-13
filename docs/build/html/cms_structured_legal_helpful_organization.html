@@ -40,7 +40,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Structured content API" href="cms_structured_content_api.html" />
+    <link rel="next" title="Paired Markup" href="cms_structured_paired_markup.html" />
     <link rel="prev" title="Legal Question" href="cms_structured_legal_question.html" /> 
 </head>
 
@@ -110,13 +110,16 @@
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content.html">Structured Content Schema</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_types.html">Structured Content Types</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="cms_structured_legal_content_admin.html">Creating and editing structured content</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_problem.html">Structured Legal Problem</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_solution.html">Structured Legal Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_problem.html">Legal Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_solution.html">Legal Solution</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_howto.html">Legal How-To</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_step.html">Legal Step</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_forms.html">Legal forms</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_question.html">Legal Question</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Structured Helpful Organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_paired_markup.html">Paired Markup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_jurisdiction.html">Coverage area</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_structured_text.html">Structured Text &amp; Lists</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_api.html">Structured content API</a></li>
@@ -148,13 +151,16 @@
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content.html">Structured Content Schema</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_types.html">Structured Content Types</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="cms_structured_legal_content_admin.html">Creating and editing structured content</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_problem.html">Structured Legal Problem</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_solution.html">Structured Legal Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_problem.html">Legal Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_solution.html">Legal Solution</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_howto.html">Legal How-To</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_step.html">Legal Step</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_forms.html">Legal forms</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_structured_legal_question.html">Legal Question</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Structured Helpful Organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_paired_markup.html">Paired Markup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_jurisdiction.html">Coverage area</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_structured_text.html">Structured Text &amp; Lists</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_api.html">Structured content API</a></li>
@@ -236,6 +242,65 @@
             
   <div class="section" id="structured-helpful-organization">
 <h1>Structured Helpful Organization<a class="headerlink" href="#structured-helpful-organization" title="Permalink to this headline">¶</a></h1>
+<p>Helpful organizations can be added to structured legal content within a solution.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Do not add an existing <a class="reference external" href="https://www.illinoislegalaid.org/admin/group">legal organization</a>  as a helpful organization.  Within a solution, you can reference existing legal organizations directly.</p>
+</div>
+<div class="section" id="what-is-a-helpful-organization">
+<h2>What is a helpful organization?<a class="headerlink" href="#what-is-a-helpful-organization" title="Permalink to this headline">¶</a></h2>
+<p>These are organizations that do not qualify for inclusion within our organization/locations/services system but that may still be helpful to users  This might include:</p>
+<ul class="simple">
+<li>DV shelters and/or hotlines</li>
+<li>Social services</li>
+<li>Government offices</li>
+</ul>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">When to include a helpful organization in structured content should be defined as part of overall content governance.</p>
+</div>
+</div>
+<div class="section" id="creating-a-helpful-organization">
+<h2>Creating a helpful organization<a class="headerlink" href="#creating-a-helpful-organization" title="Permalink to this headline">¶</a></h2>
+<p>To create a helpful organization:</p>
+<ul class="simple">
+<li>Enter the name of the organization as the title</li>
+<li>Add a short description and a meta description.  The meta description will be used in the solution.</li>
+<li>Enter the main location of the organization</li>
+<li>Set the area served in the coverage area.  You can add multiple administrative areas within one coverage area and/or add multiple coverage areas for different types of administrative areas</li>
+<li>Optionally, set an organization email</li>
+<li>Optionally, set an organization telephone</li>
+<li>Add at least one contact point</li>
+<li>Add any content management tags</li>
+<li>Indicate whether a translation should be created</li>
+<li>Indicate whether a translation is outdated</li>
+</ul>
+<div class="section" id="contact-point">
+<h3>Contact point<a class="headerlink" href="#contact-point" title="Permalink to this headline">¶</a></h3>
+<p>A contact point is a specific set of data associated with a helpful organization that tells the user how to reach the organization.  For legal organizations, this information lives in the services node.</p>
+<p>To create a contact type:</p>
+<ul class="simple">
+<li>Add a contact type.  Schema.org provides examples of Customer complaints department, sales department.  For our purposes it may be: intake, help desk, navigator.</li>
+<li>Set the area served.  This may be different than the organization service area.  For example, A contact type of “Intake” may only serve 3 counties of the 14 county service area.</li>
+<li>Email for the contact point, if users can contact via email</li>
+<li>Telephone for the contact point, if users can contact via phone</li>
+<li>Hours of operation</li>
+<li>Products supported.  Schema.org defines this as “The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. “iPhone”) or a general category of products or services (e.g. “smartphones”).”  For our purposes, this is likely to be things like legal referrals, social service referrals, food services, financial support, housing support, utility assistance.</li>
+</ul>
+<div class="admonition-todo admonition" id="index-1">
+<p class="first admonition-title">Todo</p>
+<p class="last">Determine if we should actually require the location or indicate that it should not be displayed/shared.</p>
+</div>
+<div class="admonition-todo admonition" id="index-2">
+<p class="first admonition-title">Todo</p>
+<p class="last">Determine if we should standardize a set of contact types and products supported for use in this content.</p>
+</div>
+</div>
+</div>
+<div class="section" id="full-add-edit-form">
+<h2>Full add/edit form<a class="headerlink" href="#full-add-edit-form" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/cms-structured-helpful-org.png" src="_images/cms-structured-helpful-org.png" />
+</div>
 </div>
 
 
@@ -246,7 +311,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="cms_structured_content_api.html" class="btn btn-neutral float-right" title="Structured content API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="cms_structured_paired_markup.html" class="btn btn-neutral float-right" title="Paired Markup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="cms_structured_legal_question.html" class="btn btn-neutral float-left" title="Legal Question" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
