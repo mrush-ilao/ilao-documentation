@@ -60,12 +60,16 @@ Because fast entry bypasses triage rules and intake settings generally, ILAO sta
 
 Fast entry form
 ====================
-The fast entry form is built using webform. 
+The fast entry form is built using webform and is attached to a triage rule per organization.  The triage rule can be tagged to "Law practice" to prevent any potential conflicts.  
+
+.. image:: ../assets/fast-entry-form.png
 
 
-Exit use cases
+Confirmation
 =================
 Fast entry forms will be treated as "we call client" and a field for callback times is collected via a preferred day/time field.
+
+.. image:: ../assets/fast-entry-confirm.png
 
 
 Data capture & reporting
