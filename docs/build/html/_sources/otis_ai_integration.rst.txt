@@ -11,6 +11,8 @@ Both produce similar results although they don't always perform evenly.
    :caption: Contents:
    
    otis_tech_guided_navigation
+   otis_tech_guided_navigation_api
+   otis_tech_guided_navigation_forms
    otis_tech_houston_ai
    otis_tech_spot_classifier
    otis_natural_language_processing
