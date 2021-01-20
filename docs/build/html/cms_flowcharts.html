@@ -256,13 +256,26 @@
 <p>There is a <a class="reference external" href="https://mermaid-js.github.io/mermaid-live-editor/#">live editor</a> that can be used to build diagrams.</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;mermaid&quot;</span><span class="p">&gt;</span>
 graph TB
-A[Hard edge] --&gt;|Link text| B(Round edge)
-B --&gt; C{Decision}
-C --&gt;|One| D[Result one]
-C --&gt;|Two| E[Result two]
+  A[Hard edge] --&gt;|Link text| B(Round edge)
+  B --&gt; C{Decision}
+  C --&gt;|One| D[Result one]
+  C --&gt;|Two| E[fa:fa-car Result two]
+  click D &quot;https://www.illinoislegalaid.org&quot; &quot;Home&quot;
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </pre></div>
 </div>
+<img alt="_images/cms-flowchart.png" src="_images/cms-flowchart.png" />
+<p>In the above image:</p>
+<blockquote>
+<div><ul class="simple">
+<li>the flowchart is set to be top to bottom (graph TB)</li>
+<li>A, B, C, D, E are the ids of the 5 blocks</li>
+<li>Text within | | are text between pathways, for example One between C &amp; D</li>
+<li>Both hard edge and round edge use the rectangle, but the round edge class has rounded edges.</li>
+<li>Result one includes a hyperlink to our website with a tooltip of Home</li>
+<li>Result two includes the car font-awesome icon.</li>
+</ul>
+</div></blockquote>
 </div>
 <div class="section" id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
@@ -270,7 +283,7 @@ C --&gt;|Two| E[Result two]
 </div>
 <div class="section" id="icon-support">
 <h2>Icon support<a class="headerlink" href="#icon-support" title="Permalink to this headline">¶</a></h2>
-<p>Mermaid supports the use of basic font-awesome icons.  While ILAO has a pro account, only the basic class is currently supported.</p>
+<p>Mermaid supports the use of basic <a class="reference external" href="https://fontawesome.com/icons?d=gallery">font-awesome</a> icons.  While ILAO has a pro account, only the basic class is currently supported.</p>
 <div class="admonition-todo admonition" id="index-0">
 <p class="first admonition-title">Todo</p>
 <p class="last">determine if ILAO just needs to add support for fal/fas clases in font awesome to support the additional icon set.</p>
@@ -284,8 +297,8 @@ C --&gt;|Two| E[Result two]
 <li>Should be tagged to a content format of decision tree</li>
 <li>Needs to include the JS:</li>
 </ul>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>&lt;script src=&quot;https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js&quot;&gt;&lt;/script&gt;
-&lt;script&gt;mermaid.initialize({startOnLoad:true,&#39;securityLevel&#39;: &#39;loose&#39;, &#39;theme&#39;:&#39;base&#39;});
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>&lt;script src=&quot;https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;mermaid.initialize({startOnLoad:true,&#39;securityLevel&#39;: &#39;loose&#39;, &#39;theme&#39;:&#39;default&#39;});&lt;/script&gt;
 </pre></div>
 </div>
 </div>

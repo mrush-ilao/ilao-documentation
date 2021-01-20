@@ -12,11 +12,25 @@ There is a `live editor <https://mermaid-js.github.io/mermaid-live-editor/#>`_ t
 
     <div class="mermaid">
     graph TB
-    A[Hard edge] -->|Link text| B(Round edge)
-    B --> C{Decision}
-    C -->|One| D[Result one]
-    C -->|Two| E[Result two]
+      A[Hard edge] -->|Link text| B(Round edge)
+      B --> C{Decision}
+      C -->|One| D[Result one] 
+      C -->|Two| E[fa:fa-car Result two]
+      click D "https://www.illinoislegalaid.org" "Home"
     </div>
+
+.. image:: ../assets/cms-flowchart.png
+
+In the above image:
+    
+    * the flowchart is set to be top to bottom (graph TB)
+    * A, B, C, D, E are the ids of the 5 blocks
+    * Text within | | are text between pathways, for example One between C & D
+    * Both hard edge and round edge use the rectangle, but the round edge class has rounded edges.
+    * Result one includes a hyperlink to our website with a tooltip of Home
+    * Result two includes the car font-awesome icon.
+    
+
 
 Configuration
 ===============
@@ -25,7 +39,7 @@ Flowcharts must be created using the text format "Diagrams." This ensures that c
 Icon support
 =============
 
-Mermaid supports the use of basic font-awesome icons.  While ILAO has a pro account, only the basic class is currently supported. 
+Mermaid supports the use of basic `font-awesome <https://fontawesome.com/icons?d=gallery>`_ icons.  While ILAO has a pro account, only the basic class is currently supported. 
 
 .. todo:: determine if ILAO just needs to add support for fal/fas clases in font awesome to support the additional icon set.
 
@@ -38,10 +52,10 @@ Technical Notes
 * Should be tagged to a content format of decision tree
 * Needs to include the JS:
 
-.. code-block:: html
+.. code-block:: javascript
 
    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-   <script>mermaid.initialize({startOnLoad:true,'securityLevel': 'loose', 'theme':'base'});
+   <script>mermaid.initialize({startOnLoad:true,'securityLevel': 'loose', 'theme':'default'});</script>
 
 
 
