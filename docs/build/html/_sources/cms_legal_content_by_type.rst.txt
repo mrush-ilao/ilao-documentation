@@ -16,4 +16,5 @@ Legal content formats
    cms_legal_content_download
    cms_legal_content_teach_me
    cms_legal_content_decision_tree
+   cms_flowcharts
 
