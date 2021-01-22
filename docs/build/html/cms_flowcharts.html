@@ -118,6 +118,7 @@
 <li class="toctree-l3"><a class="reference internal" href="cms_legal_content_annual_updates.html">Annual Updates</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_legal_content_workflows.html">Workflow Moderation States</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_legal_content_scheduling.html">Scheduling Revisions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_legal_content_taxonomies.html">Legal taxonomies</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_legal_content.html#related-content">Related content</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_legal_content.html#related-forms">(Related) Forms</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_legal_content.html#content-restrictions">Content Restrictions</a></li>
@@ -163,6 +164,7 @@
 <li class="toctree-l3"><a class="reference internal" href="cms_legal_content_annual_updates.html">Annual Updates</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_legal_content_workflows.html">Workflow Moderation States</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_legal_content_scheduling.html">Scheduling Revisions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_legal_content_taxonomies.html">Legal taxonomies</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_legal_content.html#related-content">Related content</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_legal_content.html#related-forms">(Related) Forms</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_legal_content.html#content-restrictions">Content Restrictions</a></li>
@@ -282,6 +284,11 @@ graph TB
 <p>Flowcharts must be created using the text format “Diagrams.” This ensures that characters are not escaped in a way that breaks the image.</p>
 <p>To create a flowchart, use the <a class="reference external" href="https://mermaid-js.github.io/mermaid/#/flowchart">flowchart syntax</a> documentation.</p>
 </div>
+<div class="section" id="theming">
+<h2>Theming<a class="headerlink" href="#theming" title="Permalink to this headline">¶</a></h2>
+<p>ILAO will design a standard visual design for flowcharts.  This will be our default theme.  Staff can use other themes as appropriate, or switch to the base theme and set custom theme variables.</p>
+<p>See <a class="reference external" href="https://mermaid-js.github.io/mermaid/#/theming">theming documentation</a>.</p>
+</div>
 <div class="section" id="icon-support">
 <h2>Icon support<a class="headerlink" href="#icon-support" title="Permalink to this headline">¶</a></h2>
 <p>Mermaid supports the use of basic <a class="reference external" href="https://fontawesome.com/icons?d=gallery">font-awesome</a> icons.  While ILAO has a pro account, only the basic class is currently supported.</p>
@@ -293,6 +300,7 @@ graph TB
 <div class="section" id="technical-notes">
 <h2>Technical Notes<a class="headerlink" href="#technical-notes" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
+<li>Needs a configuration to allow staff to specify what theme to use and any theme variables within the paragraphs (should default to “default”</li>
 <li>Needs a content format added that does not use CKeditor (named diagrams)</li>
 <li>Needs a paragraph type of formatted text long that defaults to the diagrams format</li>
 <li>Should be tagged to a content format of decision tree</li>
