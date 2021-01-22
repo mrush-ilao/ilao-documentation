@@ -36,6 +36,8 @@ Configuration
 ===============
 Flowcharts must be created using the text format "Diagrams." This ensures that characters are not escaped in a way that breaks the image.
 
+To create a flowchart, use the `flowchart syntax <https://mermaid-js.github.io/mermaid/#/flowchart>`_ documentation. 
+
 Icon support
 =============
 
