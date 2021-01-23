@@ -27,9 +27,19 @@ Our legal content type has three states:
 .. note:: When content has a revision in the draft or ready to review mode, users with editing permission will see a Latest version and View version. The View version is the latest PUBLISHED revision. The Latest version is the latest drafted revision.
    
   
-Unpublished
+Unpublished Status
 ======================
-Unpublished is a state but applies to the node, not to a specific revision.  When a node is unpublished, there is no published revision.  The following users can view unpublished nodes:
+Selecting the unpublished state will unpublish the content for the language currently being edited. For example, if I unpublish from the English edit form, the English translation will be unpublished.  Spanish and Polish will still be published.  
+
+Viewing the English edit form will show a current moderation state of "Unpublished" but Spanish and Polish will show "Published."
+
+.. warning:: To unpublish the content completely, you must go to the translate tab to edit and unpublish Spanish and Polish translations individually.
+
+.. image:: ../assets/cms-english-unpublished.png
+
+Access to Unpublished Content
+-------------------------------
+The following users can view unpublished nodes:
 
   * Staff
   * Interns
@@ -37,3 +47,12 @@ Unpublished is a state but applies to the node, not to a specific revision.  Whe
   * Pro bono members 
   
 The expansiveness of the view unpublished content is required to allow legal aid members and pro bono members to edit legal content.  
+
+A note about redirects
+-----------------------
+
+Redirects from a path alias will only redirect that path alias (so a url of /legal-information/english-title to /node/1 will only redirect the English title but will not impact /es/legal-information/spanish-title).
+
+A redirect from /node/2 to /node/1 will redirect for all languages.
+
+

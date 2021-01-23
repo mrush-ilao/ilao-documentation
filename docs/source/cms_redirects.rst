@@ -4,7 +4,9 @@ Creating redirects between pages
 
 If you need to redirect one page to another page (for example, "Old article" to "New article") so that users who access the old url are automatically moved to the new url.
 
-.. note:: You will need to do this for each language that the old article is available in as the path alias is different per language.
+You will need to do this for the path alias of every language you are redirecting. If a node has English, Spanish, and Polish, you will want to set redirects for each language URL.
+
+.. note:: If you are only redirecting one language for a node that has multiple languages, skip step 6 as that will cause the redirect to work in all languages.
 
 **Step 1**: Grab the url you need to redirect from (for example, for an English legal content, legal-information/old-article)
 

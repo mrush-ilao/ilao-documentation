@@ -94,6 +94,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="cms_wysiwyg.html">WYSIWYG Tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_custom_tokens.html">Custom Tokens</a></li>
@@ -200,9 +201,10 @@
   <div class="section" id="creating-redirects-between-pages">
 <h1>Creating redirects between pages<a class="headerlink" href="#creating-redirects-between-pages" title="Permalink to this headline">¶</a></h1>
 <p>If you need to redirect one page to another page (for example, “Old article” to “New article”) so that users who access the old url are automatically moved to the new url.</p>
+<p>You will need to do this for the path alias of every language you are redirecting. If a node has English, Spanish, and Polish, you will want to set redirects for each language URL.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">You will need to do this for each language that the old article is available in as the path alias is different per language.</p>
+<p class="last">If you are only redirecting one language for a node that has multiple languages, skip step 6 as that will cause the redirect to work in all languages.</p>
 </div>
 <p><strong>Step 1</strong>: Grab the url you need to redirect from (for example, for an English legal content, legal-information/old-article)</p>
 <p><strong>Step 2</strong>: Go to the edit form of the new page that you are redirecting TO</p>
