@@ -286,7 +286,7 @@ graph TB
 </div>
 <div class="section" id="theming">
 <h2>Theming<a class="headerlink" href="#theming" title="Permalink to this headline">¶</a></h2>
-<p>ILAO will design a standard visual design for flowcharts.  This will be our default theme.  Staff can use other themes as appropriate, or switch to the base theme and set custom theme variables.</p>
+<p>ILAO will design a standard visual design for flowcharts. Staff can use other themes as appropriate, or switch to the base theme and set custom theme variables.</p>
 <p>See <a class="reference external" href="https://mermaid-js.github.io/mermaid/#/theming">theming documentation</a>.</p>
 </div>
 <div class="section" id="icon-support">
@@ -297,19 +297,9 @@ graph TB
 <p class="last">determine if ILAO just needs to add support for fal/fas clases in font awesome to support the additional icon set.</p>
 </div>
 </div>
-<div class="section" id="technical-notes">
-<h2>Technical Notes<a class="headerlink" href="#technical-notes" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>Needs a configuration to allow staff to specify what theme to use and any theme variables within the paragraphs (should default to “default”</li>
-<li>Needs a content format added that does not use CKeditor (named diagrams)</li>
-<li>Needs a paragraph type of formatted text long that defaults to the diagrams format</li>
-<li>Should be tagged to a content format of decision tree</li>
-<li>Needs to include the JS:</li>
-</ul>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>&lt;script src=&quot;https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js&quot;&gt;&lt;/script&gt;
-&lt;script&gt;mermaid.initialize({startOnLoad:true,&#39;securityLevel&#39;: &#39;loose&#39;, &#39;theme&#39;:&#39;default&#39;});&lt;/script&gt;
-</pre></div>
-</div>
+<div class="section" id="content-format">
+<h2>Content format<a class="headerlink" href="#content-format" title="Permalink to this headline">¶</a></h2>
+<p>Pages with a flowchart should be set to a content format of Flowchart.  This will cause the flowchart label and icon to display.</p>
 </div>
 </div>
 

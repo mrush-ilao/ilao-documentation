@@ -40,7 +40,7 @@ To create a flowchart, use the `flowchart syntax <https://mermaid-js.github.io/m
 
 Theming
 ========
-ILAO will design a standard visual design for flowcharts.  This will be our default theme.  Staff can use other themes as appropriate, or switch to the base theme and set custom theme variables.
+ILAO will design a standard visual design for flowcharts. Staff can use other themes as appropriate, or switch to the base theme and set custom theme variables.
 
 See `theming documentation <https://mermaid-js.github.io/mermaid/#/theming>`_.
 
@@ -51,20 +51,12 @@ Mermaid supports the use of basic `font-awesome <https://fontawesome.com/icons?d
 
 .. todo:: determine if ILAO just needs to add support for fal/fas clases in font awesome to support the additional icon set.
 
+Content format
+================
+Pages with a flowchart should be set to a content format of Flowchart.  This will cause the flowchart label and icon to display.
 
-Technical Notes
-=================
 
-* Needs a configuration to allow staff to specify what theme to use and any theme variables within the paragraphs (should default to "default"
-* Needs a content format added that does not use CKeditor (named diagrams)
-* Needs a paragraph type of formatted text long that defaults to the diagrams format
-* Should be tagged to a content format of decision tree
-* Needs to include the JS:
 
-.. code-block:: javascript
-
-   <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-   <script>mermaid.initialize({startOnLoad:true,'securityLevel': 'loose', 'theme':'default'});</script>
 
 
 
