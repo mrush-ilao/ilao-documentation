@@ -21,8 +21,8 @@ These are used as text labels:
   * How-to's
   * Easy Forms
   * Blank forms
+  * Flowcharts
 
-.. note:: Text labels are a work-in-progress
 
 Guide
 =======
@@ -105,14 +105,14 @@ Hex color: #E2acf4
 
 .. note::  Lawyer manuals are limited to ADRM content. Text articles that are "lawyer manuals" are not considered lawyer manuals for iconography purposes.  Those are text articles.
 
-Decision Tree
-==============
+Decision Tree & Flowcharts
+============================
 
 .. image:: ../assets/design-decision-tree.png
 
 Hex color: #Adbaff
 
-.. note:: Decision tree format is limited to legal content that contains the decision tree paragraphs bundle.  
+.. note:: Decision tree format is limited to legal content that contains the decision tree paragraphs bundle or have a content format of flowchart.
 
 Teach Me
 =========
