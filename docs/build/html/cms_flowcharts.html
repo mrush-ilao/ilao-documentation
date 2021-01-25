@@ -301,6 +301,49 @@ graph TB
 <h2>Content format<a class="headerlink" href="#content-format" title="Permalink to this headline">¶</a></h2>
 <p>Pages with a flowchart should be set to a content format of Flowchart.  This will cause the flowchart label and icon to display.</p>
 </div>
+<div class="section" id="process-server-flowchart">
+<h2>Process Server Flowchart<a class="headerlink" href="#process-server-flowchart" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">DO NOT EDIT THIS</p>
+</div>
+<dl class="docutils">
+<dt>graph TD</dt>
+<dd>A[start] –&gt; B(Determine who you need to serve)
+B –&gt; C{A person or business?}
+C –&gt; D[Business]
+C –&gt; E[Person]
+E –&gt; F[Fill out the summons and complaint form]
+D –&gt; a1
+subgraph one [Who to serve]
+a1&gt;”Summons has to be served to a &lt;br /&gt;Registered Legal Agent of the Business&lt;br /&gt; through any of the service methods below”]—a2
+a2[“Go to the Secretary of State website to search for the Registered Agent of the Corporation or LLC you wish to serve a summons on”]–&gt;a3
+a3[“</dd>
+<dt>Once on the site, click #quot;Search#quot;, select #quot;Corporation and LLC#quot;, click #quot;Submit#quot;, and finally enter the name or keywords you are looking for”]–&gt;a4</dt>
+<dd>a4[“Select the corporation or LLC and scroll down to find the contact info for the Registered Agent that you must serve the summons to”]–&gt;a5
+a5&gt;”</dd>
+<dt>If the business is not incorporated, then put the name of the owner and put them as D/B/A (doing business as) and then the name of the business”]</dt>
+<dd>a5–&gt;F
+end
+F–&gt;G
+G[“File complaint and summons form with the local county circuit court in person or online with e-filing”]–&gt;H
+H&gt;Now you have to make sure that the defendant is served.]–&gt;I{“How will you serve?”}
+I –&gt; <a href="#id1"><span class="problematic" id="id2">|Most common|</span></a> J[Sheriff] –&gt;b1
+I –&gt; K[Professional process server or an adult not part of the case]–&gt;c1
+subgraph two [Having the sheriff service]
+b1[Staple Summons on top of copy of complaint being served] –&gt; b2
+b2[Ask the sheriff of the county in person or via mail where the summons will be served where the party you want to serve lives]–&gt;b3
+b3&gt;There will be a fee unless you have a fee waiver]–&gt;b4{Does the defendant &lt;br /&gt;live in the same county where the lawsuit was filed}
+b4–&gt;|No| b5[“Call the sheriff of the county of the party being sued lives in to get the sheriff’s contact info”]–&gt;b6
+b4–&gt;|Yes| b6{“How are you going to take it to the sheriff?”}
+b6–&gt;|In person|b7[“test”]
+b6–&gt;|Mail|b8[“text”]
+end
+subgraph Professional process server[three]
+c1–&gt;c2
+end</dd>
+</dl>
+</div>
 </div>
 
 
