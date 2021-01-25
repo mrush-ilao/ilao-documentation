@@ -25,15 +25,15 @@ Only one header block should appear on any given page.  To create a heading bann
 * Go to Structure => Block layout => Custom block library
 * Add custom block
 * Select basic
-* Enter a block description; this is what appears in the block library as the name of the block
+* Enter a block description; this is what appears in the block library as the name of the block.
 * Enter the body.   Use the header banner code below to provide the correct style.
 * **DO NOT** add an image.
 
 When placing the block:
 
-* add the block to the Header section on the block layout page by clicking Place block
-* the block must be ordered just above the disabled blocks to keep the block from interfering with menus, site slogan blocks.
-* set the block CSS class to ilao-banner-block to cause it to display correctly full-width.
+* Add the block to the Header section on the block layout page by clicking Place block.
+* The block must be ordered just above the disabled blocks to keep the block from interfering with menus, site slogan blocks.
+* Set the block CSS class to ilao-banner-block to cause it to display correctly full-width.
 
 .. image:: ../assets/header-block-config.png
 

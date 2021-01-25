@@ -3,7 +3,7 @@ Creating and editing structured content
 ========================================
 
 
-Structured legal content needs to be created in a specific ways as certain content types depend on other content types.    
+Structured legal content needs to be created in a specific way as certain content types depend on other content types.    
 
 * Legal problems:
 
