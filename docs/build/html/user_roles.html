@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Account Roles &mdash; IllinoisLegalAid.org 1 documentation</title>
+  <title>User accounts &mdash; IllinoisLegalAid.org 1 documentation</title>
   
 
   
@@ -95,7 +95,11 @@
 <li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="people_management.html">User Management</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Account Roles</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">User accounts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#roles">Roles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#profile-data">Profile data</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="user_dashboards.html">User Dashboard Pages</a></li>
 </ul>
 </li>
@@ -157,7 +161,7 @@
         
           <li><a href="people_management.html">User Management</a> &raquo;</li>
         
-      <li>Account Roles</li>
+      <li>User accounts</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -176,23 +180,47 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="account-roles">
-<h1>Account Roles<a class="headerlink" href="#account-roles" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="user-accounts">
+<h1>User accounts<a class="headerlink" href="#user-accounts" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="roles">
+<h2>Roles<a class="headerlink" href="#roles" title="Permalink to this headline">¶</a></h2>
 <p>We have the following roles:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Legal self-help center navigator.  This should be given to navigators of LSHC locations that need to be able to post jobs, events, or manage their organization’s profile.</li>
-<li>Law student member.  This is given automatically to anyone registering with a .edu email address.  Law school staff at legal aid clinics are manually given other permissions as needed.</li>
-<li>Pro bono member.  Lawyers, paralegals who indicate when registering are given this role.  Pro bono members can post jobs, events, and access legal content restricted to pro bono users.</li>
-<li>Legal aid member.  This should be limited to users who are current employees of a legal aid organization.  If the user registered with a legal aid organization email, they will automatically be given this role.  Volunteers at legal aid organizations should be given pro bono permissions.</li>
-<li>Translator.  This role is not active currently.</li>
-<li>Subject matter expert.  This role is not actively used but will be used to indicate that the user is a legal content volunteer as we build out our gamification features.</li>
-<li>Intern.  An intern at ILAO</li>
-<li>Staff.  A staff member at ILAO.  This user has elevated permissions and can do most anything on the website.</li>
-<li>Content manager.  A member of the legal content team.  This role is used exclusively to determine who gets content-related emails.</li>
+<li><strong>Legal self-help center navigator</strong>.  This should be given to navigators of LSHC locations that need to be able to post jobs, events, or manage their organization’s profile.</li>
+<li><strong>Law student member</strong>.  This is given automatically to anyone registering with a .edu email address.  Law school staff at legal aid clinics are manually given other permissions as needed.</li>
+<li><strong>Pro bono member</strong>.  Lawyers, paralegals who indicate when registering are given this role.  Pro bono members can post jobs, events, and access legal content restricted to pro bono users.</li>
+<li><strong>Legal aid member</strong>.  This should be limited to users who are current employees of a legal aid organization.  If the user registered with a legal aid organization email, they will automatically be given this role.  Volunteers at legal aid organizations should be given pro bono permissions.</li>
+<li><strong>Translator</strong>.  This role is not active currently.</li>
+<li><strong>Subject matter expert</strong>.  This role is not actively used but will be used to indicate that the user is a legal content volunteer as we build out our gamification features.</li>
+<li><strong>Intern</strong>.  An intern at ILAO</li>
+<li><strong>Staff</strong>.  A staff member at ILAO.  This user has elevated permissions and can do most anything on the website.</li>
+<li><strong>Content manager</strong>.  A member of the legal content team.  This role is used exclusively to determine who gets content-related emails.</li>
 </ul>
 </div></blockquote>
-<p>..note:: Community members are not given any of the above roles.  They are just “authenticated” (that is, they can log in and access the basic permissions that all logged-in roles have).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Community members are not given any of the above roles.  They are just “authenticated users” (that is, they can log in and access the basic permissions that all logged-in roles have).  There will not be a role listed for these users in people reports.</p>
+</div>
+</div>
+<div class="section" id="profile-data">
+<h2>Profile data<a class="headerlink" href="#profile-data" title="Permalink to this headline">¶</a></h2>
+<p>We collect and store:</p>
+<ul class="simple">
+<li>the user’s name</li>
+<li>the user’s email.  This must be unique in the system</li>
+<li>a system-generated user ID</li>
+<li>areas of interest and expertise, if the user chooses to provide those.  These are limited to the top level website categories like Family &amp; Safety, House &amp; Apartment.</li>
+<li>address (at least a zip code)</li>
+<li>employer (for all but law student and community members)</li>
+<li>profile picture</li>
+<li>notification preferences (email, text or none)</li>
+<li>opt-in for SMS preference</li>
+<li>Mailchimp subscriptions (eUpdates, blog, newsletter)</li>
+<li>Biography (for some user roles)</li>
+<li>Whether they are interested in participating in user testing</li>
+</ul>
+</div>
 </div>
 
 
