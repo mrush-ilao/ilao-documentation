@@ -18,7 +18,8 @@ Content types for legal content:
    cms_adrm
    cms_content_reporting
    cms_structured_legal_content
-   
+   cms_lcv_program
+  
 
 Known Workarounds
 ===================

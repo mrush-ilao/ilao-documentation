@@ -27,7 +27,6 @@ If the user's input is not an exact match to the legal issues taxonomy:
 * A combined list of results are culled together, ranked and mapped back to ILAO's IA
 * The user is presented with a short list of options based on the classifier data.
 
-.. todo:: Figure out how to map all these taxonomies to a single index.  We have our IA, a LSC code to our IA.  Nothing that maps our IA to NSMI 
 
 Examples
 ------------
