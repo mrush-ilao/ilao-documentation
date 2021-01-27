@@ -40,7 +40,16 @@ Integration into Website
 
 .. note:: This is to document how we envision this will work.  It has not been built yet.
 
-Guided navigation processes will be tied to our legal issues taxonomy so that when a user is triaged to that legal issue, Guided Navigation will take over.  
+GN processes will be tagged to Legal Issues.  When the Legal issue is selected in the OTIS triage, the Guided Navigation process will takeover (existing triage rules will continue to be used where Guided Navigation is empty).
+
+When Guided navigation is used, the system will:
+
+* create a Guided navigation session
+* pull the Guided navigation form(s)
+* display them to the user, collect data
+* send the data back to Guided navigation
+* repeat until the end of the interview is reached
+* take the collected profile and determine what organization(s) match against data stored in Drupal
 
 Relationship to Program Intake Settings & Services
 ===================================================

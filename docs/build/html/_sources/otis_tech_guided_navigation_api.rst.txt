@@ -6,7 +6,7 @@ API Configuration
 ==================
 ILAO stores in Drupal configuration:
 
-* API Server location (https://[sitename].legalserver.org/api/v1/processes for example)
+* API Server location (https://[sitename].legalserver.org/api/v1 for example)
 * Username authorized to use API
 * Password associated with the username
 

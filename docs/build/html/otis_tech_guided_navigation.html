@@ -100,6 +100,7 @@
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="otis_cms.html">Get Legal Help</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="otis_endusers.html">Get Legal Help Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_organization_management.html">Organization management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_endpoints.html">Triage rule endpoints</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_reports.html">Get Legal Help Reporting</a></li>
@@ -227,7 +228,16 @@
 <p class="first admonition-title">Note</p>
 <p class="last">This is to document how we envision this will work.  It has not been built yet.</p>
 </div>
-<p>Guided navigation processes will be tied to our legal issues taxonomy so that when a user is triaged to that legal issue, Guided Navigation will take over.</p>
+<p>GN processes will be tagged to Legal Issues.  When the Legal issue is selected in the OTIS triage, the Guided Navigation process will takeover (existing triage rules will continue to be used where Guided Navigation is empty).</p>
+<p>When Guided navigation is used, the system will:</p>
+<ul class="simple">
+<li>create a Guided navigation session</li>
+<li>pull the Guided navigation form(s)</li>
+<li>display them to the user, collect data</li>
+<li>send the data back to Guided navigation</li>
+<li>repeat until the end of the interview is reached</li>
+<li>take the collected profile and determine what organization(s) match against data stored in Drupal</li>
+</ul>
 </div>
 <div class="section" id="relationship-to-program-intake-settings-services">
 <h2>Relationship to Program Intake Settings &amp; Services<a class="headerlink" href="#relationship-to-program-intake-settings-services" title="Permalink to this headline">¶</a></h2>
