@@ -40,7 +40,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="LCV Dashboard" href="lcv_dashboard.html" />
+    <link rel="next" title="Badges" href="lcv_badges.html" />
     <link rel="prev" title="LCV Permissions" href="lcv_roles.html" /> 
 </head>
 
@@ -112,8 +112,10 @@
 <li class="toctree-l4"><a class="reference internal" href="#point-types">Point Types</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#rules-for-automated-point-awards">Rules for Automated Point Awards</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#manual-points">Manual points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#point-tracking">Point Tracking</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="lcv_badges.html">Badges</a></li>
 <li class="toctree-l3"><a class="reference internal" href="lcv_dashboard.html">LCV Dashboard</a></li>
 <li class="toctree-l3"><a class="reference internal" href="lcv_leaderboards.html">LCV Leaderboards</a></li>
 </ul>
@@ -146,8 +148,10 @@
 <li class="toctree-l4"><a class="reference internal" href="#point-types">Point Types</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#rules-for-automated-point-awards">Rules for Automated Point Awards</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#manual-points">Manual points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#point-tracking">Point Tracking</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="lcv_badges.html">Badges</a></li>
 <li class="toctree-l3"><a class="reference internal" href="lcv_dashboard.html">LCV Dashboard</a></li>
 <li class="toctree-l3"><a class="reference internal" href="lcv_leaderboards.html">LCV Leaderboards</a></li>
 </ul>
@@ -252,6 +256,7 @@
 <ul class="simple">
 <li>only to revision authors with the subject matter expert role</li>
 <li>can only be awarded to the same node/language/author pair once every 24 hours (so that we don’t accidentally award points multiple times)</li>
+<li>users with the staff or intern role never earn points.</li>
 </ul>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -267,6 +272,28 @@
 <li>Portal main pages</li>
 </ul>
 </div>
+<div class="section" id="point-tracking">
+<h2>Point Tracking<a class="headerlink" href="#point-tracking" title="Permalink to this headline">¶</a></h2>
+<p>Points should be recorded in the website with the following information:</p>
+<ul class="simple">
+<li>the timestamp of when the record is created</li>
+<li>the timestamp of when the record was last updated</li>
+<li>a reference to the point type awarded</li>
+<li>the user ID of the person earning the point.  For automated points, it is always the revision author.</li>
+<li>the entity id of the node associated with the points<ul>
+<li>for automated awards, it is the node of the content being revised</li>
+<li>for manual awards, it comes from the manual credit form</li>
+</ul>
+</li>
+<li>the primary legal category associated with the points<ul>
+<li>for automated awards, it is the primary legal category of the node at the time the points are awarded</li>
+<li>for manual awards, it comes from the manual credit form</li>
+</ul>
+</li>
+<li>the number of points awarded</li>
+<li>the user id of the person awarding the points (for automated awards, this is anonymous)</li>
+</ul>
+</div>
 </div>
 
 
@@ -277,7 +304,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="lcv_dashboard.html" class="btn btn-neutral float-right" title="LCV Dashboard" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="lcv_badges.html" class="btn btn-neutral float-right" title="Badges" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="lcv_roles.html" class="btn btn-neutral float-left" title="LCV Permissions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

@@ -41,7 +41,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="LCV Leaderboards" href="lcv_leaderboards.html" />
-    <link rel="prev" title="Points System" href="lcv_points_system.html" /> 
+    <link rel="prev" title="Badges" href="lcv_badges.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -109,7 +109,12 @@
 <li class="toctree-l2 current"><a class="reference internal" href="cms_lcv_program.html">Legal Content Volunteers Program</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="lcv_roles.html">LCV Permissions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="lcv_points_system.html">Points System</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">LCV Dashboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lcv_badges.html">Badges</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">LCV Dashboard</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#user-profile-data">User profile data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#system-tasks">System Tasks</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="lcv_leaderboards.html">LCV Leaderboards</a></li>
 </ul>
 </li>
@@ -138,7 +143,12 @@
 <li class="toctree-l2 current"><a class="reference internal" href="cms_lcv_program.html">Legal Content Volunteers Program</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="lcv_roles.html">LCV Permissions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="lcv_points_system.html">Points System</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">LCV Dashboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lcv_badges.html">Badges</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">LCV Dashboard</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#user-profile-data">User profile data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#system-tasks">System Tasks</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="lcv_leaderboards.html">LCV Leaderboards</a></li>
 </ul>
 </li>
@@ -216,6 +226,24 @@
             
   <div class="section" id="lcv-dashboard">
 <h1>LCV Dashboard<a class="headerlink" href="#lcv-dashboard" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="user-profile-data">
+<h2>User profile data<a class="headerlink" href="#user-profile-data" title="Permalink to this headline">¶</a></h2>
+<p>The website should store as part of the user’s profile:</p>
+<ul class="simple">
+<li>the current number of points earned</li>
+<li>the badges earned with the date the badge was earned</li>
+<li>the current number of words captured</li>
+<li>the current number of articles captured</li>
+</ul>
+</div>
+<div class="section" id="system-tasks">
+<h2>System Tasks<a class="headerlink" href="#system-tasks" title="Permalink to this headline">¶</a></h2>
+<p>To generate content for the dashboard, the following scheduled tasks must be executed daily:</p>
+<ul class="simple">
+<li>a daily task to award badges</li>
+<li>a daily task to update totals.  We don’t want to have to manually update the data every time the page is viewed (technically similar to the voting API module)</li>
+</ul>
+</div>
 </div>
 
 
@@ -229,7 +257,7 @@
         <a href="lcv_leaderboards.html" class="btn btn-neutral float-right" title="LCV Leaderboards" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="lcv_points_system.html" class="btn btn-neutral float-left" title="Points System" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="lcv_badges.html" class="btn btn-neutral float-left" title="Badges" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
