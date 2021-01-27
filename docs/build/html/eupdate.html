@@ -107,6 +107,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#sending">Sending</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#tracking">Tracking</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#testing">Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#technical-integration">Technical Integration</a></li>
 </ul>
 </li>
 </ul>
@@ -215,7 +216,7 @@ The monthly version includes content from the current date minus 30 days</p>
 <li>9am Tuesdays for weekly subscribers.</li>
 <li>9am on the 1st of the month for weekly subscribers.</li>
 </ul>
-<p>Because the scheduled task runs once per hour, it may be delayed and run anytime between 9am and 10am.</p>
+<p>Because the scheduled task system runs once per hour, it may be delayed and run anytime between 9am and 10am.</p>
 </div>
 <div class="section" id="tracking">
 <h2>Tracking<a class="headerlink" href="#tracking" title="Permalink to this headline">¶</a></h2>
@@ -232,7 +233,30 @@ The monthly version includes content from the current date minus 30 days</p>
 <p>There is a check group in the master segment that is made up of Gwen and various members of the QED42 team.  This is the default send-to on all non-production instances to prevent accidentally sending from these machines to all users.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Mailchimp campaigns sent to the check group may be safely deleted.</p>
+<p class="last">Mailchimp campaigns sent to the check group may be safely deleted from Mailchimp.</p>
+</div>
+</div>
+<div class="section" id="technical-integration">
+<h2>Technical Integration<a class="headerlink" href="#technical-integration" title="Permalink to this headline">¶</a></h2>
+<p>The mailchimp block that appears on the user registration/profile page is tied to the Master list within Mailchimp. When a user creates an account on the website:</p>
+<ul class="simple">
+<li>They are added to the master list</li>
+<li>They are added to the segment that matches their role</li>
+<li>If they sign up for specific communications, they are added to groups within website communications:<ul>
+<li>if they sign up for the monthly newsletter, they are added to the Newsletter segment</li>
+<li>if they sign up for the weekly eUpdate, they are added to the weekly eUpdate segment</li>
+<li>if they sign up for the monthly eupdate, they are added to the monthly eUpdate segment</li>
+<li>if they sign up for the blog alerts, they are added to the blog segment</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are also signup forms for anonymous users for the newsletter and the blog alerts.</p>
+</div>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">Need to verify that editing my profile to unsubscribe in website in fact changes my settings in Mailchimp.</p>
 </div>
 </div>
 </div>

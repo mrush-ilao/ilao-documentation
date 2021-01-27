@@ -33,7 +33,7 @@ The eUpdate is scheduled to send at:
 * 9am Tuesdays for weekly subscribers.
 * 9am on the 1st of the month for weekly subscribers.
 
-Because the scheduled task runs once per hour, it may be delayed and run anytime between 9am and 10am.
+Because the scheduled task system runs once per hour, it may be delayed and run anytime between 9am and 10am.
 
 Tracking
 ==========
@@ -50,7 +50,29 @@ Testing
 ===========
 There is a check group in the master segment that is made up of Gwen and various members of the QED42 team.  This is the default send-to on all non-production instances to prevent accidentally sending from these machines to all users.
 
-.. note:: Mailchimp campaigns sent to the check group may be safely deleted.
+.. note:: Mailchimp campaigns sent to the check group may be safely deleted from Mailchimp.
+
+
+Technical Integration
+=======================
+The mailchimp block that appears on the user registration/profile page is tied to the Master list within Mailchimp. When a user creates an account on the website:
+
+* They are added to the master list
+* They are added to the segment that matches their role
+* If they sign up for specific communications, they are added to groups within website communications:
+
+  * if they sign up for the monthly newsletter, they are added to the Newsletter segment
+  * if they sign up for the weekly eUpdate, they are added to the weekly eUpdate segment
+  * if they sign up for the monthly eupdate, they are added to the monthly eUpdate segment
+  * if they sign up for the blog alerts, they are added to the blog segment
+  
+.. note:: There are also signup forms for anonymous users for the newsletter and the blog alerts.
+
+
+.. todo:: Need to verify that editing my profile to unsubscribe in website in fact changes my settings in Mailchimp.
+
+
+  
 
 
 
