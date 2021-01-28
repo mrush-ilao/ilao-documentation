@@ -230,11 +230,19 @@
 <h2>User profile data<a class="headerlink" href="#user-profile-data" title="Permalink to this headline">¶</a></h2>
 <p>The website should store as part of the user’s profile:</p>
 <ul class="simple">
-<li>the current number of points earned</li>
+<li>the current total number of points earned</li>
 <li>the badges earned with the date the badge was earned</li>
-<li>the current number of words captured</li>
-<li>the current number of articles captured</li>
+<li>the current total number of words captured</li>
+<li>the current total number of articles captured</li>
+<li>this quarter totals</li>
+<li>last quarter totals</li>
+<li>current month streak number</li>
 </ul>
+<p>These fields should not be visible to users in their regular profile.</p>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">We need to determine what a quarter is (Jan-Mar, Apr -Jun, Jul -Sept, Oct -Dec or rolling basis [current month - 2. current month -2 to current month - 5])</p>
+</div>
 </div>
 <div class="section" id="system-tasks">
 <h2>System Tasks<a class="headerlink" href="#system-tasks" title="Permalink to this headline">¶</a></h2>
@@ -242,7 +250,12 @@
 <ul class="simple">
 <li>a daily task to award badges</li>
 <li>a daily task to update totals.  We don’t want to have to manually update the data every time the page is viewed (technically similar to the voting API module)</li>
+<li>monthly task to update streak</li>
 </ul>
+<div class="admonition-todo admonition" id="index-1">
+<p class="first admonition-title">Todo</p>
+<p class="last">Number format (commas or no commas)</p>
+</div>
 </div>
 </div>
 

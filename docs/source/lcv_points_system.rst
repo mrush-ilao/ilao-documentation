@@ -30,7 +30,7 @@ Automated point awards will be awarded:
 * can only be awarded to the same node/language/author pair once every 24 hours (so that we don't accidentally award points multiple times)
 * users with the staff or intern role never earn points.
 
-.. note:: Andrew needs to verify that we aren't awarding points to editors who aren't LCV members.  Another option may be to award the points and then send them a "hey, want to be an LCV? You already have 50 points." email.
+.. note:: Andrew needs to verify that we aren't awarding points to editors who aren't LCV members.  Does that work if we have user testing badges or non-editing badges?  Another option may be to award the points and then send them a "hey, want to be an LCV? You already have 50 points." email if they edit content.
 
 Manual points 
 =================================

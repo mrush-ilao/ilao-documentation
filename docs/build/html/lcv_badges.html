@@ -110,7 +110,9 @@
 <li class="toctree-l3"><a class="reference internal" href="lcv_roles.html">LCV Permissions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="lcv_points_system.html">Points System</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Badges</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#badge-definitions">Badge Definitions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#badges-vs-milestones">Badges vs Milestones</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#champion-badges">Champion badges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#badge-milestone-definitions">Badge &amp; Milestone Definitions</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="lcv_dashboard.html">LCV Dashboard</a></li>
@@ -143,7 +145,9 @@
 <li class="toctree-l3"><a class="reference internal" href="lcv_roles.html">LCV Permissions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="lcv_points_system.html">Points System</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Badges</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#badge-definitions">Badge Definitions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#badges-vs-milestones">Badges vs Milestones</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#champion-badges">Champion badges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#badge-milestone-definitions">Badge &amp; Milestone Definitions</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="lcv_dashboard.html">LCV Dashboard</a></li>
@@ -224,9 +228,9 @@
             
   <div class="section" id="badges">
 <h1>Badges<a class="headerlink" href="#badges" title="Permalink to this headline">¶</a></h1>
-<p>ILAO awards badges to users</p>
+<p>ILAO awards badges to users based on activity.</p>
 <img alt="_images/lcv_badges.png" src="_images/lcv_badges.png" />
-<p>There are 6 badges for each legal category:</p>
+<p>There are 6 badges icons for each legal category:</p>
 <ul class="simple">
 <li>Hero</li>
 <li>Leader</li>
@@ -235,12 +239,51 @@
 <li>Author</li>
 <li>Partner</li>
 </ul>
-<p>There are also 3 “Champion” badges per category (1st, 2nd, 3rd).</p>
-<div class="section" id="badge-definitions">
-<h2>Badge Definitions<a class="headerlink" href="#badge-definitions" title="Permalink to this headline">¶</a></h2>
-<p>The badges can be configured in the CMS. Badges may be configured:</p>
+<p>There are also 3 “Champion” badges per category (1st, 2nd, 3rd).
+There is also a star image for milestone awards.</p>
+<div class="section" id="badges-vs-milestones">
+<h2>Badges vs Milestones<a class="headerlink" href="#badges-vs-milestones" title="Permalink to this headline">¶</a></h2>
+<p>Badges are awarded based on point counts and can be earned quarterly, annually, or one time.  Examples of badges are:</p>
 <ul class="simple">
-<li>for a specific legal category or all categories.</li>
+<li>Family &amp; Safety Hero</li>
+<li>Crime &amp; Traffic Hero</li>
+<li>Workhorse</li>
+<li>Family &amp; Safety Workhorse</li>
+</ul>
+<p>The author and partner badges are reserved for specialty awards rather than general editorial work.  The author badge might be awarded:</p>
+<ul class="simple">
+<li>with a label of “Contributor” the first time a user drafts an article from scratch and can only be earned once.</li>
+<li>with a label of “Scribe” the first time a user drafts 5 articles from scratch and can only be earned once.</li>
+<li>with a label of “Wordsmith” for every 10 articles a user drafts and can be earned as often as necessary.</li>
+</ul>
+<p>The partner badge might be awarded:
+* with a category of “UX Tester” the first time a user completes an observeration test
+* with a category of “QA Partner” when a user tests an Easy Form</p>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">Do the badges on the dashboard need labels?  Archita didn’t include them in the design but I’m questioning that.</p>
+</div>
+<p>Milestones are awarded over all time or annually. These do not have an icon and appear only on the Milestones block.  Examples of milestones might be:</p>
+<ul class="simple">
+<li>100 articles edited</li>
+<li>250 articles edited</li>
+<li>5,000 words edited</li>
+<li>10,000 words edited</li>
+</ul>
+</div>
+<div class="section" id="champion-badges">
+<h2>Champion badges<a class="headerlink" href="#champion-badges" title="Permalink to this headline">¶</a></h2>
+<p>At the end of each quarter, champion badges will be awarded to the user with the highest number of points in each category, 1st, 2nd, and 3rd place. These badges would be named for the period awarded: School &amp; Education, Q2 2021.</p>
+<p>There is also a global champion badge, awarded based on the total number of points during the quarter.</p>
+<p>At the end of the calendar year, annual champion badges are also awarded.</p>
+</div>
+<div class="section" id="badge-milestone-definitions">
+<h2>Badge &amp; Milestone Definitions<a class="headerlink" href="#badge-milestone-definitions" title="Permalink to this headline">¶</a></h2>
+<p>The badges can be configured in the CMS. Badges and Milestones:</p>
+<ul class="simple">
+<li>Have a name.  This is what appears beneath the name.  Examples:  Family &amp; Safety Scribe, House &amp; Apartment Hero, User Testing Expert.</li>
+<li>Description is optional but can be used to define the badge in a user-friendly way.  For example:  Earn the Family &amp; Safety Hero award by earning 200 points editing content in family &amp; safety.</li>
+<li>Image.  Select the badge to use.  <strong>For milestones, leave blank</strong>.</li>
 <li>the maximum number of times a badge can be earned:<ul>
 <li>no limit means as soon as the user hits the number of points required, they earn the badge.  For example, the hero badge could be set to be awarded when a user has earned 100 points in Family &amp; Safety.  If a user earns 300 points in Quarter 2, they would earn the badge 3 times.</li>
 <li>once means the user can only earn the badge one time ever.  For example, if the Partner badge is set at 10,000 points for Family &amp; Safety, and a user hits 10,005 points on January 4, 2022 and 20,001 points on June 6, 2022, they would only see one Family &amp; Safety Partner badge.</li>
@@ -248,7 +291,22 @@
 <li>once per year means the user can earn the badge once a year maximum.  For example, if the Leader badge is set at 500 points for Family &amp; Safety, and a user hits 501 points on January 4, 2022, 1007 points on February 3, 2022 and then earns 505 points on April 1, 2023, the user would earn the workhouse on January 4, 2022 and April 1, 2023.  No additional workhorse badge would be earned on February 3.</li>
 </ul>
 </li>
+<li>Which content categories count towards the badge.  A badge could be limited points earned from tasks associated with family &amp; safety content or not limited for example.  The category used is either:<ul>
+<li>the primary legal category associated with a node</li>
+<li>the primary legal category indicated when awarding manual credit.</li>
 </ul>
+</li>
+<li>the point entities that should be counted for a badge award.  For example, the Family &amp; Safety hero badge may be limited to point entities related to content editing while the House &amp; Apartment UX partner may be limited to point entities related to user testing.</li>
+<li>the requirements to earn a badge:<ul>
+<li>a number of points/words/articles.  Points should be used unless the badge is a milestone.</li>
+</ul>
+</li>
+<li>a checkbox to indicate that the badge is a milestone award.</li>
+</ul>
+<div class="admonition-todo admonition" id="index-1">
+<p class="first admonition-title">Todo</p>
+<p class="last">Andrew, we could use the description to list the awards from the how we calculate points block.</p>
+</div>
 </div>
 </div>
 
