@@ -39,8 +39,9 @@ The partner badge might be awarded:
 
 .. todo:: Do the badges on the dashboard need labels?  Archita didn't include them in the design but I'm questioning that.
 
-Milestones are awarded over all time or annually. These do not have an icon and appear only on the Milestones block.  Examples of milestones might be:
+Milestones are awarded once. These do not have an icon and appear only on the Milestones block.  Examples of milestones might be:
 
+* 1st article edited
 * 100 articles edited
 * 250 articles edited
 * 5,000 words edited
@@ -55,7 +56,7 @@ There is also a global champion badge, awarded based on the total number of poin
 
 At the end of the calendar year, annual champion badges are also awarded.
 
-Badge & Milestone Definitions
+Defining Badges & Milestones
 ===============================
 The badges can be configured in the CMS. Badges and Milestones:
 
