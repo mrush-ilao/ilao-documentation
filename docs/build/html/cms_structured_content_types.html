@@ -40,7 +40,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Basic pages" href="basic_pages_cms.html" />
+    <link rel="next" title="Creating and editing structured content" href="cms_structured_legal_content_admin.html" />
     <link rel="prev" title="Structured Content Schema" href="cms_structured_content.html" /> 
 </head>
 
@@ -94,16 +94,19 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="cms_wysiwyg.html">WYSIWYG Tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_custom_tokens.html">Custom Tokens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_redirects.html">Creating redirects between pages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_content_management_tags.html">Content management tags</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_legal_content.html">Legal content type</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_portal_main_page.html">Portal main page content type</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_toolboxes.html">Toolbox and related content types</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cms_adrm.html">ADRM content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_adrm.html">Lawyer Manuals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_content_reporting.html">Legal content reporting</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="cms_structured_legal_content.html">Structured Legal Content</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_overview.html">Structured Content Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content.html">Structured Content Schema</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Structured Content Types</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#content-types">Content Types</a></li>
@@ -112,8 +115,11 @@
 <li class="toctree-l4"><a class="reference internal" href="#technical-notes">Technical Notes</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_legal_content_admin.html">Creating and editing structured content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_api.html">Structured content API</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="cms_lcv_program.html">Legal Content Volunteers Program</a></li>
 <li class="toctree-l2"><a class="reference internal" href="legal_content_cms.html#known-workarounds">Known Workarounds</a></li>
 </ul>
 </li>
@@ -128,13 +134,15 @@
 <li class="toctree-l1 current"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="cms_wysiwyg.html">WYSIWYG Tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_custom_tokens.html">Custom Tokens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_redirects.html">Creating redirects between pages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_content_management_tags.html">Content management tags</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_legal_content.html">Legal content type</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_portal_main_page.html">Portal main page content type</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_toolboxes.html">Toolbox and related content types</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cms_adrm.html">ADRM content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms_adrm.html">Lawyer Manuals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_content_reporting.html">Legal content reporting</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="cms_structured_legal_content.html">Structured Legal Content</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_overview.html">Structured Content Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content.html">Structured Content Schema</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Structured Content Types</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#content-types">Content Types</a></li>
@@ -143,8 +151,11 @@
 <li class="toctree-l4"><a class="reference internal" href="#technical-notes">Technical Notes</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_legal_content_admin.html">Creating and editing structured content</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_content_api.html">Structured content API</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="cms_lcv_program.html">Legal Content Volunteers Program</a></li>
 <li class="toctree-l2"><a class="reference internal" href="legal_content_cms.html#known-workarounds">Known Workarounds</a></li>
 </ul>
 </li>
@@ -347,6 +358,17 @@ Legal Question</td>
 <td>Entity reference to legal
 content types</td>
 </tr>
+<tr class="row-even"><td>RelatedProblems</td>
+<td>Entity reference</td>
+<td>unlimited</td>
+<td>Entity reference to Legal
+Problem</td>
+</tr>
+<tr class="row-odd"><td>Citations</td>
+<td>Paragraphs</td>
+<td>unlimited</td>
+<td>Citation block</td>
+</tr>
 <tr class="row-even"><td>Image</td>
 <td>Image</td>
 <td>1</td>
@@ -530,19 +552,24 @@ tions</td>
 <td>one</td>
 <td>Text blocks</td>
 </tr>
-<tr class="row-even"><td>legal position</td>
+<tr class="row-even"><td>citations</td>
+<td>Paragraphs</td>
+<td>unlimited</td>
+<td>Citation block</td>
+</tr>
+<tr class="row-odd"><td>legal position</td>
 <td>List</td>
 <td>1, required</td>
 <td>Current field_legal_position</td>
 </tr>
-<tr class="row-odd"><td>content managem
+<tr class="row-even"><td>content managem
 ent tags</td>
 <td>Term reference</td>
 <td>unlimited</td>
 <td>Current content management
 tags</td>
 </tr>
-<tr class="row-even"><td>request
+<tr class="row-odd"><td>request
 to be translated</td>
 <td>Boolean</td>
 <td>1, default to
@@ -550,7 +577,7 @@ No</td>
 <td>Should translation be
 requested</td>
 </tr>
-<tr class="row-odd"><td>mark translation
+<tr class="row-even"><td>mark translation
 as outdated</td>
 <td>Boolean</td>
 <td>1, default to
@@ -1478,6 +1505,36 @@ organization.</td>
 </tbody>
 </table>
 </div>
+<div class="section" id="citation">
+<h3>Citation<a class="headerlink" href="#citation" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="23%" />
+<col width="20%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Type</th>
+<th class="head">Cardinality</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Citation</td>
+<td>Text field</td>
+<td>one</td>
+<td>Citation text</td>
+</tr>
+<tr class="row-odd"><td>URL</td>
+<td>Link</td>
+<td>one</td>
+<td>Link to citation</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div class="section" id="taxonomies">
 <h2>Taxonomies<a class="headerlink" href="#taxonomies" title="Permalink to this headline">¶</a></h2>
@@ -1504,7 +1561,7 @@ organization.</td>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="basic_pages_cms.html" class="btn btn-neutral float-right" title="Basic pages" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="cms_structured_legal_content_admin.html" class="btn btn-neutral float-right" title="Creating and editing structured content" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="cms_structured_content.html" class="btn btn-neutral float-left" title="Structured Content Schema" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

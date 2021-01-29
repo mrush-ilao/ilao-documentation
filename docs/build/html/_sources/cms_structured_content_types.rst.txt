@@ -64,6 +64,11 @@ The primary content type for structured content is the Legal Problem.
 | RelatedResources| Entity reference  | unlimited      | Entity reference to legal   |
 |                 |                   |                | content types               |
 +-----------------+-------------------+----------------+-----------------------------+ 
+| RelatedProblems | Entity reference  | unlimited      | Entity reference to Legal   |
+|                 |                   |                | Problem                     |
++-----------------+-------------------+----------------+-----------------------------+
+| Citations       | Paragraphs        | unlimited      | Citation block              |
++-----------------+-------------------+----------------+-----------------------------+ 
 | Image           | Image             | 1              | Image to associate with node|
 +-----------------+-------------------+----------------+-----------------------------+ 
 | Language        | Hidden            | 1              | Language of the node        |
@@ -143,6 +148,8 @@ Legal Solution
 | howTos          | Entity reference  | unlimited      | Reference to a legal how to |
 +-----------------+-------------------+----------------+-----------------------------+
 | result          | Paragraphs        | one            | Text blocks                 |
++-----------------+-------------------+----------------+-----------------------------+
+| citations       | Paragraphs        | unlimited      | Citation block              |
 +-----------------+-------------------+----------------+-----------------------------+ 
 | legal position  | List              | 1, required    | Current field_legal_position|
 +-----------------+-------------------+----------------+-----------------------------+ 
@@ -536,6 +543,16 @@ Contact Point
 | Products        | Text field        | unlimited      | Type of service or product  |
 | Supported       |                   |                | offered through the         |
 |                 |                   |                | organization.               |
++-----------------+-------------------+----------------+-----------------------------+
+
+Citation
+-----------
++-----------------+-------------------+----------------+-----------------------------+
+| Field           | Type              | Cardinality    | Description                 |
++=================+===================+================+=============================+
+| Citation        | Text field        | one            | Citation text               |
++-----------------+-------------------+----------------+-----------------------------+
+| URL             | Link              |one             |  Link to citation           |
 +-----------------+-------------------+----------------+-----------------------------+
 
 Taxonomies

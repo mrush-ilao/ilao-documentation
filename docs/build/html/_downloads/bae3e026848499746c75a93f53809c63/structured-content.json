@@ -96,6 +96,18 @@
         "$ref": "#/definitions/RelatedResource"
       }
     },
+    "relatedProblems": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/RelatedProblem"
+      }
+    },
+    "citations": {
+      "type": "array",
+      "items": {
+        "$refs": "#/definitions/Citation"
+      }
+    },
     "image": {
       "type": "string",
       "description": "url of an image associated with the problem."
@@ -215,7 +227,13 @@
           "items": {
             "$ref": "#/definitions/TextBlock"
           }
-        }
+        },
+         "citations": {
+      "type": "array",
+      "items": {
+        "$refs": "#/definitions/Citation"
+      }
+    },
       },
       "definitions": {
         "LegalForm": {
@@ -505,6 +523,47 @@
         }
       }
     },
+     "RelatedProblem": {
+      "type": "object",
+      "required": [
+        "name",
+        "lastModified"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "name of the problem"
+        },
+        "lastReviewed": {
+          "type": "string",
+          "description": "ISO 8601 date; when problem was last reviewed"
+        },
+        "lastModified": {
+          "type": "string",
+          "description": "ISO 8610 date; when problem was last modified"
+        },
+        "url": {
+          "type": "string",
+          "description": "URL for the related problem"
+        },
+      }
+    },
+    "Citation": {
+      "type": "object",
+      "required": [
+        "name"],
+      "properties": {
+        "name": {
+           "type": "string",
+          "description": "name of the problem"
+        },
+        "url": {
+         "type": "string",
+          "description": "URL for the citation"
+        },
+      }  
+        
+    },
     "CoverageArea": {
       "type": "object",
       "properties": {
@@ -710,7 +769,7 @@
             "hoursAvailable": {
               "type": "array",
               "items": {
-                "$ref": "#/Organization/definitions/HoursOfOperation"
+                "$ref": "#/definitions/Organization/definitions/HoursOfOperation"
               }
             },
             "productSupported": {
