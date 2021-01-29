@@ -23,6 +23,15 @@ Legal aid members and pro bono members who have point activity can access the le
 
 Legal aid members can view the leaderboard of their organization.
 
+Admin role
+============
+Users with the staff role can:
+
+* Create, edit, and disable point entities
+* Create, edit, and disable badge types
+* Create, edit, and disable milestone types
+* View reports related to gamification
+
 Roles
 ========
 Legal content volunteers should be given the "subject matter expert" role when they are an active volunteer editor.  This will allow for certain organizational milestones to work.

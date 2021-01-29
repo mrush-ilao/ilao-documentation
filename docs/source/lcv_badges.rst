@@ -82,7 +82,7 @@ The badges can be configured in the CMS. Badges and Milestones:
   
 * a checkbox to indicate that the badge is a milestone award.  
   
-.. todo:: Andrew, we could use the description to list the awards from the how we calculate points block.  
+.. todo:: Milestones and/or badges may need a date available range.
   
   
   
