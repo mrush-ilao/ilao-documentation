@@ -9,4 +9,5 @@ Other Website Features
    livechat
    eupdate
    comments_ratings
-   contact_us   
+   contact_us
+   donations   

@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to IllinoisLegalAid Documentation's documentation!
-==========================================================
+Welcome to Illinois Legal Aid Online Product Documentation
+============================================================
 
 .. toctree::
    :maxdepth: 2
