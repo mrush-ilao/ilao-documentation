@@ -17,7 +17,11 @@ Welcome to IllinoisLegalAid Documentation's documentation!
    basic_pages_cms
    testimonials_cms
    webforms_cms
+   calendar_cms
+   jobs_cms
    otis_cms
+   site_search
+   site_faqs
    other_cms_features
    
    

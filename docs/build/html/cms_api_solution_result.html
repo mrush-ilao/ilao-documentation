@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Content API: Solution Result &mdash; IllinoisLegalAid.org 1 documentation</title>
+  <title>Content API: Solution Result &mdash; IllinoisLegalAid.org 2.10 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                2020
+                2021
               </div>
             
           
@@ -94,6 +94,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="cms_wysiwyg.html">WYSIWYG Tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms_custom_tokens.html">Custom Tokens</a></li>
@@ -108,6 +109,7 @@
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_overview.html">Structured Content Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content.html">Structured Content Schema</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_types.html">Structured Content Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_legal_content_admin.html">Creating and editing structured content</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="cms_structured_content_api.html">Structured content API</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="cms_api_taxonomy_terms.html">Content taxonomy terms</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_api_legal_problems_list.html">Content API: Legal Problems List</a></li>
@@ -126,17 +128,23 @@
 <li class="toctree-l4"><a class="reference internal" href="cms_api_solution_form.html">Content API:  Legal Form</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Content API:  Solution Result</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_api_solution_helpful_organization.html">Content API: Legal Solution Helpful Organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_content_api.html#authentication">Authentication</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="cms_lcv_program.html">Legal Content Volunteers Program</a></li>
 <li class="toctree-l2"><a class="reference internal" href="legal_content_cms.html#known-workarounds">Known Workarounds</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
@@ -155,6 +163,7 @@
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_overview.html">Structured Content Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content.html">Structured Content Schema</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_structured_content_types.html">Structured Content Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cms_structured_legal_content_admin.html">Creating and editing structured content</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="cms_structured_content_api.html">Structured content API</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="cms_api_taxonomy_terms.html">Content taxonomy terms</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_api_legal_problems_list.html">Content API: Legal Problems List</a></li>
@@ -173,10 +182,12 @@
 <li class="toctree-l4"><a class="reference internal" href="cms_api_solution_form.html">Content API:  Legal Form</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Content API:  Solution Result</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cms_api_solution_helpful_organization.html">Content API: Legal Solution Helpful Organization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cms_structured_content_api.html#authentication">Authentication</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="cms_lcv_program.html">Legal Content Volunteers Program</a></li>
 <li class="toctree-l2"><a class="reference internal" href="legal_content_cms.html#known-workarounds">Known Workarounds</a></li>
 </ul>
 </li>
@@ -314,7 +325,7 @@
   <div role="contentinfo">
     <p>
         
-        &copy; Copyright 2020, Illinois Legal Aid Online
+        &copy; Copyright 2020-2021, Illinois Legal Aid Online
 
     </p>
   </div>

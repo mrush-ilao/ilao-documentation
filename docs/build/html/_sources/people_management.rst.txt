@@ -8,3 +8,5 @@ User Management
 
    user_roles
    user_dashboards
+   user_reports
+   user_staff_board

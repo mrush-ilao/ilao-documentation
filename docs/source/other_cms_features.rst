@@ -7,4 +7,6 @@ Other Website Features
    :caption: Contents:
 
    livechat
-   eupdate   
+   eupdate
+   comments_ratings
+   contact_us   
