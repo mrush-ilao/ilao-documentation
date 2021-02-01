@@ -26,11 +26,9 @@ Rules for Automated Point Awards
 
 Automated point awards will be awarded:
 
-* only to revision authors with the subject matter expert role
+* to revision authors who do not have the staff or intern role
 * can only be awarded to the same node/language/author pair once every 24 hours (so that we don't accidentally award points multiple times)
-* users with the staff or intern role never earn points.
 
-.. note:: Andrew needs to verify that we aren't awarding points to editors who aren't LCV members.  Does that work if we have user testing badges or non-editing badges?  Another option may be to award the points and then send them a "hey, want to be an LCV? You already have 50 points." email if they edit content.
 
 Manual points 
 =================================
@@ -50,10 +48,10 @@ Points should be recorded in the website with the following information:
 * the timestamp of when the record was last updated
 * a reference to the point type awarded
 * the user ID of the person earning the point.  For automated points, it is always the revision author.
-* the entity id of the node associated with the points 
+* the entity id of the node associated with the points, if one exists 
 
   * for automated awards, it is the node of the content being revised
-  * for manual awards, it comes from the manual credit form
+  * for manual awards, it comes from the manual credit form.  
   
 * the primary legal category associated with the points
 
@@ -61,7 +59,7 @@ Points should be recorded in the website with the following information:
   * for manual awards, it comes from the manual credit form
   
 * the number of points awarded
-* the user id of the person awarding the points (for automated awards, this is anonymous)
+* the user id of the person awarding the points (for automated awards, this is anonymous as the system user)
 
   
   

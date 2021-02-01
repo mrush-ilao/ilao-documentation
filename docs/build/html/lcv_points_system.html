@@ -258,14 +258,9 @@
 <h2>Rules for Automated Point Awards<a class="headerlink" href="#rules-for-automated-point-awards" title="Permalink to this headline">¶</a></h2>
 <p>Automated point awards will be awarded:</p>
 <ul class="simple">
-<li>only to revision authors with the subject matter expert role</li>
+<li>to revision authors who do not have the staff or intern role</li>
 <li>can only be awarded to the same node/language/author pair once every 24 hours (so that we don’t accidentally award points multiple times)</li>
-<li>users with the staff or intern role never earn points.</li>
 </ul>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Andrew needs to verify that we aren’t awarding points to editors who aren’t LCV members.  Does that work if we have user testing badges or non-editing badges?  Another option may be to award the points and then send them a “hey, want to be an LCV? You already have 50 points.” email if they edit content.</p>
-</div>
 </div>
 <div class="section" id="manual-points">
 <h2>Manual points<a class="headerlink" href="#manual-points" title="Permalink to this headline">¶</a></h2>
@@ -284,9 +279,9 @@
 <li>the timestamp of when the record was last updated</li>
 <li>a reference to the point type awarded</li>
 <li>the user ID of the person earning the point.  For automated points, it is always the revision author.</li>
-<li>the entity id of the node associated with the points<ul>
+<li>the entity id of the node associated with the points, if one exists<ul>
 <li>for automated awards, it is the node of the content being revised</li>
-<li>for manual awards, it comes from the manual credit form</li>
+<li>for manual awards, it comes from the manual credit form.</li>
 </ul>
 </li>
 <li>the primary legal category associated with the points<ul>
@@ -295,7 +290,7 @@
 </ul>
 </li>
 <li>the number of points awarded</li>
-<li>the user id of the person awarding the points (for automated awards, this is anonymous)</li>
+<li>the user id of the person awarding the points (for automated awards, this is anonymous as the system user)</li>
 </ul>
 </div>
 </div>

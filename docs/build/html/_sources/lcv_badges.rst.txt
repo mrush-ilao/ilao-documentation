@@ -20,12 +20,27 @@ There is also a star image for milestone awards.
 
 Badges vs Milestones
 ======================
-Badges are awarded based on point counts and can be earned quarterly, annually, or one time.  Examples of badges are:
+Badges
+------------
+
+* Can only be awarded to individuals
+* Are awarded based on points (but points can be awarded per word or at a flat rate)
+* Have an associated badge image
+* May be earned:
+ 
+  * one time
+  * once a quarter
+  * once a year
+  * as many times as the criteria is met
+  * only during a defined time period
+
+Examples:
 
 * Family & Safety Hero
 * Crime & Traffic Hero
 * Workhorse
 * Family & Safety Workhorse
+* Pro Bono Month Champion
 
 The author and partner badges are reserved for specialty awards rather than general editorial work.  The author badge might be awarded:
 
@@ -37,16 +52,29 @@ The partner badge might be awarded:
 * with a category of "UX Tester" the first time a user completes an observeration test
 * with a category of "QA Partner" when a user tests an Easy Form
 
-.. todo:: Do the badges on the dashboard need labels?  Archita didn't include them in the design but I'm questioning that.
 
-Milestones are awarded once. These do not have an icon and appear only on the Milestones block.  Examples of milestones might be:
+Milestones
+------------
+
+* Can be awarded to individuals or to organizations
+* Can be tied to words, articles, points, or editors (for organizations)
+* Appear only in the milestones block
+* Have a star icon (no badge)
+* Are awarded:
+
+  * once, when first earned
+  * at the end of the quarter
+  * at the end of the year
+
+
+Examples of milestones might be:
 
 * 1st article edited
 * 100 articles edited
 * 250 articles edited
 * 5,000 words edited
 * 10,000 words edited
-
+* 100% LCV contribution (awarded to an organization for the quarter/year)
 
 Champion badges
 =================
@@ -56,33 +84,91 @@ There is also a global champion badge, awarded based on the total number of poin
 
 At the end of the calendar year, annual champion badges are also awarded.
 
-Defining Badges & Milestones
+Defining Badges 
 ===============================
-The badges can be configured in the CMS. Badges and Milestones:
+The badges can be configured in the CMS. Badges:
 
-* Have a name.  This is what appears beneath the name.  Examples:  Family & Safety Scribe, House & Apartment Hero, User Testing Expert.
-* Description is optional but can be used to define the badge in a user-friendly way.  For example:  Earn the Family & Safety Hero award by earning 200 points editing content in family & safety.
-* Image.  Select the badge to use.  **For milestones, leave blank**.
+* Name.  This is the administrative name for the badge (for admin reports).
+* Display label.  This is what appears to users beneath the badge, minus the date range.
+* Description.  This will appear on the "Learn more about badges" page.
+* Badge image.  This is the image to use.  
 * the maximum number of times a badge can be earned:
 
-  * no limit means as soon as the user hits the number of points required, they earn the badge.  For example, the hero badge could be set to be awarded when a user has earned 100 points in Family & Safety.  If a user earns 300 points in Quarter 2, they would earn the badge 3 times.
-  * once means the user can only earn the badge one time ever.  For example, if the Partner badge is set at 10,000 points for Family & Safety, and a user hits 10,005 points on January 4, 2022 and 20,001 points on June 6, 2022, they would only see one Family & Safety Partner badge.
-  * once per quarter means the user can earn the badge once a quarter maximum.  For example, if the Workhorse badge is set at 500 points for Family & Safety, and a user hits 501 points on January 4, 2022, 1007 points on February 3, 2022 and then earns 505 points on April 1, 2022, the user would earn the workhouse on January 4 and April 1.  No additional workhorse badge would be earned on February 3.
-  * once per year means the user can earn the badge once a year maximum.  For example, if the Leader badge is set at 500 points for Family & Safety, and a user hits 501 points on January 4, 2022, 1007 points on February 3, 2022 and then earns 505 points on April 1, 2023, the user would earn the workhouse on January 4, 2022 and April 1, 2023.  No additional workhorse badge would be earned on February 3.
-  
+  * Once.  A user can earn a badge one time. 
+  * Once per quarter.  The user can earn the badge once a quarter maximum.  Quarter badges are postfixed with "Q2, 2021".  
+  * Once per year.  The user can earn the badge once a year maximum. Annual badges are postfixed with the 4 digit year.  
+    * No limit. As soon as the user hits the number of points required, they earn the badge.  
+    
+    
+Example:  User has: 210 points on Jan 28, 305 points on Feb 28, 500 points on April 30
+
++--------------------+--------------------------------------------------------------+
+| Badge Type         |  User Awarded                                                |
++====================+==============================================================+
+| Once; 200 points   | User awarded the badge on Jan 28                             |
++--------------------+--------------------------------------------------------------+
+| Once per qtr;      | User awarded the badge on Jan 28 and April 30                |
+| 100 points         |                                                              |
++--------------------+--------------------------------------------------------------+
+| Once per qtr;      | User awarded the badge on February 28 (points reset Apr 1;   |
+| 250 points         | user only has 195 countable points for the quarter           |
++--------------------+--------------------------------------------------------------+
+| Once per year      | User awarded the badge on February 28                        |
+| 300 points         |                                                              |
++--------------------+--------------------------------------------------------------+
+| No limit           | User awarded the badge on Jan 28, Feb 28, April 30           |
+| 150 points         |                                                              |
++--------------------+--------------------------------------------------------------+
+
 * Which content categories count towards the badge.  A badge could be limited points earned from tasks associated with family & safety content or not limited for example.  The category used is either:
  
   * the primary legal category associated with a node
   * the primary legal category indicated when awarding manual credit.
   
-* the point entities that should be counted for a badge award.  For example, the Family & Safety hero badge may be limited to point entities related to content editing while the House & Apartment UX partner may be limited to point entities related to user testing.
-* the requirements to earn a badge:
+* the point types that should be counted for a badge award.  Leave blank for all point types.
+
+.. note:: If left empty, new point types will be included automatically.  When populated, any new point types will need to be manually added.
   
-  * a number of points/words/articles.  Points should be used unless the badge is a milestone.
+* a number of point required to earn a badge.
   
-* a checkbox to indicate that the badge is a milestone award.  
+* the dates when points can be earned for a specific badge.  If left empty, all dates can be used.
+
+.. note:: For example, if a badge is limited to October 1, 2021 through October 31, 2021, points earned outside of that range will not be counted regardless of the badge award frequency.  However, if the frequency is no limit, the user can earn the badge multiple times in October.    
+
+
+Defining Milestones
+=====================
+Milestones should have:
+
+* A name.  This is what displays in the Milestones this quarter panel
+* A description.  This will be displayed on the Learn more about our badges/milestones page
+* Maximum number of times a milestone can be earned.  This has options of:
+
+  * Lifetime (once)
+  * Quarterly
+  * Annually
   
-.. todo:: Milestones and/or badges may need a date available range.
+* Who the milestone applies to.   Options are:
+
+  * Organizations
+  * Individuals
+  * Both
+
+* Base award on:
+
+  * Points
+  * Words.  When words is selected, the milestone will be calculated using the number of words in the content associated with the point type(s).
+  * Revisions.  When revisions is selected, the milestone will be calculated using the number of point types associated with the user/organization.  For example, if a user has earned points under "Published content" 5 times, 5 revisions will be counted.
+  * Editors.  When editors is selected, the milestone will be calculated by the number of unique users associated with point types. Editor totals can be tracked against:
+  
+    * Percentage of legal content volunteers in an organization.  For example, if Organization A has 5 editors and the milestone is for 75% contribution, 4 editors must make an edit for the organization to earn the milestone.
+    * Percentage of staff in an organization.  For example, if Organization A has 20 staff  and the milestone is for 75% contribution, 15 users must make an edit for the organization to earn the milestone.
+    * Number.   
+
+  
+* Legal category for countable points.  
+* Point types to include when counting points.
+* Number of items required to earn milestone.  
   
   
   

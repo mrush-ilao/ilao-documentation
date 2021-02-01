@@ -112,7 +112,8 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Badges</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#badges-vs-milestones">Badges vs Milestones</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#champion-badges">Champion badges</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#defining-badges-milestones">Defining Badges &amp; Milestones</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#defining-badges">Defining Badges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#defining-milestones">Defining Milestones</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="lcv_dashboard.html">LCV Dashboard</a></li>
@@ -151,7 +152,8 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Badges</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#badges-vs-milestones">Badges vs Milestones</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#champion-badges">Champion badges</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#defining-badges-milestones">Defining Badges &amp; Milestones</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#defining-badges">Defining Badges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#defining-milestones">Defining Milestones</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="lcv_dashboard.html">LCV Dashboard</a></li>
@@ -247,12 +249,28 @@
 There is also a star image for milestone awards.</p>
 <div class="section" id="badges-vs-milestones">
 <h2>Badges vs Milestones<a class="headerlink" href="#badges-vs-milestones" title="Permalink to this headline">¶</a></h2>
-<p>Badges are awarded based on point counts and can be earned quarterly, annually, or one time.  Examples of badges are:</p>
+<div class="section" id="id1">
+<h3>Badges<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Can only be awarded to individuals</li>
+<li>Are awarded based on points (but points can be awarded per word or at a flat rate)</li>
+<li>Have an associated badge image</li>
+<li>May be earned:<ul>
+<li>one time</li>
+<li>once a quarter</li>
+<li>once a year</li>
+<li>as many times as the criteria is met</li>
+<li>only during a defined time period</li>
+</ul>
+</li>
+</ul>
+<p>Examples:</p>
 <ul class="simple">
 <li>Family &amp; Safety Hero</li>
 <li>Crime &amp; Traffic Hero</li>
 <li>Workhorse</li>
 <li>Family &amp; Safety Workhorse</li>
+<li>Pro Bono Month Champion</li>
 </ul>
 <p>The author and partner badges are reserved for specialty awards rather than general editorial work.  The author badge might be awarded:</p>
 <ul class="simple">
@@ -263,18 +281,31 @@ There is also a star image for milestone awards.</p>
 <p>The partner badge might be awarded:
 * with a category of “UX Tester” the first time a user completes an observeration test
 * with a category of “QA Partner” when a user tests an Easy Form</p>
-<div class="admonition-todo admonition" id="index-0">
-<p class="first admonition-title">Todo</p>
-<p class="last">Do the badges on the dashboard need labels?  Archita didn’t include them in the design but I’m questioning that.</p>
 </div>
-<p>Milestones are awarded once. These do not have an icon and appear only on the Milestones block.  Examples of milestones might be:</p>
+<div class="section" id="milestones">
+<h3>Milestones<a class="headerlink" href="#milestones" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Can be awarded to individuals or to organizations</li>
+<li>Can be tied to words, articles, points, or editors (for organizations)</li>
+<li>Appear only in the milestones block</li>
+<li>Have a star icon (no badge)</li>
+<li>Are awarded:<ul>
+<li>once, when first earned</li>
+<li>at the end of the quarter</li>
+<li>at the end of the year</li>
+</ul>
+</li>
+</ul>
+<p>Examples of milestones might be:</p>
 <ul class="simple">
 <li>1st article edited</li>
 <li>100 articles edited</li>
 <li>250 articles edited</li>
 <li>5,000 words edited</li>
 <li>10,000 words edited</li>
+<li>100% LCV contribution (awarded to an organization for the quarter/year)</li>
 </ul>
+</div>
 </div>
 <div class="section" id="champion-badges">
 <h2>Champion badges<a class="headerlink" href="#champion-badges" title="Permalink to this headline">¶</a></h2>
@@ -282,36 +313,111 @@ There is also a star image for milestone awards.</p>
 <p>There is also a global champion badge, awarded based on the total number of points during the quarter.</p>
 <p>At the end of the calendar year, annual champion badges are also awarded.</p>
 </div>
-<div class="section" id="defining-badges-milestones">
-<h2>Defining Badges &amp; Milestones<a class="headerlink" href="#defining-badges-milestones" title="Permalink to this headline">¶</a></h2>
-<p>The badges can be configured in the CMS. Badges and Milestones:</p>
+<div class="section" id="defining-badges">
+<h2>Defining Badges<a class="headerlink" href="#defining-badges" title="Permalink to this headline">¶</a></h2>
+<p>The badges can be configured in the CMS. Badges:</p>
 <ul class="simple">
-<li>Have a name.  This is what appears beneath the name.  Examples:  Family &amp; Safety Scribe, House &amp; Apartment Hero, User Testing Expert.</li>
-<li>Description is optional but can be used to define the badge in a user-friendly way.  For example:  Earn the Family &amp; Safety Hero award by earning 200 points editing content in family &amp; safety.</li>
-<li>Image.  Select the badge to use.  <strong>For milestones, leave blank</strong>.</li>
+<li>Name.  This is the administrative name for the badge (for admin reports).</li>
+<li>Display label.  This is what appears to users beneath the badge, minus the date range.</li>
+<li>Description.  This will appear on the “Learn more about badges” page.</li>
+<li>Badge image.  This is the image to use.</li>
 <li>the maximum number of times a badge can be earned:<ul>
-<li>no limit means as soon as the user hits the number of points required, they earn the badge.  For example, the hero badge could be set to be awarded when a user has earned 100 points in Family &amp; Safety.  If a user earns 300 points in Quarter 2, they would earn the badge 3 times.</li>
-<li>once means the user can only earn the badge one time ever.  For example, if the Partner badge is set at 10,000 points for Family &amp; Safety, and a user hits 10,005 points on January 4, 2022 and 20,001 points on June 6, 2022, they would only see one Family &amp; Safety Partner badge.</li>
-<li>once per quarter means the user can earn the badge once a quarter maximum.  For example, if the Workhorse badge is set at 500 points for Family &amp; Safety, and a user hits 501 points on January 4, 2022, 1007 points on February 3, 2022 and then earns 505 points on April 1, 2022, the user would earn the workhouse on January 4 and April 1.  No additional workhorse badge would be earned on February 3.</li>
-<li>once per year means the user can earn the badge once a year maximum.  For example, if the Leader badge is set at 500 points for Family &amp; Safety, and a user hits 501 points on January 4, 2022, 1007 points on February 3, 2022 and then earns 505 points on April 1, 2023, the user would earn the workhouse on January 4, 2022 and April 1, 2023.  No additional workhorse badge would be earned on February 3.</li>
+<li>Once.  A user can earn a badge one time.</li>
+<li>Once per quarter.  The user can earn the badge once a quarter maximum.  Quarter badges are postfixed with “Q2, 2021”.</li>
+<li>Once per year.  The user can earn the badge once a year maximum. Annual badges are postfixed with the 4 digit year.
+* No limit. As soon as the user hits the number of points required, they earn the badge.</li>
 </ul>
 </li>
+</ul>
+<p>Example:  User has: 210 points on Jan 28, 305 points on Feb 28, 500 points on April 30</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="76%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Badge Type</th>
+<th class="head">User Awarded</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Once; 200 points</td>
+<td>User awarded the badge on Jan 28</td>
+</tr>
+<tr class="row-odd"><td>Once per qtr;
+100 points</td>
+<td>User awarded the badge on Jan 28 and April 30</td>
+</tr>
+<tr class="row-even"><td>Once per qtr;
+250 points</td>
+<td>User awarded the badge on February 28 (points reset Apr 1;
+user only has 195 countable points for the quarter</td>
+</tr>
+<tr class="row-odd"><td>Once per year
+300 points</td>
+<td>User awarded the badge on February 28</td>
+</tr>
+<tr class="row-even"><td>No limit
+150 points</td>
+<td>User awarded the badge on Jan 28, Feb 28, April 30</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
 <li>Which content categories count towards the badge.  A badge could be limited points earned from tasks associated with family &amp; safety content or not limited for example.  The category used is either:<ul>
 <li>the primary legal category associated with a node</li>
 <li>the primary legal category indicated when awarding manual credit.</li>
 </ul>
 </li>
-<li>the point entities that should be counted for a badge award.  For example, the Family &amp; Safety hero badge may be limited to point entities related to content editing while the House &amp; Apartment UX partner may be limited to point entities related to user testing.</li>
-<li>the requirements to earn a badge:<ul>
-<li>a number of points/words/articles.  Points should be used unless the badge is a milestone.</li>
+<li>the point types that should be counted for a badge award.  Leave blank for all point types.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If left empty, new point types will be included automatically.  When populated, any new point types will need to be manually added.</p>
+</div>
+<ul class="simple">
+<li>a number of point required to earn a badge.</li>
+<li>the dates when points can be earned for a specific badge.  If left empty, all dates can be used.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For example, if a badge is limited to October 1, 2021 through October 31, 2021, points earned outside of that range will not be counted regardless of the badge award frequency.  However, if the frequency is no limit, the user can earn the badge multiple times in October.</p>
+</div>
+</div>
+<div class="section" id="defining-milestones">
+<h2>Defining Milestones<a class="headerlink" href="#defining-milestones" title="Permalink to this headline">¶</a></h2>
+<p>Milestones should have:</p>
+<ul class="simple">
+<li>A name.  This is what displays in the Milestones this quarter panel</li>
+<li>A description.  This will be displayed on the Learn more about our badges/milestones page</li>
+<li>Maximum number of times a milestone can be earned.  This has options of:<ul>
+<li>Lifetime (once)</li>
+<li>Quarterly</li>
+<li>Annually</li>
 </ul>
 </li>
-<li>a checkbox to indicate that the badge is a milestone award.</li>
+<li>Who the milestone applies to.   Options are:<ul>
+<li>Organizations</li>
+<li>Individuals</li>
+<li>Both</li>
 </ul>
-<div class="admonition-todo admonition" id="index-1">
-<p class="first admonition-title">Todo</p>
-<p class="last">Milestones and/or badges may need a date available range.</p>
-</div>
+</li>
+<li>Base award on:<ul>
+<li>Points</li>
+<li>Words.  When words is selected, the milestone will be calculated using the number of words in the content associated with the point type(s).</li>
+<li>Revisions.  When revisions is selected, the milestone will be calculated using the number of point types associated with the user/organization.  For example, if a user has earned points under “Published content” 5 times, 5 revisions will be counted.</li>
+<li>Editors.  When editors is selected, the milestone will be calculated by the number of unique users associated with point types. Editor totals can be tracked against:<ul>
+<li>Percentage of legal content volunteers in an organization.  For example, if Organization A has 5 editors and the milestone is for 75% contribution, 4 editors must make an edit for the organization to earn the milestone.</li>
+<li>Percentage of staff in an organization.  For example, if Organization A has 20 staff  and the milestone is for 75% contribution, 15 users must make an edit for the organization to earn the milestone.</li>
+<li>Number.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Legal category for countable points.</li>
+<li>Point types to include when counting points.</li>
+<li>Number of items required to earn milestone.</li>
+</ul>
 </div>
 </div>
 
