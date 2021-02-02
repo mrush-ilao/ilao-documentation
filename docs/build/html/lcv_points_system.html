@@ -118,6 +118,7 @@
 <li class="toctree-l3"><a class="reference internal" href="lcv_badges.html">Badges</a></li>
 <li class="toctree-l3"><a class="reference internal" href="lcv_dashboard.html">LCV Dashboard</a></li>
 <li class="toctree-l3"><a class="reference internal" href="lcv_leaderboards.html">LCV Leaderboards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lcv_reporting.html">Gamefication Reports</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="legal_content_cms.html#known-workarounds">Known Workarounds</a></li>
@@ -158,6 +159,7 @@
 <li class="toctree-l3"><a class="reference internal" href="lcv_badges.html">Badges</a></li>
 <li class="toctree-l3"><a class="reference internal" href="lcv_dashboard.html">LCV Dashboard</a></li>
 <li class="toctree-l3"><a class="reference internal" href="lcv_leaderboards.html">LCV Leaderboards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lcv_reporting.html">Gamefication Reports</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="legal_content_cms.html#known-workarounds">Known Workarounds</a></li>
@@ -273,24 +275,32 @@
 </div>
 <div class="section" id="point-tracking">
 <h2>Point Tracking<a class="headerlink" href="#point-tracking" title="Permalink to this headline">¶</a></h2>
-<p>Points should be recorded in the website with the following information:</p>
+<p>Point awards should be recorded in the website with the following information:</p>
 <ul class="simple">
 <li>the timestamp of when the record is created</li>
 <li>the timestamp of when the record was last updated</li>
 <li>a reference to the point type awarded</li>
-<li>the user ID of the person earning the point.  For automated points, it is always the revision author.</li>
+<li>the user ID of the person earning the point.<ul>
+<li>for automated points, it is always the revision author.</li>
+<li>for manual points, it is the user added to the user field on the form</li>
+</ul>
+</li>
 <li>the entity id of the node associated with the points, if one exists<ul>
 <li>for automated awards, it is the node of the content being revised</li>
 <li>for manual awards, it comes from the manual credit form.</li>
 </ul>
 </li>
+<li>the revision id of the revision being tracked, for automated awards</li>
+<li>the language code of the revision, for automated awards</li>
 <li>the primary legal category associated with the points<ul>
 <li>for automated awards, it is the primary legal category of the node at the time the points are awarded</li>
 <li>for manual awards, it comes from the manual credit form</li>
 </ul>
 </li>
 <li>the number of points awarded</li>
+<li>the number of words in the node at the time points were awarded</li>
 <li>the user id of the person awarding the points (for automated awards, this is anonymous as the system user)</li>
+<li>the date the points were earned (this may be different from when they are awarded)</li>
 </ul>
 </div>
 </div>

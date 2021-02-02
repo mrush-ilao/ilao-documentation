@@ -42,24 +42,35 @@ Manual points may be awarded via a separate form and may optionally be tied to a
 Point Tracking
 =================
 
-Points should be recorded in the website with the following information:
+Point awards should be recorded in the website with the following information:
 
 * the timestamp of when the record is created
 * the timestamp of when the record was last updated
 * a reference to the point type awarded
-* the user ID of the person earning the point.  For automated points, it is always the revision author.
+* the user ID of the person earning the point.  
+
+  * for automated points, it is always the revision author.
+  * for manual points, it is the user added to the user field on the form
+  
 * the entity id of the node associated with the points, if one exists 
 
   * for automated awards, it is the node of the content being revised
   * for manual awards, it comes from the manual credit form.  
-  
+
+* the revision id of the revision being tracked, for automated awards 
+* the language code of the revision, for automated awards 
 * the primary legal category associated with the points
 
   * for automated awards, it is the primary legal category of the node at the time the points are awarded
   * for manual awards, it comes from the manual credit form
   
 * the number of points awarded
+* the number of words in the node at the time points were awarded
 * the user id of the person awarding the points (for automated awards, this is anonymous as the system user)
+* the date the points were earned (this may be different from when they are awarded)
+
+
+
 
   
   

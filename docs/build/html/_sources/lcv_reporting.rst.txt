@@ -26,6 +26,7 @@ Point History Report
 =====================
 The point history report shows all individual point awards made.  The report includes:
 
+* Date earned
 * Date awarded
 * Point type
 * Name of the user awarded the point
@@ -37,8 +38,9 @@ The point history report shows all individual point awards made.  The report inc
 
 The report can be filtered by:
 
-* Start and end dates
-* Name of user awarded the points
+* Date awarded date range
+* Date earned date range
+* Name of user awarded the points (first and last names)
 * Point type
 
 Report can be exported to CSV.
