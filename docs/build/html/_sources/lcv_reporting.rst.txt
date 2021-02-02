@@ -44,3 +44,61 @@ The report can be filtered by:
 * Point type
 
 Report can be exported to CSV.
+
+Badge Listing Report
+====================
+The badge listing report shows all the badges available in the system.  The report includes:
+
+* Name of the badge
+* Maximum times a badge can be earned
+* Primary legal category
+* Point types to count (as a simple list)
+* Points required to earn badge
+* Date range points can be earned
+* An operations column to edit the badge
+
+Report can be filtered on:
+* Maximum times a badge can be earned
+* Point types to count
+* Primary legal category
+
+Report can be exported to CSV
+
+Milestone Listing Report
+=========================
+The milestone listing report shows all the milestones available in the system.  The report includes:
+
+* Name of the milestone
+* Maximum times a milestone can be earned
+* Applies to
+* Basis for milestone
+* Primary legal category
+* Point types to include
+* Number of items required to earn milestone
+
+Report can be filtered on:
+* Maximum times a milestone can be earned
+* Point types to count
+* Primary legal category to count
+* Applies to
+
+Report can be exported to CSV
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
