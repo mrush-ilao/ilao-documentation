@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Search &mdash; IllinoisLegalAid.org 2.10 documentation</title>
+  <title>SMS Integration &mdash; IllinoisLegalAid.org 2.10 documentation</title>
   
 
   
@@ -24,7 +24,6 @@
   
 
   
-    
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -39,9 +38,10 @@
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-    <script type="text/javascript" src="_static/searchtools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Site Search" href="site_search.html" />
+    <link rel="prev" title="ILAO OTIS API" href="otis_ilao_api.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -72,7 +72,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -91,7 +91,7 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="design_guide.html">Design Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
@@ -99,10 +99,29 @@
 <li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="otis_cms.html">Get Legal Help</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="otis_endusers.html">Get Legal Help Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_organization_management.html">Organization management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_endpoints.html">Triage rule endpoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_reports.html">Get Legal Help Reporting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_ai_integration.html">OTIS AI Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_third_party_support.html">Supported Integrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_ilao_api.html">ILAO OTIS API</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">SMS Integration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-this-will-work">How This Will Work</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#legal-issue-not-in-illinois">Legal issue not in Illinois</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#legal-issue-in-guided-navigation">Legal issue in Guided Navigation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#legal-issue-outside-guided-navigation">Legal issue outside Guided Navigation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#required-apis-for-intake">Required APIs for Intake</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#required-apis-for-triage">Required APIs for Triage</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
 <li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
@@ -156,12 +175,16 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Search</li>
+          <li><a href="otis_cms.html">Get Legal Help</a> &raquo;</li>
+        
+      <li>SMS Integration</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
+            <a href="_sources/otis_sms_intake.rst.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
     
@@ -173,23 +196,64 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search functionality.
-    </p>
-  </div>
-  </noscript>
+  <div class="section" id="sms-integration">
+<h1>SMS Integration<a class="headerlink" href="#sms-integration" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This is not built but documentation to guide the build.  This will be built out using Twilio Studio and ILAO API calls.</p>
+</div>
+<div class="section" id="how-this-will-work">
+<h2>How This Will Work<a class="headerlink" href="#how-this-will-work" title="Permalink to this headline">¶</a></h2>
+<p>Users will text “legal help” to a specific telephone number and provide their legal issue.  Only legal issues offered over Guided Navigation can be triaged over SMS in our pilot.  Users with issues outside of these limited areas will be redirected to apply to Get Legal Help on the website.</p>
+<p>See <a class="reference external" href="https://kywpl3.axshare.com/#g=1&amp;p=home">conceptual prototype</a>.</p>
+<div class="section" id="legal-issue-not-in-illinois">
+<h3>Legal issue not in Illinois<a class="headerlink" href="#legal-issue-not-in-illinois" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Redirect to LSC</li>
+<li>track user as out of state</li>
+</ul>
+</div>
+<div class="section" id="legal-issue-in-guided-navigation">
+<h3>Legal issue in Guided Navigation<a class="headerlink" href="#legal-issue-in-guided-navigation" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="legal-issue-outside-guided-navigation">
+<h3>Legal issue outside Guided Navigation<a class="headerlink" href="#legal-issue-outside-guided-navigation" title="Permalink to this headline">¶</a></h3>
+<p>User is sent to /get-legal-help on website</p>
+</div>
+</div>
+<div class="section" id="required-apis-for-intake">
+<h2>Required APIs for Intake<a class="headerlink" href="#required-apis-for-intake" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Zip code validation</li>
+<li>Race list</li>
+<li>Ethnicity list</li>
+<li>Income levels per household size</li>
+<li>Income type entities</li>
+<li>Callback types</li>
+</ul>
+</div>
+<div class="section" id="required-apis-for-triage">
+<h2>Required APIs for Triage<a class="headerlink" href="#required-apis-for-triage" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Classifier processing</li>
+</ul>
+</div>
+</div>
 
-  
-  <div id="search-results">
-  
-  </div>
 
            </div>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="site_search.html" class="btn btn-neutral float-right" title="Site Search" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="otis_ilao_api.html" class="btn btn-neutral float-left" title="ILAO OTIS API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -229,14 +293,7 @@
   
   
     
-  
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
    
-
 
 </body>
 </html>

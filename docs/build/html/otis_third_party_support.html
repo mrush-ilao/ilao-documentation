@@ -99,6 +99,7 @@
 <li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="otis_cms.html">Get Legal Help</a><ul class="current">
@@ -110,10 +111,16 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Supported Integrations</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#url-pre-fill-method">URL Pre-fill method</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#source-parameters">Source parameters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#examples">Examples</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#when-used-as-a-link-on-a-website-or-social-media">When used as a link on a website or social media</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#when-used-in-a-chatbot">When used in a chatbot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#combining-the-two">Combining the two</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="otis_ilao_api.html">ILAO OTIS API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_sms_intake.html">SMS Integration</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
@@ -200,7 +207,8 @@
 <li>issue, which is the legal issues taxonomy term ID.  ILAO will provide a list of taxonomy term IDs for interested partners of the lowest-level terms so that users bypass additional screening.</li>
 <li>zipcode, the user’s zipcode</li>
 <li>household, the size of the household as a number</li>
-<li>source (a valid intake settings ID)</li>
+<li>source</li>
+<li>referral_source_type</li>
 <li>helptype[]<ul>
 <li>up to 3 instances of helptype[] are allowed</li>
 <li>the accepted values for these are lawyer, content, forms</li>
@@ -210,7 +218,13 @@
 </div>
 <div class="section" id="source-parameters">
 <h2>Source parameters<a class="headerlink" href="#source-parameters" title="Permalink to this headline">¶</a></h2>
-<p>When the source parameter is present, the specific intake settings will receive priority over any other intake settings.  This is expected to be used by organization partners on their own websites or via social media to prioritize traffic from those partners into OTIS.  For example, if the url is /get-legal-help?source=1226 then Legal Aid Chicago’s housing rules would take priority over other organizations.</p>
+<p>Source parameters should be matched as a pair:</p>
+<ul class="simple">
+<li>source should be either an organization id or intake_settings id</li>
+<li>referral_source_type should be either organization or intake_settings</li>
+</ul>
+<p>When a source is included with a referral_source_type of organization, the specific organization will receive priority over any other organization.  This is usually the <strong>preferred</strong> approach to use unless an organization needs to prioritize a specific intake setting.</p>
+<p>When a source is included with a referral_source_type of intake_settings, the specific intake settings or organization will receive priority over any other intake settings.  This is expected to be used by organization partners on their own websites or via social media to prioritize traffic from those partners into OTIS.  For example, if the url is /get-legal-help?source=1226 then Legal Aid Chicago’s housing rules would take priority over other organizations.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Because the source parameter is tied to the intake settings, it is best practice to include a relevant taxonomy term as the parameter will be ignored if the user selects a topic that is unrelated to the intake settings</p>
@@ -218,16 +232,35 @@
 </div>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<p>In these samples, the request is coming from a 3rd party chatbot.</p>
-<p>User is in zip code 60603, legal issue is  enforcing a joint parenting plan or agreement
-(514616) and the household size is 3.</p>
+<div class="section" id="when-used-as-a-link-on-a-website-or-social-media">
+<h3>When used as a link on a website or social media<a class="headerlink" href="#when-used-as-a-link-on-a-website-or-social-media" title="Permalink to this headline">¶</a></h3>
+<p>In these examples, we are using just the source parameters to prioritize an OTIS partner.</p>
+<p>Direct referral to Legal Aid Chicago for any legal issue:</p>
+<p><a class="reference external" href="https://www.illinoislegalaid.org/get-legal-help?source=25231&amp;referral_source_type=organization">https://www.illinoislegalaid.org/get-legal-help?source=25231&amp;referral_source_type=organization</a></p>
+<p>Direct referral to JEP for any legal issue:</p>
+<p><a class="reference external" href="https://www.illinoislegalaid.org/get-legal-help?source=25181&amp;referral_source_type=organization">https://www.illinoislegalaid.org/get-legal-help?source=25181&amp;referral_source_type=organization</a></p>
 <p>Direct referral to Legal Aid Chicago’s housing practice group:</p>
 <p><a class="reference external" href="https://www.illinoislegalaid.org/get-legal-help?source=1226&amp;helptype[]=lawyer">https://www.illinoislegalaid.org/get-legal-help?source=1226&amp;helptype[]=lawyer</a></p>
+</div>
+<div class="section" id="when-used-in-a-chatbot">
+<h3>When used in a chatbot<a class="headerlink" href="#when-used-in-a-chatbot" title="Permalink to this headline">¶</a></h3>
+<p>In these examples, we are using the parameters to prefill the Get Legal Help form without prioritizing one organization over another.</p>
 <p>Looking for a lawyer:
 <a class="reference external" href="https://www.illinoislegalaid.org/get-legal-help?issue=514616&amp;zipcode=60603&amp;household=3&amp;helptype[]=lawyer">https://www.illinoislegalaid.org/get-legal-help?issue=514616&amp;zipcode=60603&amp;household=3&amp;helptype[]=lawyer</a></p>
 <p>Looking for a lawyer &amp; content:
 <a class="reference external" href="https://www.illinoislegalaid.org/get-legal-help?issue=514616&amp;zipcode=60603&amp;household=3&amp;helptype[]=lawyer&amp;helptype[]=content">https://www.illinoislegalaid.org/get-legal-help?issue=514616&amp;zipcode=60603&amp;household=3&amp;helptype[]=lawyer&amp;helptype[]=content</a></p>
+</div>
+<div class="section" id="combining-the-two">
+<h3>Combining the two<a class="headerlink" href="#combining-the-two" title="Permalink to this headline">¶</a></h3>
+<p>We can combine the two to pre-fill the form and prioritize an organization.  This may be helpful for social media or website campaigns where an OTIS partner may want to help the user get to the right triage rules, for example, prefilling the legal issue as foreclosure to ensure that users don’t search for bankruptcy when they are considering bankruptcy to prevent a foreclosure.</p>
+<p>Looking for a lawyer for foreclosure in 60603, household size of 3 and prioritizing Legal Aid Chicago:</p>
+<p><a class="reference external" href="https://www.illinoislegalaid.org/get-legal-help?issue=515281&amp;zipcode=60603&amp;household=3&amp;helptype[]=lawyer&amp;source=25231&amp;referral_source_type=organization">https://www.illinoislegalaid.org/get-legal-help?issue=515281&amp;zipcode=60603&amp;household=3&amp;helptype[]=lawyer&amp;source=25231&amp;referral_source_type=organization</a></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Where the user still has to drill down from ILAO’s taxonomy, there is a chance that the organization will be de-prioritized if the user drills down to a subtopic not covered by that organization’s triage rules.</p>
+</div>
 <img alt="_images/otis-prefill-mobile.png" src="_images/otis-prefill-mobile.png" />
+</div>
 </div>
 </div>
 
