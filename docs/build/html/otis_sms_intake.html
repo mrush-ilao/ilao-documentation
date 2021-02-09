@@ -99,6 +99,7 @@
 <li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="otis_cms.html">Get Legal Help</a><ul class="current">
@@ -110,10 +111,11 @@
 <li class="toctree-l2"><a class="reference internal" href="otis_third_party_support.html">Supported Integrations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_ilao_api.html">ILAO OTIS API</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">SMS Integration</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#how-this-will-work">How This Will Work</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#legal-issue-not-in-illinois">Legal issue not in Illinois</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#legal-issue-in-guided-navigation">Legal issue in Guided Navigation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#legal-issue-outside-guided-navigation">Legal issue outside Guided Navigation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#phase-1">Phase 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#phase-2">Phase 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#phase-3">Phase 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#twilio-technical-notes">Twilio Technical Notes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#functions">Functions</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#required-apis-for-intake">Required APIs for Intake</a></li>
@@ -202,23 +204,31 @@
 <p class="first admonition-title">Note</p>
 <p class="last">This is not built but documentation to guide the build.  This will be built out using Twilio Studio and ILAO API calls.</p>
 </div>
-<div class="section" id="how-this-will-work">
-<h2>How This Will Work<a class="headerlink" href="#how-this-will-work" title="Permalink to this headline">¶</a></h2>
-<p>Users will text “legal help” to a specific telephone number and provide their legal issue.  Only legal issues offered over Guided Navigation can be triaged over SMS in our pilot.  Users with issues outside of these limited areas will be redirected to apply to Get Legal Help on the website.</p>
+<p>The English Twilio Studio flow is the OTIS master.</p>
 <p>See <a class="reference external" href="https://kywpl3.axshare.com/#g=1&amp;p=home">conceptual prototype</a>.</p>
-<div class="section" id="legal-issue-not-in-illinois">
-<h3>Legal issue not in Illinois<a class="headerlink" href="#legal-issue-not-in-illinois" title="Permalink to this headline">¶</a></h3>
+<p>The interface, including text segments, are stored in Twilio.  API calls to required data sets are on the website and processed using functions in Twilio Studio.</p>
+<div class="section" id="phase-1">
+<h2>Phase 1<a class="headerlink" href="#phase-1" title="Permalink to this headline">¶</a></h2>
+<p>Phase 1 is a basic model that requires the user to choose from a limited set of legal problems.  All other issues will be routed to the website.</p>
+<p>Only legal issues offered over Guided Navigation can be triaged over SMS in our pilot and the initial rollout will be limited to:</p>
 <ul class="simple">
-<li>Redirect to LSC</li>
-<li>track user as out of state</li>
+<li>unemployment benefits</li>
+<li>food stamps and TANF</li>
 </ul>
 </div>
-<div class="section" id="legal-issue-in-guided-navigation">
-<h3>Legal issue in Guided Navigation<a class="headerlink" href="#legal-issue-in-guided-navigation" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="phase-2">
+<h2>Phase 2<a class="headerlink" href="#phase-2" title="Permalink to this headline">¶</a></h2>
+<p>Phase 2 will add support for classifiers to support plain language triage</p>
 </div>
-<div class="section" id="legal-issue-outside-guided-navigation">
-<h3>Legal issue outside Guided Navigation<a class="headerlink" href="#legal-issue-outside-guided-navigation" title="Permalink to this headline">¶</a></h3>
-<p>User is sent to /get-legal-help on website</p>
+<div class="section" id="phase-3">
+<h2>Phase 3<a class="headerlink" href="#phase-3" title="Permalink to this headline">¶</a></h2>
+<p>Phase 3 will add support for legal issues beyond those in Phase 1</p>
+</div>
+<div class="section" id="twilio-technical-notes">
+<h2>Twilio Technical Notes<a class="headerlink" href="#twilio-technical-notes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<p>Available functions are in the ilao service.  Twilio studio can pass parameters to functions.  These are stored in the event object.</p>
 </div>
 </div>
 <div class="section" id="required-apis-for-intake">
@@ -235,7 +245,8 @@
 <div class="section" id="required-apis-for-triage">
 <h2>Required APIs for Triage<a class="headerlink" href="#required-apis-for-triage" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Classifier processing</li>
+<li>Guided navigation integration in phase 1</li>
+<li>Classifier integration in phase 2</li>
 </ul>
 </div>
 </div>

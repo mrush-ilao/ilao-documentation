@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>WYSIWYG Tools &mdash; IllinoisLegalAid.org 2.10 documentation</title>
+  <title>Word counts &mdash; IllinoisLegalAid.org 2.10 documentation</title>
   
 
   
@@ -40,8 +40,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Link tool in WYSIWYG" href="cms_link_tool.html" />
-    <link rel="prev" title="Legal Content CMS" href="legal_content_cms.html" /> 
+    <link rel="next" title="Custom Tokens" href="cms_custom_tokens.html" />
+    <link rel="prev" title="Local content tool" href="cms_localization_tool.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,10 +96,10 @@
 <li class="toctree-l1"><a class="reference internal" href="block_management.html">Custom blocks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="people_management.html">User Management</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">WYSIWYG Tools</a><ul>
+<li class="toctree-l2 current"><a class="reference internal" href="cms_wysiwyg.html">WYSIWYG Tools</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="cms_link_tool.html">Link tool in WYSIWYG</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_localization_tool.html">Local content tool</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_word_counts.html">Word counts</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Word counts</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="cms_custom_tokens.html">Custom Tokens</a></li>
@@ -129,10 +129,10 @@
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="legal_content_cms.html">Legal Content CMS</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">WYSIWYG Tools</a><ul>
+<li class="toctree-l2 current"><a class="reference internal" href="cms_wysiwyg.html">WYSIWYG Tools</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="cms_link_tool.html">Link tool in WYSIWYG</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cms_localization_tool.html">Local content tool</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cms_word_counts.html">Word counts</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Word counts</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="cms_custom_tokens.html">Custom Tokens</a></li>
@@ -196,13 +196,15 @@
         
           <li><a href="legal_content_cms.html">Legal Content CMS</a> &raquo;</li>
         
-      <li>WYSIWYG Tools</li>
+          <li><a href="cms_wysiwyg.html">WYSIWYG Tools</a> &raquo;</li>
+        
+      <li>Word counts</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/cms_wysiwyg.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/cms_word_counts.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -215,20 +217,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="wysiwyg-tools">
-<h1>WYSIWYG Tools<a class="headerlink" href="#wysiwyg-tools" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="cms_link_tool.html">Link tool in WYSIWYG</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cms_localization_tool.html">Local content tool</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="cms_localization_tool.html#to-use">To use</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cms_localization_tool.html#example-use-case">Example use case</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cms_localization_tool.html#what-users-see">What users see</a></li>
+  <div class="section" id="word-counts">
+<h1>Word counts<a class="headerlink" href="#word-counts" title="Permalink to this headline">¶</a></h1>
+<p>The system calculates word counts and stores this value on legal content and ADRM content as follows:</p>
+<ul class="simple">
+<li>Only legal content that contains a body field (text articles, how-to articles, guides, and video) have word counts.</li>
+<li>ADRM content only supports text fields</li>
+<li>Metadata fields like titles, descriptions, etc are not included in any count.</li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="cms_word_counts.html">Word counts</a></li>
-</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Because only legal content and ADRM content can be edited by legal aid members and are the only content types under moderation, they are the only content types currently with a word count field.</p>
 </div>
 </div>
 
@@ -240,10 +239,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="cms_link_tool.html" class="btn btn-neutral float-right" title="Link tool in WYSIWYG" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="cms_custom_tokens.html" class="btn btn-neutral float-right" title="Custom Tokens" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="legal_content_cms.html" class="btn btn-neutral float-left" title="Legal Content CMS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="cms_localization_tool.html" class="btn btn-neutral float-left" title="Local content tool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

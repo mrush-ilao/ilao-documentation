@@ -7,3 +7,4 @@ WYSIWYG Tools
 
    cms_link_tool
    cms_localization_tool
+   cms_word_counts

@@ -4,26 +4,36 @@ SMS Integration
 
 .. note:: This is not built but documentation to guide the build.  This will be built out using Twilio Studio and ILAO API calls.
 
-How This Will Work
-====================
-
-Users will text "legal help" to a specific telephone number and provide their legal issue.  Only legal issues offered over Guided Navigation can be triaged over SMS in our pilot.  Users with issues outside of these limited areas will be redirected to apply to Get Legal Help on the website.  
+The English Twilio Studio flow is the OTIS master.
 
 See `conceptual prototype <https://kywpl3.axshare.com/#g=1&p=home>`_.
 
-Legal issue not in Illinois
-------------------------------
+The interface, including text segments, are stored in Twilio.  API calls to required data sets are on the website and processed using functions in Twilio Studio.
 
-* Redirect to LSC
-* track user as out of state
+Phase 1
+==========
 
-Legal issue in Guided Navigation
-------------------------------------
+Phase 1 is a basic model that requires the user to choose from a limited set of legal problems.  All other issues will be routed to the website.
 
+Only legal issues offered over Guided Navigation can be triaged over SMS in our pilot and the initial rollout will be limited to:
 
-Legal issue outside Guided Navigation
----------------------------------------
-User is sent to /get-legal-help on website
+* unemployment benefits
+* food stamps and TANF
+
+Phase 2
+========
+Phase 2 will add support for classifiers to support plain language triage
+
+Phase 3
+=========
+Phase 3 will add support for legal issues beyond those in Phase 1
+
+Twilio Technical Notes
+========================
+
+Functions
+-------------
+Available functions are in the ilao service.  Twilio studio can pass parameters to functions.  These are stored in the event object.
 
 
 
@@ -40,4 +50,5 @@ Required APIs for Intake
 Required APIs for Triage
 ===========================
 
-* Classifier processing
+* Guided navigation integration in phase 1
+* Classifier integration in phase 2
