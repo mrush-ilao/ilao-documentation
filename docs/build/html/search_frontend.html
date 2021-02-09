@@ -106,7 +106,14 @@
 <li class="toctree-l1 current"><a class="reference internal" href="site_search.html">Site Search</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="search_solr_config.html">Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="search_indexing.html">Indexing and Updates</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Using Site Search</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Using Site Search</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#language-support">Language support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#facets-or-filters">Facets (or Filters)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#search-results">Search Results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#search-tips">Search Tips</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#no-results">No results</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
@@ -184,6 +191,64 @@
             
   <div class="section" id="using-site-search">
 <h1>Using Site Search<a class="headerlink" href="#using-site-search" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="language-support">
+<h2>Language support<a class="headerlink" href="#language-support" title="Permalink to this headline">¶</a></h2>
+<p>The site search results are language dependent.  Searching the English site for Spanish or Polish terms is likely to result in no results but searching for those terms on the Spanish or Polish search pages will generate appropriate results.</p>
+</div>
+<div class="section" id="facets-or-filters">
+<h2>Facets (or Filters)<a class="headerlink" href="#facets-or-filters" title="Permalink to this headline">¶</a></h2>
+<p>There are 3 filters available for search:</p>
+<ul class="simple">
+<li>Content type - this lists the content types included in the search results.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Content types use the name provided for the content type.  We have multiple types of legal content (Legal content, ADRM, Portal main page)</p>
+</div>
+<ul class="simple">
+<li>Primary content type:  this is applicable only to legal content and includes the content formats like How-to, Guide, Easy form</li>
+<li>Topic:  this is applicable to all included content types except Job postings and basic pages.  This is the top level taxonomy terms.</li>
+</ul>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">Look at cleaning up some of these content type names.</p>
+</div>
+</div>
+<div class="section" id="search-results">
+<h2>Search Results<a class="headerlink" href="#search-results" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/mobile-search.png" src="_images/mobile-search.png" />
+<p>The search results are ordered by score descending (the score is determined by Solr).  Each search result includes:</p>
+<ul class="simple">
+<li>Icon representing the content type/format.  Jobs, events, and basic pages do not have icons.</li>
+<li>a content type label (format is used for legal content)</li>
+<li>Content title</li>
+<li>Content description, if one exists.</li>
+</ul>
+<div class="admonition-todo admonition" id="index-1">
+<p class="first admonition-title">Todo</p>
+<p class="last">Basic pages, job postings, and events do not have a description field.</p>
+</div>
+</div>
+<div class="section" id="search-tips">
+<h2>Search Tips<a class="headerlink" href="#search-tips" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Using quotes requires an exact match to the phrase.  For example, searching “minor offense” will return no results but searching minor offense will return Getting a ticket for a minor traffic offense, Clearing arrests for minor cannabis offenses.</li>
+<li>Multi-word searches are treated as OR but AND pairs will rank higher</li>
+<li>You can prefix + or - to better control search.  For example:<ul>
+<li>+child +support will require the content include both the word child and the word support.</li>
+<li>+child -support will require the content include the word child but not the word support.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="no-results">
+<h2>No results<a class="headerlink" href="#no-results" title="Permalink to this headline">¶</a></h2>
+<p>When no results are found, a message of “No results found” displays.</p>
+<div class="admonition-todo admonition" id="index-2">
+<p class="first admonition-title">Todo</p>
+<p class="last">Consider adding a block for no results tips when no results are provided.</p>
+</div>
+</div>
 </div>
 
 

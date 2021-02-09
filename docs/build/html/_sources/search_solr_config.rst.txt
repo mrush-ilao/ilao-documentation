@@ -37,10 +37,9 @@ The following are not included in our search index:
 * All other content types, including organizations, locations, services.
 * Comments 
 * Custom blocks 
-* Custom tokens
+* Custom tokens (these are not indexed because they are included within the rendered legal content)
 
 
-.. todo:: Evaluate whether custom tokens should be included.
 
 Processors Used
 ==================

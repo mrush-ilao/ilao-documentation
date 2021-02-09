@@ -40,7 +40,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Site FAQs" href="site_faqs.html" />
+    <link rel="next" title="Using Site Search" href="search_frontend.html" />
     <link rel="prev" title="Configuration" href="search_solr_config.html" /> 
 </head>
 
@@ -106,6 +106,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="site_search.html">Site Search</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="search_solr_config.html">Configuration</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Indexing and Updates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="search_frontend.html">Using Site Search</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
@@ -183,6 +184,23 @@
             
   <div class="section" id="indexing-and-updates">
 <h1>Indexing and Updates<a class="headerlink" href="#indexing-and-updates" title="Permalink to this headline">¶</a></h1>
+<p>The search index can be:</p>
+<ul class="simple">
+<li>Manually indexed completely (Administrator only)</li>
+<li>Automatically when content is saved.  This can be done by:<ul>
+<li>Editing and saving a single piece of content</li>
+<li>Using the <a class="reference external" href="https://www.illinoislegalaid.org/admin/content">admin/content page</a>, selecting items to save and using the “Save content” feature when bulk editing.  This is useful when something seems funny and you need to reindex an entire content type.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The default action is delete content.  Be careful that you change the setting to save content first.</p>
+</div>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">Update the bulk options on admin/content to remove delete content and other unused options.</p>
+</div>
 </div>
 
 
@@ -193,7 +211,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="site_faqs.html" class="btn btn-neutral float-right" title="Site FAQs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="search_frontend.html" class="btn btn-neutral float-right" title="Using Site Search" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="search_solr_config.html" class="btn btn-neutral float-left" title="Configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
