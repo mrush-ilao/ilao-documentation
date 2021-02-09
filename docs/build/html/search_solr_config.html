@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Site Search &mdash; IllinoisLegalAid.org 2.10 documentation</title>
+  <title>Configuration &mdash; IllinoisLegalAid.org 2.10 documentation</title>
   
 
   
@@ -40,8 +40,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Configuration" href="search_solr_config.html" />
-    <link rel="prev" title="SMS Integration" href="otis_sms_intake.html" /> 
+    <link rel="next" title="Indexing and Updates" href="search_indexing.html" />
+    <link rel="prev" title="Site Search" href="site_search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -103,8 +103,21 @@
 <li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Site Search</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="search_solr_config.html">Configuration</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="site_search.html">Site Search</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#known-bugs">Known bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#search-contents">Search Contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#our-search-index-includes">Our search index includes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-is-not-included-in-search">What is not included in search</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#processors-used">Processors Used</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#before-indexing">Before indexing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#when-searching">When searching</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="search_indexing.html">Indexing and Updates</a></li>
 <li class="toctree-l2"><a class="reference internal" href="search_frontend.html">Using Site Search</a></li>
 </ul>
@@ -161,13 +174,15 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Site Search</li>
+          <li><a href="site_search.html">Site Search</a> &raquo;</li>
+        
+      <li>Configuration</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/site_search.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/search_solr_config.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -180,20 +195,85 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="site-search">
-<h1>Site Search<a class="headerlink" href="#site-search" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="search_solr_config.html">Configuration</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="search_solr_config.html#known-bugs">Known bugs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="search_solr_config.html#search-contents">Search Contents</a></li>
-<li class="toctree-l2"><a class="reference internal" href="search_solr_config.html#processors-used">Processors Used</a></li>
+  <div class="section" id="configuration">
+<h1>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Staff users do not have access to search configuration.  Please let Gwen know if you see issues.</p>
+</div>
+<div class="section" id="known-bugs">
+<h2>Known bugs<a class="headerlink" href="#known-bugs" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Non-node pages do not appear to be indexed.</li>
+</ul>
+</div>
+<div class="section" id="search-contents">
+<h2>Search Contents<a class="headerlink" href="#search-contents" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="our-search-index-includes">
+<h3>Our search index includes<a class="headerlink" href="#our-search-index-includes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Content of types:<ul>
+<li>ADRM (Lawyer Manuals)</li>
+<li>Events</li>
+<li>Job postings</li>
+<li>Legal content</li>
+<li>Basic pages</li>
+<li>Portal content</li>
+<li>Toolboxes</li>
+<li>Toolbox tool</li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="search_indexing.html">Indexing and Updates</a></li>
-<li class="toctree-l1"><a class="reference internal" href="search_frontend.html">Using Site Search</a></li>
+<li>Files</li>
+<li>Paragraph bundles used in included content types.</li>
 </ul>
+</div>
+<div class="section" id="what-is-not-included-in-search">
+<h3>What is not included in search<a class="headerlink" href="#what-is-not-included-in-search" title="Permalink to this headline">¶</a></h3>
+<p>The following are not included in our search index:</p>
+<ul class="simple">
+<li>All other content types, including organizations, locations, services.</li>
+<li>Comments</li>
+<li>Custom blocks</li>
+<li>Custom tokens</li>
+</ul>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">Evaluate whether custom tokens should be included.</p>
+</div>
+</div>
+</div>
+<div class="section" id="processors-used">
+<h2>Processors Used<a class="headerlink" href="#processors-used" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="before-indexing">
+<h3>Before indexing<a class="headerlink" href="#before-indexing" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Index hierarchy - this indexes the hierarchy of taxonomy terms included in content.</li>
+<li>HTML filter - this strips HTML tags and decodes HTML entities</li>
+<li>Stopwords - this strips out common words from the text of the content to be indexed. ILAO can manage the terms in the list.</li>
+<li>Type specific boosting - this adds a boost factor to some content.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">List of stopwords:  a, about, above, after, again, against, all, am, an, and, any, are, as, at, be, because, been, before, being, below, between, both, but, by, can, did, do, does, doing, don, down, during, each, few, for, from, further, get, had, has, have, having, he, help, her, here, hers, herself, him, himself, his, how, i, if, in, into, is, it, its, itself, just, legal, me, more, most, my, myself, need, no, nor, not, now, of, off, on, once, only, or, other, our, ours, ourselves, out, over, own, s, same, she, should, so, some, such, t, than, that, the, their, theirs, them, themselves, then, there, these, they, this, those, through, to, too, under, until, up, very, was, we, were, what, when, where, which, while, who, whom, why, will, with, you, your, yours, yourself, yourselves</p>
+</div>
+<div class="section" id="type-specific-boosting">
+<h4>Type specific boosting<a class="headerlink" href="#type-specific-boosting" title="Permalink to this headline">¶</a></h4>
+<p>We lower the boost for events and job postings to make them less relevant compared to legal information and basic pages.</p>
+</div>
+</div>
+<div class="section" id="when-searching">
+<h3>When searching<a class="headerlink" href="#when-searching" title="Permalink to this headline">¶</a></h3>
+<p>We apply the following:</p>
+<ul class="simple">
+<li>HTML filter to strip HTML from search queries</li>
+<li>Stopwords to remove stopwords from query</li>
+<li>Highlight to highlight the search term in the results.</li>
+</ul>
+<div class="admonition-todo admonition" id="index-1">
+<p class="first admonition-title">Todo</p>
+<p class="last">Should we make use of any of the other available processors?</p>
+</div>
+</div>
 </div>
 </div>
 
@@ -205,10 +285,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="search_solr_config.html" class="btn btn-neutral float-right" title="Configuration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="search_indexing.html" class="btn btn-neutral float-right" title="Indexing and Updates" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="otis_sms_intake.html" class="btn btn-neutral float-left" title="SMS Integration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="site_search.html" class="btn btn-neutral float-left" title="Site Search" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
