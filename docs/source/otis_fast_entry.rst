@@ -10,8 +10,9 @@ Fast entry permissions
 The fast entry form is accessible at /get-legal-help/fast-entry but is only accessible to:
 
 * ILAO staff
-* Legal aid members who are also organization managers of an OTIS partner organization
 * Website users who have been given the fast entry role within the organization settings of an OTIS partner organization by an organization manager of the OTIS partner organization
+
+.. note:: OAS/OTIS managers should be given the Fast Entry role to be able to see the form.
 
 Adding a fast entry user
 --------------------------
