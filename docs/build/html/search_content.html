@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Configuration &mdash; IllinoisLegalAid.org 2.10 documentation</title>
+  <title>Manipulating Search &mdash; IllinoisLegalAid.org 2.10 documentation</title>
   
 
   
@@ -40,8 +40,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Indexing and Updates" href="search_indexing.html" />
-    <link rel="prev" title="Site Search" href="site_search.html" /> 
+    <link rel="next" title="Using Site Search" href="search_frontend.html" />
+    <link rel="prev" title="Indexing and Updates" href="search_indexing.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -104,17 +104,17 @@
 <li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="site_search.html">Site Search</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Configuration</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#known-bugs">Known bugs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#search-contents">Search Contents</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#our-search-index-includes">Our search index includes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#what-is-not-included-in-search">What is not included in search</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#processors-used-when-indexing">Processors Used When Indexing</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="search_solr_config.html">Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="search_indexing.html">Indexing and Updates</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Manipulating Search</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#synonyms">Synonyms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#replacing-a-search-term">Replacing a search term</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-description-terms-to-name">Add description terms to name</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#best-bets">Best Bets</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="search_frontend.html">Using Site Search</a></li>
 </ul>
 </li>
@@ -172,13 +172,13 @@
         
           <li><a href="site_search.html">Site Search</a> &raquo;</li>
         
-      <li>Configuration</li>
+      <li>Manipulating Search</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/search_solr_config.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/search_content.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -191,65 +191,51 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="configuration">
-<h1>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h1>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Staff users do not have access to search configuration.  Please let Gwen know if you see issues.</p>
-</div>
-<div class="section" id="known-bugs">
-<h2>Known bugs<a class="headerlink" href="#known-bugs" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="manipulating-search">
+<h1>Manipulating Search<a class="headerlink" href="#manipulating-search" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synonyms">
+<h2>Synonyms<a class="headerlink" href="#synonyms" title="Permalink to this headline">¶</a></h2>
+<p>The search synonyms taxonomy allows us to:</p>
 <ul class="simple">
-<li>Non-node pages are not being returned correctly in search results.</li>
+<li>Replace a search term with another search term</li>
+<li>Expand a search term with additional search terms</li>
 </ul>
-</div>
-<div class="section" id="search-contents">
-<h2>Search Contents<a class="headerlink" href="#search-contents" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="our-search-index-includes">
-<h3>Our search index includes<a class="headerlink" href="#our-search-index-includes" title="Permalink to this headline">¶</a></h3>
+<p>The search synonym taxonomy:</p>
 <ul class="simple">
-<li>Content of types:<ul>
-<li>ADRM (Lawyer Manuals)</li>
-<li>Events</li>
-<li>Job postings</li>
-<li>Legal content</li>
-<li>Basic pages</li>
-<li>Portal content</li>
-<li>Toolboxes</li>
-<li>Toolbox tool</li>
+<li>The name is the search term as entered by the user</li>
+<li>The description is what is used to replace or expand</li>
+<li>The synonym type is either:<ul>
+<li>Replace name with description.</li>
+<li>Add description terms to name.</li>
 </ul>
 </li>
-<li>Files</li>
-<li>Paragraph bundles used in included content types.</li>
 </ul>
+<div class="section" id="replacing-a-search-term">
+<h3>Replacing a search term<a class="headerlink" href="#replacing-a-search-term" title="Permalink to this headline">¶</a></h3>
+<p>This feature is helpful for misspellings.  For example, a synonym of divrce with a description of divorce will result in the system searching just for divorce.</p>
 </div>
-<div class="section" id="what-is-not-included-in-search">
-<h3>What is not included in search<a class="headerlink" href="#what-is-not-included-in-search" title="Permalink to this headline">¶</a></h3>
-<p>The following are not included in our search index:</p>
+<div class="section" id="add-description-terms-to-name">
+<h3>Add description terms to name<a class="headerlink" href="#add-description-terms-to-name" title="Permalink to this headline">¶</a></h3>
+<p>This feature is helpful for true synonyms.  For example, adding weed as a synonym for cannabis with a type of “add description terms to name” will return content with either term.</p>
+<img alt="_images/cms-search-synonym-expand.png" src="_images/cms-search-synonym-expand.png" />
+</div>
+</div>
+<div class="section" id="best-bets">
+<h2>Best Bets<a class="headerlink" href="#best-bets" title="Permalink to this headline">¶</a></h2>
+<p>Best bets allow us to designate a specific node as the “best bet” for a specific search term.  The user must enter the exact search term for the best bet to be picked up.</p>
+<p>This feature is only available for  the following content types:</p>
 <ul class="simple">
-<li>All other content types, including organizations, locations, services.</li>
-<li>Comments</li>
-<li>Custom blocks</li>
-<li>Custom tokens (these are not indexed because they are included within the rendered legal content)</li>
-</ul>
-</div>
-</div>
-<div class="section" id="processors-used-when-indexing">
-<h2>Processors Used When Indexing<a class="headerlink" href="#processors-used-when-indexing" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>Index hierarchy - this indexes the hierarchy of taxonomy terms included in content.</li>
-<li>HTML filter - this strips HTML tags and decodes HTML entities</li>
-<li>Stopwords - this strips out common words from the text of the content to be indexed. ILAO can manage the terms in the list.</li>
-<li>Type specific boosting - this adds a boost factor to some content.</li>
+<li>Legal content</li>
+<li>Portal main page</li>
+<li>Toolboxes</li>
 </ul>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">List of stopwords:  a, about, above, after, again, against, all, am, an, and, any, are, as, at, be, because, been, before, being, below, between, both, but, by, can, did, do, does, doing, don, down, during, each, few, for, from, further, get, had, has, have, having, he, help, her, here, hers, herself, him, himself, his, how, i, if, in, into, is, it, its, itself, just, legal, me, more, most, my, myself, need, no, nor, not, now, of, off, on, once, only, or, other, our, ours, ourselves, out, over, own, s, same, she, should, so, some, such, t, than, that, the, their, theirs, them, themselves, then, there, these, they, this, those, through, to, too, under, until, up, very, was, we, were, what, when, where, which, while, who, whom, why, will, with, you, your, yours, yourself, yourselves</p>
+<p class="last">Only one node can be associated with a search term as a best bet.  If anyone attempts to add a duplicate, the following message will appear:  “One or more of your search terms already has a best bet. Please review the best bet report and remove duplicates.”</p>
 </div>
-<p>We lower the boost for events and job postings to make them less relevant compared to legal information and basic pages.</p>
 <div class="admonition-todo admonition" id="index-0">
 <p class="first admonition-title">Todo</p>
-<p class="last">Should we make use of any of the other available processors?</p>
+<p class="last">We need to build the best bet report.</p>
 </div>
 </div>
 </div>
@@ -262,10 +248,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="search_indexing.html" class="btn btn-neutral float-right" title="Indexing and Updates" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="search_frontend.html" class="btn btn-neutral float-right" title="Using Site Search" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="site_search.html" class="btn btn-neutral float-left" title="Site Search" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="search_indexing.html" class="btn btn-neutral float-left" title="Indexing and Updates" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

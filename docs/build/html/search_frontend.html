@@ -107,6 +107,7 @@
 <li class="toctree-l2"><a class="reference internal" href="search_solr_config.html">Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="search_indexing.html">Indexing and Updates</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Using Site Search</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-search-works">How Search Works</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#language-support">Language support</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#facets-or-filters">Facets (or Filters)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#search-results">Search Results</a></li>
@@ -191,6 +192,21 @@
             
   <div class="section" id="using-site-search">
 <h1>Using Site Search<a class="headerlink" href="#using-site-search" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="how-search-works">
+<h2>How Search Works<a class="headerlink" href="#how-search-works" title="Permalink to this headline">¶</a></h2>
+<p>We apply the following filters to search:</p>
+<ul class="simple">
+<li>HTML filter to strip HTML from search queries</li>
+<li>Stopwords to remove stopwords from query</li>
+<li>Highlight to highlight the search term in the results.</li>
+</ul>
+<p>Through custom code we also:</p>
+<ul class="simple">
+<li>Boost easy forms when the search term contains the word “form”</li>
+<li>Boost video when the search term contains “video”</li>
+<li>Boost a result when the content is an exact match to the best bet field</li>
+</ul>
+</div>
 <div class="section" id="language-support">
 <h2>Language support<a class="headerlink" href="#language-support" title="Permalink to this headline">¶</a></h2>
 <p>The site search results are language dependent.  Searching the English site for Spanish or Polish terms is likely to result in no results but searching for those terms on the Spanish or Polish search pages will generate appropriate results.</p>

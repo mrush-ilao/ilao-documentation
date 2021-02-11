@@ -9,5 +9,7 @@ Site Search
    
    search_solr_config
    search_indexing
+   search_content
    search_frontend
+
 

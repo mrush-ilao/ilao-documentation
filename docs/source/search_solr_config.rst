@@ -7,7 +7,7 @@ Configuration
 Known bugs
 ==============
 
-* Non-node pages do not appear to be indexed.
+* Non-node pages are not being returned correctly in search results.
 
 Search Contents
 ============================
@@ -41,11 +41,9 @@ The following are not included in our search index:
 
 
 
-Processors Used
-==================
+Processors Used When Indexing
+=================================
 
-Before indexing
----------------------
 
 * Index hierarchy - this indexes the hierarchy of taxonomy terms included in content.  
 * HTML filter - this strips HTML tags and decodes HTML entities
@@ -60,14 +58,7 @@ Type specific boosting
 
 We lower the boost for events and job postings to make them less relevant compared to legal information and basic pages.
 
-When searching
------------------
 
-We apply the following:
-
-* HTML filter to strip HTML from search queries
-* Stopwords to remove stopwords from query
-* Highlight to highlight the search term in the results.
 
  
 

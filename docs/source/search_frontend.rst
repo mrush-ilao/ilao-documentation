@@ -2,6 +2,21 @@
 Using Site Search
 ========================
 
+How Search Works
+==================
+
+We apply the following filters to search:
+
+* HTML filter to strip HTML from search queries
+* Stopwords to remove stopwords from query
+* Highlight to highlight the search term in the results.
+
+Through custom code we also:
+
+* Boost easy forms when the search term contains the word "form"
+* Boost video when the search term contains "video"
+* Boost a result when the content is an exact match to the best bet field
+
 Language support
 ==================
 
