@@ -7,7 +7,7 @@ Points System
 Point Types
 ==============
 
-Users with the role staff may create point categories and view a list of all point categories.
+Users with the Staff role may create point categories and view a list of all point categories.
 
 * Automatic points are awarded when a piece of legal content or ADRM content transitions across workflows:
 
@@ -42,9 +42,9 @@ Manual points may be awarded via a separate form and may optionally be tied to a
 Point Tracking
 =================
 
-Point awards should be recorded in the website with the following information:
+Point awards should be recorded on the website with the following information:
 
-* The timestamp of when the record is created
+* The timestamp of when the record was created
 * The timestamp of when the record was last updated
 * A reference to the point type awarded
 * The user ID of the person earning the point
