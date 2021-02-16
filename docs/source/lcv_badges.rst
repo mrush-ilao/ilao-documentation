@@ -86,13 +86,13 @@ At the end of the calendar year, annual champion badges are also awarded.
 
 Defining Badges 
 ===============================
-The badges can be configured in the CMS. Badges:
+The badges can be configured in the CMS. Badges should have:
 
-* Name.  This is the administrative name for the badge (for admin reports).
-* Display label.  This is what appears to users beneath the badge, minus the date range.
-* Description.  This will appear on the "Learn more about badges" page.
+* A name.  This is the administrative name for the badge (for admin reports).
+* A display label.  This is what appears to users beneath the badge, minus the date range.
+* A description.  This will appear on the "Learn more about badges" page.
 * Badge image.  This is the image to use.  
-* the maximum number of times a badge can be earned:
+* The maximum number of times a badge can be earned:
 
   * Once.  A user can earn a badge one time. 
   * Once per quarter.  The user can earn the badge once a quarter maximum.  Quarter badges are postfixed with "Q2, 2021".  
