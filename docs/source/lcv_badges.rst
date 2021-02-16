@@ -6,7 +6,7 @@ ILAO awards badges to users based on activity.
 
 .. image:: ../assets/lcv_badges.png
 
-There are 6 badges icons for each legal category:
+There are 6 badge icons for each legal category:
 
 * Hero
 * Leader
