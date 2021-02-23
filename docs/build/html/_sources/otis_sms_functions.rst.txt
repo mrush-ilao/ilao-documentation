@@ -245,5 +245,18 @@ OTIS Zipcode Validate
 =======================
 
 
+**Function name:**  otis-poverty-estimate
+
+**Purpose**: Determines whether a provided zip code is in Illinois or note
+
+**Parameters:**  event.zip
+
+**Requires:**  API call to get state based on zip code.
+
+**Returns:** A string representing the state.
+
+**Status:** Needs to integrate a working API.  Currently validates only for 60603.
+
+
 
 
