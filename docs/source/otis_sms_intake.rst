@@ -28,8 +28,15 @@ Phase 3
 =========
 Phase 3 will add support for legal issues beyond those in Phase 1
 
-Twilio Technical Notes
-========================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   otis_sms_functions
+   otis_sms_twilio_studio_workflow
+   otis_sms_api_calls
+
 
 Functions
 -------------

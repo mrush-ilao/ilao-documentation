@@ -40,7 +40,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Site Search" href="site_search.html" />
+    <link rel="next" title="OTIS SMS Functions" href="otis_sms_functions.html" />
     <link rel="prev" title="ILAO OTIS API" href="otis_ilao_api.html" /> 
 </head>
 
@@ -113,8 +113,10 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">SMS Integration</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#phase-1">Phase 1</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#phase-2">Phase 2</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#phase-3">Phase 3</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#twilio-technical-notes">Twilio Technical Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#phase-3">Phase 3</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="otis_sms_functions.html">OTIS SMS Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="otis_sms_twilio_studio_workflow.html">OTIS Master Twilio Workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="otis_sms_api_calls.html">OTIS SMS API</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#functions">Functions</a></li>
 </ul>
 </li>
@@ -223,9 +225,32 @@
 <div class="section" id="phase-3">
 <h2>Phase 3<a class="headerlink" href="#phase-3" title="Permalink to this headline">¶</a></h2>
 <p>Phase 3 will add support for legal issues beyond those in Phase 1</p>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="otis_sms_functions.html">OTIS SMS Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="otis_sms_functions.html#function-standards">Function standards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_sms_functions.html#otis-get-confirmation">OTIS Get Confirmation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_sms_functions.html#otis-get-callback-days">OTIS Get Callback Days</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_sms_functions.html#otis-get-first-callback-time">OTIS Get First Callback Time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_sms_functions.html#otis-get-callback-times">OTIS Get Callback Times</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_sms_functions.html#otis-get-callback-type">OTIS Get Callback Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_sms_functions.html#otis-validate-total-income">OTIS Validate Total Income</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_sms_functions.html#otis-validate-payments">OTIS Validate Payments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_sms_functions.html#otis-validate-benefit-types">OTIS Validate Benefit Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_sms_functions.html#id1">OTIS Validate Benefit Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_sms_functions.html#otis-validate-money-input">OTIS Validate Money Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_sms_functions.html#otis-validate-race">OTIS Validate Race</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_sms_functions.html#otis-validate-ethnicity">OTIS Validate Ethnicity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_sms_functions.html#otis-validate-year">OTIS Validate Year</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_sms_functions.html#otis-validate-day-of-month">OTIS Validate Day of Month</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_sms_functions.html#otis-validate-month">OTIS Validate Month</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="otis_sms_twilio_studio_workflow.html">OTIS Master Twilio Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otis_sms_api_calls.html">OTIS SMS API</a></li>
+</ul>
 </div>
-<div class="section" id="twilio-technical-notes">
-<h2>Twilio Technical Notes<a class="headerlink" href="#twilio-technical-notes" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="functions">
 <h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
 <p>Available functions are in the ilao service.  Twilio studio can pass parameters to functions.  These are stored in the event object.</p>
@@ -259,7 +284,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="site_search.html" class="btn btn-neutral float-right" title="Site Search" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="otis_sms_functions.html" class="btn btn-neutral float-right" title="OTIS SMS Functions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="otis_ilao_api.html" class="btn btn-neutral float-left" title="ILAO OTIS API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
