@@ -222,5 +222,28 @@ OTIS Validate Month
 
 **Status:**  Support for per-month validation would be nice.
 
+OTIS Name Processor
+======================
+
+OTIS Poverty Estimate
+=======================
+
+**Function name:**  otis-poverty-estimate
+
+**Purpose**: Gets the estimated over-income threshold for users based on household size.
+
+**Parameters:**  event.children and event.adult.  Both should be numbers.
+
+**Requires:**  API call to get poverty income.
+
+**Returns:** A number representing the maximum income to continue.
+
+**Status:**  Support for per-month validation would be nice.
+
+
+OTIS Zipcode Validate
+=======================
+
+
 
 
