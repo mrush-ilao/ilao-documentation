@@ -137,6 +137,7 @@
 <li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
@@ -285,70 +286,44 @@ graph TB
 </ul>
 </div></blockquote>
 </div>
-<div class="section" id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
-<p>Flowcharts must be created using the text format “Diagrams.” This ensures that characters are not escaped in a way that breaks the image.</p>
+<div class="section" id="creating-a-flowchart">
+<h2>Creating a Flowchart<a class="headerlink" href="#creating-a-flowchart" title="Permalink to this headline">¶</a></h2>
+<p>For best results, use the Live Editor and then copy and paste your diagram into the CMS.</p>
+<img alt="_images/cms-flowchart-code-example.png" src="_images/cms-flowchart-code-example.png" />
 <p>To create a flowchart, use the <a class="reference external" href="https://mermaid-js.github.io/mermaid/#/flowchart">flowchart syntax</a> documentation.</p>
 </div>
-<div class="section" id="theming">
-<h2>Theming<a class="headerlink" href="#theming" title="Permalink to this headline">¶</a></h2>
-<p>ILAO will design a standard visual design for flowcharts. Staff can use other themes as appropriate, or switch to the base theme and set custom theme variables.</p>
+<div class="section" id="customizing-the-look">
+<h2>Customizing the look<a class="headerlink" href="#customizing-the-look" title="Permalink to this headline">¶</a></h2>
+<p>The flowchart type supports two themes:  default and base.  The default theme can not be customized.</p>
+<img alt="_images/cms-flowchart-default-theme.png" src="_images/cms-flowchart-default-theme.png" />
+<p>The base theme:</p>
+<img alt="_images/cms-flowchart-base-theme.png" src="_images/cms-flowchart-base-theme.png" />
+<p>The base theme can accept additional variables, entered in the “theme variables” section to customize the theme.</p>
+<p>For example, adding a theme variable of primaryColor to 0079d00 (ILAO’s blue) would result in this:</p>
+<img alt="_images/flowchart-ilao-theme.png" src="_images/flowchart-ilao-theme.png" />
+<p>Theme variables would be added to the theme variables field in the format of “themeVariable”: “value”</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;primaryColor&quot;</span><span class="o">:</span> <span class="s2">&quot;#0079d0&quot;</span><span class="o">,</span>
+<span class="s2">&quot;secondaryColor&quot;</span><span class="o">:</span> <span class="s2">&quot;#ccc&quot;</span>
+</pre></div>
+</div>
 <p>See <a class="reference external" href="https://mermaid-js.github.io/mermaid/#/theming">theming documentation</a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">ILAO will design a standard visual design for flowcharts. Staff can use other themes as appropriate, or switch to the base theme and set custom theme variables.</p>
+</div>
 </div>
 <div class="section" id="icon-support">
 <h2>Icon support<a class="headerlink" href="#icon-support" title="Permalink to this headline">¶</a></h2>
-<p>Mermaid supports the use of basic <a class="reference external" href="https://fontawesome.com/icons?d=gallery">font-awesome</a> icons.  While ILAO has a pro account, only the basic class is currently supported.</p>
+<p>Mermaid supports the use of basic <a class="reference external" href="https://fontawesome.com/icons?d=gallery&amp;m=free">font-awesome</a> icons.  While ILAO has a pro account, only the basic class is currently supported.</p>
 <div class="admonition-todo admonition" id="index-0">
 <p class="first admonition-title">Todo</p>
-<p class="last">determine if ILAO just needs to add support for fal/fas clases in font awesome to support the additional icon set.</p>
+<p class="last">determine if ILAO can add support for fal/fas clases in font awesome to support the additional icon sets.</p>
 </div>
 </div>
 <div class="section" id="content-format">
 <h2>Content format<a class="headerlink" href="#content-format" title="Permalink to this headline">¶</a></h2>
-<p>Pages with a flowchart should be set to a content format of Flowchart.  This will cause the flowchart label and icon to display.</p>
-</div>
-<div class="section" id="process-server-flowchart">
-<h2>Process Server Flowchart<a class="headerlink" href="#process-server-flowchart" title="Permalink to this headline">¶</a></h2>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">DO NOT EDIT THIS</p>
-</div>
-<dl class="docutils">
-<dt>graph TD</dt>
-<dd>A[start] –&gt; B(Determine who you need to serve)
-B –&gt; C{A person or business?}
-C –&gt; D[Business]
-C –&gt; E[Person]
-E –&gt; F[Fill out the summons and complaint form]
-D –&gt; a1
-subgraph one [Who to serve]
-a1&gt;”Summons has to be served to a &lt;br /&gt;Registered Legal Agent of the Business&lt;br /&gt; through any of the service methods below”]—a2
-a2[“Go to the Secretary of State website to search for the Registered Agent of the Corporation or LLC you wish to serve a summons on”]–&gt;a3
-a3[“</dd>
-<dt>Once on the site, click #quot;Search#quot;, select #quot;Corporation and LLC#quot;, click #quot;Submit#quot;, and finally enter the name or keywords you are looking for”]–&gt;a4</dt>
-<dd>a4[“Select the corporation or LLC and scroll down to find the contact info for the Registered Agent that you must serve the summons to”]–&gt;a5
-a5&gt;”</dd>
-<dt>If the business is not incorporated, then put the name of the owner and put them as D/B/A (doing business as) and then the name of the business”]</dt>
-<dd>a5–&gt;F
-end
-F–&gt;G
-G[“File complaint and summons form with the local county circuit court in person or online with e-filing”]–&gt;H
-H&gt;Now you have to make sure that the defendant is served.]–&gt;I{“How will you serve?”}
-I –&gt; <a href="#id1"><span class="problematic" id="id2">|Most common|</span></a> J[Sheriff] –&gt;b1
-I –&gt; K[Professional process server or an adult not part of the case]–&gt;c1
-subgraph two [Having the sheriff service]
-b1[Staple Summons on top of copy of complaint being served] –&gt; b2
-b2[Ask the sheriff of the county in person or via mail where the summons will be served where the party you want to serve lives]–&gt;b3
-b3&gt;There will be a fee unless you have a fee waiver]–&gt;b4{Does the defendant &lt;br /&gt;live in the same county where the lawsuit was filed}
-b4–&gt;|No| b5[“Call the sheriff of the county of the party being sued lives in to get the sheriff’s contact info”]–&gt;b6
-b4–&gt;|Yes| b6{“How are you going to take it to the sheriff?”}
-b6–&gt;|In person|b7[“test”]
-b6–&gt;|Mail|b8[“text”]
-end
-subgraph Professional process server[three]
-c1–&gt;c2
-end</dd>
-</dl>
+<p>Pages with a flowchart block will be saved with a content format of Flowchart.  This will cause the flowchart label and icon to display on those pages.</p>
+<img alt="_images/flowchart-header.png" src="_images/flowchart-header.png" />
 </div>
 </div>
 
