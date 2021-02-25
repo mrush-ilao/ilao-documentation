@@ -205,6 +205,77 @@
   <div class="section" id="otis-master-twilio-workflow">
 <h1>OTIS Master Twilio Workflow<a class="headerlink" href="#otis-master-twilio-workflow" title="Permalink to this headline">¶</a></h1>
 <p>This documents the flow of the OTIS Master flow in Twilio Studio.</p>
+<p>The general flow of the OTIS SMS tool is:</p>
+<ul class="simple">
+<li>Get the user’s first name</li>
+<li>Get the user’s zip code; this validates that the user is in Illinois.  If the user:<ul>
+<li>If the user is not in Illinois, they are directed to LawHelp.org</li>
+<li>If the user is in Illinois, they are offered a menu of options for help (currently limited to unemployment, food stamps/TANF, or other).  <strong>Picking other, exits the user to the website application.</strong><ul>
+<li>If the user picks unemployment or food stamps/tanf (Guided navigation needs to be dropped in here)<ul>
+<li>Number of adults is collected</li>
+<li>Number of children is collected</li>
+<li>The basic income calculation is computed and the user is asked a Y/N question if their household income exceeds our base threshold.  If the user indicates Yes, they are exited to the website application.</li>
+</ul>
+</li>
+<li>If the user indicates they are not over-income and are matched to an organization, they are told who they matched to and given the option to continue to a full application.  ** If they say no, they are exited to Get Legal Help on the website**  If they say yes:<ul>
+<li>They are prompted to enter their last name</li>
+<li>They are asked if they have any maiden names.  If they enter Yes, they are asked to provide them.  If they enter no, they are taken to the next question.  If they enter other text, that is treated as their maiden name.</li>
+<li>They are asked if they have any nicknames.  If they enter Yes, they are asked to provide them.  If they enter no, they are taken to the next question.  If they enter other text, that is treated as their nickname.</li>
+<li>The user is then prompted to enter their birthday:<ul>
+<li>The month is collected; full month names, abbreviations, and numbers are all supported</li>
+<li>The day is collected; only values between 1 - 31 are collected</li>
+<li>The year is collected; 2 and 4 digit years are supported.</li>
+</ul>
+</li>
+<li>The user is then taken through demographics questions:<ul>
+<li>Race</li>
+<li>Ethnicity</li>
+<li>Gender</li>
+<li>Marital status</li>
+<li>Language preference</li>
+</ul>
+</li>
+<li>The user is then taken to a series of income questions.  For each money input, the system validates that the user entered a number and redirects back to the question if they do not.<ul>
+<li>Do they have wages/salary - if they indicate yes or wages or salary, they are asked to provide the amount.</li>
+<li>Do they have farming or self-employment income - if they indicate yes or wages or salary, they are asked to provide the amount.</li>
+<li>Do they have one or more government benefits; entering any number or partial text will result in a match.  The user is then cycled through all the benefits they have to provide an amount. Government benefits include: TANF, Veterans benefits (including disability), unemployment, SSI, Social security.</li>
+<li>Do they have one or more other payments; entering any number or partial text will result in a match.  The user is then cycled through all the payments they have to provide an amount. Payment types include:  private disability payments, alimony, child support, workers compensation, pension/retirement income, and investment income.</li>
+<li>Do they have any other income? If they respond yes, they are asked for the amount.</li>
+<li>Once income is collected, we collect contact information:<ul>
+<li>Is this there best contact number (if they say no, they are prompted to add a number)</li>
+<li>What is their email address?</li>
+<li>What is their street address</li>
+<li>What city?</li>
+</ul>
+</li>
+<li>Next it processes the confirmation:<ul>
+<li>If the user needs to call the program, it exits with the “please call” message.</li>
+<li>If the user needs to schedule a callback:<ul>
+<li>The system provides the range of available times and the first available day.</li>
+<li>If the user is okay with that day, they are provided a list of time slots</li>
+<li>If the user is not okay with that day, they are provided a list of alternate days.<ul>
+<li>If none of the dates work, the user is prompted to text 0 which will convert it to a “please call”</li>
+<li>If one of the dates work, they are provided with a list of time slots to pick one.</li>
+</ul>
+</li>
+<li>Once the user picks a time slot, the data is transferred and they are given their confirmation text message.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">may want to add a try again for zip code; household function does not validate correctly when non-numeric text is entered on adult/children question.  Entering other than yes/no in maiden name exits application.  Missing gender, language, marital status questions. answering no to payments dead ends</p>
+</div>
 </div>
 
 
