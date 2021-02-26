@@ -23,7 +23,6 @@ Adding a fast entry user
 --------------------------
 An OTIS manager or organization manager will need to:
 
-* Add the user to their organization
 * Invite the fast entry user to register on IllinoisLegalAid.org if the user is not already registered;
 * Once the user has registered, add the user to their organization (group membership); and
 * Give the user the fast entry user role in their organization:
@@ -62,12 +61,12 @@ Uncheck Fast entry user and save
 
 Related Intake Settings
 ==========================
-Because fast entry bypasses triage rules and intake settings generally, ILAO staff will associate a single intake settings ID per organization in the Legal Server configuration.  This intake setting should be an intake that is generally left open. The legal issue taxonomy selected in the intake settign will not impact the law type options on the fast entry form. This id will then be used for data tracking. Fast entry intakes will not impact counts on any intake settings.
+Because fast entry bypasses triage rules and intake settings generally, ILAO staff will associate a single intake settings ID per organization in the Legal Server configuration.  This intake setting should be an intake that is generally left open. The legal issue taxonomy selected in the intake setting will not impact the law type options on the fast entry form. This id will then be used for data tracking. Fast entry intakes will not impact counts on any intake settings.
 
 
 Related Triage Rule
 ======================
-The fast entry form is built using webform and is attached to a triage rule per organization.
+The fast entry form is built using a single webform and is attached to a separate triage rule per organization.
 
 * The triage rule should be named "[ORG] Fast Entry";
 * The service of the triage rule should match the service for the intake setting selected above;
