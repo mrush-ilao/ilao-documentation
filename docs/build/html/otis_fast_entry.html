@@ -115,6 +115,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Fast Entry Form</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#fast-entry-permissions">Fast entry permissions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#related-intake-settings">Related Intake Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#related-triage-rule">Related Triage Rule</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id1">Fast entry form</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#confirmation">Confirmation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#data-capture-reporting">Data capture &amp; reporting</a></li>
@@ -211,10 +212,15 @@
 <p>The fast entry form can be used to quickly refer users to OTIS partners, bypassing all triage rules and the standard online intake forms.</p>
 <div class="section" id="fast-entry-permissions">
 <h2>Fast entry permissions<a class="headerlink" href="#fast-entry-permissions" title="Permalink to this headline">¶</a></h2>
-<p>The fast entry form is accessible at /get-legal-help/fast-entry but is only accessible to:</p>
+<p>The global fast entry form is accessible at /get-legal-help/fast-entry but is only accessible to:</p>
 <ul class="simple">
 <li>ILAO staff</li>
-<li>Website users who have been given the fast entry role within the organization settings of an OTIS partner organization by an organization manager of the OTIS partner organization</li>
+</ul>
+<p>The referral fast entry form is accessible at /get-legal-help/[organization]/fast-entry* but is only accessible to:</p>
+<ul class="simple">
+<li>ILAO staff</li>
+<li>Logged in website users who have been given the fast entry member role within the organization settings for the OTIS partner organization by an organization manager of the OTIS partner organization</li>
+<li>[organization] is replaced with the organization’s specific name or acronym. Ex. Prairie State Legal Services, Inc. = /prairie-state</li>
 </ul>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -224,9 +230,9 @@
 <h3>Adding a fast entry user<a class="headerlink" href="#adding-a-fast-entry-user" title="Permalink to this headline">¶</a></h3>
 <p>An OTIS manager or organization manager will need to:</p>
 <ul class="simple">
-<li>Add the user to their organization</li>
-<li>Invite the fast entry user to register on IllinoisLegalAid.org</li>
-<li>Once the user has registered, give the user the fast entry user role in their organization:</li>
+<li>Invite the fast entry user to register on IllinoisLegalAid.org if the user is not already registered;</li>
+<li>Once the user has registered, add the user to their organization (group membership); and</li>
+<li>Give the user the fast entry user role in their organization:</li>
 </ul>
 <p>Click on Manage your organization, locations, and services from your dashboard</p>
 <img alt="_images/otis-oas-manager-dashboard.png" src="_images/otis-oas-manager-dashboard.png" />
@@ -249,11 +255,23 @@
 </div>
 <div class="section" id="related-intake-settings">
 <h2>Related Intake Settings<a class="headerlink" href="#related-intake-settings" title="Permalink to this headline">¶</a></h2>
-<p>Because fast entry bypasses triage rules and intake settings generally, ILAO staff will associate a single intake settings ID per organization in the Legal Server configuration.  This id will then be used for data tracking. Fast entry intakes will not impact counts on any intake settings.</p>
+<p>Because fast entry bypasses triage rules and intake settings generally, ILAO staff will associate a single intake settings ID per organization in the Legal Server configuration.  This intake setting should be an intake that is generally left open. The legal issue taxonomy selected in the intake setting will not impact the law type options on the fast entry form. This id will then be used for data tracking. Fast entry intakes will not impact counts on any intake settings.</p>
+</div>
+<div class="section" id="related-triage-rule">
+<h2>Related Triage Rule<a class="headerlink" href="#related-triage-rule" title="Permalink to this headline">¶</a></h2>
+<p>The fast entry form is built using a single webform and is attached to a separate triage rule per organization.</p>
+<ul class="simple">
+<li>The triage rule should be named “[ORG] Fast Entry”;</li>
+<li>The service of the triage rule should match the service for the intake setting selected above;</li>
+<li>“Law practice” should be selected from the legal issue taxonomy to prevent any potential conflicts;</li>
+<li>[Organization] should be added as the Group audience;</li>
+<li>Attach the “Fast entry intake form” webform to the triage rule; and</li>
+<li>Assign a URL alias /get-legal-help/[organization]/fast-entry</li>
+<li>[organization] should be the organization’s commonly known acronum or short name.</li>
+</ul>
 </div>
 <div class="section" id="id1">
 <h2>Fast entry form<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>The fast entry form is built using webform and is attached to a triage rule per organization.  The triage rule can be tagged to “Law practice” to prevent any potential conflicts.</p>
 <img alt="_images/fast-entry-form.png" src="_images/fast-entry-form.png" />
 </div>
 <div class="section" id="confirmation">

@@ -65,9 +65,5 @@ The general flow of the OTIS SMS tool is:
             
             * Once the user picks a time slot, the data is transferred and they are given their confirmation text message.  
           
-          
-                
-    
   
-.. todo:: may want to add a try again for zip code; household function does not validate correctly when non-numeric text is entered on adult/children question.  Entering other than yes/no in maiden name exits application.  Missing gender, language, marital status questions. 
   

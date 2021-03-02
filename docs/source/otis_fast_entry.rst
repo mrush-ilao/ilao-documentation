@@ -15,7 +15,7 @@ The referral fast entry form is accessible at /get-legal-help/[organization]/fas
 
 * ILAO staff
 * Logged in website users who have been given the fast entry member role within the organization settings for the OTIS partner organization by an organization manager of the OTIS partner organization
-[organization]* is replaced with the organization's specific name or acronym. Ex. Prairie State Legal Services, Inc. = /prairie-state
+* [organization] is replaced with the organization's specific name or acronym. Ex. Prairie State Legal Services, Inc. = /prairie-state
 
 .. note:: OAS/OTIS managers should be given the Fast Entry role to be able to see the form.
 
@@ -74,7 +74,7 @@ The fast entry form is built using a single webform and is attached to a separat
 * [Organization] should be added as the Group audience;
 * Attach the "Fast entry intake form" webform to the triage rule; and
 * Assign a URL alias /get-legal-help/[organization]/fast-entry
- * [organization] should be the organization's commonly known acronum or short name.
+* [organization] should be the organization's commonly known acronum or short name.
 
 Fast entry form
 ====================
