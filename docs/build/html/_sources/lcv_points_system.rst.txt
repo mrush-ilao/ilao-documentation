@@ -43,6 +43,13 @@ Each point type:
 
 .. note:: A warning will appear when saving a point type to remind staff to check to see if any existing badges or milestones need to be updated.  For example, when a new point type is added, badges that aren't set to include all point types may need to be updated.  
 
+Point Type Report
+-------------------
+
+All point types can be viewed on the `Points Type report <https://www.illinoislegalaid.org/admin/content/gamification/point-types>`_, filtered by status and type and exported to CSV.
+
+.. image:: ../assets/points-type-report.png
+
 Rules for Automated Point Awards
 ==================================
 
