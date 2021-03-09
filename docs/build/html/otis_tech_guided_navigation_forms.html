@@ -99,6 +99,7 @@
 <li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="otis_cms.html">Get Legal Help</a><ul class="current">
@@ -122,11 +123,13 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="otis_third_party_support.html">Supported Integrations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_ilao_api.html">ILAO OTIS API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_sms_intake.html">SMS Integration</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
 <li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies Overview</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul>
@@ -226,7 +229,7 @@
 </ul>
 <div class="section" id="fields">
 <h3>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h3>
-<p>Known supported field types are select, text, bool,</p>
+<p>Known supported field types are select, text, bool, date.</p>
 <p>Form fields will have:
 * a field_type which indicates the type of field
 * a value field
@@ -253,6 +256,13 @@
 <ul class="simple">
 <li>a field_type of bool</li>
 <li>no options; these should be Yes, No with values of t and f</li>
+</ul>
+</div>
+<div class="section" id="date">
+<h4>Date<a class="headerlink" href="#date" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>a field_type of date</li>
+<li>should require a valid date of mm/dd/yyyy or yyyy-dd-mm (or parse together a valid date).</li>
 </ul>
 </div>
 </div>

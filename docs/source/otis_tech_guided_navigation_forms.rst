@@ -33,7 +33,7 @@ Every (form) element has:
 
 Fields
 ----------
-Known supported field types are select, text, bool,
+Known supported field types are select, text, bool, date.
 
 Form fields will have:
 * a field_type which indicates the type of field 
@@ -58,6 +58,12 @@ Bool
 ^^^^^^
 * a field_type of bool
 * no options; these should be Yes, No with values of t and f
+
+Date
+^^^^^^^
+* a field_type of date
+* should require a valid date of mm/dd/yyyy or yyyy-dd-mm (or parse together a valid date).
+
 
 
 
