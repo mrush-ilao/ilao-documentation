@@ -32,8 +32,7 @@ release = '2.22'
 # ones.
 extensions = ['sphinx.ext.todo',
     'sphinx.ext.imgmath',
-    'sphinx_rtd_theme',
-    'sphinxcontrib.mermaid']
+    'sphinx_rtd_theme']
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
@@ -100,14 +99,6 @@ html_sidebars = {
         'donate.html',
     ]
 }
-
-
-# Mermaid config
-mermaid_output_format = 'raw'
-
-mermaid_version = "latest"
-
-mermaid_init_js = "mermaid.initialize({startOnLoad:true});"
 
 
 
