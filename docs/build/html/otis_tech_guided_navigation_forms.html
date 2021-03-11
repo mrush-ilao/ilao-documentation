@@ -1,13 +1,13 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html4" lang="en" >
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Guided Navigation Forms &mdash; IllinoisLegalAid.org 2.10 documentation</title>
+  <title>Guided Navigation Forms &mdash; ILAO 2.22 documentation</title>
   
 
   
@@ -20,7 +20,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -30,10 +33,9 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -55,7 +57,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home" alt="Documentation Home"> IllinoisLegalAid.org
+            <a href="index.html" class="icon icon-home"> ILAO
           
 
           
@@ -63,10 +65,6 @@
 
           
             
-            
-              <div class="version">
-                2021
-              </div>
             
           
 
@@ -149,7 +147,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">IllinoisLegalAid.org</a>
+          <a href="index.html">ILAO</a>
         
       </nav>
 
@@ -159,6 +157,8 @@
         <div class="rst-content">
         
           
+
+
 
 
 
@@ -189,7 +189,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="_sources/otis_tech_guided_navigation_forms.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -209,11 +209,11 @@
 <h2>Understanding the Guided Navigation form object<a class="headerlink" href="#understanding-the-guided-navigation-form-object" title="Permalink to this headline">¶</a></h2>
 <p>Each form has:</p>
 <ul class="simple">
-<li>a unique ID associated with it that appears to change with each invocation.</li>
-<li>a set of elements that define the form</li>
-<li>an array of validation errors</li>
-<li>a boolean of is_complete.  When is_complete is TRUE, we’ve reached the end of the dialogue.</li>
-<li>a boolean of should_show_previous.  When TRUE, we can allow the user to go back a form page.</li>
+<li><p>a unique ID associated with it that appears to change with each invocation.</p></li>
+<li><p>a set of elements that define the form</p></li>
+<li><p>an array of validation errors</p></li>
+<li><p>a boolean of is_complete.  When is_complete is TRUE, we’ve reached the end of the dialogue.</p></li>
+<li><p>a boolean of should_show_previous.  When TRUE, we can allow the user to go back a form page.</p></li>
 </ul>
 </div>
 <div class="section" id="elements">
@@ -222,10 +222,10 @@
 <img alt="_images/otis_gn_form_select_no_logic.png" src="_images/otis_gn_form_select_no_logic.png" />
 <p>Every (form) element has:</p>
 <ul class="simple">
-<li>a unique id</li>
-<li>a boolean to indicate whether there display logic.</li>
-<li>display_logic, which has data when has_display_logic is TRUE.</li>
-<li>a type.  Known supported types are field, headline</li>
+<li><p>a unique id</p></li>
+<li><p>a boolean to indicate whether there display logic.</p></li>
+<li><p>display_logic, which has data when has_display_logic is TRUE.</p></li>
+<li><p>a type.  Known supported types are field, headline</p></li>
 </ul>
 <div class="section" id="fields">
 <h3>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h3>
@@ -239,30 +239,30 @@
 <h4>Select<a class="headerlink" href="#select" title="Permalink to this headline">¶</a></h4>
 <p>A select field will have:</p>
 <ul class="simple">
-<li>a field_type of select</li>
-<li>an array of options.  Each option is an object with a value and a label.  The label is shown to the user while the value is stored and shared back to Guided Navigation.</li>
-<li>a boolean of is_multiple.  When this is true, the field is a multiselect and/or checkboxes.  When the value is false, the field is a single select or radio buttons.</li>
-<li>a value.  This may be pre-filled with a default value from Guided Navigation.</li>
+<li><p>a field_type of select</p></li>
+<li><p>an array of options.  Each option is an object with a value and a label.  The label is shown to the user while the value is stored and shared back to Guided Navigation.</p></li>
+<li><p>a boolean of is_multiple.  When this is true, the field is a multiselect and/or checkboxes.  When the value is false, the field is a single select or radio buttons.</p></li>
+<li><p>a value.  This may be pre-filled with a default value from Guided Navigation.</p></li>
 </ul>
 </div>
 <div class="section" id="text">
 <h4>Text<a class="headerlink" href="#text" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
-<li>a field_type of text</li>
+<li><p>a field_type of text</p></li>
 </ul>
 </div>
 <div class="section" id="bool">
 <h4>Bool<a class="headerlink" href="#bool" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
-<li>a field_type of bool</li>
-<li>no options; these should be Yes, No with values of t and f</li>
+<li><p>a field_type of bool</p></li>
+<li><p>no options; these should be Yes, No with values of t and f</p></li>
 </ul>
 </div>
 <div class="section" id="date">
 <h4>Date<a class="headerlink" href="#date" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
-<li>a field_type of date</li>
-<li>should require a valid date of mm/dd/yyyy or yyyy-dd-mm (or parse together a valid date).</li>
+<li><p>a field_type of date</p></li>
+<li><p>should require a valid date of mm/dd/yyyy or yyyy-dd-mm (or parse together a valid date).</p></li>
 </ul>
 </div>
 </div>
@@ -272,18 +272,18 @@
 <h4>Instructions<a class="headerlink" href="#instructions" title="Permalink to this headline">¶</a></h4>
 <p>Instructions will have:</p>
 <ul class="simple">
-<li>a type of “instructions”</li>
-<li>an html_value</li>
-<li>may have display logic</li>
+<li><p>a type of “instructions”</p></li>
+<li><p>an html_value</p></li>
+<li><p>may have display logic</p></li>
 </ul>
 </div>
 <div class="section" id="headline">
 <h4>Headline<a class="headerlink" href="#headline" title="Permalink to this headline">¶</a></h4>
 <p>A headline is just HTMl-formatted text. A headline will have:</p>
 <ul class="simple">
-<li>a type of headline</li>
-<li>an html_value</li>
-<li>may have display logic</li>
+<li><p>a type of headline</p></li>
+<li><p>an html_value</p></li>
+<li><p>may have display logic</p></li>
 </ul>
 </div>
 </div>
@@ -291,8 +291,8 @@
 <h3>Display logic<a class="headerlink" href="#display-logic" title="Permalink to this headline">¶</a></h3>
 <p>When the element’s has_display_logic is true, the display_logic property will have data.  There are two use cases we have to be concerned with:</p>
 <ul class="simple">
-<li>Display logic dependent on a previous form submission</li>
-<li>Display logic dependent on a previous field submission in the current form.</li>
+<li><p>Display logic dependent on a previous form submission</p></li>
+<li><p>Display logic dependent on a previous field submission in the current form.</p></li>
 </ul>
 <p>The display_logic property will be an object with:
 * a condition property. Expected values are AND, OR. When there are multiple rules, this condition sits between them
@@ -303,13 +303,13 @@
 <h4>Rules<a class="headerlink" href="#rules" title="Permalink to this headline">¶</a></h4>
 <p>Rules is an array that contains the conditions to test against.  Each element in the array contains an object with:</p>
 <ul class="simple">
-<li>an id</li>
-<li>field, which represents the field to test against.  This can be found in the profile from Guided Navigation for a particular session</li>
-<li>type (known types: string)</li>
-<li>input</li>
-<li>operator.  Known types are contains, not_contains, equal, not_equal, begins_with, in, is_empty, is_not_empty,</li>
-<li>value.  This is either a string (for contains, not contains) or an array of values (for in operators)</li>
-<li>data.  For in operators, this is the data to test against.</li>
+<li><p>an id</p></li>
+<li><p>field, which represents the field to test against.  This can be found in the profile from Guided Navigation for a particular session</p></li>
+<li><p>type (known types: string)</p></li>
+<li><p>input</p></li>
+<li><p>operator.  Known types are contains, not_contains, equal, not_equal, begins_with, in, is_empty, is_not_empty,</p></li>
+<li><p>value.  This is either a string (for contains, not contains) or an array of values (for in operators)</p></li>
+<li><p>data.  For in operators, this is the data to test against.</p></li>
 </ul>
 <img alt="_images/otis-gn-and-example.png" src="_images/otis-gn-and-example.png" />
 <p>In the above, the element would display if the field mr_service_area_49 had a value IN (1)</p>
@@ -330,37 +330,29 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="otis_tech_houston_ai.html" class="btn btn-neutral float-right" title="Houston AI Classifier API Docs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="otis_tech_guided_navigation_api.html" class="btn btn-neutral float-left" title="Guided Navigation API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="otis_tech_houston_ai.html" class="btn btn-neutral float-right" title="Houston AI Classifier API Docs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="otis_tech_guided_navigation_api.html" class="btn btn-neutral float-left" title="Guided Navigation API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020-2021, Illinois Legal Aid Online
+        &#169; Copyright 2021, Gwen Daniels.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

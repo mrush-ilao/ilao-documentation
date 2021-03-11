@@ -1,13 +1,13 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html4" lang="en" >
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Intake/Triage Report &mdash; IllinoisLegalAid.org 2.10 documentation</title>
+  <title>Intake/Triage Report &mdash; ILAO 2.22 documentation</title>
   
 
   
@@ -20,7 +20,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -30,10 +33,9 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -55,7 +57,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home" alt="Documentation Home"> IllinoisLegalAid.org
+            <a href="index.html" class="icon icon-home"> ILAO
           
 
           
@@ -63,10 +65,6 @@
 
           
             
-            
-              <div class="version">
-                2021
-              </div>
             
           
 
@@ -99,6 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="otis_cms.html">Get Legal Help</a><ul class="current">
@@ -120,11 +119,13 @@
 <li class="toctree-l2"><a class="reference internal" href="otis_ai_integration.html">OTIS AI Integration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_third_party_support.html">Supported Integrations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_ilao_api.html">ILAO OTIS API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_sms_intake.html">SMS Integration</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
 <li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies Overview</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul>
@@ -144,7 +145,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">IllinoisLegalAid.org</a>
+          <a href="index.html">ILAO</a>
         
       </nav>
 
@@ -154,6 +155,8 @@
         <div class="rst-content">
         
           
+
+
 
 
 
@@ -184,7 +187,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="_sources/otis_reports_etransfer.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -206,47 +209,47 @@
 <h2>Report Data<a class="headerlink" href="#report-data" title="Permalink to this headline">¶</a></h2>
 <p>Report data includes:</p>
 <ul class="simple">
-<li>Triage ID (labeled as ID)</li>
-<li>Organization name (labeled Name)</li>
-<li>Location of the associated service</li>
-<li>Service associated with the intake</li>
-<li>Date the intake was created (Intake Created)</li>
-<li>Intake Status (see intake statuses below)</li>
-<li>Zip code entered by the user</li>
-<li>County, derived from the zip code entered</li>
-<li>Gender, if captured.  Not all organizations capture gender</li>
-<li>Race, if captured.  Not all organizations capture race</li>
-<li>Ethnicity, if captured.  Not all organizations capture ethnicity</li>
-<li>Martial status, if captured.  Not all organizations capture marital status</li>
-<li>Legal problem.  The tree of legal problems the user drilled through to get to intake</li>
+<li><p>Triage ID (labeled as ID)</p></li>
+<li><p>Organization name (labeled Name)</p></li>
+<li><p>Location of the associated service</p></li>
+<li><p>Service associated with the intake</p></li>
+<li><p>Date the intake was created (Intake Created)</p></li>
+<li><p>Intake Status (see intake statuses below)</p></li>
+<li><p>Zip code entered by the user</p></li>
+<li><p>County, derived from the zip code entered</p></li>
+<li><p>Gender, if captured.  Not all organizations capture gender</p></li>
+<li><p>Race, if captured.  Not all organizations capture race</p></li>
+<li><p>Ethnicity, if captured.  Not all organizations capture ethnicity</p></li>
+<li><p>Martial status, if captured.  Not all organizations capture marital status</p></li>
+<li><p>Legal problem.  The tree of legal problems the user drilled through to get to intake</p></li>
 </ul>
 </div>
 <div class="section" id="filters">
 <h2>Filters<a class="headerlink" href="#filters" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Start and end date:  Either or both can be added.  This is based on intake created date.  There are some instances where this field is empty.  In those cases, the date will appear as 12/31/1969.</li>
-<li>Organization:  Supports partial matches to the organization name</li>
-<li>Services:  Supports partial  matches to a location-services for an organization</li>
-<li>Legal issues:  Single select of a legal issue.  This field is slightly problematic in that it returns only instances where the selected term matches part of the user’s drill down.</li>
-<li>Source:  this is currently legacy from D7 site to include whether the user accessed the system from a program widget or the modal (neither of which are part of the D8 site)</li>
-<li>Intake status:  this is a multi-select for different intake statuses.  See the intake status legend below.</li>
+<li><p>Start and end date:  Either or both can be added.  This is based on intake created date.  There are some instances where this field is empty.  In those cases, the date will appear as 12/31/1969.</p></li>
+<li><p>Organization:  Supports partial matches to the organization name</p></li>
+<li><p>Services:  Supports partial  matches to a location-services for an organization</p></li>
+<li><p>Legal issues:  Single select of a legal issue.  This field is slightly problematic in that it returns only instances where the selected term matches part of the user’s drill down.</p></li>
+<li><p>Source:  this is currently legacy from D7 site to include whether the user accessed the system from a program widget or the modal (neither of which are part of the D8 site)</p></li>
+<li><p>Intake status:  this is a multi-select for different intake statuses.  See the intake status legend below.</p></li>
 </ul>
-<div class="admonition-todo admonition" id="index-0">
-<p class="first admonition-title">Todo</p>
-<p class="last">Update the legal issues filter to have depth.</p>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>Update the legal issues filter to have depth.</p>
 </div>
 </div>
 <div class="section" id="intake-statuses">
 <h2>Intake Statuses<a class="headerlink" href="#intake-statuses" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Bypass intake - the user completed the program’s triage rules and was taken to the bypass intake message. They did not complete an intake application.</li>
-<li>Diverted - the user completed the program’s triage rules and was diverted because of legal issue.</li>
-<li>Offered - the user completed the program’s triage rules and was offered intake. The user did not start the intake form.</li>
-<li>Started - the user completed the program’s triage rules, was offered intake and completed at least one page in the intake form but did not complete the application.</li>
-<li>Eligible - the user completed the program’s triage rules, began intake and finished any financial information screens but did not complete the contact information.</li>
-<li>Over-income - the user completed the program’s triage rules, was offered intake, completed an intake application but was over-income.</li>
-<li>Over-asset - the user completed the program’s triage rules, was offered intake, completed an intake application but was over-asset (and not over-income).</li>
-<li>eTransferred -the user completed the program’s triage rules, was offered intake, completed an intake application that was eTransferred to the program.</li>
+<li><p>Bypass intake - the user completed the program’s triage rules and was taken to the bypass intake message. They did not complete an intake application.</p></li>
+<li><p>Diverted - the user completed the program’s triage rules and was diverted because of legal issue.</p></li>
+<li><p>Offered - the user completed the program’s triage rules and was offered intake. The user did not start the intake form.</p></li>
+<li><p>Started - the user completed the program’s triage rules, was offered intake and completed at least one page in the intake form but did not complete the application.</p></li>
+<li><p>Eligible - the user completed the program’s triage rules, began intake and finished any financial information screens but did not complete the contact information.</p></li>
+<li><p>Over-income - the user completed the program’s triage rules, was offered intake, completed an intake application but was over-income.</p></li>
+<li><p>Over-asset - the user completed the program’s triage rules, was offered intake, completed an intake application but was over-asset (and not over-income).</p></li>
+<li><p>eTransferred -the user completed the program’s triage rules, was offered intake, completed an intake application that was eTransferred to the program.</p></li>
 </ul>
 </div>
 </div>
@@ -256,37 +259,29 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="otis_reports_referral_counts.html" class="btn btn-neutral float-right" title="GLH Referral Count Report" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="otis_reports_glh_summary.html" class="btn btn-neutral float-left" title="Get Legal Help Summary Report" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="otis_reports_referral_counts.html" class="btn btn-neutral float-right" title="GLH Referral Count Report" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="otis_reports_glh_summary.html" class="btn btn-neutral float-left" title="Get Legal Help Summary Report" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020-2021, Illinois Legal Aid Online
+        &#169; Copyright 2021, Gwen Daniels.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

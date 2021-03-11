@@ -1,13 +1,13 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html4" lang="en" >
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Configuration &mdash; IllinoisLegalAid.org 2.10 documentation</title>
+  <title>Configuration &mdash; ILAO 2.22 documentation</title>
   
 
   
@@ -20,7 +20,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -30,10 +33,9 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -55,7 +57,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home" alt="Documentation Home"> IllinoisLegalAid.org
+            <a href="index.html" class="icon icon-home"> ILAO
           
 
           
@@ -63,10 +65,6 @@
 
           
             
-            
-              <div class="version">
-                2021
-              </div>
             
           
 
@@ -115,11 +113,13 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="search_indexing.html">Indexing and Updates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="search_content.html">Manipulating Search</a></li>
 <li class="toctree-l2"><a class="reference internal" href="search_frontend.html">Using Site Search</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies Overview</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul>
@@ -139,7 +139,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">IllinoisLegalAid.org</a>
+          <a href="index.html">ILAO</a>
         
       </nav>
 
@@ -149,6 +149,8 @@
         <div class="rst-content">
         
           
+
+
 
 
 
@@ -177,7 +179,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="_sources/search_solr_config.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -194,13 +196,13 @@
   <div class="section" id="configuration">
 <h1>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Staff users do not have access to search configuration.  Please let Gwen know if you see issues.</p>
+<p class="admonition-title">Note</p>
+<p>Staff users do not have access to search configuration.  Please let Gwen know if you see issues.</p>
 </div>
 <div class="section" id="known-bugs">
 <h2>Known bugs<a class="headerlink" href="#known-bugs" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Non-node pages are not being returned correctly in search results.</li>
+<li><p>Non-node pages are not being returned correctly in search results.</p></li>
 </ul>
 </div>
 <div class="section" id="search-contents">
@@ -208,48 +210,49 @@
 <div class="section" id="our-search-index-includes">
 <h3>Our search index includes<a class="headerlink" href="#our-search-index-includes" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Content of types:<ul>
-<li>ADRM (Lawyer Manuals)</li>
-<li>Events</li>
-<li>Job postings</li>
-<li>Legal content</li>
-<li>Basic pages</li>
-<li>Portal content</li>
-<li>Toolboxes</li>
-<li>Toolbox tool</li>
+<li><p>Content of types:</p>
+<ul>
+<li><p>ADRM (Lawyer Manuals)</p></li>
+<li><p>Events</p></li>
+<li><p>Job postings</p></li>
+<li><p>Legal content</p></li>
+<li><p>Basic pages</p></li>
+<li><p>Portal content</p></li>
+<li><p>Toolboxes</p></li>
+<li><p>Toolbox tool</p></li>
 </ul>
 </li>
-<li>Files</li>
-<li>Paragraph bundles used in included content types.</li>
+<li><p>Files</p></li>
+<li><p>Paragraph bundles used in included content types.</p></li>
 </ul>
 </div>
 <div class="section" id="what-is-not-included-in-search">
 <h3>What is not included in search<a class="headerlink" href="#what-is-not-included-in-search" title="Permalink to this headline">¶</a></h3>
 <p>The following are not included in our search index:</p>
 <ul class="simple">
-<li>All other content types, including organizations, locations, services.</li>
-<li>Comments</li>
-<li>Custom blocks</li>
-<li>Custom tokens (these are not indexed because they are included within the rendered legal content)</li>
+<li><p>All other content types, including organizations, locations, services.</p></li>
+<li><p>Comments</p></li>
+<li><p>Custom blocks</p></li>
+<li><p>Custom tokens (these are not indexed because they are included within the rendered legal content)</p></li>
 </ul>
 </div>
 </div>
 <div class="section" id="processors-used-when-indexing">
 <h2>Processors Used When Indexing<a class="headerlink" href="#processors-used-when-indexing" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Index hierarchy - this indexes the hierarchy of taxonomy terms included in content.</li>
-<li>HTML filter - this strips HTML tags and decodes HTML entities</li>
-<li>Stopwords - this strips out common words from the text of the content to be indexed. ILAO can manage the terms in the list.</li>
-<li>Type specific boosting - this adds a boost factor to some content.</li>
+<li><p>Index hierarchy - this indexes the hierarchy of taxonomy terms included in content.</p></li>
+<li><p>HTML filter - this strips HTML tags and decodes HTML entities</p></li>
+<li><p>Stopwords - this strips out common words from the text of the content to be indexed. ILAO can manage the terms in the list.</p></li>
+<li><p>Type specific boosting - this adds a boost factor to some content.</p></li>
 </ul>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">List of stopwords:  a, about, above, after, again, against, all, am, an, and, any, are, as, at, be, because, been, before, being, below, between, both, but, by, can, did, do, does, doing, don, down, during, each, few, for, from, further, get, had, has, have, having, he, help, her, here, hers, herself, him, himself, his, how, i, if, in, into, is, it, its, itself, just, legal, me, more, most, my, myself, need, no, nor, not, now, of, off, on, once, only, or, other, our, ours, ourselves, out, over, own, s, same, she, should, so, some, such, t, than, that, the, their, theirs, them, themselves, then, there, these, they, this, those, through, to, too, under, until, up, very, was, we, were, what, when, where, which, while, who, whom, why, will, with, you, your, yours, yourself, yourselves</p>
+<p class="admonition-title">Note</p>
+<p>List of stopwords:  a, about, above, after, again, against, all, am, an, and, any, are, as, at, be, because, been, before, being, below, between, both, but, by, can, did, do, does, doing, don, down, during, each, few, for, from, further, get, had, has, have, having, he, help, her, here, hers, herself, him, himself, his, how, i, if, in, into, is, it, its, itself, just, legal, me, more, most, my, myself, need, no, nor, not, now, of, off, on, once, only, or, other, our, ours, ourselves, out, over, own, s, same, she, should, so, some, such, t, than, that, the, their, theirs, them, themselves, then, there, these, they, this, those, through, to, too, under, until, up, very, was, we, were, what, when, where, which, while, who, whom, why, will, with, you, your, yours, yourself, yourselves</p>
 </div>
 <p>We lower the boost for events and job postings to make them less relevant compared to legal information and basic pages.</p>
-<div class="admonition-todo admonition" id="index-0">
-<p class="first admonition-title">Todo</p>
-<p class="last">Should we make use of any of the other available processors?</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Should we make use of any of the other available processors?</p>
 </div>
 </div>
 </div>
@@ -259,37 +262,29 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="search_indexing.html" class="btn btn-neutral float-right" title="Indexing and Updates" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="site_search.html" class="btn btn-neutral float-left" title="Site Search" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="search_indexing.html" class="btn btn-neutral float-right" title="Indexing and Updates" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="site_search.html" class="btn btn-neutral float-left" title="Site Search" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020-2021, Illinois Legal Aid Online
+        &#169; Copyright 2021, Gwen Daniels.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

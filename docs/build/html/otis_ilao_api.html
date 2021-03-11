@@ -1,13 +1,13 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html4" lang="en" >
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>ILAO OTIS API &mdash; IllinoisLegalAid.org 2.10 documentation</title>
+  <title>ILAO OTIS API &mdash; ILAO 2.22 documentation</title>
   
 
   
@@ -20,7 +20,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -30,17 +33,16 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Site Search" href="site_search.html" />
+    <link rel="next" title="SMS Integration" href="otis_sms_intake.html" />
     <link rel="prev" title="Supported Integrations" href="otis_third_party_support.html" /> 
 </head>
 
@@ -55,7 +57,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home" alt="Documentation Home"> IllinoisLegalAid.org
+            <a href="index.html" class="icon icon-home"> ILAO
           
 
           
@@ -63,10 +65,6 @@
 
           
             
-            
-              <div class="version">
-                2021
-              </div>
             
           
 
@@ -99,6 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="otis_cms.html">Get Legal Help</a><ul class="current">
@@ -121,11 +120,13 @@
 <li class="toctree-l3"><a class="reference internal" href="#taxonomies">Taxonomies</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="otis_sms_intake.html">SMS Integration</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
 <li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies Overview</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul>
@@ -145,7 +146,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">IllinoisLegalAid.org</a>
+          <a href="index.html">ILAO</a>
         
       </nav>
 
@@ -155,6 +156,8 @@
         <div class="rst-content">
         
           
+
+
 
 
 
@@ -183,7 +186,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="_sources/otis_ilao_api.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -204,9 +207,9 @@
 </div>
 <div class="section" id="permissions">
 <h2>Permissions<a class="headerlink" href="#permissions" title="Permalink to this headline">¶</a></h2>
-<div class="admonition-todo admonition" id="index-0">
-<p class="first admonition-title">Todo</p>
-<p class="last">Understand how the authentication that was created works.</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Understand how the authentication that was created works.</p>
 </div>
 </div>
 <div class="section" id="triage-user">
@@ -317,20 +320,19 @@
 <div class="section" id="update-triage-user">
 <h3>Update triage user<a class="headerlink" href="#update-triage-user" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><dl class="docutils">
-<dt>curl -X PATCH -H “Content-Type:application/vnd.api+json” -d ‘{</dt>
-<dd><dl class="first last docutils">
-<dt>“data”: {</dt>
-<dd><blockquote class="first">
+<div><dl>
+<dt>curl -X PATCH -H “Content-Type:application/vnd.api+json” -d ‘{</dt><dd><dl>
+<dt>“data”: {</dt><dd><blockquote>
 <div><p>“type”: “oas_triage_user–oas_triage_user”,
 “id”: “e08ff647-362f-4428-bcaf-8b45191a8df7”,
 “attributes”: {</p>
 <blockquote>
-<div>“household_size”: 6,
-“household_children”: 4</div></blockquote>
+<div><p>“household_size”: 6,
+“household_children”: 4</p>
+</div></blockquote>
 <p>}</p>
 </div></blockquote>
-<p class="last">}</p>
+<p>}</p>
 </dd>
 </dl>
 </dd>
@@ -341,13 +343,15 @@
 <div class="section" id="delete-triage-user">
 <h3>Delete triage user<a class="headerlink" href="#delete-triage-user" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>curl -X DELETE <a class="reference external" href="http://ilaodrupal8.prod.dd:8083/jsonapi/oas_triage_user/oas_triage_user/e08ff647-362f-4428-bcaf-8b45191a8df7">http://ilaodrupal8.prod.dd:8083/jsonapi/oas_triage_user/oas_triage_user/e08ff647-362f-4428-bcaf-8b45191a8df7</a></div></blockquote>
+<div><p>curl -X DELETE <a class="reference external" href="http://ilaodrupal8.prod.dd:8083/jsonapi/oas_triage_user/oas_triage_user/e08ff647-362f-4428-bcaf-8b45191a8df7">http://ilaodrupal8.prod.dd:8083/jsonapi/oas_triage_user/oas_triage_user/e08ff647-362f-4428-bcaf-8b45191a8df7</a></p>
+</div></blockquote>
 </div>
 </div>
 <div class="section" id="taxonomies">
 <h2>Taxonomies<a class="headerlink" href="#taxonomies" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div>curl -X GET -H “Content-Type:application/vnd.api+json” http://ilaodrupal8.prod.dd:8083/jsonapi/taxonomy_term/oas_marital_status</div></blockquote>
+<div><p>curl -X GET -H “Content-Type:application/vnd.api+json” http://ilaodrupal8.prod.dd:8083/jsonapi/taxonomy_term/oas_marital_status</p>
+</div></blockquote>
 </div>
 </div>
 
@@ -356,37 +360,29 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="site_search.html" class="btn btn-neutral float-right" title="Site Search" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="otis_third_party_support.html" class="btn btn-neutral float-left" title="Supported Integrations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="otis_sms_intake.html" class="btn btn-neutral float-right" title="SMS Integration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="otis_third_party_support.html" class="btn btn-neutral float-left" title="Supported Integrations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020-2021, Illinois Legal Aid Online
+        &#169; Copyright 2021, Gwen Daniels.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

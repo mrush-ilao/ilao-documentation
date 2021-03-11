@@ -1,13 +1,13 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html4" lang="en" >
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Custom Tokens &mdash; IllinoisLegalAid.org 2.10 documentation</title>
+  <title>Custom Tokens &mdash; ILAO 2.22 documentation</title>
   
 
   
@@ -20,7 +20,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -30,10 +33,9 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -41,7 +43,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Creating redirects between pages" href="cms_redirects.html" />
-    <link rel="prev" title="Local content tool" href="cms_localization_tool.html" /> 
+    <link rel="prev" title="Word counts" href="cms_word_counts.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -55,7 +57,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home" alt="Documentation Home"> IllinoisLegalAid.org
+            <a href="index.html" class="icon icon-home"> ILAO
           
 
           
@@ -63,10 +65,6 @@
 
           
             
-            
-              <div class="version">
-                2021
-              </div>
             
           
 
@@ -125,12 +123,14 @@
 <li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
 <li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
 <li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies Overview</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul class="current">
@@ -176,7 +176,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">IllinoisLegalAid.org</a>
+          <a href="index.html">ILAO</a>
         
       </nav>
 
@@ -186,6 +186,8 @@
         <div class="rst-content">
         
           
+
+
 
 
 
@@ -214,7 +216,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="_sources/cms_custom_tokens.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -236,38 +238,38 @@
 <h2>Custom token types<a class="headerlink" href="#custom-token-types" title="Permalink to this headline">¶</a></h2>
 <p>Staff can create different types of custom tokens to better manage custom tokens.  Currently we have types of:</p>
 <ul class="simple">
-<li>Custom</li>
-<li>Process</li>
-<li>Custom-ES</li>
-<li>Custom-PL</li>
-<li>Process-ES</li>
-<li>Process-PL</li>
+<li><p>Custom</p></li>
+<li><p>Process</p></li>
+<li><p>Custom-ES</p></li>
+<li><p>Custom-PL</p></li>
+<li><p>Process-ES</p></li>
+<li><p>Process-PL</p></li>
 </ul>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The machine name for each type is lowercase.  Uppercase is not supported.</p>
+<p class="admonition-title">Note</p>
+<p>The machine name for each type is lowercase.  Uppercase is not supported.</p>
 </div>
 </div>
 <div class="section" id="adding-and-editing-custom-tokens">
 <h2>Adding and editing custom tokens<a class="headerlink" href="#adding-and-editing-custom-tokens" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Custom tokens are not translatable.  They can technically be translated but the translations can’t be detected on the front-end. The approach then is to create separate tokens per language and then insert the correct language token in the legal content.</p>
+<p class="admonition-title">Note</p>
+<p>Custom tokens are not translatable.  They can technically be translated but the translations can’t be detected on the front-end. The approach then is to create separate tokens per language and then insert the correct language token in the legal content.</p>
 </div>
 <img alt="_images/cms-custom-tokens.png" src="_images/cms-custom-tokens.png" />
 <div class="section" id="to-create-a-token">
 <h3>To create a token<a class="headerlink" href="#to-create-a-token" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Select the token type.  This will be the type part in [type:name].</li>
-<li>Enter a name.  This is the name for display.  It is not the name used in the token.</li>
-<li>Enter the machine name ID.  Only lowercase letters, numbers, hyphens, or underscores may be used and each machine name ID must be unique.  <strong>This is the name part of the token</strong></li>
-<li>Optionally, enter a description</li>
-<li>Enter the content.</li>
-<li>Select the language code.</li>
+<li><p>Select the token type.  This will be the type part in [type:name].</p></li>
+<li><p>Enter a name.  This is the name for display.  It is not the name used in the token.</p></li>
+<li><p>Enter the machine name ID.  Only lowercase letters, numbers, hyphens, or underscores may be used and each machine name ID must be unique.  <strong>This is the name part of the token</strong></p></li>
+<li><p>Optionally, enter a description</p></li>
+<li><p>Enter the content.</p></li>
+<li><p>Select the language code.</p></li>
 </ul>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">You may need to view the source of the content to strip out paragraph tags for tokens that should be used in-line with other content, for example, tokens that are used mid-sentence or mid-paragraph.</p>
+<p class="admonition-title">Note</p>
+<p>You may need to view the source of the content to strip out paragraph tags for tokens that should be used in-line with other content, for example, tokens that are used mid-sentence or mid-paragraph.</p>
 </div>
 </div>
 </div>
@@ -275,10 +277,10 @@
 <h2>Recommendations for Spanish and Polish tokens<a class="headerlink" href="#recommendations-for-spanish-and-polish-tokens" title="Permalink to this headline">¶</a></h2>
 <p>The recommended approach for Spanish and Polish tokens is:</p>
 <ul class="simple">
-<li>Create the token in English first</li>
-<li>For Spanish, create the Spanish token using the -es token type that matches the English but use the English machine name (for example, custom:minimum-wage would be custom-es:minimum-wage)</li>
-<li>For Polish, create the Ppanish token using the -pl token type that matches the English but use the English machine name (for example, custom:minimum-wage would be custom-pl:minimum-wage)</li>
-<li>Set the language code to the correct language.</li>
+<li><p>Create the token in English first</p></li>
+<li><p>For Spanish, create the Spanish token using the -es token type that matches the English but use the English machine name (for example, custom:minimum-wage would be custom-es:minimum-wage)</p></li>
+<li><p>For Polish, create the Ppanish token using the -pl token type that matches the English but use the English machine name (for example, custom:minimum-wage would be custom-pl:minimum-wage)</p></li>
+<li><p>Set the language code to the correct language.</p></li>
 </ul>
 <p>This approach will make it easier to update the tokens in content when translating.</p>
 </div>
@@ -299,37 +301,29 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="cms_redirects.html" class="btn btn-neutral float-right" title="Creating redirects between pages" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="cms_localization_tool.html" class="btn btn-neutral float-left" title="Local content tool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="cms_redirects.html" class="btn btn-neutral float-right" title="Creating redirects between pages" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="cms_word_counts.html" class="btn btn-neutral float-left" title="Word counts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020-2021, Illinois Legal Aid Online
+        &#169; Copyright 2021, Gwen Daniels.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

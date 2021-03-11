@@ -1,13 +1,13 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html4" lang="en" >
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Natural language processing of legal problem &mdash; IllinoisLegalAid.org 2.10 documentation</title>
+  <title>Natural language processing of legal problem &mdash; ILAO 2.22 documentation</title>
   
 
   
@@ -20,7 +20,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -30,10 +33,9 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -55,7 +57,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home" alt="Documentation Home"> IllinoisLegalAid.org
+            <a href="index.html" class="icon icon-home"> ILAO
           
 
           
@@ -63,10 +65,6 @@
 
           
             
-            
-              <div class="version">
-                2021
-              </div>
             
           
 
@@ -99,6 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="otis_cms.html">Get Legal Help</a><ul class="current">
@@ -122,11 +121,13 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="otis_third_party_support.html">Supported Integrations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="otis_ilao_api.html">ILAO OTIS API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="otis_sms_intake.html">SMS Integration</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
 <li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies Overview</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul>
@@ -146,7 +147,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">IllinoisLegalAid.org</a>
+          <a href="index.html">ILAO</a>
         
       </nav>
 
@@ -156,6 +157,8 @@
         <div class="rst-content">
         
           
+
+
 
 
 
@@ -186,7 +189,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="_sources/otis_natural_language_processing.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -204,14 +207,16 @@
 <h1>Natural language processing of legal problem<a class="headerlink" href="#natural-language-processing-of-legal-problem" title="Permalink to this headline">¶</a></h1>
 <p>The current website uses an autocomplete to our legal issues taxonomy to direct a user to the appropriate triage rules or referrals.  The accuracy of this is dependent on how the user interacts with the field:</p>
 <ul class="simple">
-<li>Users can pick a term from the autocomplete.  If they do:<ul>
-<li>and it is the lowest level term in the taxonomy, they are matched to the triage rules</li>
-<li>and it is not the lowest level term in the taxonomy, they are taken to a screen to filter through the taxonomy to the lowest level, starting with the term they entered.</li>
+<li><p>Users can pick a term from the autocomplete.  If they do:</p>
+<ul>
+<li><p>and it is the lowest level term in the taxonomy, they are matched to the triage rules</p></li>
+<li><p>and it is not the lowest level term in the taxonomy, they are taken to a screen to filter through the taxonomy to the lowest level, starting with the term they entered.</p></li>
 </ul>
 </li>
-<li>Users can type text into the autocomplete.  If they do:<ul>
-<li>and it is an exact match to a term in the taxonomy, then it is treated as if the user selected the term from the autocomplete</li>
-<li>and it is not an exact match to a term in the taxonomy, the user is taken to the top of our legal issues taxonomy to filter down to the lowest level problem.</li>
+<li><p>Users can type text into the autocomplete.  If they do:</p>
+<ul>
+<li><p>and it is an exact match to a term in the taxonomy, then it is treated as if the user selected the term from the autocomplete</p></li>
+<li><p>and it is not an exact match to a term in the taxonomy, the user is taken to the top of our legal issues taxonomy to filter down to the lowest level problem.</p></li>
 </ul>
 </li>
 </ul>
@@ -221,52 +226,54 @@
 <p>If the user’s input is an exact match to the legal issues taxonomy =&gt; no change in the current system is made</p>
 <p>If the user’s input is not an exact match to the legal issues taxonomy:</p>
 <ul class="simple">
-<li>User input is passed to both Houston.ai and Spot classifier</li>
-<li>A combined list of results are culled together, ranked and mapped back to ILAO’s IA</li>
-<li>The user is presented with a short list of options based on the classifier data.</li>
+<li><p>User input is passed to both Houston.ai and Spot classifier</p></li>
+<li><p>A combined list of results are culled together, ranked and mapped back to ILAO’s IA</p></li>
+<li><p>The user is presented with a short list of options based on the classifier data.</p></li>
 </ul>
 <div class="section" id="examples">
 <h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
 <p>These examples require a score of .8 or higher in Houston AI and .6 for LIT Spot</p>
 <p>“I am getting evicted from my apartment”</p>
 <ul class="simple">
-<li>Houston AI returns private/landlord tenant</li>
-<li>Spot returns:<ul>
-<li>Eviction from a homeless shelter or group home (83.968495156154)</li>
-<li>Eviction from private rental housing (not public or subsidized) (88.335262899271)</li>
-<li>Notice and Procedural defenses against an eviction (76.408919436079)</li>
-<li>Living conditions (habitability) defenses against an eviction (83.987595048243)</li>
-<li>Title and ownership defenses against an eviction (78.661704605665)</li>
-<li>Retaliatory Eviction defenses against an eviction (76.335103161464)</li>
+<li><p>Houston AI returns private/landlord tenant</p></li>
+<li><p>Spot returns:</p>
+<ul>
+<li><p>Eviction from a homeless shelter or group home (83.968495156154)</p></li>
+<li><p>Eviction from private rental housing (not public or subsidized) (88.335262899271)</p></li>
+<li><p>Notice and Procedural defenses against an eviction (76.408919436079)</p></li>
+<li><p>Living conditions (habitability) defenses against an eviction (83.987595048243)</p></li>
+<li><p>Title and ownership defenses against an eviction (78.661704605665)</p></li>
+<li><p>Retaliatory Eviction defenses against an eviction (76.335103161464)</p></li>
 </ul>
 </li>
-<li>ILAO would offer the user ?</li>
+<li><p>ILAO would offer the user ?</p></li>
 </ul>
 <p>“I want a divorce”</p>
 <ul class="simple">
-<li>Houston AI returns Divorce/Sep/Annul</li>
-<li>Spot returns family</li>
-<li>ILAO would drop the user into Divorce</li>
+<li><p>Houston AI returns Divorce/Sep/Annul</p></li>
+<li><p>Spot returns family</p></li>
+<li><p>ILAO would drop the user into Divorce</p></li>
 </ul>
 <p>“I was denied unemployment”</p>
 <ul class="simple">
-<li>Houston AI returns unemployment compensation</li>
-<li>Spot returns unemployment benefits, compensation, and insurance</li>
-<li>ILAO would drop the user into unemployment benefits</li>
+<li><p>Houston AI returns unemployment compensation</p></li>
+<li><p>Spot returns unemployment benefits, compensation, and insurance</p></li>
+<li><p>ILAO would drop the user into unemployment benefits</p></li>
 </ul>
 <p>“my spouse beat me up”</p>
 <ul class="simple">
-<li>Neither returns anything good</li>
-<li>ILAO would drop the user at the top of the tree</li>
+<li><p>Neither returns anything good</p></li>
+<li><p>ILAO would drop the user at the top of the tree</p></li>
 </ul>
 <p>“I can’t afford my groceries”</p>
 <ul class="simple">
-<li>Houston AI returns Bankruptcy/Debtor relief</li>
-<li>Spot returns Food and cash benefits</li>
-<li>ILAO would offer the user multiple options to pick from:<ul>
-<li>Food stamps</li>
-<li>TANF</li>
-<li>Bankruptcy</li>
+<li><p>Houston AI returns Bankruptcy/Debtor relief</p></li>
+<li><p>Spot returns Food and cash benefits</p></li>
+<li><p>ILAO would offer the user multiple options to pick from:</p>
+<ul>
+<li><p>Food stamps</p></li>
+<li><p>TANF</p></li>
+<li><p>Bankruptcy</p></li>
 </ul>
 </li>
 </ul>
@@ -275,11 +282,11 @@
 <div class="section" id="technical-implementation">
 <h2>Technical Implementation<a class="headerlink" href="#technical-implementation" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Implement classifier module for Houston AI (DEV-2809/DEV-2881)</li>
-<li>Implement classifier module for Spot AI (DEV-2812/DEV-2882)</li>
-<li>Add fields to the legal issues taxonomy to map LSC and NSMI codes against it (DEV-2886)</li>
-<li>Update the legal issues taxonomy to include codes where they should be added (Gwen)</li>
-<li>Write code to invoke the classifier where needed and return the right data sets (DEV-2887)</li>
+<li><p>Implement classifier module for Houston AI (DEV-2809/DEV-2881)</p></li>
+<li><p>Implement classifier module for Spot AI (DEV-2812/DEV-2882)</p></li>
+<li><p>Add fields to the legal issues taxonomy to map LSC and NSMI codes against it (DEV-2886)</p></li>
+<li><p>Update the legal issues taxonomy to include codes where they should be added (Gwen)</p></li>
+<li><p>Write code to invoke the classifier where needed and return the right data sets (DEV-2887)</p></li>
 </ul>
 </div>
 </div>
@@ -289,37 +296,29 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="otis_third_party_support.html" class="btn btn-neutral float-right" title="Supported Integrations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="otis_tech_spot_classifier.html" class="btn btn-neutral float-left" title="Spot Classsifer API Docs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="otis_third_party_support.html" class="btn btn-neutral float-right" title="Supported Integrations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="otis_tech_spot_classifier.html" class="btn btn-neutral float-left" title="Spot Classsifer API Docs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020-2021, Illinois Legal Aid Online
+        &#169; Copyright 2021, Gwen Daniels.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

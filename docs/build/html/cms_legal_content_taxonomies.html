@@ -1,13 +1,13 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html4" lang="en" >
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Legal taxonomies &mdash; IllinoisLegalAid.org 2.10 documentation</title>
+  <title>Legal taxonomies &mdash; ILAO 2.22 documentation</title>
   
 
   
@@ -20,7 +20,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -30,10 +33,9 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -55,7 +57,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home" alt="Documentation Home"> IllinoisLegalAid.org
+            <a href="index.html" class="icon icon-home"> ILAO
           
 
           
@@ -63,10 +65,6 @@
 
           
             
-            
-              <div class="version">
-                2021
-              </div>
             
           
 
@@ -124,12 +122,14 @@
 <li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
 <li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
 <li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies Overview</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul class="current">
@@ -174,7 +174,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">IllinoisLegalAid.org</a>
+          <a href="index.html">ILAO</a>
         
       </nav>
 
@@ -184,6 +184,8 @@
         <div class="rst-content">
         
           
+
+
 
 
 
@@ -214,7 +216,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="_sources/cms_legal_content_taxonomies.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -232,41 +234,38 @@
 <h1>Legal taxonomies<a class="headerlink" href="#legal-taxonomies" title="Permalink to this headline">¶</a></h1>
 <p>As of January 2021, the legal issues taxonomy:</p>
 <ul class="simple">
-<li>is used to tag legal content at a granular legal issue</li>
-<li>the top 2 levels are used as navigation within the website</li>
+<li><p>is used to tag legal content at a granular legal issue</p></li>
+<li><p>the top 2 levels are used as navigation within the website</p></li>
 </ul>
 <p>We envision that we will use the <a class="reference external" href="https://www.illinoislegalaid.org/admin/structure/taxonomy_manager/voc/navigational_ia">navigational IA taxonomy</a> for navigating the website by the end of 2021.</p>
 <p>In order to do this, we must:</p>
 <ul>
-<li><p class="first">Populate the navigational IA taxonomy with our revised legal issues taxonomy (content) This will include for each language (English, Spanish, and Polish):</p>
+<li><p>Populate the navigational IA taxonomy with our revised legal issues taxonomy (content) This will include for each language (English, Spanish, and Polish):</p>
 <blockquote>
 <div><ul class="simple">
-<li>Copying terms</li>
-<li>Copying definitions</li>
-<li>Copying any alternates</li>
-<li>Copying icons</li>
-<li>Copying images</li>
+<li><p>Copying terms</p></li>
+<li><p>Copying definitions</p></li>
+<li><p>Copying any alternates</p></li>
+<li><p>Copying icons</p></li>
+<li><p>Copying images</p></li>
 </ul>
 </div></blockquote>
 </li>
-<li><p class="first">Add a field to all forms of legal content to tag content to the navigational IA (developers)</p>
-</li>
-<li><p class="first">Create a report that shows all legal content that does not have navigational IA terms (developers)</p>
-</li>
-<li><p class="first">Update all of our legal content (content) to add the new tags (content)</p>
-</li>
-<li><p class="first">Implement changes to our front end:</p>
+<li><p>Add a field to all forms of legal content to tag content to the navigational IA (developers)</p></li>
+<li><p>Create a report that shows all legal content that does not have navigational IA terms (developers)</p></li>
+<li><p>Update all of our legal content (content) to add the new tags (content)</p></li>
+<li><p>Implement changes to our front end:</p>
 <ul class="simple">
-<li>Remove existing path aliases so that they can be re-used (Gwen)</li>
-<li>Update navigational IA to use the current legal issues taxonomy (Gwen)</li>
-<li>Update category, subcategory, forms, practice resources to use new taxonomy (developers)</li>
-<li>Re-run sitemaps (Gwen)</li>
+<li><p>Remove existing path aliases so that they can be re-used (Gwen)</p></li>
+<li><p>Update navigational IA to use the current legal issues taxonomy (Gwen)</p></li>
+<li><p>Update category, subcategory, forms, practice resources to use new taxonomy (developers)</p></li>
+<li><p>Re-run sitemaps (Gwen)</p></li>
 </ul>
 </li>
 </ul>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">For the immediate future, we will continue to tag content to both taxonomies as Get Legal Help relies heavily on the depth of the legal issues taxonomy and some relationships between content also use this information.</p>
+<p class="admonition-title">Note</p>
+<p>For the immediate future, we will continue to tag content to both taxonomies as Get Legal Help relies heavily on the depth of the legal issues taxonomy and some relationships between content also use this information.</p>
 </div>
 </div>
 
@@ -275,37 +274,29 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="cms_portal_main_page.html" class="btn btn-neutral float-right" title="Portal main page content type" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="cms_legal_content_scheduling.html" class="btn btn-neutral float-left" title="Scheduling Revisions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="cms_portal_main_page.html" class="btn btn-neutral float-right" title="Portal main page content type" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="cms_legal_content_scheduling.html" class="btn btn-neutral float-left" title="Scheduling Revisions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020-2021, Illinois Legal Aid Online
+        &#169; Copyright 2021, Gwen Daniels.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

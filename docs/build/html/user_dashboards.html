@@ -1,13 +1,13 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html4" lang="en" >
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>User Dashboard Pages &mdash; IllinoisLegalAid.org 2.10 documentation</title>
+  <title>User Dashboard Pages &mdash; ILAO 2.22 documentation</title>
   
 
   
@@ -20,7 +20,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -30,10 +33,9 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -55,7 +57,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home" alt="Documentation Home"> IllinoisLegalAid.org
+            <a href="index.html" class="icon icon-home"> ILAO
           
 
           
@@ -63,10 +65,6 @@
 
           
             
-            
-              <div class="version">
-                2021
-              </div>
             
           
 
@@ -112,12 +110,14 @@
 <li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
 <li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
 <li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies Overview</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul>
@@ -137,7 +137,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">IllinoisLegalAid.org</a>
+          <a href="index.html">ILAO</a>
         
       </nav>
 
@@ -147,6 +147,8 @@
         <div class="rst-content">
         
           
+
+
 
 
 
@@ -175,7 +177,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="_sources/user_dashboards.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -197,14 +199,14 @@
 <p>Our most limited role is the community member.  This role is given to any user who does not have any other role.</p>
 <p>This dashboard shows:</p>
 <ul class="simple">
-<li>A block for their user profile</li>
-<li>A block for any referrals made via Get Legal Help</li>
-<li>A block for any toolboxes that are saved.</li>
+<li><p>A block for their user profile</p></li>
+<li><p>A block for any referrals made via Get Legal Help</p></li>
+<li><p>A block for any toolboxes that are saved.</p></li>
 </ul>
 <img alt="_images/community-dashboard-mobile.png" src="_images/community-dashboard-mobile.png" />
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Law students have the same dashboard as community members.</p>
+<p class="admonition-title">Note</p>
+<p>Law students have the same dashboard as community members.</p>
 </div>
 </div>
 <div class="section" id="staff-members">
@@ -216,10 +218,10 @@
 <h2>Legal Aid Members<a class="headerlink" href="#legal-aid-members" title="Permalink to this headline">¶</a></h2>
 <p>The dashboard for legal aid members:</p>
 <ul class="simple">
-<li>The standard user profile block</li>
-<li>A “You Can” block; the content of this block varies depending on whether the user has any elevated organization permissions</li>
-<li>A “My legal edits” block</li>
-<li>A “My jobs and events” block if the user has any published events or jobs.</li>
+<li><p>The standard user profile block</p></li>
+<li><p>A “You Can” block; the content of this block varies depending on whether the user has any elevated organization permissions</p></li>
+<li><p>A “My legal edits” block</p></li>
+<li><p>A “My jobs and events” block if the user has any published events or jobs.</p></li>
 </ul>
 <img alt="_images/dashboard-default-legal-aid.png" src="_images/dashboard-default-legal-aid.png" />
 </div>
@@ -227,22 +229,22 @@
 <h2>LSHC Members<a class="headerlink" href="#lshc-members" title="Permalink to this headline">¶</a></h2>
 <p>The dashboard for legal self-help center navigators has:</p>
 <ul class="simple">
-<li>The standard user profile block</li>
-<li>A “You Can” block with options to manage their organization, location, and services as well as post a job or event.</li>
-<li>A “Navigator resources” block that links to our <a class="reference external" href="https://www.illinoislegalaid.org/about/our-work/navigator-resources">Navigator Resources</a> page</li>
+<li><p>The standard user profile block</p></li>
+<li><p>A “You Can” block with options to manage their organization, location, and services as well as post a job or event.</p></li>
+<li><p>A “Navigator resources” block that links to our <a class="reference external" href="https://www.illinoislegalaid.org/about/our-work/navigator-resources">Navigator Resources</a> page</p></li>
 </ul>
 </div>
 <div class="section" id="pro-bono-members">
 <h2>Pro Bono Members<a class="headerlink" href="#pro-bono-members" title="Permalink to this headline">¶</a></h2>
 <p>The dashboard for pro bono members:</p>
 <ul class="simple">
-<li>The standard user profile block</li>
-<li>A “You Can” block; the content of this block varies depending on whether the user has any elevated organization permissions</li>
-<li>A “My legal edits” block</li>
+<li><p>The standard user profile block</p></li>
+<li><p>A “You Can” block; the content of this block varies depending on whether the user has any elevated organization permissions</p></li>
+<li><p>A “My legal edits” block</p></li>
 </ul>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The My jobs and events block does not show currently for pro bono members even if they have posted an active job or event.  Also the You Can block has an empty Manage Organizations link that goes to the page not found.</p>
+<p class="admonition-title">Note</p>
+<p>The My jobs and events block does not show currently for pro bono members even if they have posted an active job or event.  Also the You Can block has an empty Manage Organizations link that goes to the page not found.</p>
 </div>
 <img alt="_images/dashboard-probono.png" src="_images/dashboard-probono.png" />
 </div>
@@ -253,37 +255,29 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="user_reports.html" class="btn btn-neutral float-right" title="User Reports" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="user_roles.html" class="btn btn-neutral float-left" title="User accounts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="user_reports.html" class="btn btn-neutral float-right" title="User Reports" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="user_roles.html" class="btn btn-neutral float-left" title="User accounts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020-2021, Illinois Legal Aid Online
+        &#169; Copyright 2021, Gwen Daniels.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

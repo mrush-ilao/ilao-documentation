@@ -1,13 +1,13 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html4" lang="en" >
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Legal Solution &mdash; IllinoisLegalAid.org 2.10 documentation</title>
+  <title>Legal Solution &mdash; ILAO 2.22 documentation</title>
   
 
   
@@ -20,7 +20,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -30,10 +33,9 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -55,7 +57,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home" alt="Documentation Home"> IllinoisLegalAid.org
+            <a href="index.html" class="icon icon-home"> ILAO
           
 
           
@@ -63,10 +65,6 @@
 
           
             
-            
-              <div class="version">
-                2021
-              </div>
             
           
 
@@ -132,12 +130,14 @@
 <li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
 <li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
 <li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies Overview</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul class="current">
@@ -190,7 +190,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">IllinoisLegalAid.org</a>
+          <a href="index.html">ILAO</a>
         
       </nav>
 
@@ -200,6 +200,8 @@
         <div class="rst-content">
         
           
+
+
 
 
 
@@ -232,7 +234,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="_sources/cms_structured_legal_solution.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -250,22 +252,22 @@
 <span id="cms-legal-solution"></span><h1>Legal Solution<a class="headerlink" href="#legal-solution" title="Permalink to this headline">¶</a></h1>
 <p>A legal solution is tied to one or more legal problems (see <a class="reference internal" href="cms_structured_legal_problem.html#cms-legal-problem"><span class="std std-ref">Legal Problem</span></a>) and features:</p>
 <ul class="simple">
-<li>content metadata</li>
-<li>a solution type</li>
-<li>0 or more <a class="reference internal" href="cms_structured_legal_forms.html#cms-legal-forms"><span class="std std-ref">Legal forms</span></a></li>
-<li>0 or more pieces of needed information</li>
-<li>Legal difficulty (optional)</li>
-<li>Estimated time required to complete the entire process</li>
-<li>One or more eligibility rules to be able to use a specific solution</li>
-<li>A jurisdiction</li>
-<li>Zero or more helpful organizations</li>
-<li>Zero or more legal organizations</li>
-<li>One or more HowTos</li>
-<li>A result</li>
+<li><p>content metadata</p></li>
+<li><p>a solution type</p></li>
+<li><p>0 or more <a class="reference internal" href="cms_structured_legal_forms.html#cms-legal-forms"><span class="std std-ref">Legal forms</span></a></p></li>
+<li><p>0 or more pieces of needed information</p></li>
+<li><p>Legal difficulty (optional)</p></li>
+<li><p>Estimated time required to complete the entire process</p></li>
+<li><p>One or more eligibility rules to be able to use a specific solution</p></li>
+<li><p>A jurisdiction</p></li>
+<li><p>Zero or more helpful organizations</p></li>
+<li><p>Zero or more legal organizations</p></li>
+<li><p>One or more HowTos</p></li>
+<li><p>A result</p></li>
 </ul>
-<div class="admonition-todo admonition" id="index-0">
-<p class="first admonition-title">Todo</p>
-<p class="last">Determine if we should have information needed when we have tools/supplies in the how-to; This is especially important if the information needed might vary at a local level.  How Tos should be required.</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Determine if we should have information needed when we have tools/supplies in the how-to; This is especially important if the information needed might vary at a local level.  How Tos should be required.</p>
 </div>
 <div class="section" id="solution-type">
 <h2>Solution type<a class="headerlink" href="#solution-type" title="Permalink to this headline">¶</a></h2>
@@ -287,15 +289,15 @@
 </div>
 <p>might be created:</p>
 <ul class="simple">
-<li>with a heading of “One of the following must be true”</li>
-<li>with an unordered list of 3 list items:</li>
-<li>You or the person you are filing the order against must live in the county you are filing the request in</li>
-<li>The abuse must have taken place in the county</li>
-<li>You must be living in the county temporarily to avoid abuse elsewhere</li>
+<li><p>with a heading of “One of the following must be true”</p></li>
+<li><p>with an unordered list of 3 list items:</p></li>
+<li><p>You or the person you are filing the order against must live in the county you are filing the request in</p></li>
+<li><p>The abuse must have taken place in the county</p></li>
+<li><p>You must be living in the county temporarily to avoid abuse elsewhere</p></li>
 </ul>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Because these may be rendered differently in different services, we’ve removed any punctuation at the end of each list item and have removed any AND/OR parts (instead, the header makes that case clear).</p>
+<p class="admonition-title">Note</p>
+<p>Because these may be rendered differently in different services, we’ve removed any punctuation at the end of each list item and have removed any AND/OR parts (instead, the header makes that case clear).</p>
 </div>
 </div>
 </div>
@@ -303,13 +305,13 @@
 <h2>Jurisdiction<a class="headerlink" href="#jurisdiction" title="Permalink to this headline">¶</a></h2>
 <p>Structured content supports jurisdiction across different pieces of data. See <a class="reference internal" href="cms_structured_jurisdiction.html#cms-coverage-area"><span class="std std-ref">Coverage area</span></a> documentation.  A solution may have a jurisdiction that is broader than an attached How-to, attached legal forms, or attached organization.  A solution, even if it has How-tos that vary by location or forms that apply only to some jurisdictions, can still be marked at a broader jurisdiction so long as:</p>
 <ul class="simple">
-<li>the eligibility rules apply to the solution jurisdiction</li>
-<li>the legal difficulty varies by location</li>
-<li>the result varies by location</li>
+<li><p>the eligibility rules apply to the solution jurisdiction</p></li>
+<li><p>the legal difficulty varies by location</p></li>
+<li><p>the result varies by location</p></li>
 </ul>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Example:  The steps for getting an order of protection are different in Cook county than in the rest of the states.  McHenry county requires a specific form that no one else does.  But the eligibility rules, difficulty, and result is the same across Illinois.  The solution should be set to Illinois while there should be 2 How-tos (one for Cook county, one for the other 101 counties), and the McHenry form should be specificially tagged to McHenry county.</p>
+<p class="admonition-title">Note</p>
+<p>Example:  The steps for getting an order of protection are different in Cook county than in the rest of the states.  McHenry county requires a specific form that no one else does.  But the eligibility rules, difficulty, and result is the same across Illinois.  The solution should be set to Illinois while there should be 2 How-tos (one for Cook county, one for the other 101 counties), and the McHenry form should be specificially tagged to McHenry county.</p>
 </div>
 </div>
 <div class="section" id="legal-organization-vs-helpful-organization">
@@ -318,9 +320,9 @@
 <p>A helpful organization is one that exists as a structured helpful organization.</p>
 <p>Structured helpful organizations have much less information in our system.  These are organizations that do not belong in our organization system but that may still be helpful to users  This might include:</p>
 <ul class="simple">
-<li>DV shelters and/or hotlines</li>
-<li>Social services</li>
-<li>Government offices</li>
+<li><p>DV shelters and/or hotlines</p></li>
+<li><p>Social services</p></li>
+<li><p>Government offices</p></li>
 </ul>
 <p>A legal organization is one that exists in <a class="reference external" href="https://www.illinoislegalaid.org/admin/group">ILAO’s organization system</a>.  Rather than replicate the data as a structured helpful organization, these can be referenced directly as needed in the legal organization field.</p>
 </div>
@@ -346,23 +348,25 @@
 </div>
 <p>This segment above may be structured as:</p>
 <ul class="simple">
-<li>Structured text block 1:<ul>
-<li>Body markup: When a judge signs an Order of Protection, it makes it illegal for the abuser to do or not do certain things. For example, a judge can order the abuser to:</li>
-<li>List segments - unordered</li>
-<li>A paired markup segment for each list item.<ul>
-<li>Pay child support</li>
-<li>Return or stay away from the property</li>
-<li>Move out of a home they share with the victim</li>
+<li><p>Structured text block 1:</p>
+<ul>
+<li><p>Body markup: When a judge signs an Order of Protection, it makes it illegal for the abuser to do or not do certain things. For example, a judge can order the abuser to:</p></li>
+<li><p>List segments - unordered</p></li>
+<li><p>A paired markup segment for each list item.</p>
+<ul>
+<li><p>Pay child support</p></li>
+<li><p>Return or stay away from the property</p></li>
+<li><p>Move out of a home they share with the victim</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li>Structured text block 2 with body markup of “A judge can prevent an abuser from viewing the phone records of the victim and any minor child in the victim’s custody. The &lt;em&gt;Order of Protection &lt;/em&gt;can require phone service providers to transfer service so that the victim can keep the same phone number. The victim will have to pay the bill.”</li>
-<li>Structured text block 3 with body markup of “A judge can also change a person’s parental duties (custody/visitation) in an Order of Protection.”</li>
+<li><p>Structured text block 2 with body markup of “A judge can prevent an abuser from viewing the phone records of the victim and any minor child in the victim’s custody. The &lt;em&gt;Order of Protection &lt;/em&gt;can require phone service providers to transfer service so that the victim can keep the same phone number. The victim will have to pay the bill.”</p></li>
+<li><p>Structured text block 3 with body markup of “A judge can also change a person’s parental duties (custody/visitation) in an Order of Protection.”</p></li>
 </ul>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Like in the example for eligibility rules, we have stripped off punctuation and and/or.  Basic html markup like italics can be used in body markup but will be stripped in the plain text version.</p>
+<p class="admonition-title">Note</p>
+<p>Like in the example for eligibility rules, we have stripped off punctuation and and/or.  Basic html markup like italics can be used in body markup but will be stripped in the plain text version.</p>
 </div>
 </div>
 </div>
@@ -377,37 +381,29 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="cms_structured_legal_howto.html" class="btn btn-neutral float-right" title="Legal How-To" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="cms_structured_legal_problem.html" class="btn btn-neutral float-left" title="Legal Problem" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="cms_structured_legal_howto.html" class="btn btn-neutral float-right" title="Legal How-To" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="cms_structured_legal_problem.html" class="btn btn-neutral float-left" title="Legal Problem" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020-2021, Illinois Legal Aid Online
+        &#169; Copyright 2021, Gwen Daniels.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

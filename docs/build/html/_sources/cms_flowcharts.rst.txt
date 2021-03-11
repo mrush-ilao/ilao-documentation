@@ -8,6 +8,17 @@ ILAO is using the `Mermaid.js <https://mermaid-js.github.io/mermaid/#/>`_ librar
 
 There is a `live editor <https://mermaid-js.github.io/mermaid-live-editor/#>`_ that can be used to build diagrams. 
 
+.. mermaid::
+
+   graph TB
+      A[Hard edge] -->|Link text| B(Round edge)
+      B --> C{Decision}
+      C -->|One| D[Result one] 
+      C -->|Two| E[fa:fa-car Result two]
+      click D "https://www.illinoislegalaid.org" "Home"
+
+
+
 .. code-block:: html
 
     <div class="mermaid">

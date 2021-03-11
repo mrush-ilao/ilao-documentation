@@ -1,13 +1,13 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html4" lang="en" >
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Using Site Search &mdash; IllinoisLegalAid.org 2.10 documentation</title>
+  <title>Using Site Search &mdash; ILAO 2.22 documentation</title>
   
 
   
@@ -20,7 +20,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -30,10 +33,9 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -41,7 +43,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Site FAQs" href="site_faqs.html" />
-    <link rel="prev" title="Indexing and Updates" href="search_indexing.html" /> 
+    <link rel="prev" title="Manipulating Search" href="search_content.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -55,7 +57,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home" alt="Documentation Home"> IllinoisLegalAid.org
+            <a href="index.html" class="icon icon-home"> ILAO
           
 
           
@@ -63,10 +65,6 @@
 
           
             
-            
-              <div class="version">
-                2021
-              </div>
             
           
 
@@ -106,6 +104,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="site_search.html">Site Search</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="search_solr_config.html">Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="search_indexing.html">Indexing and Updates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="search_content.html">Manipulating Search</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Using Site Search</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#how-search-works">How Search Works</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#language-support">Language support</a></li>
@@ -119,6 +118,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies Overview</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul>
@@ -138,7 +138,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">IllinoisLegalAid.org</a>
+          <a href="index.html">ILAO</a>
         
       </nav>
 
@@ -148,6 +148,8 @@
         <div class="rst-content">
         
           
+
+
 
 
 
@@ -176,7 +178,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="_sources/search_frontend.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -196,15 +198,15 @@
 <h2>How Search Works<a class="headerlink" href="#how-search-works" title="Permalink to this headline">¶</a></h2>
 <p>We apply the following filters to search:</p>
 <ul class="simple">
-<li>HTML filter to strip HTML from search queries</li>
-<li>Stopwords to remove stopwords from query</li>
-<li>Highlight to highlight the search term in the results.</li>
+<li><p>HTML filter to strip HTML from search queries</p></li>
+<li><p>Stopwords to remove stopwords from query</p></li>
+<li><p>Highlight to highlight the search term in the results.</p></li>
 </ul>
 <p>Through custom code we also:</p>
 <ul class="simple">
-<li>Boost easy forms when the search term contains the word “form”</li>
-<li>Boost video when the search term contains “video”</li>
-<li>Boost a result when the content is an exact match to the best bet field</li>
+<li><p>Boost easy forms when the search term contains the word “form”</p></li>
+<li><p>Boost video when the search term contains “video”</p></li>
+<li><p>Boost a result when the content is an exact match to the best bet field</p></li>
 </ul>
 </div>
 <div class="section" id="language-support">
@@ -215,19 +217,19 @@
 <h2>Facets (or Filters)<a class="headerlink" href="#facets-or-filters" title="Permalink to this headline">¶</a></h2>
 <p>There are 3 filters available for search:</p>
 <ul class="simple">
-<li>Content type - this lists the content types included in the search results.</li>
+<li><p>Content type - this lists the content types included in the search results.</p></li>
 </ul>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Content types use the name provided for the content type.  We have multiple types of legal content (Legal content, ADRM, Portal main page)</p>
+<p class="admonition-title">Note</p>
+<p>Content types use the name provided for the content type.  We have multiple types of legal content (Legal content, ADRM, Portal main page)</p>
 </div>
 <ul class="simple">
-<li>Primary content type:  this is applicable only to legal content and includes the content formats like How-to, Guide, Easy form</li>
-<li>Topic:  this is applicable to all included content types except Job postings and basic pages.  This is the top level taxonomy terms.</li>
+<li><p>Primary content type:  this is applicable only to legal content and includes the content formats like How-to, Guide, Easy form</p></li>
+<li><p>Topic:  this is applicable to all included content types except Job postings and basic pages.  This is the top level taxonomy terms.</p></li>
 </ul>
-<div class="admonition-todo admonition" id="index-0">
-<p class="first admonition-title">Todo</p>
-<p class="last">Look at cleaning up some of these content type names.</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Look at cleaning up some of these content type names.</p>
 </div>
 </div>
 <div class="section" id="search-results">
@@ -235,24 +237,25 @@
 <img alt="_images/mobile-search.png" src="_images/mobile-search.png" />
 <p>The search results are ordered by score descending (the score is determined by Solr).  Each search result includes:</p>
 <ul class="simple">
-<li>Icon representing the content type/format.  Jobs, events, and basic pages do not have icons.</li>
-<li>a content type label (format is used for legal content)</li>
-<li>Content title</li>
-<li>Content description, if one exists.</li>
+<li><p>Icon representing the content type/format.  Jobs, events, and basic pages do not have icons.</p></li>
+<li><p>a content type label (format is used for legal content)</p></li>
+<li><p>Content title</p></li>
+<li><p>Content description, if one exists.</p></li>
 </ul>
-<div class="admonition-todo admonition" id="index-1">
-<p class="first admonition-title">Todo</p>
-<p class="last">Basic pages, job postings, and events do not have a description field.</p>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>Basic pages, job postings, and events do not have a description field.</p>
 </div>
 </div>
 <div class="section" id="search-tips">
 <h2>Search Tips<a class="headerlink" href="#search-tips" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Using quotes requires an exact match to the phrase.  For example, searching “minor offense” will return no results but searching minor offense will return Getting a ticket for a minor traffic offense, Clearing arrests for minor cannabis offenses.</li>
-<li>Multi-word searches are treated as OR but AND pairs will rank higher</li>
-<li>You can prefix + or - to better control search.  For example:<ul>
-<li>+child +support will require the content include both the word child and the word support.</li>
-<li>+child -support will require the content include the word child but not the word support.</li>
+<li><p>Using quotes requires an exact match to the phrase.  For example, searching “minor offense” will return no results but searching minor offense will return Getting a ticket for a minor traffic offense, Clearing arrests for minor cannabis offenses.</p></li>
+<li><p>Multi-word searches are treated as OR but AND pairs will rank higher</p></li>
+<li><p>You can prefix + or - to better control search.  For example:</p>
+<ul>
+<li><p>+child +support will require the content include both the word child and the word support.</p></li>
+<li><p>+child -support will require the content include the word child but not the word support.</p></li>
 </ul>
 </li>
 </ul>
@@ -260,9 +263,9 @@
 <div class="section" id="no-results">
 <h2>No results<a class="headerlink" href="#no-results" title="Permalink to this headline">¶</a></h2>
 <p>When no results are found, a message of “No results found” displays.</p>
-<div class="admonition-todo admonition" id="index-2">
-<p class="first admonition-title">Todo</p>
-<p class="last">Consider adding a block for no results tips when no results are provided.</p>
+<div class="admonition-todo admonition" id="id3">
+<p class="admonition-title">Todo</p>
+<p>Consider adding a block for no results tips when no results are provided.</p>
 </div>
 </div>
 </div>
@@ -272,37 +275,29 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="site_faqs.html" class="btn btn-neutral float-right" title="Site FAQs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="search_indexing.html" class="btn btn-neutral float-left" title="Indexing and Updates" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="site_faqs.html" class="btn btn-neutral float-right" title="Site FAQs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="search_content.html" class="btn btn-neutral float-left" title="Manipulating Search" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020-2021, Illinois Legal Aid Online
+        &#169; Copyright 2021, Gwen Daniels.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

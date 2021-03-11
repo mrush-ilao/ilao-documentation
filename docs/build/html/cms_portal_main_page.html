@@ -1,13 +1,13 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html4" lang="en" >
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Portal main page content type &mdash; IllinoisLegalAid.org 2.10 documentation</title>
+  <title>Portal main page content type &mdash; ILAO 2.22 documentation</title>
   
 
   
@@ -20,7 +20,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -30,10 +33,9 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -55,7 +57,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home" alt="Documentation Home"> IllinoisLegalAid.org
+            <a href="index.html" class="icon icon-home"> ILAO
           
 
           
@@ -63,10 +65,6 @@
 
           
             
-            
-              <div class="version">
-                2021
-              </div>
             
           
 
@@ -128,12 +126,14 @@
 <li class="toctree-l1"><a class="reference internal" href="basic_pages_cms.html">Basic pages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testimonials_cms.html">Testimonials Content Type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="webforms_cms.html">Webforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translation_cms.html">Translation Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="calendar_cms.html">Calendar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jobs_cms.html">Job Listings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="otis_cms.html">Get Legal Help</a></li>
 <li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
 <li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies Overview</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul class="current">
@@ -182,7 +182,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">IllinoisLegalAid.org</a>
+          <a href="index.html">ILAO</a>
         
       </nav>
 
@@ -192,6 +192,8 @@
         <div class="rst-content">
         
           
+
+
 
 
 
@@ -220,7 +222,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="_sources/cms_portal_main_page.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -237,16 +239,16 @@
   <div class="section" id="portal-main-page-content-type">
 <h1>Portal main page content type<a class="headerlink" href="#portal-main-page-content-type" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The 2020 migration resulted in a new portal template.  As a result, there are fields that are no longer used, such as the hero image. At some point in the future, the deprecated fields will be removed.</p>
+<p class="admonition-title">Note</p>
+<p>The 2020 migration resulted in a new portal template.  As a result, there are fields that are no longer used, such as the hero image. At some point in the future, the deprecated fields will be removed.</p>
 </div>
 <div class="section" id="portal-page-types">
 <h2>Portal page types<a class="headerlink" href="#portal-page-types" title="Permalink to this headline">¶</a></h2>
 <p>Despite the content type name of “portal main page”, there are three types of portal pages:</p>
 <ul class="simple">
-<li>Main page</li>
-<li>Subpages</li>
-<li>Toolbox selector form (deprecated I think)</li>
+<li><p>Main page</p></li>
+<li><p>Subpages</p></li>
+<li><p>Toolbox selector form (deprecated I think)</p></li>
 </ul>
 <p>A portal should have no more than 1 main page and may have an unlimited number of subpages.</p>
 </div>
@@ -254,20 +256,20 @@
 <h2>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h2>
 <p>Every portal page requires:</p>
 <ul class="simple">
-<li>A title</li>
-<li>A subdomain.  For main pages, this is the url that the the website is accessed at.  While the field is called subdomain, it is no longer an actual subdomain.  Instead, it becomes <a class="reference external" href="https://www.illinoislegalaid.org/[node:subdomain">https://www.illinoislegalaid.org/[node:subdomain</a>].  For sub pages and toolbox selector form, this binds the pages together and results in a url of <a class="reference external" href="https://www.illinoislegalaid.org/[node:subdomain]/[node:title">https://www.illinoislegalaid.org/[node:subdomain]/[node:title</a>]</li>
-<li>A page type</li>
-<li>A meta description.  This is used in socia media and SEO.</li>
-<li>A content description.  This is used in listing pages and search results pages</li>
-<li>Hero title and subtitle are required but not used.</li>
-<li>Primary legal category and legal issues; this is used throughout the site to aid in navigation, filtering, and reporting</li>
-<li>One or more paragraphs (components)</li>
-<li>An image.  This is used for social media sharing</li>
-<li>An hero image.  This is no longer used but is still required.</li>
+<li><p>A title</p></li>
+<li><p>A subdomain.  For main pages, this is the url that the the website is accessed at.  While the field is called subdomain, it is no longer an actual subdomain.  Instead, it becomes <a class="reference external" href="https://www.illinoislegalaid.org/[node:subdomain">https://www.illinoislegalaid.org/[node:subdomain</a>].  For sub pages and toolbox selector form, this binds the pages together and results in a url of <a class="reference external" href="https://www.illinoislegalaid.org/[node:subdomain]/[node:title">https://www.illinoislegalaid.org/[node:subdomain]/[node:title</a>]</p></li>
+<li><p>A page type</p></li>
+<li><p>A meta description.  This is used in socia media and SEO.</p></li>
+<li><p>A content description.  This is used in listing pages and search results pages</p></li>
+<li><p>Hero title and subtitle are required but not used.</p></li>
+<li><p>Primary legal category and legal issues; this is used throughout the site to aid in navigation, filtering, and reporting</p></li>
+<li><p>One or more paragraphs (components)</p></li>
+<li><p>An image.  This is used for social media sharing</p></li>
+<li><p>An hero image.  This is no longer used but is still required.</p></li>
 </ul>
-<div class="admonition-todo admonition" id="index-0">
-<p class="first admonition-title">Todo</p>
-<p class="last">Remove hero title, subtitle and image.</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Remove hero title, subtitle and image.</p>
 </div>
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Components:</span></p>
@@ -285,26 +287,26 @@
 <div class="section" id="navigation">
 <h2>Navigation<a class="headerlink" href="#navigation" title="Permalink to this headline">¶</a></h2>
 <p>The main portal page should be linked to in the Quick Links in the footer.</p>
-<div class="admonition-todo admonition" id="index-1">
-<p class="first admonition-title">Todo</p>
-<p class="last">We will add portal main page where the page type is main page to the legal resources pages to improve findability.</p>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>We will add portal main page where the page type is main page to the legal resources pages to improve findability.</p>
 </div>
 </div>
 <div class="section" id="sample-structures">
 <h2>Sample Structures<a class="headerlink" href="#sample-structures" title="Permalink to this headline">¶</a></h2>
 <p>The Victim of Crime portal main page (below) includes:</p>
 <ul class="simple">
-<li>A sidebar with a CTA and CTA image component</li>
-<li>A portal layout grid for the survivor stories</li>
-<li>A split column layout component for the two text blocks</li>
+<li><p>A sidebar with a CTA and CTA image component</p></li>
+<li><p>A portal layout grid for the survivor stories</p></li>
+<li><p>A split column layout component for the two text blocks</p></li>
 </ul>
 <img alt="_images/portal-sample1.png" src="_images/portal-sample1.png" />
 <a class="reference internal image-reference" href="_images/portal-voc-mobile.png"><img alt="_images/portal-voc-mobile.png" src="_images/portal-voc-mobile.png" style="width: 281.0px; height: 3781.0px;" /></a>
 <p>The Gun Violence survivor story contains:</p>
 <ul class="simple">
-<li>A sidebar with a CTA and CTA image component</li>
-<li>A portal layout summary for Dantae’s story, image, and summary</li>
-<li>A timeline</li>
+<li><p>A sidebar with a CTA and CTA image component</p></li>
+<li><p>A portal layout summary for Dantae’s story, image, and summary</p></li>
+<li><p>A timeline</p></li>
 </ul>
 <a class="reference internal image-reference" href="_images/portal-sample2.png"><img alt="_images/portal-sample2.png" src="_images/portal-sample2.png" style="width: 281.0px; height: 9219.5px;" /></a>
 </div>
@@ -315,37 +317,29 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="portal_layout_webform.html" class="btn btn-neutral float-right" title="Portal layout webform" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="cms_legal_content_taxonomies.html" class="btn btn-neutral float-left" title="Legal taxonomies" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="portal_layout_webform.html" class="btn btn-neutral float-right" title="Portal layout webform" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="cms_legal_content_taxonomies.html" class="btn btn-neutral float-left" title="Legal taxonomies" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020-2021, Illinois Legal Aid Online
+        &#169; Copyright 2021, Gwen Daniels.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

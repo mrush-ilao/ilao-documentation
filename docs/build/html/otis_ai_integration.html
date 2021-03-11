@@ -1,13 +1,13 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html4" lang="en" >
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>OTIS AI Integration &mdash; IllinoisLegalAid.org 2.10 documentation</title>
+  <title>OTIS AI Integration &mdash; ILAO 2.22 documentation</title>
   
 
   
@@ -20,7 +20,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -30,10 +33,9 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -55,7 +57,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home" alt="Documentation Home"> IllinoisLegalAid.org
+            <a href="index.html" class="icon icon-home"> ILAO
           
 
           
@@ -63,10 +65,6 @@
 
           
             
-            
-              <div class="version">
-                2021
-              </div>
             
           
 
@@ -150,7 +148,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">IllinoisLegalAid.org</a>
+          <a href="index.html">ILAO</a>
         
       </nav>
 
@@ -160,6 +158,8 @@
         <div class="rst-content">
         
           
+
+
 
 
 
@@ -188,7 +188,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="_sources/otis_ai_integration.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -250,22 +250,22 @@
 <div class="section" id="walking-through-the-prototype-managing-the-legal-problem">
 <h3>Walking through the prototype:  Managing the legal problem<a class="headerlink" href="#walking-through-the-prototype-managing-the-legal-problem" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Enter <strong>cut in my food stamps</strong> in the text area and click Continue to see what would happen if the user entered an exact match to ILAO’s taxonomy.  In this case, the user is just asked to confirm their legal issue.</li>
-<li>Enter <strong>food stamps</strong> to see one option when the classifiers do not return anything meeting our threshold.  In this case, it shows all the lowest level taxonomy terms that contain the search term or whose parent contains the search term.</li>
-<li>Enter <strong>snap</strong> to see the other option when the classifiers do not return anything meeting our threshold.  In this case it shows the highest level taxonomy terms that contain the search term.</li>
-<li>Enter <strong>I lost my job and now am being evicted from my apartment</strong> to see results where one or both classifiers return items. This example shows multiple relevant issues.</li>
+<li><p>Enter <strong>cut in my food stamps</strong> in the text area and click Continue to see what would happen if the user entered an exact match to ILAO’s taxonomy.  In this case, the user is just asked to confirm their legal issue.</p></li>
+<li><p>Enter <strong>food stamps</strong> to see one option when the classifiers do not return anything meeting our threshold.  In this case, it shows all the lowest level taxonomy terms that contain the search term or whose parent contains the search term.</p></li>
+<li><p>Enter <strong>snap</strong> to see the other option when the classifiers do not return anything meeting our threshold.  In this case it shows the highest level taxonomy terms that contain the search term.</p></li>
+<li><p>Enter <strong>I lost my job and now am being evicted from my apartment</strong> to see results where one or both classifiers return items. This example shows multiple relevant issues.</p></li>
 </ul>
 </div>
 <div class="section" id="guided-navigation-vs-webform-triage-rules">
 <h3>Guided navigation vs. Webform triage rules<a class="headerlink" href="#guided-navigation-vs-webform-triage-rules" title="Permalink to this headline">¶</a></h3>
 <p>For some legal issues, we will have Guided navigation and for other issues, we will continue ot use webform triage rules.</p>
 <ul class="simple">
-<li>Enter <strong>bills</strong> in the legal problem text area</li>
-<li>Click on bankruptcy</li>
-<li>Click on I want to file bankruptcy</li>
-<li>Click No on the Do you have an open bankruptcy case</li>
-<li>Click on To stop a foreclosure to see what happens when a user is taken out of Guided navigation to triage rules</li>
-<li>Click on To stop a foreclosure of my home to see what happens when a user is taken completely through Guided navigation</li>
+<li><p>Enter <strong>bills</strong> in the legal problem text area</p></li>
+<li><p>Click on bankruptcy</p></li>
+<li><p>Click on I want to file bankruptcy</p></li>
+<li><p>Click No on the Do you have an open bankruptcy case</p></li>
+<li><p>Click on To stop a foreclosure to see what happens when a user is taken out of Guided navigation to triage rules</p></li>
+<li><p>Click on To stop a foreclosure of my home to see what happens when a user is taken completely through Guided navigation</p></li>
 </ul>
 </div>
 <div class="section" id="one-match-vs-multiple">
@@ -281,37 +281,29 @@
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="otis_tech_guided_navigation.html" class="btn btn-neutral float-right" title="Guided Navigation Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="otis_reports_referrals.html" class="btn btn-neutral float-left" title="Referrals Report" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="otis_tech_guided_navigation.html" class="btn btn-neutral float-right" title="Guided Navigation Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="otis_reports_referrals.html" class="btn btn-neutral float-left" title="Referrals Report" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020-2021, Illinois Legal Aid Online
+        &#169; Copyright 2021, Gwen Daniels.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
