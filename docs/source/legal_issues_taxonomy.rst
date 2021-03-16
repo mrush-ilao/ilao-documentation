@@ -12,9 +12,12 @@ Taxonomy Structure
 Each taxonomy term has:
 * a name
 * a description.  This is used on subcategory and category pages.
+* whether it should be used in the autosuggest on Get Legal Help
 * alternatives (these can be helpful for autocompletes)
 * an icon.  This is only needed on the top level categories.  The icon is per language.
 * an image.  This is used on category and subcategory pages.  The image is limited to one for all languages
+
+.. note:: The top content field has been deprecated.
 
 
 Use Cases
