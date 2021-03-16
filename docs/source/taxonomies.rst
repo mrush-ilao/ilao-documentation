@@ -1,5 +1,5 @@
 ======================
-Taxonomies Overview
+Taxonomies 
 ======================
 
 Legal issues
