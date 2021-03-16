@@ -85,6 +85,7 @@ Report data
 * Published status (Yes or No)
 * Language of the node (content in more than one language will have multiple rows in the report)
 * Page views from Google analytics.  These are pulled in from the English content and associated with the node (so it will show the same page views on Spanish and Polish versions).  These are pulled in as a scheduled task in batches and are based on the last 60 days +/- 14 days depending on when it was last imported.  **This was added to aid in prioritization not as a 100% accurate measure**
+* Word count.  The number of words in the node (see :ref:`word-count-label`)
 
 .. note::  The last revised and last expert review fields are not translatable in legal content but are translatable in toolbox, tool, and tool step content.    The last changed date is per language. 
 

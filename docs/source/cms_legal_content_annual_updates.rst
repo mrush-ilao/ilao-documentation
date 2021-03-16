@@ -1,3 +1,5 @@
+.. _annual-updates-label:
+
 ===================
 Annual Updates
 ===================
@@ -13,4 +15,4 @@ Adding an annual update term requires adding a term to the annual updates taxono
 
 Notifications
 ===============
-The system automatically sends an email to users with the content manager role 30 days ahead of the recurring date with a list of all the content tied to the annual updates.
+The system automatically sends an email to users with the content manager role 30 days ahead of the recurring date with a list of all the content tied to that annual update.  It will not send again until the next occurrence.

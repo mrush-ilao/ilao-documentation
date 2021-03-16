@@ -1,6 +1,8 @@
-=======================
-Legal taxonomies
-=======================
+.. _taxonomy-status-label:
+
+==========================
+Legal taxonomies status
+==========================
 
 As of January 2021, the legal issues taxonomy:
 

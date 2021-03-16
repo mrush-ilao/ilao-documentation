@@ -1,3 +1,5 @@
+.. _search-content-label:
+
 =========================
 Manipulating Search
 =========================
