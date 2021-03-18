@@ -49,6 +49,8 @@ Testimonials should be added to legal content on a routine basis.  Please see ou
 
 To insert a testimonial:
 
+* add a Text content block 
+* drag the content block to the appropriate place between other content blocks (for instance, process steps)
 * in the WYSIWG, click the E embed button
 * search for the testimonial name you want to include
 
