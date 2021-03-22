@@ -209,11 +209,38 @@
 <div class="section" id="create-triage-user">
 <h2>Create triage user<a class="headerlink" href="#create-triage-user" title="Permalink to this headline">¶</a></h2>
 <p>Within Twilio, we have the ILAO service for functions.  The <a class="reference external" href="https://ilao-8092.twil.io/otis-create-triage-user">/otis-create-triage-user</a> function creates a data packet based on ILAO’s OTIS Rest API to create a triage user record in our database.  The API returns the UUID of the newly created triage user entity.</p>
+<p>The triage user is initially created after the user identifies their legal issue (OTIS-master).  At this point we have:</p>
+<ul class="simple">
+<li><p>Zip code, county, state</p></li>
+<li><p>Legal problem</p></li>
+<li><p>Search term (initial triggering input)</p></li>
+<li><p>Mobile phone</p></li>
+<li><p>Opt-in</p></li>
+<li><p>Timestamps</p></li>
+<li><p>Triage status of started</p></li>
+<li><p>Source</p></li>
+<li><p>Last screen viewed</p></li>
+</ul>
 </div>
 <div class="section" id="update-triage-user">
 <h2>Update triage user<a class="headerlink" href="#update-triage-user" title="Permalink to this headline">¶</a></h2>
 <p>The <a class="reference external" href="https://ilao-8092.twil.io/otis-update-triage-user">/otis-update-triage-user</a> function creates a data packet based on ILAO’s OTIS Rest API to update an existing triage user based on the UUID.</p>
 <p>It ignores any parameters that are not part of the ILAO OTIS Rest API.</p>
+<p>Within the OTIS Master, triage user records are updated:</p>
+<ul class="simple">
+<li><p>When the user is exited for being over-income on the initial income question</p></li>
+<li><p>When the user accepts or rejects a match</p></li>
+<li><p>After the user provides household size details</p></li>
+<li><p>After the user provides a valid DOB</p></li>
+<li><p>After each demographic question</p></li>
+<li><p>After all benefits income collected</p></li>
+<li><p>After all other payments income collected</p></li>
+<li><p>After other income collected</p></li>
+<li><p>After total income is calculated and overincome flags set</p></li>
+<li><p>After contact information is set</p></li>
+<li><p>After callback selections</p></li>
+<li><p>At end for any remaining data</p></li>
+</ul>
 </div>
 <div class="section" id="post-to-legal-server">
 <h2>Post to legal server<a class="headerlink" href="#post-to-legal-server" title="Permalink to this headline">¶</a></h2>
