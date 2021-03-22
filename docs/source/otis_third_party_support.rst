@@ -30,7 +30,7 @@ Source parameters should be matched as a pair:
 
 When a source is included with a referral_source_type of organization, the specific organization will receive priority over any other organization.  This is usually the **preferred** approach to use unless an organization needs to prioritize a specific intake setting.
 
-When a source is included with a referral_source_type of intake_settings, the specific intake settings or organization will receive priority over any other intake settings.  This is expected to be used by organization partners on their own websites or via social media to prioritize traffic from those partners into OTIS.  For example, if the url is /get-legal-help?source=1226 then Legal Aid Chicago's housing rules would take priority over other organizations.  
+When a source is included with a referral_source_type of intake_settings, the specific intake settings or organization will receive priority over any other intake settings.  This is expected to be used by organization partners on their own websites or via social media to prioritize traffic from those partners into OTIS.  For example, if the url is /get-legal-help?source=1226&referral_source_type=intake_settings then Legal Aid Chicago's housing rules would take priority over other organizations.  
 
 .. note::  
    Because the source parameter is tied to the intake settings, it is best practice to include a relevant taxonomy term as the parameter will be ignored if the user selects a topic that is unrelated to the intake settings
@@ -54,7 +54,7 @@ Direct referral to JEP for any legal issue:
 
 Direct referral to Legal Aid Chicago's housing practice group:
 
-`https://www.illinoislegalaid.org/get-legal-help?source=1226&helptype[]=lawyer <https://www.illinoislegalaid.org/get-legal-help?source=1226&helptype[]=lawyer>`_
+`https://www.illinoislegalaid.org/get-legal-help?source=1226&helptype[]=lawyer <https://www.illinoislegalaid.org/get-legal-help?source=1226&referral_source_type=intake_settings&helptype[]=lawyer>`_
 
 When used in a chatbot
 --------------------------
