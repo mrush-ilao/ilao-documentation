@@ -11,7 +11,7 @@ There is a separate field for the LIST taxonomy code.
 There is a term reference field to link the LIST taxonomy to ILAO's legal issues taxonomy.
 There is a term reference field to link the LIST taxonomy to the Legal Server taxonomy to support eTransfer integrations.
 
-Use in ILAO's products
+Use Cases
 =======================
 
 * LIST is a referenced entity in the Legal Problem content type

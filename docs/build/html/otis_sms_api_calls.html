@@ -127,7 +127,7 @@
 <li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
 <li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
-<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul>
@@ -206,6 +206,23 @@
   <div class="section" id="otis-sms-api">
 <h1>OTIS SMS API<a class="headerlink" href="#otis-sms-api" title="Permalink to this headline">¶</a></h1>
 <p>This documents our integration between the website and SMS to provide the needed functionality between ILAO’s database, LegalServer, and Twilio for online intake.</p>
+<div class="section" id="create-triage-user">
+<h2>Create triage user<a class="headerlink" href="#create-triage-user" title="Permalink to this headline">¶</a></h2>
+<p>Within Twilio, we have the ILAO service for functions.  The <a class="reference external" href="https://ilao-8092.twil.io/otis-create-triage-user">/otis-create-triage-user</a> function creates a data packet based on ILAO’s OTIS Rest API to create a triage user record in our database.  The API returns the UUID of the newly created triage user entity.</p>
+</div>
+<div class="section" id="update-triage-user">
+<h2>Update triage user<a class="headerlink" href="#update-triage-user" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference external" href="https://ilao-8092.twil.io/otis-update-triage-user">/otis-update-triage-user</a> function creates a data packet based on ILAO’s OTIS Rest API to update an existing triage user based on the UUID.</p>
+<p>It ignores any parameters that are not part of the ILAO OTIS Rest API.</p>
+</div>
+<div class="section" id="post-to-legal-server">
+<h2>Post to legal server<a class="headerlink" href="#post-to-legal-server" title="Permalink to this headline">¶</a></h2>
+<p>TBD</p>
+</div>
+<div class="section" id="get-intake-settings">
+<h2>Get intake settings<a class="headerlink" href="#get-intake-settings" title="Permalink to this headline">¶</a></h2>
+<p>TBD</p>
+</div>
 </div>
 
 

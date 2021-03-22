@@ -244,19 +244,127 @@ OTIS Poverty Estimate
 OTIS Zipcode Validate
 =======================
 
-
 **Function name:**  otis-poverty-estimate
 
-**Purpose**: Determines whether a provided zip code is in Illinois or note
+**Purpose**: Determines whether a provided zip code is in Illinois or not
 
 **Parameters:**  event.zip
 
-**Requires:**  API call to get state based on zip code.
+**Requires:**  API call to get region information based on zip code.
 
 **Returns:** A string representing the state.
 
-**Status:** Needs to integrate a working API.  Currently validates only for 60603.
+**Status:** Relies on a JSON object in our static assets (/illinois-regions) that contains the IL regional taxonomy data.
 
+Create Triage User
+==========================
+**Function name:**  otis-create-triage-user
 
+**Purpose**: Builds a data packet and leverages ILAO's Rest API to create a triage user record on ILAO's website
 
+**Parameters:**  Event object that contains base data; empty or missing values are set to null.  
 
+**Requires:**  Authentication with ILAO's REST OTIS API
+
+**Returns:** UUID representing the triage user.
+
+**Status:** Data packet generates; API integration not built.
+
+OTIS Update Triage User
+==========================
+**Function name:**  otis-update-triage-user
+
+**Purpose**: Updates a triage user record on ILAO's website based on interactions with the SMS intake system.
+
+**Parameters:**  Event object with data to update; UUID of existing triage user.
+
+**Requires:**  Authentication with ILAO's REST OTIS API
+
+**Returns:** Updated data packet
+
+**Status:** Data packet based on event object generates; API integration not built.
+
+Get Matches
+==========================
+
+**Function name:**  otis-get-matches
+
+**Purpose**: 
+
+**Parameters:**  
+
+**Requires:**  
+
+**Returns:** 
+
+**Status:** 
+
+Load marital statuses
+==========================
+**Function name:**  otis-load-marital-statuses
+
+**Purpose**: Returns list of marital statuses for user to select from. 
+
+**Parameters:** event.langcode (may be null)
+
+**Requires:**  None
+
+**Returns:** A string of marital statuses for display
+
+**Status:** Built for English. Separate array for Spanish exists for translation and will be returned when the langcode = es.
+
+Load languages
+==========================
+**Function name:**  otis-load-languages
+
+**Purpose**: Returns list of languages for user to select from. 
+
+**Parameters:** event.langcode (may be null)
+
+**Requires:**  None
+
+**Returns:** A string of languages for display
+
+**Status:** Built for English. Separate array for Spanish exists for translation and will be returned when the langcode = es.
+
+Load genders
+==========================
+**Function name:**  otis-load-genders
+
+**Purpose**: Returns list of genders for user to select from. 
+
+**Parameters:** event.langcode (may be null)
+
+**Requires:**  None
+
+**Returns:** A string of genders for display
+
+**Status:** Built for English. Separate array for Spanish exists for translation and will be returned when the langcode = es.
+
+Load ethnicities
+==========================
+**Function name:**  otis-load-ethnicity
+
+**Purpose**: Returns list of ethnicity options for user to select from. 
+
+**Parameters:** event.langcode (may be null)
+
+**Requires:**  None
+
+**Returns:** A string of ethnicities for display
+
+**Status:** Built for English. Separate array for Spanish exists for translation and will be returned when the langcode = es.
+
+Load races
+==========================
+**Function name:**  otis-load-races
+
+**Purpose**: Returns list of races for user to select from. 
+
+**Parameters:** event.langcode (may be null)
+
+**Requires:**  None
+
+**Returns:** A string of races for display
+
+**Status:** Built for English. Separate array for Spanish exists for translation and will be returned when the langcode = es.

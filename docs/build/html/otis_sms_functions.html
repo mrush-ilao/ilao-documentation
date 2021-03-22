@@ -127,7 +127,7 @@
 <li class="toctree-l1"><a class="reference internal" href="site_search.html">Site Search</a></li>
 <li class="toctree-l1"><a class="reference internal" href="site_faqs.html">Site FAQs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="other_cms_features.html">Other Website Features</a></li>
-<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomies.html">Taxonomies</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Workarounds:</span></p>
 <ul>
@@ -362,11 +362,83 @@
 <div class="section" id="otis-zipcode-validate">
 <h2>OTIS Zipcode Validate<a class="headerlink" href="#otis-zipcode-validate" title="Permalink to this headline">¶</a></h2>
 <p><strong>Function name:</strong>  otis-poverty-estimate</p>
-<p><strong>Purpose</strong>: Determines whether a provided zip code is in Illinois or note</p>
+<p><strong>Purpose</strong>: Determines whether a provided zip code is in Illinois or not</p>
 <p><strong>Parameters:</strong>  event.zip</p>
-<p><strong>Requires:</strong>  API call to get state based on zip code.</p>
+<p><strong>Requires:</strong>  API call to get region information based on zip code.</p>
 <p><strong>Returns:</strong> A string representing the state.</p>
-<p><strong>Status:</strong> Needs to integrate a working API.  Currently validates only for 60603.</p>
+<p><strong>Status:</strong> Relies on a JSON object in our static assets (/illinois-regions) that contains the IL regional taxonomy data.</p>
+</div>
+<div class="section" id="create-triage-user">
+<h2>Create Triage User<a class="headerlink" href="#create-triage-user" title="Permalink to this headline">¶</a></h2>
+<p><strong>Function name:</strong>  otis-create-triage-user</p>
+<p><strong>Purpose</strong>: Builds a data packet and leverages ILAO’s Rest API to create a triage user record on ILAO’s website</p>
+<p><strong>Parameters:</strong>  Event object that contains base data; empty or missing values are set to null.</p>
+<p><strong>Requires:</strong>  Authentication with ILAO’s REST OTIS API</p>
+<p><strong>Returns:</strong> UUID representing the triage user.</p>
+<p><strong>Status:</strong> Data packet generates; API integration not built.</p>
+</div>
+<div class="section" id="otis-update-triage-user">
+<h2>OTIS Update Triage User<a class="headerlink" href="#otis-update-triage-user" title="Permalink to this headline">¶</a></h2>
+<p><strong>Function name:</strong>  otis-update-triage-user</p>
+<p><strong>Purpose</strong>: Updates a triage user record on ILAO’s website based on interactions with the SMS intake system.</p>
+<p><strong>Parameters:</strong>  Event object with data to update; UUID of existing triage user.</p>
+<p><strong>Requires:</strong>  Authentication with ILAO’s REST OTIS API</p>
+<p><strong>Returns:</strong> Updated data packet</p>
+<p><strong>Status:</strong> Data packet based on event object generates; API integration not built.</p>
+</div>
+<div class="section" id="get-matches">
+<h2>Get Matches<a class="headerlink" href="#get-matches" title="Permalink to this headline">¶</a></h2>
+<p><strong>Function name:</strong>  otis-get-matches</p>
+<p><strong>Purpose</strong>:</p>
+<p><strong>Parameters:</strong></p>
+<p><strong>Requires:</strong></p>
+<p><strong>Returns:</strong></p>
+<p><strong>Status:</strong></p>
+</div>
+<div class="section" id="load-marital-statuses">
+<h2>Load marital statuses<a class="headerlink" href="#load-marital-statuses" title="Permalink to this headline">¶</a></h2>
+<p><strong>Function name:</strong>  otis-load-marital-statuses</p>
+<p><strong>Purpose</strong>: Returns list of marital statuses for user to select from.</p>
+<p><strong>Parameters:</strong> event.langcode (may be null)</p>
+<p><strong>Requires:</strong>  None</p>
+<p><strong>Returns:</strong> A string of marital statuses for display</p>
+<p><strong>Status:</strong> Built for English. Separate array for Spanish exists for translation and will be returned when the langcode = es.</p>
+</div>
+<div class="section" id="load-languages">
+<h2>Load languages<a class="headerlink" href="#load-languages" title="Permalink to this headline">¶</a></h2>
+<p><strong>Function name:</strong>  otis-load-languages</p>
+<p><strong>Purpose</strong>: Returns list of languages for user to select from.</p>
+<p><strong>Parameters:</strong> event.langcode (may be null)</p>
+<p><strong>Requires:</strong>  None</p>
+<p><strong>Returns:</strong> A string of languages for display</p>
+<p><strong>Status:</strong> Built for English. Separate array for Spanish exists for translation and will be returned when the langcode = es.</p>
+</div>
+<div class="section" id="load-genders">
+<h2>Load genders<a class="headerlink" href="#load-genders" title="Permalink to this headline">¶</a></h2>
+<p><strong>Function name:</strong>  otis-load-genders</p>
+<p><strong>Purpose</strong>: Returns list of genders for user to select from.</p>
+<p><strong>Parameters:</strong> event.langcode (may be null)</p>
+<p><strong>Requires:</strong>  None</p>
+<p><strong>Returns:</strong> A string of genders for display</p>
+<p><strong>Status:</strong> Built for English. Separate array for Spanish exists for translation and will be returned when the langcode = es.</p>
+</div>
+<div class="section" id="load-ethnicities">
+<h2>Load ethnicities<a class="headerlink" href="#load-ethnicities" title="Permalink to this headline">¶</a></h2>
+<p><strong>Function name:</strong>  otis-load-ethnicity</p>
+<p><strong>Purpose</strong>: Returns list of ethnicity options for user to select from.</p>
+<p><strong>Parameters:</strong> event.langcode (may be null)</p>
+<p><strong>Requires:</strong>  None</p>
+<p><strong>Returns:</strong> A string of ethnicities for display</p>
+<p><strong>Status:</strong> Built for English. Separate array for Spanish exists for translation and will be returned when the langcode = es.</p>
+</div>
+<div class="section" id="load-races">
+<h2>Load races<a class="headerlink" href="#load-races" title="Permalink to this headline">¶</a></h2>
+<p><strong>Function name:</strong>  otis-load-races</p>
+<p><strong>Purpose</strong>: Returns list of races for user to select from.</p>
+<p><strong>Parameters:</strong> event.langcode (may be null)</p>
+<p><strong>Requires:</strong>  None</p>
+<p><strong>Returns:</strong> A string of races for display</p>
+<p><strong>Status:</strong> Built for English. Separate array for Spanish exists for translation and will be returned when the langcode = es.</p>
 </div>
 </div>
 
